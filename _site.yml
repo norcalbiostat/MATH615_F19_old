@@ -1,0 +1,25 @@
+name: "Robin Donatello"
+output_dir: "."
+navbar:
+  title: "MATH 615"
+  left:
+    - text: "Syllabus"
+      href: index.html
+    - text: "Learning Materials"
+      href: notes.html
+    - text: "Assignments"
+      href: assignments.html
+    - text: "Projects"
+      href: project.html
+  right:
+      - text: ""
+        icon: fa-envelope-o
+        href: mailto:rdonatello@csuchico.edu
+      - text: ""
+        icon: fa-github-alt
+        href: https://github.com/norcalbiostat
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+ 

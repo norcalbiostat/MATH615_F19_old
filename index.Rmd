@@ -1,0 +1,47 @@
+# Course Description
+
+## Learning Outcomes
+
+
+# Logistics
+**Instructor:** Dr. Robin Donatello  
+**Office Location:** Holt 202  
+**Phone Number:** 898-5767  
+**E-mail:** rdonatello@csuchico.edu   
+**Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105. 
+**Meeting Days and Times** Tue/Thu 11-12:15, HOLT 155
+
+## Required Materials
+* Textbook: 
+* A reliable laptop that you can install programs onto. Contact me for alternatives.
+    - Mac / Windows are easy. Linux/Unix installs are more difficult, but not impossible. 
+* Reliable internet connection while on and off campus.
+* A free [Data Camp](www.datacamp.com) account.
+* Join the [Chico R Users Google Group](https://groups.google.com/forum/#!forum/chico-rug) - This is our discussion forum to ask (and answer) questions outside of class. 
+    - There is also a [Meetup group](https://www.meetup.com/Chico-R-Users-Group/) - optional but useful if you want to stay connected to the community and learn about upcoming events. 
+* Free programming software. Instructions and links to download, install and setup these programs can be found at http://www.norcalbiostat.com/Software/software_overview.html#/ <p class="text-danger"> (Update this link)</p>
+    - [R](https://cran.r-project.org/)
+    - [R Studio](https://www.rstudio.com/)
+    - [LaTeX](https://www.latex-project.org/): optional but very nice for producing professional quality PDF reports.  
+
+## Grading
+
+## Schedule of Topics
+
+
+## Adding and Dropping the course
+
+
+## Americans with Disabilities Act
+If you need course adaptations or accommodations because of a disability or chronic illness,  or if you need to make special arrangements in case the building must be evacuated, please make an appointment with me as soon as possible, or see me during office hours. Please also contact Accessibility Resource Center (ARC) as they are the designated department responsible for approving and coordinating reasonable accommodations and services for students with disabilities. ARC will help you understand your rights and responsibilities under the Americans with Disabilities Act and provide you further assistance with requesting and arranging accommodations.
+
+Accessibility Resource Center  
+530-898-5959   
+Student Services Center 170  
+arcdept@csuchico.edu  
+
+
+
+
+
+
