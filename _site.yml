@@ -5,10 +5,14 @@ navbar:
   left:
     - text: "Syllabus"
       href: index.html
+    - text: "Schedule"
+      href: schedule.html
     - text: "Learning Materials"
-      href: notes.html
-    - text: "Assignments"
-      href: assignments.html
+      menu:
+      - text: "Lecture Notes"
+        href: notes.html
+      - text: "Assignments"
+        href: assignments.html
     - text: "Projects"
       href: project.html
   right:
@@ -22,4 +26,6 @@ output:
   html_document:
     theme: flatly
     highlight: tango
+    include:
+      after_body: footer.html
  
