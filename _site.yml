@@ -3,25 +3,30 @@ output_dir: "."
 navbar:
   title: "MATH 615"
   left:
-    - text: "Syllabus"
-      href: index.html
     - text: "Schedule"
+      icon: fa-calendar
       href: schedule.html
-    - text: "Learning Materials"
-      menu:
-      - text: "Lecture Notes"
-        href: notes.html
-      - text: "Assignments"
-        href: assignments.html
+    - text: "Lecture Notes"
+      icon: fa-file-text-o
+      href: notes.html
+    - text: "Assignments"
+      icon: fa-pencil
+      href: assignments.html
     - text: "Projects"
+      icon: fa-bar-chart
       href: project.html
+    
   right:
-      - text: ""
-        icon: fa-envelope-o
-        href: mailto:rdonatello@csuchico.edu
-      - text: ""
-        icon: fa-github-alt
-        href: https://github.com/norcalbiostat
+    - text: "Syllabus"
+      icon: fa-info-circle
+      href: syllabus.html
+    - text: "Help/FAQ"
+      icon: fa-question
+      href: help.html
+    - text: "Contact"
+      icon: fa-envelope-o
+      href: mailto:rdonatello@csuchico.edu
+      
 output:
   html_document:
     theme: flatly
