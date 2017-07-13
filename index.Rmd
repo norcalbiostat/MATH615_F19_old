@@ -23,7 +23,7 @@ By the end of the semester students will be able to
 **Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, MATH 350 or MATH 305.  
 **Meeting Days and Times** Tue/Thu 11-12:15, HOLT 155
 
-You can download the Syllabus in PDF form by clicking [this link](/docs/Syllabus.pdf).
+You can download the Syllabus in PDF form by clicking [this link](../docs/Syllabus.pdf).
 
 
 ## Required Materials
