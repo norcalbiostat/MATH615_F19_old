@@ -1,0 +1,25 @@
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr);library(readxl); library(kableExtra)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+```
+
+```{r results="asis", echo=FALSE}
+source("schedule_css_green.R")
+```
+
+```{r echo=FALSE}
+rawdat <- read_excel("schedule_615.xlsx")
+cdat   <- rawdat %>% mutate(Date = format(date, "%m/%d")) %>% 
+              filter(as.Date(date) > "2017-04-01") %>%
+              select(Wk, Date, Topics, Preparation, Evaluation)
+```
+
+```{r results='asis', echo=FALSE}
+knitr::kable(cdat, align="c") %>% 
+  kable_styling(bootstrap_options = c("hover", "striped", "responsive")) %>% 
+  column_spec(1, width="1%") 
+```
+
+
+

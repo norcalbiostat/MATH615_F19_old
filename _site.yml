@@ -3,20 +3,23 @@ output_dir: "."
 navbar:
   title: "MATH 615"
   left:
-    - text: "Schedule"
-      icon: fa-calendar
+    - text: "Materials"
+      icon: fa-book
       href: schedule.html
-    - text: "Lecture Notes"
-      icon: fa-file-text-o
-      href: notes.html
-    - text: "Assignments"
-      icon: fa-pencil
-      href: assignments.html
+    - text: "Due Dates"
+      icon: fa-calendar-check-o
+      href: calendar.html
+    - text: "Data"
+      icon: fa-database
+      href: data.html
     - text: "Projects"
       icon: fa-bar-chart
       href: project.html
     
   right:
+    - text: "RSS"
+      icon: fa-feed
+      href: rss.html
     - text: "Syllabus"
       icon: fa-info-circle
       href: syllabus.html
