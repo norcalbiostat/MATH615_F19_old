@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "MATH 615"
   left:
-    - text: "Materials"
+    - text: "Schedule & Materials"
       icon: fa-book
       href: schedule.html
     - text: "Due Dates"
@@ -17,9 +17,6 @@ navbar:
       href: project.html
     
   right:
-    - text: "RSS"
-      icon: fa-feed
-      href: rss.html
     - text: "Syllabus"
       icon: fa-info-circle
       href: syllabus.html
@@ -29,6 +26,9 @@ navbar:
     - text: "Contact"
       icon: fa-envelope-o
       href: mailto:rdonatello@csuchico.edu
+    - text: "NorCalBiostat"
+      icon: fa-paw
+      href: http://www.norcalbiostat.com
       
 output:
   html_document:

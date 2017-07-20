@@ -1,5 +1,5 @@
 
-This is the landing page for **Statistical Methods for Graduate Research** course taught by [Dr. Robin Donatello](www.norcalbiostat.com). This page is used for posting of regular announcements and information for students of the class. 
+This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](www.norcalbiostat.com). This page is used for posting of regular announcements and information for students of the class. 
 
 
 # Announcements
