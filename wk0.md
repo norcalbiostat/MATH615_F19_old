@@ -8,6 +8,8 @@ Goals:
 
 ### Prepare before class
 
+### In class
+
 ### Assignments
 
 ----
@@ -17,6 +19,8 @@ Goals:
 
 
 ### Prepare 
+
+### In class
 
 
 ### Assignments

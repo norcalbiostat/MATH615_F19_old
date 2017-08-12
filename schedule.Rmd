@@ -7,13 +7,19 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```{r echo=FALSE}
 rawdat <- read_excel("schedule_615.xlsx")
 cdat   <- rawdat %>% mutate(Date = format(date, "%m/%d"), 
-                            Topics = topic, Evaluation = eval) %>% 
-              select(Week, Date, Topics, Notes, Evaluation, topic, eval)
+                            Topics = topic, Notes=notes, Evaluation = eval) %>% 
+              select(Week, Date, Topics, Notes, Evaluation, topic, eval, notes)
 
 # parse topics
 topiclist <- which(!is.na(cdat$topic))
 cdat$Topics[topiclist] <- paste0("<ul><li>", cdat$topic[topiclist], "</li></ul>")
 cdat$Topics[topiclist] <- gsub("(+.)\\*", "</li><li>", cdat$Topics[topiclist])
+
+# parse notes
+noteslist <- which(!is.na(cdat$notes))
+cdat$Notes[noteslist] <- paste0("<ul><li>", cdat$notes[noteslist], "</li></ul>")
+cdat$Notes[noteslist] <- gsub("(+.)\\*", "</li><li>", cdat$Notes[noteslist])
+
 
 # parse evaluations
 evallist <- which(!is.na(cdat$eval))

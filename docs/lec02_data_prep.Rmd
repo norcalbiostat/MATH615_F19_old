@@ -1,0 +1,264 @@
+---
+title: 'Lec 02: Preparing Data for Analysis'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+#library(rmarkdown)
+opts_chunk$set(warning=FALSE, message=FALSE, cache=TRUE) 
+```
+
+```{r results="asis", echo=FALSE}
+source("../stylesheets/custom.R")
+```
+
+
+# PMA5 Ch 3 notes
+
+![](Afifi_Fig3_1.png)
+
+#### Reproducible Research
+* You are your own collaborator 6 months from now. Make sure you will be able to understand what you were doing.
+* Investing the time to do things clearly and in a reproducible manner will make your future self happy.
+* Comment your code with explanations and instructions.
+    - How did you get from point A to B? 
+    - Why did you recode this variable in this manner? 
+* We need to record those steps (not just for posterity). 
+* This means your code must be saved in a script file. 
+    - Include sufficient notes to yourself describing what you are doing and why. 
+    - For R, this can be in a `.R` or `.RMD` file. I always prefer the latter. 
+    - SPSS users can open a text file or something similar. At each step be sure to copy the code from the program into this document. 
+
+![](pipeline.png)
+
+Figure Credits: [Roger Peng](http://www.biostat.jhsph.edu/~rpeng/)
+
+
+# Clean depression data
+
+## Import data
+
+* Download the Depression data set `depress` and codebook
+* Save these into a **Data** sub-folder in your **MATH615** folder. This is a tab-delimited text file.  
+* Start a new Markdown file and in the first code chunk, read the data set into R using `read.table()`, load the `dplyr` and `ggplot2` libraries.  
+* Suppress the printing of messages for this code chunk by adding appropriate options to the code chunk starter line. ` ```{r, message=FALSE, warning=FALSE}`. 
+
+```{r}
+library(dplyr)
+library(ggplot2)  
+depress <- read.table("https://norcalbiostat.netlify.com/data/Depress.txt", 
+                      sep="\t", header=TRUE)  
+```
+
+(_Read the data from your local machine, don't use the URL above. It'll ping my server to death_)
+
+## LOOK AT YOUR DATA
+The absolute first thing you should do is to look at your raw data table.
+```{r}
+str(depress)
+```
+
+Right away this tells me that **R** thinks all variables are numeric integers, not categorical variables. This will have to be changed. 
+
+## Detecting and recoding outliers and/or errors
+Let's look at the age variable in the depression data set. 
+
+```{r, fig.width=10, fig.height=6}
+par(mfrow=c(1,2)) # sets the grahpics grid 1 row by 2 columns
+boxplot(depress$AGE)
+hist(depress$AGE)
+```
+
+Just looking at the data graphically raises no red flags. The boxplot shows no outlying values and the histogram does not look wildly skewed. This is where knowledge about the data set is essential. The codebook does not provide a valid range for the data, but the description of the data starting on page 3 in the textbook clarifies that this data set is on adults. In the research world, this specifies 18 years or older. 
+
+Now look back at the graphics. See anything odd? It appears as if the data go pretty far below 20, possibly below 18. Let's check the numerical summary to get more details. 
+```{r}
+summary(depress$AGE)
+```
+
+The minimum value is a 9, which is outside the range of valid values for this variable. This is where you, as a statistician, data analyst or researcher goes back to the PI and asks for advice. Should this data be set to missing, or edited in a way that changes this data point into a valid piece of data. 
+
+As an example of a common data entry error, and for demonstration purposes, I went in and changed a 19 to a 9. So the correct thing to do here is to change that 9, back to a 19. This is a very good use of the `ifelse()` function. 
+
+```{r}
+depress$AGE <- ifelse(depress$AGE==9, 19, depress$AGE)
+```
+
+The logical statement is `depress$AGE==9`. Wherever this is true, replace the value of `depress$AGE` with 19, wherever this is false then keep the value of `depress$AGE` unchanged (by "replacing" the new value with the same old value). 
+
+
+Alternatively, you can change that one value using bracket notation. Here you are specifying that you only want the rows where `AGE==9`, and directly assign a value of 19 to those rows.  
+```{r}
+depress$AGE[depress$AGE==9] <- 19
+```
+
+Confirm the recode. 
+```{r}
+summary(depress$AGE)
+```
+
+Looks like it worked. 
+
+
+
+## Missing data
+In Excel, missing data can show up as a blank cell. In SPSS it is represented as a `.` period. R displays missing data as `NA` values. 
+
+Missing Data in SPSS: https://stats.idre.ucla.edu/spss/modules/missing-data/
+
+Why would data be missing? Other than the obvious data entry errors, tech glitches or just non-cooperative plants or people, sometimes values are out of range and you would rather delete them than change their value (data edit). 
+
+Lets look at the religion variable in the depression data set. 
+```{r}
+table(depress$RELIG, useNA="always")
+```
+
+Looking at the codebook, there is no category `6` for religion. Let's change all values to `NA`. 
+```{r}
+depress$RELIG[depress$RELIG==6] <- NA
+```
+
+Confirm recode.
+```{r}
+table(depress$RELIG, useNA="always")
+```
+
+Notice the use of the `useNA="always"` argument. If we just looked at the base table without this argument, we would have never known there was missing data!
+```{r}
+table(depress$RELIG)
+```
+
+What about continuous variables? Well there happens to be no other missing data in this data set, so let's make up a set of 7 data points stored in a variable named `y`. 
+
+```{r}
+y <- c(1, 2, 3, NA, 4, NA, 6)
+y
+```
+
+The #1 way to identify missing data in a continuous variable is by looking at the `summary()` values. 
+```{r}
+mean(y)
+summary(y)
+mean(y, na.rm=TRUE)
+```
+
+In R, any arithmetic function (like addition, multipliation) on missing data results in a missing value. The `na.rm=TRUE` toggle tells R to calculate the _complete case_ mean. This is a biased measure of the mean, but missing data is a topic worthy of it's own course. 
+
+
+## Identifying variable types (and fixing them)
+* Consider the variable that measures marital status What data type does the codebook say this variable is?  
+
+* What data type does R see this variable as? 
+```{r}
+table(depress$MARITAL)
+str(depress$MARITAL)
+is(depress$MARITAL)
+```
+
+When variables have numerical levels it is necessary to ensure that R knows it is a factor variable.  
+The following code uses the `factor()` function to take the marital status variable and convert it into a factor variable with specified labels that  match the codebook. 
+```{r}
+depress$MARITAL <- factor(depress$MARITAL, 
+                          labels = c("Never Married", "Married", "Divorced", "Separated", "Widowed"))
+```
+
+You should always confirm the recode worked. If it did not you will have to re-read in the raw data set again since the variable `MARITAL` was replaced. 
+```{r}
+table(depress$MARITAL)
+is(depress$MARITAL)
+```
+
+
+## Collapsing variables into fewer categories
+For unbiased and accurate results of a statistical analysis, sufficient data has to be present. Often times once you start slicing and dicing the data to only look at certain groups, or if you are interested in the behavior of certain variables across levels of another variable, sometimes you start to run into small sample size problems. For example, consider marital status. 
+```{r}
+table(depress$MARITAL)
+```
+There are only 13 people who report being separated. This could potentially be too small of a group size for valid statistical analysis. 
+
+One way to deal with insufficient data within a certain category is to collapse categories. The following code uses the `recode()` function from  the `car` package to create a new variable that I am calling `MARITAL2` that combines the `Divorced` and `Separated` levels. 
+
+```{r}
+library(car)
+depress$MARITAL2 <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'")
+```
+
+Always confirm your recodes. 
+```{r}
+table(depress$MARITAL, depress$MARITAL2, useNA="always")
+```
+This confirms that records where `MARITAL` (rows) is `Divorced` or `Separated` have the value of `Sep/Div` for `MARITAL2` (columns). And that no missing data crept up in the process. Now I can drop the temporary `MARITAL2` variable and actually fix `MARITAL`. (keeping it clean)
+
+```{r}
+depress$MARITAL <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'")
+depress <- select(depress, -MARITAL2)
+```
+
+## Create new variables
+
+### Dichotomizing
+Dichotomous variables tend to be binary indicator variables where a code of `1` is the level you're interested in. 
+
+For example, gender is coded as 2=Female and 1=Male. This is in the right direction but it needs to be 0/1. 
+```{r}
+depress$SEX <- depress$SEX -1 
+table(depress$SEX)
+```
+
+0/1 binary coding is mandatory for many analyses. One simple reason is that now you can calculate the mean and interpret it as a proportion. 
+```{r}
+mean(depress$SEX)
+```
+
+62% of individuals in this data set are female. 
+
+Sometimes the data is recorded as 1/2 (Yes/No), so just subtracting from 1 doesn't create a positive indicator of the variable. For example, `DRINK=1` if they are a regular drinker, and `DRINK=2` if they are not. We want not drinking to be coded as `0`, not `2`. 
+
+```{r}
+table(depress$DRINK)
+```
+
+The `ifelse()` function says that if `depress$DRINK` has a value equal to 2 `==2`, then change the value to 0. Otherwise leave it alone. 
+
+```{r}
+depress$DRINK <- ifelse(depress$DRINK==2, 0, depress$DRINK)
+table(depress$DRINK)
+``` 
+
+### Sum or Average values across multiple variables
+
+The Center for Epidemiologic Studies Depression Scale (CESD) is series of questions asked to a person to measure their level of depression. `CESD` is calculated as the sum of all 20 component variables, and is already on this data set. Let's create a new variable named `sleep` as subscale for sleep quality by adding up question numbers 5, 11, and 19. 
+
+Reference: http://cesd-r.com/cesdr/
+
+```{r, eval=1}
+depress$sleep <- depress$C5 + depress$C11 + depress$C19
+depress <- depress %>% mutate(sleep = C5+C11+C19) # Not run. dplyr example
+```
+
+```{r}
+summary(depress$sleep)
+```
+
+# Saving your changes
+
+You've just made a ton of changes! 
+
+* Save or export the new data set to your computer. 
+* Edit the codebook to reflect the changes that you made. Save this codebook with todays date as well. 
+* Keep the data, codebook and data management file in the same folder. 
+
+The `Sys.Date()` function takes the current date from your computer. The value is then formatted nicely for human consumption and added (pasted) to the file name before written to the working directory as a new text file.
+```{r, eval=FALSE}
+date <- format(Sys.Date(), "%m%d%y")
+filename <- paste("depress_", date, ".txt", sep="")
+write.table(depress, filename, sep="\t", row.names=FALSE)
+```
+
