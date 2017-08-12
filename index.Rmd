@@ -10,8 +10,8 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
     - More importantly that page has links to all the weekly overview notes, materials and assignments
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 rmarkdown::render("docs/lec01_intro_class.Rmd", quiet=TRUE)
-#rmarkdown::render("docs/lec02_data_prep.Rmd", quiet=TRUE)
+rmarkdown::render("docs/lec02_data_prep.Rmd", quiet=TRUE)
 #rmarkdown::render("docs/syllabus_615_f17.Rmd", quiet=TRUE, output_format=c("html_document", "pdf_document"))
 ```
