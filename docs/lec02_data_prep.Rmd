@@ -15,11 +15,6 @@ library(knitr)
 opts_chunk$set(warning=FALSE, message=FALSE) 
 ```
 
-```{r css2, results="asis", echo=FALSE}
-source("../stylesheets/custom.R")
-```
-
-
 # PMA5 Ch 3 notes
 
 ![](Afifi_Fig3_1.png)
@@ -39,6 +34,15 @@ source("../stylesheets/custom.R")
 ![](pipeline.png)
 
 Figure Credits: [Roger Peng](http://www.biostat.jhsph.edu/~rpeng/)
+
+# Data Management 
+Questions to ask yourself (and the data) while preparing a data management file. 
+
+1. Do you need to code out missing data? 
+2. Do you need to code out skip patterns?
+3. Do you need to make response codes more logical? 
+4. Do you need to recode categorical variables to quantitative? 
+5. Do you need to create secondary variables?
 
 
 # Clean depression data
@@ -65,7 +69,57 @@ The absolute first thing you should do is to look at your raw data table.
 str(depress)
 ```
 
-Right away this tells me that **R** thinks all variables are numeric integers, not categorical variables. This will have to be changed. 
+Right away this tells me that **R** thinks all variables are numeric integers, not categorical variables. 
+This will have to be changed. We'll get to that in a moment. 
+
+
+
+
+## Missing data (DM Step 1)
+In Excel, missing data can show up as a blank cell. In SPSS it is represented as a `.` period. R displays missing data as `NA` values. 
+
+Missing Data in SPSS: https://stats.idre.ucla.edu/spss/modules/missing-data/
+
+Why would data be missing? Other than the obvious data entry errors, tech glitches or just non-cooperative plants or people, sometimes values are out of range and you would rather delete them than change their value (data edit). 
+
+Lets look at the religion variable in the depression data set. 
+```{r relig_tab}
+table(depress$RELIG, useNA="always")
+```
+
+Looking at the codebook, there is no category `6` for religion. Let's change all values to `NA`.
+```{r relig_fix}
+depress$RELIG[depress$RELIG==6] <- NA
+```
+This code says take all rows where RELIG is equal to 6, and change them to `NA`. 
+
+Confirm recode.
+```{r relig_tab2}
+table(depress$RELIG, useNA="always")
+```
+
+Notice the use of the `useNA="always"` argument. If we just looked at the base table without this argument, we would have never known there was missing data!
+```{r relig_tab2_nona}
+table(depress$RELIG)
+```
+
+What about continuous variables? Well there happens to be no other missing data in this data set, so let's make up a set of 7 data points stored in a variable named `y`. 
+
+```{r fakey}
+y <- c(1, 2, 3, NA, 4, NA, 6)
+y
+```
+
+The #1 way to identify missing data in a continuous variable is by looking at the `summary()` values. 
+```{r fakey_ss}
+mean(y)
+summary(y)
+mean(y, na.rm=TRUE)
+```
+
+In R, any arithmetic function (like addition, multipliation) on missing data results in a missing value. The `na.rm=TRUE` toggle tells R to calculate the _complete case_ mean. This is a biased measure of the mean, but missing data is a topic worthy of it's own course. 
+
+
 
 ## Detecting and recoding outliers and/or errors
 Let's look at the age variable in the depression data set. 
@@ -102,51 +156,8 @@ Looks like it worked.
 
 
 
-## Missing data
-In Excel, missing data can show up as a blank cell. In SPSS it is represented as a `.` period. R displays missing data as `NA` values. 
 
-Missing Data in SPSS: https://stats.idre.ucla.edu/spss/modules/missing-data/
-
-Why would data be missing? Other than the obvious data entry errors, tech glitches or just non-cooperative plants or people, sometimes values are out of range and you would rather delete them than change their value (data edit). 
-
-Lets look at the religion variable in the depression data set. 
-```{r relig_tab}
-table(depress$RELIG, useNA="always")
-```
-
-Looking at the codebook, there is no category `6` for religion. Let's change all values to `NA`. 
-```{r relig_fix}
-depress$RELIG[depress$RELIG==6] <- NA
-```
-
-Confirm recode.
-```{r relig_tab2}
-table(depress$RELIG, useNA="always")
-```
-
-Notice the use of the `useNA="always"` argument. If we just looked at the base table without this argument, we would have never known there was missing data!
-```{r relig_tab2_nona}
-table(depress$RELIG)
-```
-
-What about continuous variables? Well there happens to be no other missing data in this data set, so let's make up a set of 7 data points stored in a variable named `y`. 
-
-```{r fakey}
-y <- c(1, 2, 3, NA, 4, NA, 6)
-y
-```
-
-The #1 way to identify missing data in a continuous variable is by looking at the `summary()` values. 
-```{r fakey_ss}
-mean(y)
-summary(y)
-mean(y, na.rm=TRUE)
-```
-
-In R, any arithmetic function (like addition, multipliation) on missing data results in a missing value. The `na.rm=TRUE` toggle tells R to calculate the _complete case_ mean. This is a biased measure of the mean, but missing data is a topic worthy of it's own course. 
-
-
-## Identifying variable types (and fixing them)
+## Identifying variable types (and fixing them) (Similar to DM #4)
 * Consider the variable that measures marital status What data type does the codebook say this variable is?  
 
 * What data type does R see this variable as? 
@@ -169,8 +180,10 @@ table(depress$MARITAL)
 is(depress$MARITAL)
 ```
 
+## Creating secondary variables
 
-## Collapsing variables into fewer categories
+
+### Collapsing variables into fewer categories
 For unbiased and accurate results of a statistical analysis, sufficient data has to be present. Often times once you start slicing and dicing the data to only look at certain groups, or if you are interested in the behavior of certain variables across levels of another variable, sometimes you start to run into small sample size problems. 
 
 For example, consider marital status again. There are only 13 people who report being separated. This could potentially be too small of a group size for valid statistical analysis. 
@@ -193,7 +206,14 @@ depress$MARITAL <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' 
 depress <- select(depress, -MARITAL2)
 ```
 
-## Create new variables
+### Binning a continuous variable into categorical ranges. 
+Let's create a new variable that categorizes income into the following ranges: <30, [30, 40), [40,50), [50, 60), 60+.  
+The easiest way is to use the `cut2` function in the package `Hmisc`. Note you don't have to load the package fully to use a function from within that package. Useful for times when you only need to use a function once or twice. 
+
+```{r}
+depress$inc_cut <- Hmisc::cut2(depress$INCOME, cuts=c(30,40,50,60))
+table(depress$inc_cut)
+```
 
 ### Dichotomizing
 Dichotomous variables tend to be binary indicator variables where a code of `1` is the level you're interested in. 
@@ -224,7 +244,10 @@ depress$DRINK <- ifelse(depress$DRINK==2, 0, depress$DRINK)
 table(depress$DRINK)
 ``` 
 
-### Sum or Average values across multiple variables
+
+
+
+###  Sum or Average values across multiple variables
 
 The Center for Epidemiologic Studies Depression Scale (CESD) is series of questions asked to a person to measure their level of depression. `CESD` is calculated as the sum of all 20 component variables, and is already on this data set. Let's create a new variable named `sleep` as subscale for sleep quality by adding up question numbers 5, 11, and 19. 
 
@@ -238,6 +261,14 @@ depress <- depress %>% mutate(sleep = C5+C11+C19) # Not run. dplyr example
 ```{r summ_depress_sleep}
 summary(depress$sleep)
 ```
+
+# Renaming varible names for sanity sake
+Turn all variable names to lower case. This is especially frustrating for R and STATA users where syntax is case sensitive. 
+
+```{r}
+names(depress) <- tolower(names(depress))
+```
+
 
 # Saving your changes
 

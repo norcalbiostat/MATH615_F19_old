@@ -1,0 +1,58 @@
+---
+title: 'Week 2: 8/28 - 9/1'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+css: css/customh5.css
+---
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+#library(rmarkdown)
+opts_chunk$set(warning=FALSE, message=FALSE) 
+```
+
+# Data Cleaning
+Goals: 
+
+* Learn how to identify mistakes and missing data in data using tables and summaries
+* Learn how to correct certain mistakes
+* Learn how to recode variables into new ones
+
+## Prepare 
+* Review the [data prep notes](docs/lec02_data_prep.html) 
+* Have the depression data set ready for processing in your SPC. 
+    - Also have the codebook open. 
+
+
+## In class
+* "Clean" the depression data set (`depress`). This may take more than one class period. 
+* Any remaining in class time will be spent cleaning the Add Health data
+   
+
+## Resources
+* SPSS 
+    - https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/data_prep.htm 
+    - https://stats.idre.ucla.edu/spss/modules/
+* R 
+    - http://dwoll.de/rexrepos/rerR_Basics.html 
+    - https://stats.idre.ucla.edu/r/modules/ 
+    - https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc 
+
+
+##### Assignments
+* Explore some variables within your chosen sections of Add Health (**Due 8/31**)
+    - Blog about what variables you chose and why
+    - Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (_Think about the data management questions in lec02_) 
+* Start a data management file for the Add Health data (you can start with the version that is on my raw data page if you like)
+    - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. (**Due 9/4**)
+    - It does not have to be comprehensive! I just want to make sure you are getting started in a reproducible manner. 
+* Citation assignment (**Due 9/4**) [[Instructions]](hw/Citation_Assignment.html)
+    - [Example submission](docs/Citation Assignment Example.pdf)
+
+
+

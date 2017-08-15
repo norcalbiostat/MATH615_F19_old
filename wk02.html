@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Week 2: 8/28 - 9/1</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
 
@@ -51,6 +55,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/customh5.css" type="text/css" />
 
 </head>
 
@@ -146,6 +151,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -220,23 +320,22 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Week 2: 8/28 - 9/1</h1>
+<h4 class="date"><em>Last Updated 2017-08-14 17:29:25</em></h4>
 
 </div>
 
 
-<p><br><br></p>
-<div id="week-2-828---91" class="section level1">
-<h1>Week 2 8/28 - 9/1</h1>
-<div id="tuesday-thursday-data-cleaning" class="section level2">
-<h2>Tuesday &amp; Thursday: Data Cleaning</h2>
+<div id="data-cleaning" class="section level1">
+<h1>Data Cleaning</h1>
 <p>Goals:</p>
 <ul>
 <li>Learn how to identify mistakes and missing data in data using tables and summaries</li>
 <li>Learn how to correct certain mistakes</li>
 <li>Learn how to recode variables into new ones</li>
 </ul>
-<div id="prepare-before-class" class="section level3">
-<h3>Prepare before class</h3>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
 <ul>
 <li>Review the <a href="docs/lec02_data_prep.html">data prep notes</a></li>
 <li>Have the depression data set ready for processing in your SPC.
@@ -245,14 +344,15 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 </div>
-<div id="in-class" class="section level3">
-<h3>In class</h3>
+<div id="in-class" class="section level2">
+<h2>In class</h2>
 <ul>
-<li>“Clean” the depression data set (<code>depress</code>)</li>
+<li>“Clean” the depression data set (<code>depress</code>). This may take more than one class period.</li>
+<li>Any remaining in class time will be spent cleaning the Add Health data</li>
 </ul>
 </div>
-<div id="resources" class="section level3">
-<h3>Resources</h3>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
 <ul>
 <li>SPSS
 <ul>
@@ -266,19 +366,22 @@ $(document).ready(function () {
 <li><a href="https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc" class="uri">https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc</a></li>
 </ul></li>
 </ul>
-</div>
-<div id="assignments" class="section level3">
-<h3>Assignments</h3>
+<div id="assignments" class="section level5">
+<h5>Assignments</h5>
 <ul>
-<li>Explore some variables within your chosen sections of Add Health
+<li>Explore some variables within your chosen sections of Add Health (<strong>Due 8/31</strong>)
 <ul>
 <li>Blog about what variables you chose and why</li>
-<li>Discuss any recoding you think you may want to do, or data problems that will have to be fixed.</li>
-<li>Provide evidence of these problems using screenshots and code</li>
+<li>Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (<em>Think about the data management questions in lec02</em>)</li>
 </ul></li>
-<li>Create your own codebook and data management file for the variables you have chosen.
+<li>Start a data management file for the Add Health data (you can start with the version that is on my raw data page if you like)
 <ul>
-<li>Submit due via bbl by 9/4 EOD.</li>
+<li>This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. (<strong>Due 9/4</strong>)</li>
+<li>It does not have to be comprehensive! I just want to make sure you are getting started in a reproducible manner.</li>
+</ul></li>
+<li>Citation assignment (<strong>Due 9/4</strong>) <a href="hw/Citation_Assignment.html">[Instructions]</a>
+<ul>
+<li><a href="docs/Citation%20Assignment%20Example.pdf">Example submission</a></li>
 </ul></li>
 </ul>
 </div>
@@ -287,6 +390,8 @@ $(document).ready(function () {
 
 
 
+</div>
+</div>
 
 </div>
 

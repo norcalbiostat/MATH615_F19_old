@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Week 3 9/4 - 9/10</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
 
@@ -51,6 +55,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/customh5.css" type="text/css" />
 
 </head>
 
@@ -146,6 +151,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -220,24 +320,23 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Week 3 9/4 - 9/10</h1>
+<h4 class="date"><em>Last Updated 2017-08-14 17:29:26</em></h4>
 
 </div>
 
 
-<p><br><br></p>
-<div id="week-3-94---910" class="section level1">
-<h1>Week 3 9/4 - 9/10</h1>
-<div id="univariate-data-visualizations" class="section level2">
-<h2>Univariate Data Visualizations</h2>
+<div id="tuesday-univariate-data-viz" class="section level1">
+<h1>Tuesday: Univariate Data Viz</h1>
 <p>Goals:</p>
 <ul>
 <li>Learn how to create univariate data graphics</li>
 <li>Describe the distribution of a single variable in sentence form using summary statistics and pointing out specific features of the graphics as evidence to support your interpretation.</li>
 </ul>
-<div id="prepare" class="section level3">
-<h3>Prepare</h3>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
 <ul>
-<li>Review both the following items.
+<li>Review both the following items. We are only exploring a single variable at first.
 <ul>
 <li><a href="docs/pma6_ch4_draft.pdf">PMA6 Data Viz ch DRAFT</a></li>
 <li><a href="https://norcalbiostat.github.io/MATH130/materials/day56-data-viz.html">Data Viz tutorial</a>.</li>
@@ -245,8 +344,8 @@ $(document).ready(function () {
 <li>Prepare your computer to use either the <code>parhiv</code> and/or <code>depress</code> data sets, or the <code>dsmall</code> subsample of the <code>diamonds</code> data set (also available for download on my <a href="https://norcalbiostat.netlify.com/data/cleaned_data/">cleaned data</a> page)</li>
 </ul>
 </div>
-<div id="in-class" class="section level3">
-<h3>In class</h3>
+<div id="in-class" class="section level2">
+<h2>In class</h2>
 <ul>
 <li>Reproduce all univariate graphics and tables in your SPC.
 <ul>
@@ -256,37 +355,58 @@ $(document).ready(function () {
 <li>Discuss interpretations for all univariate graphics.</li>
 </ul>
 </div>
-<div id="resources" class="section level3">
-<h3>Resources</h3>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
 <ul>
 <li>SPSS
 <ul>
-<li>IBM knowledge center on Working with multiple data sources <a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/multiple_datasets_intro.htm" class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/multiple_datasets_intro.htm</a></li>
-<li>UCLA IDRE graphics module <a href="https://stats.idre.ucla.edu/spss/seminars/spssgraphics/graphics-in-spss/" class="uri">https://stats.idre.ucla.edu/spss/seminars/spssgraphics/graphics-in-spss/</a></li>
-<li>IBM knowledge center on graphics <a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/idh_idc_cg_help_main.htm" class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/idh_idc_cg_help_main.htm</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/multiple_datasets_intro.htm">IBM knowledge center on Working with multiple data sources</a></li>
+<li><a href="https://stats.idre.ucla.edu/spss/seminars/spssgraphics/graphics-in-spss/">UCLA IDRE graphics module</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/idh_idc_cg_help_main.htm">IBM knowledge center on graphics</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/spss/tutorials/outputtut_msapps.html">IBM knowledge center on saving output as Word</a></li>
 </ul></li>
 <li>R
 <ul>
-<li>UCLA IDRE graphics module <a href="https://stats.idre.ucla.edu/r/modules/exploring-data-with-graphics/" class="uri">https://stats.idre.ucla.edu/r/modules/exploring-data-with-graphics/</a></li>
-<li>Data Camp ggplot lesson <a href="https://www.datacamp.com/courses/data-visualization-with-ggplot2-1" class="uri">https://www.datacamp.com/courses/data-visualization-with-ggplot2-1</a></li>
-</ul></li>
-</ul>
-</div>
-<div id="assignments" class="section level3">
-<h3>Assignments</h3>
-<ul>
-<li>Create and interpret appropriate univariate graphics for 5 variables in Add Health. 2 continuous, 1 ordinal, 1 nominal, 1 binary.
-<ul>
-<li>It would be ideal if the chosen variables are among your list of selected sections/variables but this is not mandatory.</li>
-<li>Blog about it. Post the graphics, and english interpretations using summary statistcs to provide context.</li>
+<li><a href="https://stats.idre.ucla.edu/r/modules/exploring-data-with-graphics/">UCLA IDRE graphics module</a></li>
+<li><a href="https://www.datacamp.com/courses/data-visualization-with-ggplot2-1">Data Camp ggplot lesson</a></li>
+<li><a href="http://ggplot2.tidyverse.org/index.html">ggplot2 documentation from the developer</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
+<div id="thursday-data-screening" class="section level1">
+<h1>Thursday: Data screening</h1>
+<p>Goals:</p>
+<ul>
+<li>Learn how to use graphics to screen the data for normality.</li>
+<li>Learn how to transform the data to achieve an approximate normal distribution</li>
+</ul>
+<div id="in-class-1" class="section level2">
+<h2>In class</h2>
+<ul>
+<li><a href="docs/lec03_data_screen.html">Data Screening</a> notes</li>
+</ul>
+<div id="assignments" class="section level5">
+<h5>Assignments</h5>
+<ul>
+<li>Univariate graphing assignment. <a href="hw/Univ_Graphing.html">[Instructions]</a>
+<ul>
+<li>To be posted as a blog in BBL.</li>
+</ul></li>
+<li>Blog review assignment
+<ul>
+<li>Take a minute and go look at 3 of your classmates blogs.</li>
+<li>Leave a few comments and questions about their work</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 

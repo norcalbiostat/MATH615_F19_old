@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Week 1 8/21 - 8/27</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
 
@@ -51,6 +55,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/customh5.css" type="text/css" />
 
 </head>
 
@@ -146,6 +151,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -220,15 +320,14 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Week 1 8/21 - 8/27</h1>
+<h4 class="date"><em>Last Updated 2017-08-14 17:29:25</em></h4>
 
 </div>
 
 
-<p><br><br></p>
-<div id="week-1-821---827" class="section level1">
-<h1>Week 1 8/21 - 8/27</h1>
-<div id="tuesday-introduction-to-the-class" class="section level2">
-<h2>Tuesday: Introduction to the class</h2>
+<div id="tuesday-introduction-to-the-class" class="section level1">
+<h1>Tuesday: Introduction to the class</h1>
 <p>Goals:</p>
 <ul>
 <li>Understand how to navigate the course website resources</li>
@@ -236,8 +335,8 @@ $(document).ready(function () {
 <li>Understand what statistical programming software options are available to you, and what support systems they come with.</li>
 <li>Understand the concept of reproducible research and why it’s important. Understand at what level reproducibility is expected in this class.</li>
 </ul>
-<div id="prepare-before-class" class="section level3">
-<h3>Prepare before class</h3>
+<div id="prepare-before-class" class="section level2">
+<h2>Prepare before class</h2>
 <ul>
 <li>Read the <a href="docs/syllabus_615_f17.html">Syllabus</a></li>
 <li>Bookmark this class website</li>
@@ -246,15 +345,17 @@ $(document).ready(function () {
 <li>Review <a href="http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/">these slides</a> on reproducible research in the social sciences.</li>
 </ul>
 </div>
-<div id="in-class" class="section level3">
-<h3>In Class</h3>
+<div id="in-class" class="section level2">
+<h2>In class</h2>
 <ul>
 <li><a href="docs/lec01_intro_class.html">Introduction to the class</a> notes</li>
 <li>Discuss logistics and software options</li>
 </ul>
 </div>
-<div id="assignments" class="section level3">
-<h3>Assignments</h3>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<div id="assignments" class="section level5">
+<h5>Assignments</h5>
 <ul>
 <li>Create a MATH615 folder on your computer - all course related files go in here.</li>
 <li>Create a Blog on BBLearn. Post an introduction/bio of yourself.</li>
@@ -273,8 +374,9 @@ $(document).ready(function () {
 <hr />
 </div>
 </div>
-<div id="thursday-preparing-data-for-analysis" class="section level2">
-<h2>Thursday: Preparing Data for Analysis</h2>
+</div>
+<div id="thursday-preparing-data-for-analysis" class="section level1">
+<h1>Thursday: Preparing Data for Analysis</h1>
 <p>Goals:</p>
 <ul>
 <li>Identify different data types according to Stevens’s Classifications.</li>
@@ -282,8 +384,8 @@ $(document).ready(function () {
 <li>Be able to import different data types into your software program of choice (SPC)</li>
 <li>Learn about the Add Health data that you will be analyzing this semester.</li>
 </ul>
-<div id="prepare" class="section level3">
-<h3>Prepare</h3>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
 <ul>
 <li>Have your laptop ready to go with your choice of statistical analysis software.</li>
 <li>Download the following data sets and codebooks from my <a href="https://norcalbiostat.netlify.com/data/raw_data/">data</a> page
@@ -295,16 +397,16 @@ $(document).ready(function () {
 <li>Review the day’s lecture notes.</li>
 </ul>
 </div>
-<div id="in-class-1" class="section level3">
-<h3>In class</h3>
+<div id="in-class-1" class="section level2">
+<h2>In class</h2>
 <ul>
 <li>Share and discuss answers to PMA5 problems 2.2, 2.7</li>
 <li>Importing different data types into software</li>
 <li>Explore the Add Health data</li>
 </ul>
 </div>
-<div id="resources" class="section level3">
-<h3>Resources</h3>
+<div id="resources-1" class="section level2">
+<h2>Resources</h2>
 <ul>
 <li>R
 <ul>
@@ -318,11 +420,10 @@ $(document).ready(function () {
 <li><a href="http://libguides.library.kent.edu/SPSS/ImportData" class="uri">http://libguides.library.kent.edu/SPSS/ImportData</a></li>
 </ul></li>
 </ul>
-</div>
-<div id="assignments-1" class="section level3">
-<h3>Assignments</h3>
+<div id="assignments-1" class="section level5">
+<h5>Assignments</h5>
 <ul>
-<li>Pick 3-5 sections of AddHealth you are interested in exploring. Blog about it.</li>
+<li>Research question assignment <a href="hw/RQ.html">[Instructions]</a> (<strong>Due 8/28</strong>)</li>
 <li>Read PMA5 Ch3</li>
 <li>Read next week’s overview so you know how to prepare for Tuesday.</li>
 </ul>
@@ -332,6 +433,8 @@ $(document).ready(function () {
 
 
 
+</div>
+</div>
 
 </div>
 
