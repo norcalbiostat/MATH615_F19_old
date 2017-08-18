@@ -1,5 +1,5 @@
 ---
-title: "Research Question and personal codebook assignment"
+title: "Univariate Descriptions"
 output:
   html_document:
     highlight: tango
@@ -19,7 +19,8 @@ Because you know that to fully understand what is going on you need Twenty-seven
 2. Completely describe at least 2 of your categorical variables. 
     - Be sure to apply appropriate titles and axes labels 
 3. Complete describe at least 2 of your quantitative variables. 
-    - If you DO NOT have truly quantitative variables, then consider if the quantitative variable age or some other quantitative variable(s) would be a variable(s) to include. If not, then you need to do additional categorical variables. Do as many quantitative variables as you have and then to bring that total to 5, do however many categorical variables (as bar charts) you need to bring the total number of graphs to 10.
+    - If you DO NOT have truly quantitative variables, then consider if the quantitative variable age or some other quantitative variable(s) would be a variable(s) to include. If not, then you need to do additional categorical variables to bring the total variables described to 4.
+
 
 
 ### To write a short description of this graph ask yourself (and answer!) the following questions:
