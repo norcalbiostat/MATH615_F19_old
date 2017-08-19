@@ -28,8 +28,8 @@ Goals:
 ## Prepare before class
 * Read the [Syllabus](docs/syllabus_615_f17.html)
 * Bookmark this class website 
-* Purchase the [textbook](https://www.amazon.com/Practical-Multivariate-Analysis-Chapman-Statistical/dp/1439816808) (PMA5). Pricey, but one of those books that you are likely to keep as a reference textbook. 
-* Read [Passion Driven Statistics](docs/PDS_Intro_Stat.pdf) (ignore last page about timeline)
+* Purchase the [textbook](https://www.amazon.com/Practical-Multivariate-Analysis-Chapman-Statistical/dp/1439816808) (PMA5). Pricey, but honestly one of those books that you are likely to keep as a reference textbook. 
+* Read [Passion Driven Statistics](docs/PDS_Intro_Stat.pdf) (ignore last page about timeline). We are going to take a similar approach in this class to conducting an analysis. 
 * Review [these slides](http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/) on reproducible research in the social sciences.
 
 
@@ -37,57 +37,48 @@ Goals:
 * [Introduction to the class](docs/lec01_intro_class.html) notes
 * Discuss logistics and software options
 
-
-## Resources
-
-
 ##### Assignments
 * Create a MATH615 folder on your computer - all course related files go in here. 
-* Create a Blog on BBLearn. Post an introduction/bio of yourself. 
-* Decide on the software program you will use. 
+* Blog post: Introduction/bio of yourself. 
+    - What's your research area?
+    - One non-academic interest or hobby
+* Decide on the software program you will use. (Due before next Tuesday)
     - Review the support options above before making your decision.  
-    - You are welcome to switch at any time, but acknowledge it will be hard (but not impossible) to get caught up. 
-* Second blog post: Write up a plan for how you will conduct reproducible research in this class. Be explicit and detailed, consider these instructions for a "you" in 6 months. 
+    - You are welcome to switch at any time, but acknowledge it will be hard (but not impossible) to get caught up.
+    - Get your laptop ready to analyze data by next Tuesday. 
+* Blog post (2): Reproducible research plan.
+    - Write up a plan for how you will conduct reproducible research in this class.
+    - Be explicit and detailed, consider these instructions for a "you" in 6 months. (yes these plans can, and will change)
 * Read PMA5 Ch 2. Here is a [scanned PDF](docs/PMA5 Ch 2 and 3.pdf) if you don't have the book yet.
-    - Prepare answers to PMA5 problems 2.2 & 2.7 
     
 ----
 
-# Thursday: Preparing Data for Analysis
+# Thursday: Orientating yourself to data
 Goals: 
 
 * Identify different data types according to Stevens's Classifications. 
 * Understand how to use a data dictionary (codebook)
-* Be able to import different data types into your software program of choice (SPC)
 * Learn about the Add Health data that you will be analyzing this semester. 
-  
 
 ## Prepare
-* Have your laptop ready to go with your choice of statistical analysis software. 
-* Download the following data sets and codebooks from my [data](https://norcalbiostat.netlify.com/data/raw_data/) page
+* Read the Personal Codebook Assignment [[instructions]](hw/RQ_personal_codebook_assignment.html)
+* Download the following data sets and codebooks from my [data](https://norcalbiostat.netlify.com/data/raw_data/) page into a `MATH615/data` subfolder on your computer. 
     - Add Health.csv
     - ParHIV.xlsx
     - depress.txt
-* Review the day's lecture notes. 
-
+    
+We'll use the Add Health codebook today, but the others next week. So might as well grab all while you're there. 
 
 ## In class
-* Share and discuss answers to PMA5 problems 2.2, 2.7
-* Importing different data types into software
-* Explore the Add Health data 
-
-
-## Resources
-* R
-    - https://norcalbiostat.github.io/MATH130/materials/day3-import-and-factors.html 
-    - http://dwoll.de/rexrepos/posts/dfImportExport.html 
-    - https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc 
-* SPSS
-    - https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/datafile_auto_0.htm
-    - http://libguides.library.kent.edu/SPSS/ImportData
-  
+* Medical Record data entry and codebook creation
+* Personal Codebook Assignment
 
 ##### Assignments
-* Research question assignment [[Instructions]](hw/RQ.html) (**Due 8/28**)
-* Read PMA5 Ch3
+* Review the AddHealth codebook front matter and choose 3-5 areas of interest. (**Blog post due 8/28**)
+* Personal Codebook and Research Question Assignment (**Due 9/4**)
+* Read PMA5 Ch3 (Preparing Data for Analysis)
 * Read next week's overview so you know how to prepare for Tuesday. 
+
+
+
+

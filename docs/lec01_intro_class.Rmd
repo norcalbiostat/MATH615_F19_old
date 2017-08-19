@@ -7,11 +7,8 @@ output:
     theme: flatly
     toc: yes
     toc_float: yes
+css: ../css/customh5.css
 ---
-
-```{r results="asis", echo=FALSE}
-source("../stylesheets/custom.R")
-```
 
 # Navigating course resources
 * My website: http://norcalbiostat.com
@@ -26,7 +23,7 @@ source("../stylesheets/custom.R")
 * Both are mobile friendly to different extents. 
 * The syllabus covers course details such as grading, office hours and required materials. 
 * Blackboard Learn (BBL) used for discussion boards, blogging, and assignment submission. 
-* Textbook used for reading and learning content, and some problem sets. 
+* Textbook used for data, reading and learning content. Sometimes problem sets. 
 
 
 # Descriptive vs. Inferential Statistics
@@ -47,8 +44,7 @@ source("../stylesheets/custom.R")
 
 # Analysis software choices    
 * I will not dictate which software program you use in this class. 
-* I prefer R for teaching for many reasons, but mostly for ease of turning in nicely formatted homework without copy/pasting
-* All my lecture notes use R. This entire website is built with R. 
+* All my lecture notes use R. This entire website is built with R. That does not mean you must use R. 
 
 
 ## R
@@ -93,8 +89,9 @@ source("../stylesheets/custom.R")
 * We're talking reproducibility and open source, let's put theory to practice. 
 * You will "publicly" share your analysis steps and thought process. 
     - "Public" is in quotes because it will only be public to our class using Blackboard Learn
-    - For those gung-ho R users I *highly* recommend building your blog using [`blogdown`](https://bookdown.org/yihui/blogdown/)
-        - Talk with me if you want to do this. 
+    - For those gung-ho R users I *highly* recommend building your blog using [`blogdown`](https://bookdown.org/yihui/blogdown/). 
+        - This is the [tutorial](https://apreshill.rbind.io/post/up-and-running-with-blogdown/) that I used to get going.
+        - Easy for even a moderate experienced R user to do. I can help you with setup if you need.
 
 
 ## Blogging in Academica
@@ -113,7 +110,5 @@ Here are some other recently googled blog posts about why academics (and grad st
 * http://www.teaching-matters-blog.ed.ac.uk/?p=1685
 * http://www.megankatenelson.com/4-reasons-blogs-are-great-for-academia/
 * https://www.timeshighereducation.com/blog/seven-reasons-why-blogging-can-make-you-better-academic-writer
-
-And the best place to learn new nifty things and see cool analyses done in R: https://www.r-bloggers.com/
 
 

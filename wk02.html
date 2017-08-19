@@ -321,15 +321,16 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Week 2: 8/28 - 9/1</h1>
-<h4 class="date"><em>Last Updated 2017-08-14 17:29:25</em></h4>
+<h4 class="date"><em>Last Updated 2017-08-18 22:02:04</em></h4>
 
 </div>
 
 
-<div id="data-cleaning" class="section level1">
-<h1>Data Cleaning</h1>
+<div id="tuesday-data-import-preparation" class="section level1">
+<h1>Tuesday: Data Import &amp; Preparation</h1>
 <p>Goals:</p>
 <ul>
+<li>Be able to import different data types into your software program of choice (SPC)</li>
 <li>Learn how to identify mistakes and missing data in data using tables and summaries</li>
 <li>Learn how to correct certain mistakes</li>
 <li>Learn how to recode variables into new ones</li>
@@ -337,49 +338,81 @@ div.tocify {
 <div id="prepare" class="section level2">
 <h2>Prepare</h2>
 <ul>
-<li>Review the <a href="docs/lec02_data_prep.html">data prep notes</a></li>
-<li>Have the depression data set ready for processing in your SPC.
+<li>Review the <a href="docs/lec02_data_prep.html">data prep notes</a>
 <ul>
-<li>Also have the codebook open.</li>
+<li>Consider starting to replicate the code in these notes in your SPC.</li>
 </ul></li>
 </ul>
 </div>
 <div id="in-class" class="section level2">
-<h2>In class</h2>
+<h2>In Class</h2>
 <ul>
-<li>“Clean” the depression data set (<code>depress</code>). This may take more than one class period.</li>
-<li>Any remaining in class time will be spent cleaning the Add Health data</li>
+<li>Walking through the data management process on the depression data set.</li>
 </ul>
 </div>
 <div id="resources" class="section level2">
 <h2>Resources</h2>
 <ul>
-<li>SPSS
+<li>R (Data Import)
 <ul>
-<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/data_prep.htm" class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/data_prep.htm</a></li>
-<li><a href="https://stats.idre.ucla.edu/spss/modules/" class="uri">https://stats.idre.ucla.edu/spss/modules/</a></li>
+<li><a href="https://norcalbiostat.github.io/MATH130/materials/day3-import-and-factors.html" class="uri">https://norcalbiostat.github.io/MATH130/materials/day3-import-and-factors.html</a></li>
+<li><a href="http://dwoll.de/rexrepos/posts/dfImportExport.html" class="uri">http://dwoll.de/rexrepos/posts/dfImportExport.html</a></li>
+<li><a href="https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc" class="uri">https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc</a></li>
 </ul></li>
-<li>R
+<li>R (Data Preparation)
 <ul>
 <li><a href="http://dwoll.de/rexrepos/rerR_Basics.html" class="uri">http://dwoll.de/rexrepos/rerR_Basics.html</a></li>
 <li><a href="https://stats.idre.ucla.edu/r/modules/" class="uri">https://stats.idre.ucla.edu/r/modules/</a></li>
 <li><a href="https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc" class="uri">https://www.datacamp.com/community/blog/an-introduction-to-cleaning-data-in-r#gs.7=03Hnc</a></li>
 </ul></li>
+<li>SPSS (Data Import)
+<ul>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/datafile_auto_0.htm" class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/datafile_auto_0.htm</a></li>
+<li><a href="http://libguides.library.kent.edu/SPSS/ImportData" class="uri">http://libguides.library.kent.edu/SPSS/ImportData</a></li>
+</ul></li>
+<li>SPSS (Data Preparation)
+<ul>
+<li><a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/data_prep.htm" class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_22.0.0/com.ibm.spss.statistics.help/spss/base/data_prep.htm</a></li>
+<li><a href="https://stats.idre.ucla.edu/spss/modules/" class="uri">https://stats.idre.ucla.edu/spss/modules/</a></li>
+</ul></li>
 </ul>
 <div id="assignments" class="section level5">
 <h5>Assignments</h5>
 <ul>
+<li>Personal Codebook / Research Question Assignment (Due 8/31)</li>
 <li>Explore some variables within your chosen sections of Add Health (<strong>Due 8/31</strong>)
 <ul>
 <li>Blog about what variables you chose and why</li>
 <li>Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (<em>Think about the data management questions in lec02</em>)</li>
 </ul></li>
-<li>Start a data management file for the Add Health data (you can start with the version that is on my raw data page if you like)
+<li>Start a data management file for the Add Health data. You wil submit this to BBLearn by <strong>9/4</strong>
 <ul>
-<li>This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. (<strong>Due 9/4</strong>)</li>
-<li>It does not have to be comprehensive! I just want to make sure you are getting started in a reproducible manner.</li>
+<li>This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name.</li>
+<li>It does not have to be comprehensive or finished! I just want to make sure you are getting started in a reproducible manner.</li>
 </ul></li>
-<li>Citation assignment (<strong>Due 9/4</strong>) <a href="hw/Citation_Assignment.html">[Instructions]</a>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="thursday-literature-review-citation-assignment" class="section level1">
+<h1>Thursday: Literature Review &amp; Citation Assignment</h1>
+<div id="prepare-1" class="section level2">
+<h2>Prepare</h2>
+<ul>
+<li>Read: <a href="docs/How%20to%20Read%20a%20Journal%20Article.pdf">How to read a Journal Article</a></li>
+</ul>
+</div>
+<div id="in-class-1" class="section level2">
+<h2>In class</h2>
+<ul>
+<li>Brief discussion of literature review &amp; citation formats</li>
+<li>Citation Assignment <em>or</em> continue data management.</li>
+</ul>
+<div id="assignments-1" class="section level5">
+<h5>Assignments</h5>
+<ul>
+<li>Citation assignment (<strong>Due 9/7</strong>) <a href="hw/Citation_Assignment.html">[Instructions]</a>
 <ul>
 <li><a href="docs/Citation%20Assignment%20Example.pdf">Example submission</a></li>
 </ul></li>

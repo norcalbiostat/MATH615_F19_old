@@ -7,6 +7,7 @@ output:
     theme: flatly
     toc: yes
     toc_float: yes
+css: ../css/customh5.css
 ---
 
 ```{r load2,echo=FALSE, warning=FALSE, message=FALSE}
@@ -26,7 +27,7 @@ Recall the aim of data preparation, screening, wrangling, or transforming is to
 ## Load data
 Load in your cleaned depression data set. 
 ```{r}
-depress <- read.table("C:/GitHub/website/static/data/Depress_081217.txt", 
+depress <- read.table("~/GitHub/website/static/data/Depress_081217.txt", 
                       sep="\t", header=TRUE) 
 ```
 
@@ -95,13 +96,12 @@ hist(log(depress$cesd+1))
 hist(depress$cesd)
 ```
 
-Why was the +1 added to CESD prior to taking the log?
+Question: Why was the +1 added to CESD prior to taking the log?
 
 
+Consider the variable `AGESMOKE`. This represents the age in years when the respondent started smoking. If the respondent did not start smoking, `AGESMOKE` was assigned to a value of zero.
 
-
-3. Using the Parental HIV data set, plot a histogram, boxplot, and a normal probability plot for the variable `AGESMOKE`. this variable is the age in years when the respondent started smoking. If the respondent did not start smoking, `AGESMOKE` was assigned to a value of zero. Decide what to do about the zero values and if a transformation should be used for this variable if the assumption of normality is made when it is used in a statistical analysis. 
-
+Question: Would we need to recode this variable during our data preparation stage? Why or why not? 
 
  
 # Session Info

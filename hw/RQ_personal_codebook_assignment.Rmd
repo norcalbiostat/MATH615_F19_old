@@ -7,8 +7,7 @@ output:
 css: ../css/customh5.css
 ---
 
-Now it is time for you to formulate your own Research Question. Take this task seriously – it will guide your focus for the rest of the semester. 
-Follow the steps below to complete this assignment.
+Now it is time for you to formulate your own Research Question. This will guide your focus for the rest of the semester. Follow the steps below to complete this assignment.
 
 
 ## Step 1: (Statement): 
@@ -19,7 +18,7 @@ After looking through the codebook for the U.S. Longitudinal Study of Adolescent
 
 
 ## Step 2: (Personal Codebook): 
-Create or continue working on your personal codebook that we discussed in class. 
+Create or continue working on your personal codebook. 
 * In your personal codebook, include the questions/items/variables from the AddHealth codebook that measure your selected topics. 
 * You can do this simply by using  “copy screen” and paste into a new document OR take a snapshot with the snipping tool. 
     - In the pdf file, go to Edit, Take a Snap Shot, then click and drag over what you want. If you are on a MAC, press Shift+Command+Ctrl+4 to get the snip tool.
@@ -33,8 +32,8 @@ Now that you have a few topics and picked out variables for each topic, what que
 
 
 ##### How to submit
-* Write a blog bpost that answers #1 and #3
-* Write up E2 in a Word or Google Doc
+* Write a blog post that answers #1 and #3
+* Write up #2 in a Word or Google Doc
     - If you are comfortable with taking screen shots, saving them to your computer and using Rmarkdown to insert images then I recommend you create complete this assignment as a `.MD` or `.RMD` file. R Studio [R Markdown reference sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
 

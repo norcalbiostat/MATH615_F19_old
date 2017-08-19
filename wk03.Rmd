@@ -55,17 +55,16 @@ Goals:
 * Learn how to use graphics to screen the data for normality. 
 * Learn how to transform the data to achieve an approximate normal distribution
 
+## Prepare
+* Read PMA5 Chapter 4: Data Screenings and Transformations
+
+
 ## In class
 * [Data Screening](docs/lec03_data_screen.html) notes
 
 
 ##### Assignments
-
 * Univariate graphing assignment. [[Instructions]](hw/Univ_Graphing.html)
-    - To be posted as a blog in BBL. 
-* Blog review assignment
-    - Take a minute and go look at 3 of your classmates blogs. 
-    - Leave a few comments and questions about their work
 
           
 

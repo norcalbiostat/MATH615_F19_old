@@ -7,6 +7,7 @@ output:
     theme: flatly
     toc: yes
     toc_float: yes
+css: ../css/customh5.css
 ---
 
 ```{r load2,echo=FALSE, warning=FALSE, message=FALSE}
@@ -46,14 +47,9 @@ Questions to ask yourself (and the data) while preparing a data management file.
 
 
 # Clean depression data
+If you are using SPSS, be sure to save the code for each **successfull** step into a script file. R users should be following along using R Markdown. 
 
 ## Import data
-
-* Download the Depression data set `depress` and codebook
-* Save these into a **Data** sub-folder in your **MATH615** folder. This is a tab-delimited text file.  
-* Start a new Markdown file and in the first code chunk, read the data set into R using `read.table()`, load the `dplyr` and `ggplot2` libraries.  
-* Suppress the printing of messages for this code chunk by adding appropriate options to the code chunk starter line. ` ```{r, message=FALSE, warning=FALSE}`. 
-
 ```{r start2, warning=FALSE, message=FALSE}
 library(dplyr)
 library(ggplot2)  
@@ -64,15 +60,12 @@ depress <- read.table("https://norcalbiostat.netlify.com/data/Depress.txt",
 (_Read the data from your local machine, don't use the URL above. It'll ping my server to death_)
 
 ## LOOK AT YOUR DATA
-The absolute first thing you should do is to look at your raw data table.
+The absolute first thing you should do is to look at your raw data table. The `str` function is short for _structure_. This shows you the variable names, what data types R thinks each variable are, and some of the raw data. You can also use the `view()` function to open the data as a simliar spreadsheet format, or `head()` to see the top 6 rows of the data. The latter is sometimes less than helpful for a very large data set. 
 ```{r look_depress}
 str(depress)
 ```
 
-Right away this tells me that **R** thinks all variables are numeric integers, not categorical variables. 
-This will have to be changed. We'll get to that in a moment. 
-
-
+Right away this tells me that **R** thinks all variables are numeric integers, not categorical variables. This will have to be changed. We'll get to that in a moment. 
 
 
 ## Missing data (DM Step 1)
