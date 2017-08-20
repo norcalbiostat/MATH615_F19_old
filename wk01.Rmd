@@ -63,6 +63,7 @@ Goals:
 ## Prepare
 * Read the Personal Codebook Assignment [[instructions]](hw/RQ_personal_codebook_assignment.html)
 * Download the following data sets and codebooks from my [data](https://norcalbiostat.netlify.com/data/raw_data/) page into a `MATH615/data` subfolder on your computer. 
+    - medical-records.pdf
     - Add Health.csv
     - ParHIV.xlsx
     - depress.txt
@@ -70,7 +71,7 @@ Goals:
 We'll use the Add Health codebook today, but the others next week. So might as well grab all while you're there. 
 
 ## In class
-* Medical Record data entry and codebook creation
+* Medical Record data entry and codebook creation [[Instructions]](docs/MedRecords.html)
 * Personal Codebook Assignment
 
 ##### Assignments
