@@ -27,7 +27,7 @@ Goals:
 
 ## Prepare
 * Review the [data prep notes](docs/lec02_data_prep.html) 
-    - Consider starting to replicate the code in these notes in your SPC. 
+    - Starting to replicate the code concepts in these notes in your SPC. 
 
 ## In Class
 * Walking through the data management process on the depression data set. 
@@ -50,11 +50,10 @@ Goals:
 
 
 ##### Assignments
-* Personal Codebook / Research Question Assignment (Due 8/31)
-* Explore some variables within your chosen sections of Add Health (**Due 8/31**)
+* Explore some variables within your chosen sections of Add Health 
     - Blog about what variables you chose and why
-    - Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (_Think about the data management questions in lec02_) 
-* Start a data management file for the Add Health data. You wil submit this to BBLearn by **9/4**
+    - Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (_Think about the data management questions in the notes_) 
+* Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
     - It does not have to be comprehensive or finished! I just want to make sure you are getting started in a reproducible manner. 
     
@@ -72,7 +71,7 @@ Goals:
 
 ##### Assignments
 
-* Citation assignment (**Due 9/7**) [[Instructions]](hw/Citation_Assignment.html)
+* Citation assignment [[Instructions]](hw/Citation_Assignment.html)
     - [Example submission](docs/Citation Assignment Example.pdf)
 
 

@@ -19,21 +19,24 @@ After looking through the codebook for the U.S. Longitudinal Study of Adolescent
 
 ## Step 2: (Personal Codebook): 
 Create or continue working on your personal codebook. 
+
 * In your personal codebook, include the questions/items/variables from the AddHealth codebook that measure your selected topics. 
 * You can do this simply by using  “copy screen” and paste into a new document OR take a snapshot with the snipping tool. 
     - In the pdf file, go to Edit, Take a Snap Shot, then click and drag over what you want. If you are on a MAC, press Shift+Command+Ctrl+4 to get the snip tool.
 
 ## Step 3: (Research Questions): 
+
 Now that you have a few topics and picked out variables for each topic, what questions are you interested in trying to answer about your topics? One of the simplest research questions that can be asked is whether two constructs are associated.
-> Questions example:
-> a) Does smoking quantity relate to nicotine dependence?
-> b) Is there a relationship between smoking frequency and suicide?
-> c) Does a smoker have more suicidal behaviors than a non-smoker?
+
+> Questions example:  
+> a) Does smoking quantity relate to nicotine dependence?  
+> b) Is there a relationship between smoking frequency and suicide?  
+> c) Does a smoker have more suicidal behaviors than a non-smoker?  
 
 
 ##### How to submit
 * Write a blog post that answers #1 and #3
-* Write up #2 in a Word or Google Doc
+* Write up #2 in an external file (word/pdf) - Submit this file to BBL by the due date. 
     - If you are comfortable with taking screen shots, saving them to your computer and using Rmarkdown to insert images then I recommend you create complete this assignment as a `.MD` or `.RMD` file. R Studio [R Markdown reference sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
 

@@ -43,6 +43,7 @@ Goals:
     - What's your research area?
     - One non-academic interest or hobby
 * Decide on the software program you will use. (Due before next Tuesday)
+    - Nutrition majors are highly recommended to choose SPSS since you will be using that in NSFC 600. 
     - Review the support options above before making your decision.  
     - You are welcome to switch at any time, but acknowledge it will be hard (but not impossible) to get caught up.
     - Get your laptop ready to analyze data by next Tuesday. 
@@ -75,8 +76,8 @@ We'll use the Add Health codebook today, but the others next week. So might as w
 * Personal Codebook Assignment
 
 ##### Assignments
-* Review the AddHealth codebook front matter and choose 3-5 areas of interest. (**Blog post due 8/28**)
-* Personal Codebook and Research Question Assignment (**Due 9/4**)
+* Review the AddHealth codebook front matter and choose 3-5 areas of interest. 
+* Personal Codebook and Research Question Assignment 
 * Read PMA5 Ch3 (Preparing Data for Analysis)
 * Read next week's overview so you know how to prepare for Tuesday. 
 
