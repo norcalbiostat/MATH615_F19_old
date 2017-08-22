@@ -56,6 +56,9 @@ Goals:
 * Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
     - It does not have to be comprehensive or finished! I just want to make sure you are getting started in a reproducible manner. 
+    - R users should upload a `.RMD` file. 
+    - SPSS users should upload a `.txt` file. Windows uses Notepad, Mac uses TextEdit. 
+        
     
 ----
 
