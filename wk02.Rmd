@@ -26,11 +26,19 @@ Goals:
 
 
 ## Prepare
+* Read the `depression` data set into your SPC
 * Review the [data prep notes](docs/lec02_data_prep.html) 
     - Starting to replicate the code concepts in these notes in your SPC. 
 
 ## In Class
-* Walking through the data management process on the depression data set. 
+
+* Data management and cleaning in a reproducible manner. 
+    - This will be done in a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
+    - R users will create a new `.RMD` file. 
+    - SPSS users should create a new `.txt` file. Windows uses Notepad, Mac uses TextEdit.
+* Walk through the data management process on the depression data set.     
+    - Recording all steps in script file 
+    - Export analysis data set. Save script file. 
 
 ## Resources
 * R (Data Import)
@@ -68,13 +76,14 @@ Goals:
 * Read: [How to read a Journal Article](docs/How to Read a Journal Article.pdf)
 
 ## In class
-* Brief discussion of literature review & citation formats
+* Brief discussion of literature review
+    - Literature review notes [[HTML]](docs/lec_lit_review.html) [[PDF]](docs/lec_lit_review.pdf)
 * Citation Assignment _or_ continue data management. 
 
 
 ##### Assignments
 
-* Citation assignment [[Instructions]](hw/Citation_Assignment.html)
+* Citation assignment Instructions [[HTML]](hw/Citation_Assignment.html) [[PDF]](hw/Citation_Assignment.pdf) 
     - [Example submission](docs/Citation Assignment Example.pdf)
 
 

@@ -33,7 +33,7 @@ Because you know that to fully understand what is going on you need Twenty-seven
 4. Describe the spread:
     - Variability - What is the approximate range of the data (x-axis)?
     - Does the variable have a lot of variability in the data (visually, are the participants responded to many different responses or mainly just one)?
-5. Describe the center: What is the approximate mean/median/midpoint of the data? (Pick one or two). 
+5. Describe the center: What is the mean/median/midpoint of the data? (Pick one or two). Don't 
 6. Describe the outliers (note: there may not be any for every graph):
     - Are there any outliers for the variable?
     - If yes, are these true outliers or false (due to data management or input error) outliers?
