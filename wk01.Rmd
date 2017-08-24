@@ -77,7 +77,11 @@ We'll use the Add Health codebook today, but the others next week. So might as w
 
 ##### Assignments
 * Review the AddHealth codebook front matter and choose 3-5 areas of interest. 
-* Personal Codebook and Research Question Assignment 
+    - Write a blog post about what you are thinking of researching. 
+    - Review a few of your other classmates posts to get a sense of what others are looking into. Feel free to comment! Giving feedback is an important part of this class.  
+* Personal Codebook and Research Question [[Assignment]](hw/RQ_personal_codebook_assignment.html) 
+    - There are a lot of common interests (in terms of general nutrition) in this class, so keep an eye on your classmates blogs to make sure you don't end up doing the exact same thing. 
+    - There can be some overlap, but avoid the **exact** same RQ. 
 * Read PMA5 Ch3 (Preparing Data for Analysis)
 * Read next week's overview so you know how to prepare for Tuesday. 
 
