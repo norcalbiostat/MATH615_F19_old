@@ -28,13 +28,12 @@ cdat$Evaluation[evallist] <- gsub("(+.)\\*", "</li><li>", cdat$Evaluation[evalli
 ```
 
 ```{r results='asis', echo=FALSE}
-out <- select(cdat, Week, Date, Topics, Materials, Evaluation)
+out <- select(cdat, Week, Topics, Materials, Evaluation)
 
 knitr::kable(out, align="l", escape=FALSE) %>% 
   kable_styling(bootstrap_options = c("hover", "striped", "responsive", "bordered")) %>% 
-  column_spec(1, width="1%") %>% column_spec(2, width="1%") %>%
-  column_spec(3, width="20%") %>% column_spec(4, width="30%") %>%
-  column_spec(5, width="30%")
+  column_spec(1, width="10%") %>% column_spec(2, width="20%") %>% 
+  column_spec(3, width="30%") %>% column_spec(4, width="30%")
 ```
 
 

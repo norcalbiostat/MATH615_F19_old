@@ -26,9 +26,10 @@ Goals:
 
 
 ## Prepare
+* Read the data management preparation [[HTML]](hw/dm_assignment_preparation.html) or [[PDF]](hw/dm_assignment_preparation.pdf) notes. 
 * Read the `depression` data set into your SPC
 * Review the [data prep notes](docs/lec02_data_prep.html) 
-    - Starting to replicate the code concepts in these notes in your SPC. 
+    - Start to replicate the code concepts in these notes in your SPC. 
 
 ## In Class
 
@@ -39,6 +40,8 @@ Goals:
 * Walk through the data management process on the depression data set.     
     - Recording all steps in script file 
     - Export analysis data set. Save script file. 
+* Start a **dm** file for Add Health. 
+
 
 ## Resources
 * R (Data Import)
@@ -58,9 +61,8 @@ Goals:
 
 
 ##### Assignments
-* Explore some variables within your chosen sections of Add Health 
-    - Blog about what variables you chose and why
-    - Discuss any recoding you think you may want to do, or data problems that will have to be fixed. (_Think about the data management questions in the notes_) 
+* Blog about some issues you are going to have to deal with during data management. Name variables specifically. 
+    - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches on different variables. 
 * Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
     - It does not have to be comprehensive or finished! I just want to make sure you are getting started in a reproducible manner. 
@@ -74,11 +76,11 @@ Goals:
 
 ## Prepare
 * Read: [How to read a Journal Article](docs/How to Read a Journal Article.pdf)
+* Read: Literature review notes [[HTML]](docs/lec_lit_review.html) [[PDF]](docs/lec_lit_review.pdf)
 
 ## In class
 * Brief discussion of literature review
-    - Literature review notes [[HTML]](docs/lec_lit_review.html) [[PDF]](docs/lec_lit_review.pdf)
-* Citation Assignment _or_ continue data management. 
+* Work on on your own: Citation Assignment _or_ continue data management. 
 
 
 ##### Assignments
