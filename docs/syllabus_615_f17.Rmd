@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Course Description
 
 Catalog Description: _Introduction to common procedures used to analyze data. Single and two-sample inference, analysis of variance, multiple regression, analysis of co-variance, experimental design, repeated measures, nonparametric procedures, and categorical data analysis. Examples will be drawn from Biology and related disciplines. Statistical computer packages will be introduced. Appropriate for biology, agriculture, nutrition, psychology, social science, and other majors. 3 hours discussion._
@@ -22,7 +27,7 @@ By the end of the semester students will be able to
 **E-mail:** rdonatello at csuchico dot edu   
 **Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, or MATH 350.  
 **Meeting Days and Times** Tue/Thu 11-12:15, HOLT 155
-**Office Hours** TBD
+**Office Hours** MW 3-4pm, TR 10-11am, or by appointment 
 
 You can download the Syllabus in PDF form by clicking [this link](syllabus_615_f17.pdf).
 
@@ -44,8 +49,8 @@ You can download the Syllabus in PDF form by clicking [this link](syllabus_615_f
 ## Grading
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
-* The approximate contributions per category are: Preparation & Participation 20%, Assignments 20%, Exams 30%, and Projects 40%. 
-* I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%: D, 0-59\%: F. Plusses and minuses will be as displayed on Blackboard Learn. 
+* The approximate contributions per category are: Participation (Blogs & Peer Reviews) 15%, (Non project) Written Assignments 20%, Exams 30%, and Project related assignments 45%. 
+* I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 
 
 # Schedule of Topics

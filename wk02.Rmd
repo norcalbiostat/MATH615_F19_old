@@ -35,12 +35,12 @@ Goals:
 
 * Data management and cleaning in a reproducible manner. 
     - This will be done in a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
-    - R users will create a new `.RMD` file. 
-    - SPSS users should create a new `.txt` file. Windows uses Notepad, Mac uses TextEdit.
+    - R users will create a new `depression_dm.RMD` file. 
+    - SPSS users should create a new `depression_dm.txt` file. Windows uses Notepad, Mac uses TextEdit.
 * Walk through the data management process on the depression data set.     
     - Recording all steps in script file 
     - Export analysis data set. Save script file. 
-* Start a **dm** file for Add Health. 
+* Start a `add_health_dm.Rmd` or `add_health_dm.txt` file for Add Health. 
 
 
 ## Resources
@@ -63,9 +63,13 @@ Goals:
 ##### Assignments
 * Blog about some issues you are going to have to deal with during data management. Name variables specifically. 
     - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches on different variables. 
+    - The data management preparation [[HTML]](hw/dm_assignment_preparation.html) or [[PDF]](hw/dm_assignment_preparation.pdf) notes will be helpful here. 
 * Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
-    - It does not have to be comprehensive or finished! I just want to make sure you are getting started in a reproducible manner. 
+    - It should have sections in it that reflect the overarching types of data management to be done 
+        - i.e. subsetting, addressing missing, recoding, making secondary variables etc. 
+    - It does not have to be comprehensive or finished by the due date! Likely it will not be. 
+        - I just want to make sure you are getting started in a reproducible manner in a reasonable time. 
     - R users should upload a `.RMD` file. 
     - SPSS users should upload a `.txt` file. Windows uses Notepad, Mac uses TextEdit. 
         

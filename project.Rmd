@@ -1,0 +1,28 @@
+---
+title: 'Project Information'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+css: css/customh5.css
+---
+
+# Peer Review
+* For each assignment submitted via Blog post that is subject to review, your assignment is to leave a comment on two (2) classmates blog post for that assignment.
+    - For each review you need to provide 1 positive comment and 1 thing they can do better. (One up One down)
+* You can leave more comments for other people as well. These are the only ones that are graded. 
+* The assigned rotation ensures that everyone gets a chance throughout the semester to learn what everyone else is researching. 
+* Peer review rotation can be found at [[this Google Spreadsheet link]](https://docs.google.com/spreadsheets/d/1njtZX4tv_3G7OgbJA5KFyHF3ecU4KPV7qdnGxSGMbVA/edit?usp=sharing)
+
+# Poster prep I 
+_tbd_
+
+# Poster prep II 
+_tbd_
+
+# Poster prep III
+_tbd_
+
