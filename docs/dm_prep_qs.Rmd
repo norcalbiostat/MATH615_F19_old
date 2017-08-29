@@ -1,10 +1,10 @@
 ---
-title: "Data Management Preparation"
+title: "Preparation questions for Data Management"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: cerulean
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
