@@ -71,9 +71,13 @@ Goals:
 
 
 ##### Assignments
-* Blog about some issues you are going to have to deal with during data management. Name variables specifically. 
-    - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches on different variables. 
-    - Use the data management preparation questions as a guide for your thoughts. 
+* Blog about some issues you are going to have to deal with during data management. 
+    - Name variables specifically. 
+    - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches to handling data on different variables. 
+    - Use the [data management](docs/dm_prep_qs.html) preparation questions as a guide for your thoughts. 
+    - This is **not** about learning syntax, or the program, or other logistics
+    - You are asking yourself "what am I going to have to DO to the data to put it in a form where I can answer my research question."
+    
 * Peer review (one up one down) two assigned classmates' blog posts about their recoding and data management woes. 
 * Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
