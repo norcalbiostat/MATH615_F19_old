@@ -10,7 +10,7 @@ _page in development_
 
 ### Online
 * Chico [R User Group](https://groups.google.com/forum/#!forum/chico-rug)
-* UCLA IDRE
+* UCLA IDRE [[R Learning modules]](https://stats.idre.ucla.edu/r/modules/)
 
 ### In Person
 * **Robin Donatello** - Stat professor. Holt 202
@@ -38,15 +38,11 @@ _page in development_
 # Where can I get help using SPSS outside of class time? 
 
 ### Online
-
+* UCLA IDRE [[learning modules]](https://stats.idre.ucla.edu/spss/modules/)
+* Sigma Plus SPSS [Tutorials](https://www.spss-tutorials.com/basics/)
+* IBM Knowledge [[Center]](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html)
 
 ### In Person: 
-* Gina XX and David Philhour: room, time
+* Gina Gerace and David Philhour: BUTTE 211, Friday 10-11:30
 
-
-# Other
-
-For now start here
-
-http://datascience.csuchico.edu/resources.html
 
