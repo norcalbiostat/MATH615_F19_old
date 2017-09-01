@@ -16,6 +16,17 @@ library(knitr)
 opts_chunk$set(warning=FALSE, message=FALSE) 
 ```
 
+##### New Assignments (on week 1 content)
+I finally figured out how I'm going to have to grade blog posts & peer reviews (Manually basically). 
+
+* I have shared with you all a MATH 615 folder in Google Drive. 
+    - In this folder there is a spreadsheet called "Peer Review Rotation". 
+    - This shows you for each peer review assignment, who your assigned reviewee's are. 
+    - The student names that are listed, are the ones YOU will be reviewing. Each person reviews two classmates posts. 
+* A review consists of providing 1 positive comment, and 1 thing they can do better or a suggestion (One up, One down)
+* Your first peer review assignment is on the research question / personal codebook blog post (The one that was due 8/28). 
+* All of this is also listed on the Project page (from the nav bar).
+
 # Tuesday: Data Import & Preparation
 Goals: 
 
@@ -24,11 +35,10 @@ Goals:
 * Learn how to correct certain mistakes
 * Learn how to recode variables into new ones
 
-
 ## Prepare
-* Read the data management preparation [[HTML]](hw/dm_assignment_preparation.html) or [[PDF]](hw/dm_assignment_preparation.pdf) notes. 
-* Read the `depression` data set into your SPC
-* Review the [data prep notes](docs/lec02_data_prep.html) 
+* Read the questions to ask yourself to prepare for data management. [[HTML]](docs/dm_prep_qs.html) or [[PDF]](docs/dm_prep_qs.pdf) 
+* Read the `depression` data set into your SPC (See below for help importing data.)
+* Review the notes on doing data management [[HTML]](docs/lec02_doing_dm.html), [[PDF]](docs/lec02_doing_dm.pdf) 
     - Start to replicate the code concepts in these notes in your SPC. 
 
 ## In Class
@@ -61,9 +71,14 @@ Goals:
 
 
 ##### Assignments
-* Blog about some issues you are going to have to deal with during data management. Name variables specifically. 
-    - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches on different variables. 
-    - The data management preparation [[HTML]](hw/dm_assignment_preparation.html) or [[PDF]](hw/dm_assignment_preparation.pdf) notes will be helpful here. 
+* Blog about some issues you are going to have to deal with during data management. 
+    - Name variables specifically. 
+    - Check a few of your classmates blogs about this. Chances are you will be doing similar approaches to handling data on different variables. 
+    - Use the [data management](docs/dm_prep_qs.html) preparation questions as a guide for your thoughts. 
+    - This is **not** about learning syntax, or the program, or other logistics
+    - You are asking yourself "what am I going to have to DO to the data to put it in a form where I can answer my research question."
+    
+* Peer review (one up one down) two assigned classmates' blog posts about their recoding and data management woes. 
 * Start a data management file for the Add Health data. You wil submit this to BBLearn by the due date. 
     - This must be a single script file that imports the data, does cleaning, and saves the cleaned data set with a new name. 
     - It should have sections in it that reflect the overarching types of data management to be done 
@@ -83,7 +98,7 @@ Goals:
 * Read: Literature review notes [[HTML]](docs/lec_lit_review.html) [[PDF]](docs/lec_lit_review.pdf)
 
 ## In class
-* Brief discussion of literature review
+* Brief discussion of literature review & citation assignment. 
 * Work on on your own: Citation Assignment _or_ continue data management. 
 
 

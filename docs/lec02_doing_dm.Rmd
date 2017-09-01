@@ -2,6 +2,8 @@
 title: 'Lec 02: Preparing Data for Analysis'
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     highlight: tango
     theme: flatly
