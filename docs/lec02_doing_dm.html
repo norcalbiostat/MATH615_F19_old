@@ -243,7 +243,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lec 02: Preparing Data for Analysis</h1>
-<h4 class="date"><em>Last Updated 2017-08-28 22:35:59</em></h4>
+<h4 class="date"><em>Last Updated 2017-09-02 18:36:46</em></h4>
 
 </div>
 
@@ -295,8 +295,7 @@ div.tocify {
 <p>If you are using SPSS, be sure to save the code for each <strong>successfull</strong> step into a script file. R users should be following along using R Markdown.</p>
 <div id="import-data" class="section level2">
 <h2>Import data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(ggplot2)  
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)  
 depress &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;https://norcalbiostat.netlify.com/data/Depress.txt&quot;</span>, 
                       <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)  </code></pre></div>
 <p>(<em>Read the data from your local machine, don’t use the URL above. It’ll ping my server to death</em>)</p>
@@ -440,10 +439,10 @@ The following code uses the <code>factor()</code> function to take the marital s
 <p>For example, consider marital status again. There are only 13 people who report being separated. This could potentially be too small of a group size for valid statistical analysis.</p>
 <p>One way to deal with insufficient data within a certain category is to collapse categories. The following code uses the <code>recode()</code> function from the <code>car</code> package to create a new variable that I am calling <code>MARITAL2</code> that combines the <code>Divorced</code> and <code>Separated</code> levels.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(car)
-depress$MARITAL2 &lt;-<span class="st"> </span><span class="kw">recode</span>(depress$MARITAL, <span class="st">&quot;'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'&quot;</span>)</code></pre></div>
+MARITAL2 &lt;-<span class="st"> </span><span class="kw">recode</span>(depress$MARITAL, <span class="st">&quot;'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'&quot;</span>)</code></pre></div>
 <p>Always confirm your recodes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(depress$MARITAL, depress$MARITAL2, <span class="dt">useNA=</span><span class="st">&quot;always&quot;</span>)</code></pre></div>
-<pre><code>##                
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(depress$MARITAL, MARITAL2, <span class="dt">useNA=</span><span class="st">&quot;always&quot;</span>)</code></pre></div>
+<pre><code>##                MARITAL2
 ##                 Married Never Married Sep/Div Widowed &lt;NA&gt;
 ##   Never Married       0            73       0       0    0
 ##   Married           127             0       0       0    0
@@ -453,7 +452,7 @@ depress$MARITAL2 &lt;-<span class="st"> </span><span class="kw">recode</span>(de
 ##   &lt;NA&gt;                0             0       0       0    0</code></pre>
 <p>This confirms that records where <code>MARITAL</code> (rows) is <code>Divorced</code> or <code>Separated</code> have the value of <code>Sep/Div</code> for <code>MARITAL2</code> (columns). And that no missing data crept up in the process. Now I can drop the temporary <code>MARITAL2</code> variable and actually fix <code>MARITAL</code>. (keeping it clean)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">depress$MARITAL &lt;-<span class="st"> </span><span class="kw">recode</span>(depress$MARITAL, <span class="st">&quot;'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'&quot;</span>)
-depress &lt;-<span class="st"> </span><span class="kw">select</span>(depress, -MARITAL2)</code></pre></div>
+<span class="kw">rm</span>(MARITAL2)</code></pre></div>
 </div>
 <div id="binning-a-continuous-variable-into-categorical-ranges." class="section level3">
 <h3>Binning a continuous variable into categorical ranges.</h3>

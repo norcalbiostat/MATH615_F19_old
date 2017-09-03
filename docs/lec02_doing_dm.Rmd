@@ -2,13 +2,13 @@
 title: 'Lec 02: Preparing Data for Analysis'
 date: "Last Updated `r Sys.time()`"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
 css: ../css/customh5.css
 ---
 
@@ -53,7 +53,6 @@ If you are using SPSS, be sure to save the code for each **successfull** step in
 
 ## Import data
 ```{r start2, warning=FALSE, message=FALSE}
-library(dplyr)
 library(ggplot2)  
 depress <- read.table("https://norcalbiostat.netlify.com/data/Depress.txt", 
                       sep="\t", header=TRUE)  
@@ -187,18 +186,18 @@ One way to deal with insufficient data within a certain category is to collapse 
 
 ```{r recode_marital, message=FALSE, warning=FALSE}
 library(car)
-depress$MARITAL2 <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'")
+MARITAL2 <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'")
 ```
 
 Always confirm your recodes. 
 ```{r confirm_marital_recode}
-table(depress$MARITAL, depress$MARITAL2, useNA="always")
+table(depress$MARITAL, MARITAL2, useNA="always")
 ```
 This confirms that records where `MARITAL` (rows) is `Divorced` or `Separated` have the value of `Sep/Div` for `MARITAL2` (columns). And that no missing data crept up in the process. Now I can drop the temporary `MARITAL2` variable and actually fix `MARITAL`. (keeping it clean)
 
 ```{r recode_marital2}
 depress$MARITAL <- recode(depress$MARITAL, "'Divorced' = 'Sep/Div'; 'Separated' = 'Sep/Div'")
-depress <- select(depress, -MARITAL2)
+rm(MARITAL2)
 ```
 
 ### Binning a continuous variable into categorical ranges. 
