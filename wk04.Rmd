@@ -16,7 +16,7 @@ Goals:
 * Describe the differences between writing a research proposal and and empirical paper. 
 
 ## Prepare 
-* Read Writing about Empirical Research [[HTML]](http://www.norcalbiostat.com/lec_writing_empirical_research.html) [[PDF]](http://www.norcalbiostat.com/lec_writing_empirical_research.pdf)
+* Read Writing about Empirical Research [[HTML]](http://www.norcalbiostat.com/lec/lec_writing_em.html)
 
 ## In class
 * Discuss the [Research Plan Outline](hw/research_plan_outline.html) assignment. 
