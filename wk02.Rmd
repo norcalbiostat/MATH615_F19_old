@@ -38,7 +38,7 @@ Goals:
 ## Prepare
 * Read the questions to ask yourself to prepare for data management. [[HTML]](docs/dm_prep_qs.html) or [[PDF]](docs/dm_prep_qs.pdf) 
 * Read the `depression` data set into your SPC (See below for help importing data.)
-* Review the notes on doing data management [[HTML]](http://www.norcalbiostat.com/lec_doing_dm.html), [[PDF]](http://www.norcalbiostat.com/lec_doing_dm.pdf) 
+* Review the notes on doing [[data management]](http://www.norcalbiostat.com/lec/lec_doing_dm.html)
     - Start to replicate the code concepts in these notes in your SPC. 
 
 ## In Class
@@ -95,7 +95,7 @@ Goals:
 
 ## Prepare
 * Read: [How to read a Journal Article](docs/How to Read a Journal Article.pdf)
-* Read: Literature review notes [[HTML]](http://www.norcalbiostat.com/lec_lit_review.html) [[PDF]](http://www.norcalbiostat.com/lec_lit_review.pdf)
+* Read: Literature review notes [[HTML]](http://www.norcalbiostat.com/lec/lec_lit_review.html)
 
 ## In class
 * Brief discussion of literature review & citation assignment. 
