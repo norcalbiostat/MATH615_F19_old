@@ -10,40 +10,30 @@ output:
 css: css/customh5.css
 ---
 
-```{r,echo=FALSE, warning=FALSE, message=FALSE}
-library(knitr)
-#library(rmarkdown)
-opts_chunk$set(warning=FALSE, message=FALSE) 
-```
-
-
 # Tuesday: Writing about empirical research
 Goals: 
 
+* Describe the differences between writing a research proposal and and empirical paper. 
 
 ## Prepare 
-* Read [Writing about Empirical Research]()
+* Read Writing about Empirical Research [[HTML]](http://www.norcalbiostat.com/lec/lec_writing_em.html)
 
 ## In class
-
-
-## Resources
+* Discuss the [Research Plan Outline](hw/research_plan_outline.html) assignment. 
 
 
 ##### Assignments
 * Research Plan outline
 
 
-# Thursday: 
-Goals: 
-
-## Prepare
+# Thursday: Analysis work time
 
 
 ## In class
 
+Work on any open assignment
 
-## Resources
+* Univariate graphing
+* Data management
+* Research plan
 
-
-##### Assignments

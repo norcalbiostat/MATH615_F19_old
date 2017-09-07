@@ -28,14 +28,13 @@ Goals:
     - [PMA6 Data Viz ch DRAFT](docs/pma6_ch4_draft.pdf)
     - [Data Viz tutorial](https://norcalbiostat.github.io/MATH130/materials/day56-data-viz.html). 
 * Prepare your computer to use either the `parhiv` and/or `depress` data sets, or the `dsmall` subsample of the `diamonds` data set (also available for download on my [cleaned data](https://norcalbiostat.netlify.com/data/cleaned_data/) page)
-          
 
 ## In class
-* Reproduce all univariate graphics and tables in your SPC. 
+* Discuss how to choose appropriate graphics based on data types. 
+* Discuss how to interpret and describe distributions of data. 
+* **Time pending**: Reproduce all univariate graphics and tables in your SPC. 
     - The examples in PMA6 use the `parhiv` and `depress` data sets. 
-    - The examples in Data viz tutorial use the `diamonds` data set that comes with `ggplot2` package. 
-* Discuss interpretations for all univariate graphics. 
-
+    - The examples in Data viz tutorial use the `diamonds` data set that comes with `ggplot2` package.           
 
 ## Resources
 * SPSS
