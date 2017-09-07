@@ -1,5 +1,5 @@
 ---
-title: "Frequently Asked Questiosn"
+title: "Frequently Asked Questions"
 date: "Last Updated `r Sys.time()`"
 output: html_document
 ---

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Week 1 8/21 - 8/27</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css/customh5.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MATH 615</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="schedule.html">
+    <span class="fa fa-book"></span>
+     
+    Schedule &amp; Materials
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/data/">
+    <span class="fa fa-database"></span>
+     
+    Data
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="docs/syllabus_615_f17.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="faq.html">
+    <span class="fa fa-question"></span>
+     
+    Help/FAQ
+  </a>
+</li>
+<li>
+  <a href="mailto:rdonatello@csuchico.edu">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Week 1 8/21 - 8/27</h1>
+<h4 class="date"><em>Last Updated 2017-09-07 13:51:46</em></h4>
+
+</div>
+
+
+<div id="tuesday-introduction-to-the-class" class="section level1">
+<h1>Tuesday: Introduction to the class</h1>
+<p>Goals:</p>
+<ul>
+<li>Understand how to navigate the course website resources</li>
+<li>Create learning support groups</li>
+<li>Understand what statistical programming software options are available to you, and what support systems they come with.</li>
+<li>Understand the concept of reproducible research and why it’s important. Understand at what level reproducibility is expected in this class.</li>
+</ul>
+<div id="prepare-before-class" class="section level2">
+<h2>Prepare before class</h2>
+<ul>
+<li>Read the <a href="docs/syllabus_615_f17.html">Syllabus</a></li>
+<li>Bookmark this class website</li>
+<li>Purchase the <a href="https://www.amazon.com/Practical-Multivariate-Analysis-Chapman-Statistical/dp/1439816808">textbook</a> (PMA5). Pricey, but honestly one of those books that you are likely to keep as a reference textbook.</li>
+<li>Read <a href="docs/PDS_Intro_Stat.pdf">Passion Driven Statistics</a> (ignore last page about timeline). We are going to take a similar approach in this class to conducting an analysis.</li>
+<li>Review <a href="http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/">these slides</a> on reproducible research in the social sciences.</li>
+</ul>
+</div>
+<div id="in-class" class="section level2">
+<h2>In class</h2>
+<ul>
+<li><a href="docs/lec01_intro_class.html">Introduction to the class</a> notes</li>
+<li>Discuss logistics and software options</li>
+</ul>
+<div id="assignments" class="section level5">
+<h5>Assignments</h5>
+<ul>
+<li>Create a MATH615 folder on your computer - all course related files go in here.</li>
+<li>Blog post: Introduction/bio of yourself.
+<ul>
+<li>What’s your research area?</li>
+<li>One non-academic interest or hobby</li>
+</ul></li>
+<li>Decide on the software program you will use. (Due before next Tuesday)
+<ul>
+<li>Nutrition majors are highly recommended to choose SPSS since you will be using that in NSFC 600.</li>
+<li>Review the support options above before making your decision.<br />
+</li>
+<li>You are welcome to switch at any time, but acknowledge it will be hard (but not impossible) to get caught up.</li>
+<li>Get your laptop ready to analyze data by next Tuesday.</li>
+</ul></li>
+<li>Blog post (2): Reproducible research plan.
+<ul>
+<li>Write up a plan for how you will conduct reproducible research in this class.</li>
+<li>Be explicit and detailed, consider these instructions for a “you” in 6 months. (yes these plans can, and will change)</li>
+</ul></li>
+<li>Read PMA5 Ch 2. Here is a <a href="docs/PMA5%20Ch%202%20and%203.pdf">scanned PDF</a> if you don’t have the book yet.</li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="thursday-orientating-yourself-to-data" class="section level1">
+<h1>Thursday: Orientating yourself to data</h1>
+<p>Goals:</p>
+<ul>
+<li>Identify different data types according to Stevens’s Classifications.</li>
+<li>Understand how to use a data dictionary (codebook)</li>
+<li>Learn about the Add Health data that you will be analyzing this semester.</li>
+</ul>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
+<ul>
+<li>Read the Personal Codebook Assignment <a href="hw/RQ_personal_codebook_assignment.html">[instructions]</a></li>
+<li>Download the following data sets and codebooks from my <a href="https://norcalbiostat.netlify.com/data/raw_data/">data</a> page into a <code>MATH615/data</code> subfolder on your computer.
+<ul>
+<li>medical-records.pdf</li>
+<li>Add Health.csv</li>
+<li>ParHIV.xlsx</li>
+<li>depress.txt</li>
+</ul></li>
+</ul>
+<p>We’ll use the Add Health codebook today, but the others next week. So might as well grab all while you’re there.</p>
+</div>
+<div id="in-class-1" class="section level2">
+<h2>In class</h2>
+<ul>
+<li>Medical Record data entry and codebook creation <a href="docs/MedRecords.html">[Instructions]</a></li>
+<li>Personal Codebook Assignment</li>
+</ul>
+<div id="assignments-1" class="section level5">
+<h5>Assignments</h5>
+<ul>
+<li>Review the AddHealth codebook front matter and choose 3-5 areas of interest.
+<ul>
+<li>Write a blog post about what you are thinking of researching.</li>
+<li>Review a few of your other classmates posts to get a sense of what others are looking into. Feel free to comment! Giving feedback is an important part of this class.<br />
+</li>
+</ul></li>
+<li>Personal Codebook and Research Question <a href="hw/RQ_personal_codebook_assignment.html">[Assignment]</a>
+<ul>
+<li>There are a lot of common interests (in terms of general nutrition) in this class, so keep an eye on your classmates blogs to make sure you don’t end up doing the exact same thing.</li>
+<li>There can be some overlap, but avoid the <strong>exact</strong> same RQ.</li>
+</ul></li>
+<li>Read PMA5 Ch3 (Preparing Data for Analysis)</li>
+<li>Read next week’s overview so you know how to prepare for Tuesday.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

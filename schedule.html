@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MATH 615</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="schedule.html">
+    <span class="fa fa-book"></span>
+     
+    Schedule &amp; Materials
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/data/">
+    <span class="fa fa-database"></span>
+     
+    Data
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="docs/syllabus_615_f17.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="faq.html">
+    <span class="fa fa-question"></span>
+     
+    Help/FAQ
+  </a>
+</li>
+<li>
+  <a href="mailto:rdonatello@csuchico.edu">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<table class="table table-hover table-striped table-responsive table-bordered" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Week
+</th>
+<th style="text-align:left;">
+Topics
+</th>
+<th style="text-align:left;">
+Materials
+</th>
+<th style="text-align:left;">
+Evaluation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk01.html">Week 1 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Introduction to the class
+</li>
+<li>
+Orientating yourself to data
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+<a href="docs/syllabus_615_f17_html">Syllabus</a>
+</li>
+<li>
+<a href="docs/PMA5%20Ch%202%20and%203.pdf">PMA5 Ch 2 &amp; 3</a>
+</li>
+<li>
+<a href="http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/">Reproducibility slides</a>
+</li>
+<li>
+<a href="docs/PDS_Intro_Stat.pdf">Passion Driven Statistics</a>
+</li>
+<li>
+<a href="docs/lec01_intro_class.html">Introduction to the class</a>
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Blog Intro/Bio (Due 8/28)
+</li>
+<li>
+Blog RR plan (Due 8/28)
+</li>
+<li>
+Blog area of Add Health research interest (Due 8/25)
+</li>
+<li>
+<p>Personal Codebook/ Research Question <a href="hw/RQ_personal_codebook_assignment.html">Assignment</a> (Due 8/28)</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk02.html">Week 2 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Data Import and Preparation
+</li>
+<li>
+Literature review
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+<a href="docs/dm_prep_qs.html">Data Management preparation questions</a>
+</li>
+<li>
+<a href="http://www.norcalbiostat.com/lec/doing-dm">Doing Data Management</a>
+</li>
+<li>
+<a href="docs/How%20to%20Read%20a%20Journal%20Article.pdf">How to read a Journal Article</a>
+</li>
+<li>
+<a href="http://www.norcalbiostat.com/lec/lec_lit_review.html">Literature Review notes</a>
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+<a href="project.html">Peer Review</a> of RQ post (Due 9/4)
+</li>
+<li>
+Blog about data management preparation (Due Thu: 8/31)
+</li>
+<li>
+Peer Review of DM blog post (Due 9/4)
+</li>
+<li>
+Data management code file (Due 9/4)
+</li>
+<li>
+Citation <a href="hw/Citation_Assignment.html">Assignment</a> (Due 9/7)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk03.html">Week 3 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Univariate Data Visualizations
+</li>
+<li>
+Screening your data for Tranformations
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+<a href="docs/pma6_ch4_draft.pdf">PMA6 Data Viz ch DRAFT</a>
+</li>
+<li>
+<a href="https://norcalbiostat.github.io/MATH130/materials/day56-data-viz.html">Data Viz tutorial</a>
+</li>
+<li>
+<a href="https://norcalbiostat.netlify.com/data/cleaned_data/">dsmall data</a>
+</li>
+<li>
+<a href="docs/lec03_data_screen.html">Data Screening</a> notes
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Univariate graphing <a href="hw/Univ_Graphing.html">Assignment</a> (Due 9/13)
+</li>
+<li>
+Peer Revew (Due 9/18)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk04.html">Week 4 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Writing about empirical research
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+<a href="http://www.norcalbiostat.com/lec/lec_writing_em.html">Writing about empirical research</a>
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Research plan outline (Due 9/18)
+</li>
+<li>
+Peer Review (Due 9/20)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Analysis work time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk05.html">Week 5 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Exploring bivariate relationships
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Bivariate graphing assignment (Due 9/25)
+</li>
+<li>
+Peer Review (Due 10/2)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Analysis work time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk06.html">Week 6 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Choosing appropriate analyses
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Progress check in blog post (Due 10/2)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Midterm
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk07.html">Week 7 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Foundations for inference: Probability, Normality, sampling distributions
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Foundations assignment (Due 10/9)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Confidence Intervals and Hypothesis Testing
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Inference Assignment (Due 10/11)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk08.html">Week 8 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Two sample Inference
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Bivariate Inference (Due 10/30)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+ANOVA
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk09.html">Week 9 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Chi-square
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Progress check in blog post (Due 10/23)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Correlation and Regression
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk10.html">Week 10 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Flex time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Progress check in blog post (Due 10/30)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Analysis work time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk11.html">Week 11 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Multiple Regression
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Multiple Regression Assignment (Due 11/13)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Indicator variables
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk12.html">Week 12 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Moderating and Confounding
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Progress check in blog post (Due 11/13)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Indicator variables
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk13.html">Week 13 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Logistic Regression
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Logistic Regression Assignment (Due 11/27)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Analysis work time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Thanksgiving Break
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk14.html">Week 14 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Special Regression Topics
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Progress check in blog post (Due Thursday 11/30)
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Analysis work time
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+<a href="wk15.html">Week 15 overview</a>
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Impacts of sampling design
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+<ul>
+<li>
+Posters Due 12/6
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Poster Presentations
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10%; ">
+</td>
+<td style="text-align:left;width: 20%; ">
+<ul>
+<li>
+Final Exam
+</li>
+</ul>
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+<td style="text-align:left;width: 30%; ">
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
