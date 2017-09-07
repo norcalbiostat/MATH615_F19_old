@@ -64,9 +64,9 @@ Goals:
 
 ##### Assignments
 * Univariate graphing assignment. [[Instructions]](hw/Univ_Graphing.html)
-    - I am allowing 2 weeks for this initial graphing assignment because you are still getting used to the software. 
-    - Later assignments will only be given 1 week to complete. 
-
+    - [[Example assignment]](docs/Univariate Graphing Assignment Examples.pdf) from another class done in SAS. 
+    - Note that their instructions were to put all the code at the end.
+    - I want to see the relevant code next to the plot itself. Don't make me hunt for it!
           
 
 
