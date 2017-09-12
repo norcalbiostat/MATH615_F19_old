@@ -1,0 +1,76 @@
+---
+title: "Bivariate Relationships Assignment"
+output:
+  html_document:
+    highlight: tango
+    theme: cerulean
+css: ../css/customh5.css
+---
+
+# Step 1: Determine what variables for your two main constructs you want to graph based on your research topic.
+You will need a mixture of categorical and quantitative variables for this assignment. 
+
+* One association with a categorical explanatory and categorical response variable. (C ~ C)
+* One association with a categorical explanatory and quantitative response variable. (Q ~ C)
+* One association with a quantitative explanatory and binary categorical response variable. (B ~ Q)
+* One association with a quantitative explanatory and quantitative response variable. (Q ~ Q)
+
+If you do not have 1 or more of the combinations above you will do one of the specific types mentioned more than once.
+
+_Recall the following definitions:_
+
+* Explanatory variable: independent variable, covariate, goes along the x axis
+* Response variable: dependent variable, outcome, goes along the y axis. 
+* Model definition: y ~ x
+    - C: categorical
+    - B: binary categorical
+    - Q: quantitative numeric / continuous
+    
+# Step 2: Recode variables as needed. 
+If your response variable is categorical with many levels, you may want to collapse it down to fewer levels. 
+
+**It is perfectly acceptable to recode variables temporarily for exploratory purposes and not put it in your `dm_addhealth` file.**
+
+
+Think of your `dm` file as containing recodes/new variable that you know you want to keep/reuse many times and/or do analysis on.  
+
+# Step 3: Create appropriate graphics
+* Create one bivariate graph for each of the four combinations listed in step 1. 
+* You can do any combination of the 4 types of bivariate graphs for a total of 4. 
+    - Do as many different combinations as you can. Not just 4 graphics on one combination (i.e. C~C)
+
+# Step 4: Calculate appropriate summary statistics
+* For continuous outcomes you'll want to describe measures such as the mean or median for each level of the categorical variable. 
+* For categorical outcomes you'll want to calculate %'s of your outcome measurement across levels of your covariate. 
+    - i.e. proportion of males who are smokers compared to proportion of females who are smokers
+    - or proportion of smokers who are male, compared to proportion of non-smokers who are male. 
+    
+
+# Step 5: Explain the relationship or trends you see in the data. 
+* Place discussion of relationship below the graph it corresponds with.
+* Use specific features of the graphic in your text explanation.
+    - i.e. are there outliers only in one group?
+    - Do the data seem clumped or clustered in one region of the scatterplot? 
+    - Does one combination of categorical levels (C~C) seem to hold most the data? 
+* Use summary statistics and also use those in your text explanation. 
+
+# Save, post, submit. 
+Create a nice document similar to what you did for the Univariate assignment. 
+
+1. Create a blog post and attach the document there. This will be for your peer review. 
+2. Upload the document to Blackboard learn. This is so I can download it and grade it
+
+----
+
+# Example
+
+```{r, fig.height=4, fig.width=4, fig.align='center', message=FALSE, warning=FALSE}
+library(ggplot2)
+ggplot(diamonds, aes(x=carat, y=price)) + geom_point() + theme_bw() + geom_smooth()
+cor(diamonds$carat, diamonds$price)
+```
+
+There is a steep positive relationship between the carat of a diamond and it's price. Carat seems to be rounded up a bit, there is very little data in the high decimal places for carats (i.e. between 1.8 and 2.0 carats, between 1.6 and 3.0 carats). This trend sharply levels off around a carat of 2.5, but this dip in the trendline is likely due to the comparatively small number of diamonds over 2.5 carats. Further analysis may restrict the data to diamonds with carats less than 2.5 or 3. Carat and price are also highly correlated, the correlation coefficient is 0.92. This is somewhat unexpected due to the large spread of price data around the trendline for carats over a value of 1. 
+
+
+
