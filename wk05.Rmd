@@ -17,7 +17,7 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 
-# Tuesday: 
+# Tuesday: Bivariate Comparisons
 Goals: 
 
 * Identify patterns or trends in bivariate relationship graphics.
@@ -39,7 +39,9 @@ Goals:
 ##### Assignments
 
 
-# Thursday: Edward Roualdes - Sub for Robin  
+# Thursday: Open work time
+Edward Roualdes - Sub for Robin  
 
 Goals: 
+
 * Finish any open assignments. 
