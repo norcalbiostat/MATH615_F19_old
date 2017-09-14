@@ -30,7 +30,9 @@ Goals:
     - [Data Viz tutorial](https://norcalbiostat.github.io/MATH130/materials/day56-data-viz.html). 
 
 ## In class
-* Talk about cross-tables and row vs column percents. 
+* Keeping your cross-tabs straight
+    _ Row vs column percents
+    - A within B, or B within A? 
 * Introduce the [Bivariate Graphing assignment](hw/biv_graphing.html)
 
 

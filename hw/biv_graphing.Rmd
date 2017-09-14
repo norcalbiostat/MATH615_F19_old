@@ -3,7 +3,7 @@ title: "Bivariate Relationships Assignment"
 output:
   html_document:
     highlight: tango
-    theme: cerulean
+    theme: flatly
 css: ../css/customh5.css
 ---
 
@@ -57,8 +57,8 @@ Think of your `dm` file as containing recodes/new variable that you know you wan
 # Save, post, submit. 
 Create a nice document similar to what you did for the Univariate assignment. 
 
-1. Create a blog post and attach the document there. This will be for your peer review. 
-2. Upload the document to Blackboard learn. This is so I can download it and grade it
+Create a blog post and attach the document there. This will be for your peer review. 
+
 
 ----
 
