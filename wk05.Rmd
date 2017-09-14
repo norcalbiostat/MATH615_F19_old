@@ -1,5 +1,5 @@
 ---
-title: 'Week 0'
+title: 'Week 5: 9/18-9/24'
 date: "Last Updated `r Sys.time()`"
 output:
   html_document:
@@ -20,29 +20,24 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 # Tuesday: 
 Goals: 
 
+* Identify patterns or trends in bivariate relationship graphics.
+* Create summary statistics for continuous variables for each level of a categorical variable.
+
 
 ## Prepare 
-
+* Review both items - specifically for the bivariate relationships. (No multivariate yet!)
+    - [PMA6 Data Viz ch DRAFT](docs/pma6_ch4_draft.pdf)
+    - [Data Viz tutorial](https://norcalbiostat.github.io/MATH130/materials/day56-data-viz.html). 
 
 ## In class
-
-
-## Resources
+* Talk about cross-tables and row vs column percents. 
+* Introduce the [Bivariate Graphing assignment](hw/biv_graphing.html)
 
 
 ##### Assignments
 
 
-# Thursday:
+# Thursday: Edward Roualdes - Sub for Robin  
+
 Goals: 
-
-## Prepare
-
-
-## In class
-
-
-## Resources
-
-
-##### Assignments
+* Finish any open assignments. 
