@@ -37,10 +37,11 @@ Goals:
 
 
 ##### Assignments
-
+* [Bivariate Graphing assignment](hw/biv_graphing.html)
+    - Similar to the univariate, post this assignment as a blog post and then conduct a peer review. 
 
 # Thursday: Open work time
-Edward Roualdes - Sub for Robin  
+_Robin out of town, Edward Roualdes will cover_
 
 Goals: 
 
