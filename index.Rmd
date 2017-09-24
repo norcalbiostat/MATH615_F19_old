@@ -5,7 +5,8 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 # Announcements
 
 ### 9/24/17 - Week 6
-* Choosing appropriate analyses
+* Schedule has been updated to reflect new poster preparation assignments. Check the Project page for details. 
+* Lecture on choosing appropriate analyses on Tuesday. 
 * Midterm on Thursday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
 
 
