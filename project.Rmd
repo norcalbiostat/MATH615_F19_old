@@ -17,12 +17,14 @@ css: css/customh5.css
 * The assigned rotation ensures that everyone gets a chance throughout the semester to learn what everyone else is researching. 
 * Peer review rotation can be found at [[this Google Spreadsheet link]](https://docs.google.com/spreadsheets/d/1njtZX4tv_3G7OgbJA5KFyHF3ecU4KPV7qdnGxSGMbVA/edit?usp=sharing)
 
-# Poster prep I 
-_tbd_
 
-# Poster prep II 
-_tbd_
+# Poster prep
+* Details about each stage of the poster prep assignments can be found [[here]](hw/Poster_Prep.html)
+* Each stage will have a related Peer Review. 
+* These assignments use Google Drive. Make sure you can log into our class drive. 
 
-# Poster prep III
-_tbd_
+# Final Posters
+Final posters will be linked here. 
+
+
 
