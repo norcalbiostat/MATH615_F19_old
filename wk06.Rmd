@@ -22,12 +22,15 @@ Goals:
 
 * Identify dependent and independent variables
 * Identify appropriate choices for analysis for each combiation of data types
+* Start your presentation slides file in Google Drive. 
 
 ## Prepare 
 * Read PMA5 Chapter 5
+* Review new items on project page. 
 
 ## In class
 
+### Selecting appropriate analysis
 
 **Considerations:**
 
@@ -55,10 +58,12 @@ Analysis options
 Unsure? Do several and compare results. 
 
 
-
+### Poster Peparation
+- Introduce new additions to project page. 
 
 ----
 
 # Thursday: Exam 1
 
+Emphasizes correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
 
