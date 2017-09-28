@@ -4,6 +4,10 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
+### 9/21/17 - Week 6
+* Tuesday: Choosing Appropriate Analyses
+* Thursday: Exam 1. The weekly overview has details on how to prepare and a sample exam.
+
 ### 9/18/17 - Week 5
 * You will be exploring relationships between two variables using graphical and summary methods. 
 * Tuesday we will talk about grouped summary statistics and how to interpret bivariate graphics. 
