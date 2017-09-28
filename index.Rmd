@@ -4,9 +4,13 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
-### 9/21/17 - Week 6
-* Tuesday: Choosing Appropriate Analyses
-* Thursday: Exam 1. The weekly overview has details on how to prepare and a sample exam.
+### 9/24/17 - Week 6
+* Schedule has been updated to reflect new poster preparation assignments. Check the Project page for details. 
+* Lecture on choosing appropriate analyses on Tuesday. 
+* Introduction to the next phase of the project analysis preparation. 
+* Midterm on Thursday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
+* Bivariate graphing assignment - also upload to BBLearn. Makes it easier for me to grade and comment on. 
+    - My comments are going on your blog posts. 
 
 ### 9/18/17 - Week 5
 * You will be exploring relationships between two variables using graphical and summary methods. 

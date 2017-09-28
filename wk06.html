@@ -11,7 +11,7 @@
 
 
 
-<title>Week 1 8/21 - 8/27</title>
+<title>Week 6: 9/25-10/1</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -320,112 +320,68 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Week 1 8/21 - 8/27</h1>
-<h4 class="date"><em>Last Updated 2017-09-24 16:39:49</em></h4>
+<h1 class="title toc-ignore">Week 6: 9/25-10/1</h1>
+<h4 class="date"><em>Last Updated 2017-09-25 17:55:03</em></h4>
 
 </div>
 
 
-<div id="tuesday-introduction-to-the-class" class="section level1">
-<h1>Tuesday: Introduction to the class</h1>
+<div id="tuesday-choosing-appropriate-analysis" class="section level1">
+<h1>Tuesday: Choosing Appropriate Analysis</h1>
 <p>Goals:</p>
 <ul>
-<li>Understand how to navigate the course website resources</li>
-<li>Create learning support groups</li>
-<li>Understand what statistical programming software options are available to you, and what support systems they come with.</li>
-<li>Understand the concept of reproducible research and why it’s important. Understand at what level reproducibility is expected in this class.</li>
+<li>Identify dependent and independent variables</li>
+<li>Identify appropriate choices for analysis for each combiation of data types</li>
+<li>Start your presentation slides file in Google Drive.</li>
 </ul>
-<div id="prepare-before-class" class="section level2">
-<h2>Prepare before class</h2>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
 <ul>
-<li>Read the <a href="docs/syllabus_615_f17.html">Syllabus</a></li>
-<li>Bookmark this class website</li>
-<li>Purchase the <a href="https://www.amazon.com/Practical-Multivariate-Analysis-Chapman-Statistical/dp/1439816808">textbook</a> (PMA5). Pricey, but honestly one of those books that you are likely to keep as a reference textbook.</li>
-<li>Read <a href="docs/PDS_Intro_Stat.pdf">Passion Driven Statistics</a> (ignore last page about timeline). We are going to take a similar approach in this class to conducting an analysis.</li>
-<li>Review <a href="http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/">these slides</a> on reproducible research in the social sciences.</li>
+<li>Read PMA5 Chapter 5</li>
+<li>Review new items on project page.</li>
 </ul>
 </div>
 <div id="in-class" class="section level2">
 <h2>In class</h2>
+<div id="selecting-appropriate-analysis" class="section level3">
+<h3>Selecting appropriate analysis</h3>
+<p><strong>Considerations:</strong></p>
 <ul>
-<li><a href="docs/lec01_intro_class.html">Introduction to the class</a> notes</li>
-<li>Discuss logistics and software options</li>
-</ul>
-<div id="assignments" class="section level5">
-<h5>Assignments</h5>
-<ul>
-<li>Create a MATH615 folder on your computer - all course related files go in here.</li>
-<li>Blog post: Introduction/bio of yourself.
-<ul>
-<li>What’s your research area?</li>
-<li>One non-academic interest or hobby</li>
-</ul></li>
-<li>Decide on the software program you will use. (Due before next Tuesday)
-<ul>
-<li>Nutrition majors are highly recommended to choose SPSS since you will be using that in NSFC 600.</li>
-<li>Review the support options above before making your decision.<br />
+<li>Purpose of analysis.<br />
 </li>
-<li>You are welcome to switch at any time, but acknowledge it will be hard (but not impossible) to get caught up.</li>
-<li>Get your laptop ready to analyze data by next Tuesday.</li>
-</ul></li>
-<li>Blog post (2): Reproducible research plan.
+<li>Types of variables in data set.<br />
+</li>
+<li>Data used in analysis.<br />
+</li>
+<li>Assumptions needed; satisfied?<br />
+</li>
+<li>Choice of analyses is often arbitrary: consider several</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>5 independent variables: 3 interval, 1 ordinal, 1 nominal</p>
+<p>1 dependent variable: interval</p>
+<p>Analysis options</p>
 <ul>
-<li>Write up a plan for how you will conduct reproducible research in this class.</li>
-<li>Be explicit and detailed, consider these instructions for a “you” in 6 months. (yes these plans can, and will change)</li>
-</ul></li>
-<li>Read PMA5 Ch 2. Here is a <a href="docs/PMA5%20Ch%202%20and%203.pdf">scanned PDF</a> if you don’t have the book yet.</li>
+<li>Multiple regression: pretend independent ordinal variable is an interval variable use dummy (0 /1) variables for nominal variables</li>
+<li>Analysis of variance: categorize all independent variables</li>
+<li>Analysis of covariance: leave variables as is, check assumptions</li>
+<li>Logistic regression: Categorize dependent variable: high, low</li>
+<li>Survival analysis: IF dependent variable is time to an event</li>
+</ul>
+<p>Unsure? Do several and compare results.</p>
+</div>
+<div id="poster-peparation" class="section level3">
+<h3>Poster Peparation</h3>
+<ul>
+<li>Introduce new additions to project page.</li>
 </ul>
 <hr />
 </div>
 </div>
 </div>
-<div id="thursday-orientating-yourself-to-data" class="section level1">
-<h1>Thursday: Orientating yourself to data</h1>
-<p>Goals:</p>
-<ul>
-<li>Identify different data types according to Stevens’s Classifications.</li>
-<li>Understand how to use a data dictionary (codebook)</li>
-<li>Learn about the Add Health data that you will be analyzing this semester.</li>
-</ul>
-<div id="prepare" class="section level2">
-<h2>Prepare</h2>
-<ul>
-<li>Read the Personal Codebook Assignment <a href="hw/RQ_personal_codebook_assignment.html">[instructions]</a></li>
-<li>Download the following data sets and codebooks from my <a href="https://norcalbiostat.netlify.com/data/raw_data/">data</a> page into a <code>MATH615/data</code> subfolder on your computer.
-<ul>
-<li>medical-records.pdf</li>
-<li>Add Health.csv</li>
-<li>ParHIV.xlsx</li>
-<li>depress.txt</li>
-</ul></li>
-</ul>
-<p>We’ll use the Add Health codebook today, but the others next week. So might as well grab all while you’re there.</p>
-</div>
-<div id="in-class-1" class="section level2">
-<h2>In class</h2>
-<ul>
-<li>Medical Record data entry and codebook creation <a href="docs/MedRecords.html">[Instructions]</a></li>
-<li>Personal Codebook Assignment</li>
-</ul>
-<div id="assignments-1" class="section level5">
-<h5>Assignments</h5>
-<ul>
-<li>Review the AddHealth codebook front matter and choose 3-5 areas of interest.
-<ul>
-<li>Write a blog post about what you are thinking of researching.</li>
-<li>Review a few of your other classmates posts to get a sense of what others are looking into. Feel free to comment! Giving feedback is an important part of this class.<br />
-</li>
-</ul></li>
-<li>Personal Codebook and Research Question <a href="hw/RQ_personal_codebook_assignment.html">[Assignment]</a>
-<ul>
-<li>There are a lot of common interests (in terms of general nutrition) in this class, so keep an eye on your classmates blogs to make sure you don’t end up doing the exact same thing.</li>
-<li>There can be some overlap, but avoid the <strong>exact</strong> same RQ.</li>
-</ul></li>
-<li>Read PMA5 Ch3 (Preparing Data for Analysis)</li>
-<li>Read next week’s overview so you know how to prepare for Tuesday.</li>
-</ul>
-</div>
-</div>
+<div id="thursday-exam-1" class="section level1">
+<h1>Thursday: Exam 1</h1>
+<p>Emphasizes correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. <a href="https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf">[Sample Exam]</a></p>
 </div>
 
 
