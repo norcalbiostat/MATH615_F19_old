@@ -6,7 +6,9 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 ### 10/1/17 - Week 7
 * As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability. 
+    - Week 7 overview has been posted and includes reading material and learning videos. 
 * An optional Exam error assessment has been posted to [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html#thursday:_exam_1)
+* The storage location for your poster prep Google Slides has changed. See project page for details. 
 
 ### 9/24/17 - Week 6
 * Schedule has been updated to reflect new poster preparation assignments. Check the Project page for details. 

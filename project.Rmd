@@ -24,8 +24,9 @@ css: css/customh5.css
 You will organize your research in stages by building a "powerpoint" type presentation. This will help you concicely explain your research topic and findings in a way that you can more easily translate (fit) onto a poster. 
 
 ### Instructions
-* Create a Google Slides presentation directly in the MATH 615 Google Drive.
-* Name it using first_last name only. 
+* Create a Google Slides presentation directly into a [Add Health Posters](https://drive.google.com/open?id=0B83Z8_sNw3KPUWFRdXo3WUdiNUk) Google Drive Folder. 
+  - This folder is shared with MATH 315 as well. They are doing the same project. 
+  - Name it using first_last name only. 
 * The required contents for each slide are listed below under **Stages**
     
 ### Peer Review
@@ -56,12 +57,12 @@ Resources on how to build a good poster will be posted here.
 7. Description of measures (variables) being used. Explain any recoding and/or altering that was done. 
 8-9. Univariate graphics and descriptions of main explanatory and response variables. One variable per slide. 
 
-#### <span style="color:blue">**Stage 2**</span>
+#### <span style="color:blue">**Stage 2 (In progress)**</span>
 10-11: Bivariate graphics and analysis (ANVOA/$\chi^2$/Correlation)
 
-#### <span style="color:blue">**Stage 3**</span>
+#### <span style="color:blue">**Stage 3 (In progress)**</span>
 
-12-13:  Multivariate Analysis
+12-13:  Multivariate Analysis 
 
 * For Moderation:
     - If you found a moderator: Remove the bivariate graph and write up from your poster and replace with explanation of moderator and graph of significant bivariate at the 3rd variable level.

@@ -1,0 +1,70 @@
+---
+title: 'Week 7: 10/2 - 10/8'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: cerulean
+    toc: yes
+    toc_float: yes
+css: css/customh5.css
+---
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+#library(rmarkdown)
+opts_chunk$set(warning=FALSE, message=FALSE) 
+```
+
+# Online Resources
+* Open Intro Statistics Textbook - Chapter 3(3.1, 3.2 only) and Chapter 4. [[PDF]](https://www.openintro.org/download.php?file=os3&referrer=/stat/textbook.php)
+    - You may find later chapters helpful. This textbook is geared towards undergraduate students whereas PMA5 is a graduate level text. It is a great refresher. 
+* Distribution calculators and demo apps [ShinyEd](http://www2.stat.duke.edu/~mc301/shinyed/) 
+* Passion Driven Statistics [Video 10](http://passiondrivenstatistics.com/2015/07/15/chapter-10/) (30 min)
+* Short videos from the authors of the OpenIntro Statistics Textbook. They are all 4-6 minutes long. 
+    - [[Playlist link]](https://www.youtube.com/playlist?list=PLkIselvEzpM7Pjo94m1e7J5jkIZkbQAl4)
+    - Variability in Point Estimates
+    - Constructing Confidence Intervals
+    - Hypothesis Testing Fundamentals
+    - Central Limit Theorem for the Sample Mean
+    
+# Tuesday: Probability
+
+Goals: 
+
+* Give an example of a random variable
+* Calculate a probability under a normal model. 
+* Describe how a sample statistic can estimate a population parameter
+* Describe the difference between the standard deviation, and the standard error. 
+
+
+## Prepare
+* At minimum watch the PDS video on probability. If you are constrained for time you can pause when they really launch into hypothesis testing. 
+
+
+## In class
+
+* Foundations worksheet
+
+##### Assignment
+* Foundations worksheet
+
+----
+
+
+# Thursday: Inference
+Goals: 
+
+* Construct a confidence interval to estimate a mean and a proportion. 
+* Generate testable hypotheses for your research questions.
+* Identify two types of decision errors. 
+
+## Prepare
+* Finish watching all linked videos, and reviewing chapter 4 of the Open Intro textbook. 
+
+
+## In class
+* Foundations Worksheet
+
+
+
