@@ -67,14 +67,15 @@ Unsure? Do several and compare results.
 
 This exam emphasizes correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
 
-Error Assessment (Optional)
+##### Assigments
+* Error Assessment (Optional)
+    - Take your returned exam and go over it carefully. 
+    - Print out [this form](docs/error_assessment.pdf) and use it to understand what types of mistakes you are making. 
+    - Correct your exam on a new piece of paper. 
+    - Go over your returned exam with a tutor, with a specific eye towards what _type_ of mistakes you made. **Do not go to a tutor until you have made your own corrections**
+    - Have the tutor sign off on your visit. 
 
-* Take your returned exam and go over it carefully. 
-* Print out [this form](docs/error_assessment.pdf) and use it to understand what types of mistakes you are making. 
-* Correct your exam on a new piece of paper. 
-* Go over your returned exam with a tutor, with a specific eye towards what _type_ of mistakes you made. **Do not go to a tutor until you have made your own corrections**
-* Have the tutor sign off on your visit. 
+You can earn up to half credit of the total missed points back by returning the form, corrected work and exam back to me by 10/20. 
 
-You can earn up to half credit of the total missed points back by returning the form, corrected work and exam back to me by 10/6. 
-
+* Exam Materials: [NC Births Codebook](docs/Codebook_for_NCBirths.pdf), [R code](docs/Exam1_F17_R_Code.pdf)
 
