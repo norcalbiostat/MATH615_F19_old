@@ -58,6 +58,6 @@ Goals:
 
 
 ##### Assignments
-* [Bivariate Inference](hw/Bivariate_inference.html) Assignment.
-    - R code [template](hw/bivariate_inference_template.Rmd) -- to be used by the R users. 
+* [Bivariate Inference](hw/Bivariate_Inference.html) Assignment.
+    - R code [template](hw/bivariate_Inference_template.Rmd) -- to be used by the R users. 
 
