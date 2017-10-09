@@ -4,6 +4,13 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
+### 10/1/17 - Week 8
+* Overarching theme is bivariate analyses. 
+* Tuesday is a little bit of recap on how to compare two means and two proportion. 
+* Then we launch into comparing multiple means on Thursday with an ANOVA. 
+* Still working out of the Open Intro textbook (with associated videos.)
+
+
 ### 10/1/17 - Week 7
 * As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability. 
     - Week 7 overview has been posted and includes reading material and learning videos. 
