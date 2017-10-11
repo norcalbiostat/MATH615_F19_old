@@ -4,21 +4,22 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
-### 10/1/17 - Week 8
+### 10/1/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk08.html)
 * Overarching theme is bivariate analyses. 
 * Tuesday is a little bit of recap on how to compare two means and two proportion. 
 * Then we launch into comparing multiple means on Thursday with an ANOVA. 
 * Still working out of the Open Intro textbook (with associated videos.)
+* MW OH cancelled, extra OH TR @ 2pm
 
 
-### 10/1/17 - Week 7
+### 10/1/17 - [Week 7](https://norcalbiostat.github.io/MATH615/wk07.html)
 * As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability. 
     - Week 7 overview has been posted and includes reading material and learning videos. 
 * An optional Exam error assessment has been posted to [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html#thursday:_exam_1)
 * The storage location for your poster prep Google Slides has changed. See project page for details. 
 
 
-### 9/24/17 - Week 6
+### 9/24/17 - [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html)
 * Schedule has been updated to reflect new poster preparation assignments. Check the Project page for details. 
 * Lecture on choosing appropriate analyses on Tuesday. 
 * Introduction to the next phase of the project analysis preparation. 
@@ -26,7 +27,7 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 * Bivariate graphing assignment - also upload to BBLearn. Makes it easier for me to grade and comment on. 
     - My comments are going on your blog posts. 
 
-### 9/18/17 - Week 5
+### 9/18/17 - [Week 5](https://norcalbiostat.github.io/MATH615/wk05.html)
 * You will be exploring relationships between two variables using graphical and summary methods. 
 * Tuesday we will talk about grouped summary statistics and how to interpret bivariate graphics. 
 * Thursday I am out of town, so it will be an open work day. 

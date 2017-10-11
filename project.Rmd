@@ -46,6 +46,8 @@ You will organize your research in stages by building a "powerpoint" type presen
 Resources on how to build a good poster will be posted here. 
 
 ### List of slide contents
+These should follow well from your research proposal. Here is the link to the post on [writing empirical research](https://norcalbiostat.netlify.com/lec/lec_writing_em/). 
+
 
 #### <span style="color:blue">**Stage 1**</span>
 1. Title 
@@ -54,11 +56,19 @@ Resources on how to build a good poster will be posted here.
 4. Explain the research problem
 5. State your Research Question. 
 6. Sample characteristics: How many people, what gender/age/ethnicity. 
-7. Description of measures (variables) being used. Explain any recoding and/or altering that was done. 
-8-9. Univariate graphics and descriptions of main explanatory and response variables. One variable per slide. 
+7. Description of measures (variables) being used. Explain any recoding and/or altering that was done - but only for recodes more substantial than setting values to missing. 
+8. Univariate graphic and description of main explanatory variable. 
+9. Univariate graphic and description of at least one response variable.
 
-#### <span style="color:blue">**Stage 2 (In progress)**</span>
-10-11: Bivariate graphics and analysis (ANVOA/$\chi^2$/Correlation)
+#### <span style="color:blue">**Stage 2**</span>
+Slide 10-11: Bivariate graphics and analysis. 
+
+Each slide should contain the following:  
+
+1. A fully labeled and cleaned up plot demonstrating the bivariate relationship under consideration.
+2. The results of an appropriate bivariate analysis. This should be a conclusion written in english, includes a confidence interval and a p-value. You also need to state the name of the test you used. 
+
+Refer to the [Bivariate Inference](docs/Bivariate_Inference.html) assignment on how to conduct and interpret these bivariate analyses.
 
 #### <span style="color:blue">**Stage 3 (In progress)**</span>
 
