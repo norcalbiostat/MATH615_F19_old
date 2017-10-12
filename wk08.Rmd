@@ -49,6 +49,8 @@ Goals:
 
 ## Prepare
 * Read Section 5.5 (comparing many means) in Open Intro textbook. Watch the associated videos. 
+* Introduce yourself to the [Bivariate Inference](hw/Bivariate_Inference.html) Assignment. 
+    - Here is a [[PDF]](hw/Bivariate_Inference.pdf) version if you would like to print/annotate. 
 
 ## In class
 

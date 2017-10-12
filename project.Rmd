@@ -68,7 +68,7 @@ Each slide should contain the following:
 1. A fully labeled and cleaned up plot demonstrating the bivariate relationship under consideration.
 2. The results of an appropriate bivariate analysis. This should be a conclusion written in english, includes a confidence interval and a p-value. You also need to state the name of the test you used. 
 
-Refer to the [Bivariate Inference](docs/Bivariate_Inference.html) assignment on how to conduct and interpret these bivariate analyses.
+Refer to the [Bivariate Inference](hw/Bivariate_Inference.html) assignment on how to conduct and interpret these bivariate analyses.
 
 #### <span style="color:blue">**Stage 3 (In progress)**</span>
 
