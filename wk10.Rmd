@@ -1,5 +1,5 @@
 ---
-title: 'Week 9: 10/16 - 10/22'
+title: 'Week 10: 10/23 - 10/29'
 date: "Last Updated `r Sys.time()`"
 output:
   html_document:
@@ -57,7 +57,6 @@ Goals:
 
 * Read PMA6 Chapter 6
 * Review Lec 05 - Linear Regression [[HTML]](docs/lec05_LinReg.html) or [[PDF]](docs/lec05_LinReg.pdf) notes. 
-* Passion Driven Stats [[Correlation]](https://www.youtube.com/watch?v=qBwjKfytls8&list=PLDEF0B9CBD27AD37E&index=60) video
 
 ## In class
 * Short lecture on linear regression analysis (quick overview of lecture notes)
