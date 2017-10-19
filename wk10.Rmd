@@ -17,56 +17,24 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 
-# Tuesday: Categorical Data Analysis
+# Tuesday: Open Work time
 Goals: 
 
-* Explain the concept of "deviation away from expected" and how that pertains to testing equal proportions. 
-* Conduct a $\chi^2$ squared test of equal proportions.
-
-## Prepare
-* Watch Passion Driven Statistics [[Chapter 12]](http://passiondrivenstatistics.com/2016/06/29/r-chapter-12/) Video. 
-* Review Lec 04 - Categorical data analysis [[HTML]](docs/lec04_cda.html) or [[PDF]](docs/lec04_cda.pdf) notes.  
-
-## In class
-* Short lecture on construction of Chi-squared test statistic and necessary assumptions (skim through of lecture notes).
-* Work on Bivarite inference assignment. 
-
-## Resources
-* [[OpenIntro Statistics]](https://www.openintro.org/stat/textbook.php) Chapter 6 (6.1-6.4)
-* UCLA IDRE pages: $\chi^2$ squared test in  [[SPSS]](https://stats.idre.ucla.edu/spss/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-spss/#chisq) or [[R]](https://stats.idre.ucla.edu/r/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-r/#chisq)
-* Mike Marin: Relative Risk and Odds Ratio https://www.youtube.com/watch?v=V_YNPQoAyCc
-* An **excellent** additional textbook reference: _Categorical Data Analysis_ by Alan Agresti
-
+* Finish Bivariate Inference Assignment
+* Work on Poster Prep Stage II
+* Meet with Robin to talk about research progress
 
 ----
 
-# Thursday: Correlation & Regression
+# Thursday: Multiple Regression 
 
 Goals: 
-
-* Conduct a correlation analyses in your software program of choice. Understand how to read the output. 
-* Describe the relationship between an independent variable X and a continuous
-  dependent variable $Y$ as a straight line. The textbook discusses two cases: 
-    - Fixed-$X$: values of $X$ are preselected by investigator
-    - Variable-$X$: have random sample of $(X,Y)$ values
-    - Calculations are the same, don't stress too much about the difference.  
-* Draw inferences regarding this relationship
 
 
 ## Prepare 
 
-* Read PMA6 Chapter 6
-* Review Lec 05 - Linear Regression [[HTML]](docs/lec05_LinReg.html) or [[PDF]](docs/lec05_LinReg.pdf) notes. 
+* Read PMA6 Chapter X
+* Review Lec 06 - Multiple Linear Regression [[HTML]](docs/lec06_MultLinReg.html) or [[PDF]](docs/lec06_MultLinReg.pdf) notes. 
 
 ## In class
-* Short lecture on linear regression analysis (quick overview of lecture notes)
-* Work on Bivariate inference assignment. 
-
-## Resources
-
-UCLA IDRE pages: 
-
-* Correlation in [[SPSS]](https://stats.idre.ucla.edu/spss/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-spss/#corr) or [[R]](https://stats.idre.ucla.edu/r/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-r/#corr)
-* Linear Regression in  [[SPSS]](https://stats.idre.ucla.edu/spss/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-spss/#simpreg) or [[R]](https://stats.idre.ucla.edu/r/whatstat/what-statistical-analysis-should-i-usestatistical-analyses-using-r/#simpreg)
-
 
