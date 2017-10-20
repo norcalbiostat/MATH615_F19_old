@@ -26,15 +26,23 @@ Goals:
 
 ----
 
-# Thursday: Multiple Regression 
+# Thursday: Moderation
 
 Goals: 
+
+* Demonstrate how to determine if a third variable alters the relationship between your response and explanatory varibles. 
 
 
 ## Prepare 
 
-* Read PMA6 Chapter X
-* Review Lec 06 - Multiple Linear Regression [[HTML]](docs/lec06_MultLinReg.html) or [[PDF]](docs/lec06_MultLinReg.pdf) notes. 
+* [Passion Driven Stats video 14](http://passiondrivenstatistics.com/2016/08/20/r-chapter-14/)(21 min)
 
 ## In class
+ 
+* Short lecture
+* Work on assignment
+
+##### Assignments
+
+* Moderation Assignment[[TBD]](hw/moderation_assignment.html)
 
