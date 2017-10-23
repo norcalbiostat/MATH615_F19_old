@@ -36,6 +36,8 @@ Goals:
 ## Prepare 
 
 * [Passion Driven Stats video 14](http://passiondrivenstatistics.com/2016/08/20/r-chapter-14/)(21 min)
+* SPSS users: Review how to split your data file for stratified analyses
+    - https://libguides.library.kent.edu/SPSS/SplitData 
 
 ## In class
  
