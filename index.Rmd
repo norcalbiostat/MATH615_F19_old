@@ -4,6 +4,11 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
+### 10/23/17 - [Week 10](https://norcalbiostat.github.io/MATH615/wk10.html)
+* Tuesday - Open work time to finish bivariate analysis
+* Thursday - Moderation. What happens if we throw another variable into the mix? 
+
+
 ### 10/15/17 - [Week 9](https://norcalbiostat.github.io/MATH615/wk09.html)
 * Tuesday - Analysis of categorical data using $\chi^{2}$ tests
 * Thursday - Correlation and Regression
