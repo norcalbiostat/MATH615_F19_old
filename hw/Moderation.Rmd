@@ -27,7 +27,7 @@ Moderation occurs when the relationship between two variables depends on a third
 
 **Setup**
 
-1. Download the Moderation template file. [[RMD for R users]](Moderation_template.Rmd), [[WORD for SPSS users]](Moderation_template.doc)
+1. Download the Moderation template file. [[RMD for R users]](Moderation_template.Rmd), [[WORD for SPSS users]](Moderation_template.docx)
 2. Copy relevant content and code from Step 1-4 for the ANOVA, Chi-Squared, and Regression inferences from your bivariate inference assignment into the appropriate location in the moderation assignment template file. 
     - We are not doing the full 5 step analysis in this document. 
 
