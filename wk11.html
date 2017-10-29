@@ -11,7 +11,7 @@
 
 
 
-<title>Frequently Asked Questions</title>
+<title>Week 11: 10/30 - 11/03</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -52,6 +55,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/customh5.css" type="text/css" />
 
 </head>
 
@@ -147,6 +151,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -221,81 +320,62 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Frequently Asked Questions</h1>
-<h4 class="date"><em>Last Updated 2017-10-24 19:23:09</em></h4>
+<h1 class="title toc-ignore">Week 11: 10/30 - 11/03</h1>
+<h4 class="date"><em>Last Updated 2017-10-28 10:35:10</em></h4>
 
 </div>
 
 
-<p><em>page in development</em></p>
-<div id="where-can-i-get-help-using-r-outside-of-class-time" class="section level1">
-<h1>Where can I get help using R outside of class time?</h1>
-<div id="online" class="section level3">
-<h3>Online</h3>
+<div id="tuesday-study-design" class="section level1">
+<h1>Tuesday: Study Design</h1>
+<p>Goals:</p>
 <ul>
-<li>Chico <a href="https://groups.google.com/forum/#!forum/chico-rug">R User Group</a></li>
-<li>UCLA IDRE <a href="https://stats.idre.ucla.edu/r/modules/">[R Learning modules]</a></li>
+<li>Explain the difference between an Experiment and an Observational study</li>
+<li>Identify which can be used to make causal claims</li>
+<li>Explain the difference between a moderator, mediator, confounder and covariate</li>
+</ul>
+<div id="prepare" class="section level2">
+<h2>Prepare</h2>
+<ul>
+<li>Review the Study Design Notes <a href="docs/lec06_StudyDesign.html">[HTML]</a> <a href="docs/lec06_StudyDesign.pdf">[PDF]</a></li>
 </ul>
 </div>
-<div id="in-person" class="section level3">
-<h3>In Person</h3>
+<div id="in-class" class="section level2">
+<h2>In class</h2>
 <ul>
-<li><strong>Robin Donatello</strong> - Stat professor. Holt 202
+<li>Lecture through the study design notes, answer questions along the way.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="thursday-multiple-linear-regression" class="section level1">
+<h1>Thursday: Multiple Linear Regression</h1>
+<p>Goals:</p>
+<div id="prepare-1" class="section level2">
+<h2>Prepare</h2>
 <ul>
-<li>MWF 3-4pm, Holt 155 (most weeks I won’t be avb one of M or W)</li>
-<li>TR 10-11am, Holt 155</li>
-<li>T 11/2 2-3:30pm, SSC 426</li>
-</ul></li>
-<li><strong>Edward Roualdes</strong> - Stat professor. Holt 204 - <a href="mailto:eroualdes@csuchico.edu">eroualdes@csuchico.edu</a>
-<ul>
-<li>MW 10-11am, 1-2pm Holt 204</li>
-<li>T 1-2pm Holt 204</li>
-<li>R 2-3:50pm MLIB 442</li>
-</ul></li>
-<li><strong>Eduardo Gomez</strong> - peer mentor - <a href="mailto:egomez42@mail.csuchico.edu">egomez42@mail.csuchico.edu</a>
-<ul>
-<li>MW 3-4pm, Holt 155</li>
-</ul></li>
-<li><strong>Ricardo Aguilar</strong> - peer mentor - <a href="mailto:raguilar11@mail.csuchico.edu">raguilar11@mail.csuchico.edu</a>
-<ul>
-<li>possibly available for personal tutoring</li>
-</ul></li>
-<li><strong>Mariby Cruz</strong> - peer mentor - <a href="mailto:mcruz27@mail.csuchico.edu">mcruz27@mail.csuchico.edu</a>
-<ul>
-<li>TLC hours: Mon 10am-1pm, R 10-11am</li>
-<li>available for personal tutoring, including weekends</li>
-</ul></li>
-<li><strong>Math Learning Lab (MLIB 4th floor)</strong> <a href="https://docs.google.com/spreadsheets/d/1xNQMfxpnIiS5bUCS9jB2_EE1Sc4C06JRaw6jyEO3nVE/edit#gid=0">[Tutor Schedule]</a>
-<ul>
-<li>Mariby Cruz, Mitch Borgert, Matt Sterkel, Jerry Tucay</li>
-</ul></li>
+<li>Read PMA5 Chapter 7, 9.1-9.3, 9.5</li>
+<li>Multiple Regression Notes <a href="docs/lec07_MLR.html">[HTML]</a> <a href="docs/lec07_MLR.pdf">[PDF]</a></li>
 </ul>
 </div>
-</div>
-<div id="helpful-r-code-snippits" class="section level1">
-<h1>Helpful R code snippits</h1>
-<p>Here is a collection of helpful R <a href="snippits.html">code snippits</a> for plotting, subsetting, handling missing values and so forth. Think of it as a FAQ for R code.</p>
-</div>
-<div id="where-can-i-get-help-using-spss-outside-of-class-time" class="section level1">
-<h1>Where can I get help using SPSS outside of class time?</h1>
-<div id="online-1" class="section level3">
-<h3>Online</h3>
+<div id="in-class-1" class="section level2">
+<h2>In class</h2>
 <ul>
-<li>UCLA IDRE <a href="https://stats.idre.ucla.edu/spss/modules/">[learning modules]</a></li>
-<li>Sigma Plus SPSS <a href="https://www.spss-tutorials.com/basics/">Tutorials</a></li>
-<li>IBM Knowledge <a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html">[Center]</a></li>
+<li>Lecture through MLR notes.</li>
 </ul>
-</div>
-<div id="in-person-1" class="section level3">
-<h3>In Person:</h3>
+<div id="assignments" class="section level5">
+<h5>Assignments</h5>
 <ul>
-<li>Gina Gerace and David Philhour: BUTTE 211, Friday 10-11:30</li>
+<li><a href="hw/regression.html">Regression Assignment</a></li>
 </ul>
 </div>
 </div>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 

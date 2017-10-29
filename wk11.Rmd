@@ -17,31 +17,37 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 
-# Tuesday: 
+# Tuesday: Study Design
 Goals: 
+
+* Explain the difference between an Experiment and an Observational study
+* Identify which can be used to make causal claims
+* Explain the difference between a moderator, mediator, confounder and covariate
 
 
 ## Prepare 
+* Review the Study Design Notes [[HTML]](docs/lec06_StudyDesign.html) [[PDF]](docs/lec06_StudyDesign.pdf)
+
 
 ## In class
- 
+* Lecture through the study design notes, answer questions along the way.  
 
-##### Assignments
-
-* [Regression Assignment](hw/regression.html)
 
 
 ----
 
-# Thursday: 
+# Thursday: Multiple Linear Regression
 
 Goals: 
 
 
 ## Prepare 
+* Read PMA5 Chapter 7, 9.1-9.3, 9.5
+* Multiple Regression Notes [[HTML]](docs/lec07_MLR.html) [[PDF]](docs/lec07_MLR.pdf)
 
 ## In class
- 
+* Lecture through MLR notes. 
 
 ##### Assignments
 
+* [Regression Assignment](hw/regression.html)

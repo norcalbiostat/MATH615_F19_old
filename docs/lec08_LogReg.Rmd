@@ -19,18 +19,12 @@ options(xtable.comment = FALSE)
 opts_chunk$set(warning=FALSE, message=FALSE) 
 ```
 
-```{r results="asis", echo=FALSE}
-source("C:/Github/MATH456/stylesheets/custom.R")
-```
-
-Navbar: [[Home]](../index.html) [[Schedule]](../Schedule.html) [[Data]](../data/Datasets.html) [[Week 11 Overview]](../wk11.html) [[HW Info]](../HW_Info.html)  [[Google Group]](https://groups.google.com/forum/#!forum/csuc_stat)
-
 
 
 # Assigned Reading and additional references
 
 * Open Intro Section 8.4
-* Afifi Ch 12 (selected)
+* PMA5 Ch 12 (selected)
 * Article: When can odds ratios mislead? http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1112884/
 
 -- Additional References
@@ -47,14 +41,14 @@ Navbar: [[Home]](../index.html) [[Schedule]](../Schedule.html) [[Data]](../data/
 * Instead of modeling the outcome directly $E(Y|X)$ as with linear regression, 
   we model the probability of an event occurring: $P(Y=1|X)$. 
 
-## Uses of Logistic Regression (Afifi 12.10)
+## Uses of Logistic Regression (PMA5 12.10)
 * Assess the impact selected covariates have on the probability of an outcome occurring. 
 * Predict the likelihood / chance / probability of an event occurring given a
   certain covariate pattern.  
 
 
 
-# The Logistic Regression Model (Afifi 12.4)
+# The Logistic Regression Model (PMA5 12.4)
 Let $p_{i} = P(y_{i}=1)$. 
 
 The logistic model relates the probability of an event based on a linear
@@ -176,7 +170,7 @@ exp(confint(dep_sex_model))
 ```
 
 
-# Multiple Logistic Regression (Afifi 12.5, 12.6)
+# Multiple Logistic Regression (PMA5 12.5, 12.6)
 Just like multiple linear regression, additional predictors are simply included 
 in the model using a `+` symbol. 
 ```{r}
@@ -250,35 +244,30 @@ times the odds of being depressed compared to someone who is 10 years younger th
 
 ## CAUTION
 
-Consider a hypothetical example where the probability of death is .4 for males
-and .6 for females. 
+Consider a hypothetical example where the probability of death is .4 for males and .6 for females. 
 
 The odds of death for males is `.4/(1-.4)` = `r round(.4/.6,2)`.
 The odds of death for females is `.6/(1-.6)` = `r round(.6/.4,2)`.
 
 The Odds Ratio of death for females compared to males is ` 1.5/.66` = `r round(1.5/.66,2)`.
 
-* If you were to say that females were 2.3 times as likely to die compare to males, 
-  you wouldn't necessarily translate that to a 40% vs 60% chance. 
+* If you were to say that females were 2.3 times as likely to die compare to males, you wouldn't necessarily translate that to a 40% vs 60% chance. 
 
 
 ## Probability Interpretation
-For the above model of depression on age, income and gender the probability of
-depression is: 
+For the above model of depression on age, income and gender the probability of depression is: 
 $$
 P(depressed) = \frac{e^{-0.676 - 0.02096*age - .03656*income + 0.92945*gender}}
 {1 + e^{-0.676 - 0.02096*age - .03656*income + 0.92945*gender}}
 $$
 
-Let's compare the probability of being depressed for males and females separately, 
-while holding age and income constant at their average value. 
+Let's compare the probability of being depressed for males and females separately, while holding age and income constant at their average value. 
 
 ```{r}
 depress %>% summarize(age=mean(age), income=mean(income))
 ```
 
-Plug the coefficient estimates and the values of the variables into the equation
-and calculate. 
+Plug the coefficient estimates and the values of the variables into the equation and calculate. 
 $$
 P(depressed|Female) = \frac{e^{-0.676 - 0.02096(44.4) - .03656(20.6) + 0.92945(1)}}
 {1 + e^{-0.676 - 0.02096(44.4) - .03656(20.6) + 0.92945(1)}}
@@ -302,14 +291,14 @@ The probability for a 44.4 year old female who makes $20.6k annual income has a
 equal age and income is 0.86. 
 
 
-# Logistic models with interaction terms (Afifi 12.7)
+# Logistic models with interaction terms (PMA5 12.7)
 
 **This section follows the book very closely so minimal notes are presented**
 
 The inclusion of an interaction is necessary if the effect of an independent 
 variable depends on the level of another independent variable.
 
-#### Example: The relationsihp between income, employment status and depression. 
+#### Example: The relationship between income, employment status and depression. 
 Here I create the binary indicators of lowincome and underemployed as described
 in the textbook. In each case I ensure that missing data is retained.  
 ```{r}
@@ -329,50 +318,7 @@ me_model <- glm(cases ~ lowincome + underemployed, data=depress, family="binomia
 summary(me_model)
 ```
 
-To formally test whether an interaction term is necessary, we add the interaction
-term into the model and assess whether the coefficient for the interaction term is
-significantly different from zero. 
+To formally test whether an interaction term is necessary, we add the interaction term into the model and assess whether the coefficient for the interaction term is significantly different from zero. 
 ```{r}
 summary(glm(cases ~ lowincome + underemployed + lowincome*underemployed, data=depress, family="binomial"))
 ```
-
-## Confouding and Effect Modification
-
-* **Confounder**: A covariate that is associated with both the outcome
-    and the risk factor. 
-* **Effect Modifier**: A covariate that modifies the effect a second 
-    covariate has on the outcome.
-
-# Refining and evaluating logistic regression
-
-
-
-# Going further
-When your outcome has more than one level and you want to build a regression
-model to assess the impact a specific variable (or set of variables) has on 
-the levels of this outcome variable, you would need to turn to more
-generalized linear models such as: 
-
-* Multinomial distribution for a nominal outcome
-    - http://www.ats.ucla.edu/stat/r/dae/mlogit.htm
-* Ordinal logistic regression
-
-* http://www.r-bloggers.com/how-to-perform-a-logistic-regression-in-r/
-
-[[top]](lec08_LogisticRegression.html)
-
-# On Your Own
-
-##### On Your Own
-1. What does an Odds Ratio of 1 signify? What if the OR < 1? What about when OR > 1? 
-   You can use a pair of example variables such as X=gender and y=death if it helps you explain. 
-2. Afifi 12.9 (a-c)
-3. Afifi 12.14 
-4. Afifi 12.15 
-5. Afifi 12.16
-6. Afifi 12.17
-7. Afifi 12.18
-8. Afifi 12.23
-
-    
-    

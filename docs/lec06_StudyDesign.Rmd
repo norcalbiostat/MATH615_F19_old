@@ -3,13 +3,13 @@ title: "Study Design"
 author: "Robin Donatello"
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 css: ../css/customh5.css
 ---
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
@@ -27,7 +27,7 @@ Recall that each research question is designed to make a statement or learn some
 
 Consider the following research question.
 
-    What is the average mercury content in swordfish in the Atlantic Ocean?
+> What is the average mercury content in swordfish in the Atlantic Ocean?
 
 The target population is all swordfish in the Atlantic Ocean, and each fish represents a case. Often times, it is too expensive to collect data for every case in a population. Instead, a sample is taken. For instance, 60 swordfish in the population might be selected, and this sample data may be used to provide an estimate of the population average and answer the research question.
 
@@ -66,7 +66,7 @@ The most basic type of random selection is equivalent to how raffles are conduct
 
 Five graduates are randomly selected from the population to be included in the sample.
 
-![](images/popToSampleGraduates)
+![](images/popToSampleGraduates.jpg)
 
 ## Representation and Bias
 
@@ -74,21 +74,24 @@ Suppose we ask a student who happens to be majoring in nutrition to select sever
 
 If someone was permitted to pick and choose exactly which graduates were included in the sample, it is entirely possible that the sample could be skewed to that person's interests, which may be entirely unintentional. This introduces **bias** into a sample. 
 
+
+> A recent review of 74 studies of antidepressant agents found 38 studies with positive results and 36 studies with negative or questionable results. All but 1 of the 38 positive studies were published. Of the remaining 36, 22 were not published, and 11 were published in such a way as to convey a positive outcome. 
+
+Describe how this selective reporting can have adverse consequences on health care.
+
+
 ### Simple Random Sampling
 
 Sampling randomly helps resolve this problem. The most basic random sample is called a **simple random sample**, and which is equivalent to using a raffle to select cases. This means that each case in the population has an equal chance of being included and there is no implied connection between the cases in the sample.
 
 Instead of sampling from all graduates equally, a nutrition major might inadvertently pick graduates with health-related majors disproportionately often. The act of taking a simple random sample helps minimize bias, however, bias can crop up in other ways.
 
-![](images/popToSubSampleGraduates)
+![](images/popToSubSampleGraduates.jpg) 
 
 Even when people are picked at random, e.g. for surveys, caution must be exercised if the **non-response** is high. For instance, if only 30% of the people randomly sampled for a survey actually respond, then it is unclear whether the results are _representative_ of the entire population. This **non-response bias** can skew results.
 
 Due to the possibility of non-response, surveys studies may only reach a certain group within the population. It is difficult, and often times impossible, to completely fix this problem.
 
-<!--
-![](images/surveySample)
--->
 
 ### Convienience Sample 
 
@@ -98,13 +101,12 @@ The next type of sampling to discuss is called a **convenience sample**. This is
 
 ### Volunteer Sample (Opt-In)
 
-In a volunteer sample, individuals choose to be included. 
+In a volunteer sample, individuals choose to be included. In general, volunteer samples tend to be comprised of individuals who have a particularly strong opinion about an issue and are looking for an opportunity to voice it. 
 
-> A student posts a music-lovers' survey to campus announcements, asking people to vote for their favorite type of music.
+> * A student posts a music-lovers' survey to campus announcements, asking people to vote for their favorite type of music.
 > 
-> The Student Evaluations of Teaching (SET) that you have to fill out each semester for each teacher. 
+> * The Student Evaluations of Teaching (SET) that you have to fill out each semester for each teacher. 
 
-In general, volunteer samples tend to be comprised of individuals who have a particularly strong opinion about an issue and are looking for an opportunity to voice it. 
 
 <span style="color:red">**Such a sample is almost guaranteed to be biased.**</span>
 
@@ -138,19 +140,13 @@ Here is a case where the sampling frame (list of potential individuals to be sam
 It is always best to have the sampling frame match the population as closely as possible.
 
 
-## Sampling strategies
+### Identifying problems with sampling strategies
 
 A statistics student who is curious about the relationship between the amount of time students spend on social networking sites and their performance at school decides to conduct a survey. Three research strategies for collecting data are described below. In each, describe any potential problems and bias you might expect.
 
 1. He randomly samples 40 students from the study's population, gives them the survey, asks them to fill it out and bring it back the next day.
 2. He gives out the survey only to his friends, and makes sure each one of them fills out the survey.
 3. He posts a link to an online survey on his Facebook wall and asks his friends to fill out the survey.
-
-## Publication Bias 
-
-> A recent review of 74 studies of antidepressant agents found 38 studies with positive results and 36 studies with negative or questionable results. All but 1 of the 38 positive studies were published. Of the remaining 36, 22 were not published, and 11 were published in such a way as to convey a positive outcome. 
-> 
-> Describe how this selective reporting can have adverse consequences on health care.
 
 
 # Study Design 
@@ -159,19 +155,31 @@ There are two primary types of data collection: **observational** studies and **
 
 ## Observational Study
 
-The researcher simply monitors and collects data on things as they are. There is no manipulation of the study by the researcher. In general, observational studies can provide evidence of a naturally occurring association between variables, but they cannot by themselves show a causal connection.
+The researcher simply monitors and collects data on things as they are. There is no manipulation of the study by the researcher. 
 
-> The Youth Risk Behavior Surveillance System (YRBSS) monitors six types of health-risk behaviors that contribute to the leading causes of death and disability among youth and adults.
+> * The Youth Risk Behavior Surveillance System (YRBSS) monitors six types of health-risk behaviors that contribute to the leading causes of death and disability among youth and adults.
 > 
-> Taking measurements on post-spawn carcasses of Chinook Salmon in Butte Creek to assess the annual population health.
+> * Measurements are taken on post-spawn carcasses of Chinook Salmon in Butte Creek to assess the annual population health.
+> 
+> * We collect a representative sample from the population of smokers who are just now trying to quit by using a nationwide telephone survey of 1,000 individuals. We ask them how they are trying to quit and classify it into one of four groups: 1) Drugs that alleviate nicotine addiction; 2) Therapy that trains smokers to quit; 3) A combination of drugs and therapy; or 4) Neither form of intervention (quitting "cold turkey"). One year later, we contact the same 1,000 individuals and determine whether they succeeded in quitting.
+
+
+In general, observational studies can provide evidence of a naturally occurring association between variables, but **they cannot by themselves show a causal connection.**
+
 
 ## Experiment
 
-In a controlled experiment, the researcher controls the value of the explanatory variable for each unit. In other words, the researcher controls which subjects go into which treatment groups. The value of such control is that cause-and-effect relationships can be established between the response and explanatory variable.
+In a controlled experiment, the researcher controls the value of the explanatory variable for each unit. In other words, the researcher controls which subjects go into which treatment groups. 
 
-> For instance, we may suspect that diet and exercise reduce mortality in heart attack patients over the following year. To check if there really is a causal connection between the explanatory variable (diet and exercise) and the response (mortality), researchers will collect a sample of individuals and split them into groups. The individuals in each group are \emph{assigned} a treatment, one group per level of the explanatory variable.
+> * We may suspect that diet and exercise reduce mortality in heart attack patients over the following year. Researchers collect a sample of individuals who have recently experienced a heart attack and split them into groups. The individuals in each group are assigned a treatment, one group per level of the explanatory variable. Patients are followed over a year and record the number of deaths per group. 
 > 
-> To study the effect of tar contained in cigarettes researchers (Wynder 1953) painted tobacco tar on the back of some mice but not others, and observed if the painted mice had cancer at a higher rate than those not exposed to the tar.
+> * To study the effect of tar contained in cigarettes researchers (Wynder 1953) painted tobacco tar on the back of some mice but not others, and observed if the painted mice had cancer at a higher rate than those not exposed to the tar.
+> 
+> * We collect a representative sample from the population of smokers who are just now trying to quit by using a nationwide telephone survey of 1,000 individuals. We divide the sample into 4 groups of 250 and assign each group to use one of the four methods to quit. One year later, we contact the same 1,000 individuals and determine whose attempts at quitting succeeded while using our designated method.
+
+
+The value of such control is that **cause-and-effect relationships can be established** between the response and explanatory variable.
+
 
 # Confounding and Lurking variables
 
@@ -179,16 +187,37 @@ In a controlled experiment, the researcher controls the value of the explanatory
 
 Some previous research tells us that using sunscreen actually reduces skin cancer risk, so maybe there is another variable that can explain this hypothetical association between sunscreen usage and skin cancer. One important piece of information that is absent is sun exposure. If someone is out in the sun all day, she is more likely to use sunscreen AND more likely to get skin cancer. Exposure to the sun is unaccounted for in the simple investigation.
 
-<!--
-![](images/sunCausesCancer)
---->
 
-Sun exposure is what is called a **confounding variable**,(a.k.a **lurking variable**, **confounder** or a **confounding factor**.) which is a variable that is correlated with both the explanatory and response variables. While one method to justify making causal conclusions from observational studies is to exhaust the search for confounding variables, there is no guarantee that all confounding variables can be examined or measured.
-
-\begin{center}
-\includegraphics[width=.6\textwidth]{images/xkcd_correlation}
-\end{center}
+![](images/sunCausesCancer.jpg)
 
 
-   
-   
+Sun exposure is what is called a **confounding variable**,(a.k.a **lurking variable**, **confounder** or a **confounding factor**.) which is a variable that is correlated with both the explanatory and response variables. 
+
+We could control for the lurking varible of sun exposure by collecting information on the individuals and categorizing their amount of sun exposure as *high* and *low* exposure, then we could run a stratified model to see if the relationship between sunscreen use and skin cancer is the same between each exposure group. 
+
+* But then what if race/ethnicity tends to drive how much sun exposure they have? Or sunscreen use? It is easy to imagine that those with very light skin color will either tend to use suncreen more, or stay out of the sun more than those with a darker skin color 
+
+
+While one method to justify making causal conclusions from observational studies is to exhaust the search for confounding variables, there is no guarantee that all confounding variables can be examined or measured. It is because of the existence of a virtually unlimited number of potential lurking variables that we can never be 100% certain of a claim of causation based on an observational study. 
+
+![](images/xkcd_correlation.png)
+
+
+Confounding is a major threat to the validity of inferences made about statistical associations. In the case of a confounding variable, the observed association with the response variable should be attributed to the confounder rather than the explanatory variable. We test for confounders by including these additional in our statistical models that may explain the association of interest. 
+
+> In other words, we want to demonstrate that our association of interest is significant even after controlling for potential confounders. 
+
+We do so by building a **Multivariable Model**. 
+
+
+# Types of multivariable relationships
+
+How can I keep them all separate? 
+
+![](images/confounding.png)
+
+* The exposure works through the *mediator*
+* The *confounder* affects both exposure and outcome
+* The *moderator* changes the relationship between the exposure and the outcome. 
+* Everything else is a *covariate*
+
