@@ -245,7 +245,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Regression Assignment</h1>
 <h4 class="author"><em>Robin Donatello</em></h4>
-<h4 class="date"><em>Last Updated 2017-10-30 19:17:45</em></h4>
+<h4 class="date"><em>Last Updated 2017-10-30 22:48:32</em></h4>
 
 </div>
 
@@ -285,8 +285,8 @@ div.tocify {
 </ul></li>
 <li>State the research Hypothesis
 <ul>
-<li>Write out your Research Question, Null, and Alternative Hypothesis <strong>for both analyses</strong> you intend to run to determine if the Third Variable is a Confound or not.</li>
-<li>These will be written the same, except the second hypothesis will include the phrasing of “after controlling for ‘Third Variable’.”</li>
+<li>Write out the Null, Alternative, and confounding Hypothesis</li>
+<li>The statement for the confounding hypothesis is the same as the alternative hypothesis, except it will include the phrasing of “after controlling for ‘Third Variable’.”</li>
 </ul></li>
 <li>Fit two models
 <ul>
@@ -302,38 +302,191 @@ div.tocify {
 <li>Structured response template in each section below.</li>
 </ul></li>
 </ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(knitr)
+opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">warning=</span><span class="ot">FALSE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>) 
+<span class="kw">library</span>(dplyr)
+<span class="kw">library</span>(ggplot2); <span class="kw">library</span>(gridExtra)
+<span class="kw">library</span>(pander) <span class="co"># Used for printing nice linear model tables</span>
+<span class="kw">panderOptions</span>(<span class="st">&quot;digits&quot;</span>, <span class="dv">3</span>)
+<span class="kw">load</span>(<span class="st">&quot;J:/MATH315/Project/addhealth_clean.Rdata&quot;</span>)</code></pre></div>
 </div>
 <div id="multiple-linear-regression-q-q-b" class="section level1">
 <h1>Multiple Linear Regression (Q ~ Q + B)</h1>
 <div id="identify-variables-under-consideration" class="section level2">
 <h2>1. Identify variables under consideration</h2>
 <p>This will work best if your Q~Q relationship under consideration is significant. If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable.</p>
+<ul>
+<li>Quantitative outcome: Income (variable <code>income</code>)</li>
+<li>Quantitative predictor: Time you wake up in the morning (variable <code>wakeup</code>)</li>
+<li>Binary confounder: Gender (variable <code>female_c</code>)</li>
+</ul>
 </div>
 <div id="state-the-research-hypothesis" class="section level2">
 <h2>2. State the research Hypothesis</h2>
-<p>Bivariate model: Null: There is no relationship between Alternative: There is a relationship between</p>
-<p>Multivariable model: Null: There is no relationship between Alternative: There is a relationship between</p>
+<ul>
+<li>Null: There is no relationship between the time you wake up and your personal earnings</li>
+<li>Alternative: There is a relationship between the time you wake up and your personal earnings</li>
+<li>Confounder: There is still a relationship between the time you wake up and your personal earnings, after controlling for gender.</li>
+</ul>
 </div>
 <div id="fit-the-models" class="section level2">
 <h2>3. Fit the models</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lm</span>(Sepal.Width <span class="op">~</span><span class="st"> </span>Petal.Width, <span class="dt">data=</span>iris)</code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = Sepal.Width ~ Petal.Width, data = iris)
-## 
-## Coefficients:
-## (Intercept)  Petal.Width  
-##      3.3084      -0.2094</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lm</span>(Sepal.Width <span class="op">~</span><span class="st"> </span>Petal.Width <span class="op">+</span><span class="st"> </span>Species, <span class="dt">data=</span>iris)</code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = Sepal.Width ~ Petal.Width + Species, data = iris)
-## 
-## Coefficients:
-##       (Intercept)        Petal.Width  Speciesversicolor  
-##             3.236              0.781             -1.501  
-##  Speciesvirginica  
-##            -1.844</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup, <span class="dt">data=</span>addhealth)
+<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod1))</code></pre></div>
+<table style="width:88%;">
+<colgroup>
+<col width="25%"></col>
+<col width="15%"></col>
+<col width="18%"></col>
+<col width="13%"></col>
+<col width="15%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Estimate</th>
+<th align="center">Std. Error</th>
+<th align="center">t value</th>
+<th align="center">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>(Intercept)</strong></td>
+<td align="center">43548</td>
+<td align="center">1126</td>
+<td align="center">38.7</td>
+<td align="center">3.03e-276</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>wakeup</strong></td>
+<td align="center">-488</td>
+<td align="center">151</td>
+<td align="center">-3.22</td>
+<td align="center">0.00127</td>
+</tr>
+</tbody>
+</table>
+<table style="width:88%;">
+<caption>Fitting linear model: income ~ wakeup</caption>
+<colgroup>
+<col width="20%"></col>
+<col width="30%"></col>
+<col width="13%"></col>
+<col width="22%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Observations</th>
+<th align="center">Residual Std. Error</th>
+<th align="center"><span class="math inline">\(R^2\)</span></th>
+<th align="center">Adjusted <span class="math inline">\(R^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3814</td>
+<td align="center">24666</td>
+<td align="center">0.00272</td>
+<td align="center">0.00246</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod2 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup <span class="op">+</span><span class="st"> </span>female_c, <span class="dt">data=</span>addhealth)
+<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod2))</code></pre></div>
+<table style="width:92%;">
+<colgroup>
+<col width="29%"></col>
+<col width="15%"></col>
+<col width="18%"></col>
+<col width="13%"></col>
+<col width="15%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Estimate</th>
+<th align="center">Std. Error</th>
+<th align="center">t value</th>
+<th align="center">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>(Intercept)</strong></td>
+<td align="center">48669</td>
+<td align="center">1207</td>
+<td align="center">40.3</td>
+<td align="center">2.06e-296</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>wakeup</strong></td>
+<td align="center">-611</td>
+<td align="center">149</td>
+<td align="center">-4.09</td>
+<td align="center">4.37e-05</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>female_cFemale</strong></td>
+<td align="center">-8527</td>
+<td align="center">789</td>
+<td align="center">-10.8</td>
+<td align="center">8.09e-27</td>
+</tr>
+</tbody>
+</table>
+<table style="width:86%;">
+<caption>Fitting linear model: income ~ wakeup + female_c</caption>
+<colgroup>
+<col width="20%"></col>
+<col width="30%"></col>
+<col width="12%"></col>
+<col width="22%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Observations</th>
+<th align="center">Residual Std. Error</th>
+<th align="center"><span class="math inline">\(R^2\)</span></th>
+<th align="center">Adjusted <span class="math inline">\(R^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3813</td>
+<td align="center">24297</td>
+<td align="center">0.0324</td>
+<td align="center">0.0318</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">confint</span>(lm.mod2), <span class="dt">digits=</span><span class="dv">2</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">2.5 %</th>
+<th align="right">97.5 %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td align="right">46303.12</td>
+<td align="right">51035.72</td>
+</tr>
+<tr class="even">
+<td>wakeup</td>
+<td align="right">-904.24</td>
+<td align="right">-318.41</td>
+</tr>
+<tr class="odd">
+<td>female_cFemale</td>
+<td align="right">-10074.58</td>
+<td align="right">-6979.58</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="interpret-the-results" class="section level2">
 <h2>4. Interpret the Results</h2>
@@ -346,19 +499,19 @@ div.tocify {
 <li>If the p-value for explanatory variable is no longer significant, then the third variable is a confounding variable. This means that the third variable is explaining the relationship between the explanatory variable and the response variable.</li>
 </ul></li>
 </ul>
+<p>The relationship between income and wake up time is still significant. Gender is not a confounder.</p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>5. Conclusion</h2>
 <p>Replace the <strong>bold</strong> words with your variables, the <code>highlighted</code> words with data from your analysis, and choose between <em>conclusion options</em>.</p>
 <p>After adjusting for the potential confounding factor of <strong>third variable</strong>, <strong>explanatory variable</strong> (<span class="math inline">\(\beta_{1}\)</span> = <code>parameter estimate, CI confidence interval range, p = significance value</code>) was *<strong>significantly/not significantly</strong> and <strong>positively/negatively</strong> associated with <strong>response variable</strong>. Approximately <code>R-Square*100</code> of the variance of <strong>response</strong> can be accounted for by <strong>explanatory</strong> after controlling for <strong>third variable</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
-</div>
-<div id="examples" class="section level2">
-<h2>Examples</h2>
+<p>So the conclusion for this analysis reads:</p>
 <blockquote>
-<ul>
-<li>After adjusting for the potential confounding factor of gender, number of times an adolescent has skipped school (Beta = -0.021, 95% CI -0.03, -0.012, p = .0001) was significantly and negatively associated with GPA. Approximately 6.58% of the variance in GPA can be accounted for by skipping school after controlling for gender. Based on these analyses, gender is not a confounding factor because the association between skipping school and GPA is still significant after accounting for gender.</li>
-<li>After adjusting for the potential confounding factor of gender, an adolescent’s weight (Beta = 1.34, 95% CI -0.53, 3.21, p = .1558) was not significantly associated with the number of cigarettes smoked in the past 30 days. Approximately 0.78% of the variance in cigarettes smoked can be accounted for by weight after controlling for gender. Based on these analyses, gender is a confounding factor because the association between weight and cigarettes smoked is no longer significant after accounting for gender.</li>
-</ul>
+<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wake up time</strong> (<span class="math inline">\(\beta_{1}\)</span> = <code>-611, -904, -318, p&lt;.0001</code>) was <strong>significantly</strong> and <strong>negatively</strong> associated with <strong>income</strong>. Approximately <code>3.2%</code> of the variance of <strong>income</strong> can be accounted for by <strong>wake up time</strong> after controlling for <strong>gender</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>wake up time</strong> and <strong>income</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
+</blockquote>
+<p>Additional example interpretation</p>
+<blockquote>
+<p>After adjusting for the potential confounding factor of gender, an adolescent’s weight (Beta = 1.34, 95% CI -0.53, 3.21, p = .1558) was not significantly associated with the number of cigarettes smoked in the past 30 days. Approximately 0.78% of the variance in cigarettes smoked can be accounted for by weight after controlling for gender. Based on these analyses, gender is a confounding factor because the association between weight and cigarettes smoked is no longer significant after accounting for gender.</p>
 </blockquote>
 </div>
 </div>
@@ -403,9 +556,7 @@ exp(confint(log.mod.2))</code></pre>
 <h2>5. Conclusion</h2>
 <p>Replace the <strong>bold</strong> words with your variables, the <code>highlighted</code> words with data from your analysis, and choose between <em>conclusion options</em>.</p>
 <p>After adjusting for the potential confounding factor of <strong>third variable</strong>, <strong>explanatory variable</strong> (<code>OR odds ratio estimate, CI confidence interval range, p = significance value</code>) was <em>significantly/not significantly</em> and <em>positively/negatively</em> associated with the likelihood of <strong>response variable</strong>. In this analysis, the odds ratio tells us that those who are <strong>[describe what dummy code 1 of your explanatory variable means here]</strong> are <code>odds ratio estimate</code> times <em>more (if OR greater than 1)/less (if OR less than 1)</em> likely to <strong>[describe what dummy code 1 of your response variable means here]</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
-</div>
-<div id="examples-1" class="section level2">
-<h2>Examples</h2>
+<p>Additional example interpretation</p>
 <blockquote>
 <ul>
 <li>After adjusting for the potential confounding factor of gender, being overweight (OR 0.920, CI 0.822 – 1.028, p = .1420) was not significantly associated with the likelihood of participating in an active sport. In this analysis, the odds ratio tells us that those adolescents who are overweight are 0.920 times less likely to participate in an active sport. Based on these analyses, gender is a confounding factor because the association between being overweight and active sport participation is no longer significant after accounting for gender.</li>
@@ -446,7 +597,7 @@ exp(confint(log.mod.2))</code></pre>
 <div id="conclusion-2" class="section level2">
 <h2>5. Conclusion</h2>
 </div>
-<div id="examples-2" class="section level2">
+<div id="examples" class="section level2">
 <h2>Examples</h2>
 </div>
 </div>

@@ -41,8 +41,8 @@ You will then take one of the above analyses and
     - If you are using a “strongly agree” to “strongly disagree” (Likert scale) variable, decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 1 (i.e., yes to the statement) and all other levels are dummy coded to 0 (i.e., no to the statement).
 
 2. State the research Hypothesis
-    - Write out your Research Question, Null, and Alternative Hypothesis **for both analyses** you intend to run to determine if the Third Variable is a Confound or not. 
-    - These will be written the same, except the second hypothesis will include the phrasing of “after controlling for ‘Third Variable’.” 
+    - Write out the Null, Alternative, and confounding Hypothesis
+    - The statement for the confounding hypothesis is the same as the alternative hypothesis, except it will include the phrasing of “after controlling for ‘Third Variable’.” 
 3. Fit two models
     - The first with just the response variable $y$ and the explanatory variable $x$ `lm(y ~ x)`
     - The second includes a third variable $z$. `lm(y ~ x + z)`
@@ -51,32 +51,44 @@ You will then take one of the above analyses and
 5. Conclusion
     - Structured response template in each section below. 
 
+```{r, warning=FALSE, message=FALSE}
+library(knitr)
+opts_chunk$set(warning=FALSE, message=FALSE) 
+library(dplyr)
+library(ggplot2); library(gridExtra)
+library(pander) # Used for printing nice linear model tables
+panderOptions("digits", 3)
+load("J:/MATH315/Project/addhealth_clean.Rdata")
+```
+
 # Multiple Linear Regression (Q ~ Q + B)
 
 ## 1. Identify variables under consideration
 
 This will work best if your Q~Q relationship under consideration is significant. If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable.
 
- 
+* Quantitative outcome: Income (variable `income`)
+* Quantitative predictor: Time you wake up in the morning (variable `wakeup`)
+* Binary confounder: Gender (variable `female_c`)
+
 ## 2. State the research Hypothesis
 
-Bivariate model: 
-Null: There is no relationship between
-Alternative: There is a relationship between
-
-Multivariable model: 
-Null: There is no relationship between
-Alternative: There is a relationship between
+* Null: There is no relationship between the time you wake up and your personal earnings
+* Alternative: There is a relationship between the time you wake up and your personal earnings
+* Confounder:  There is still a relationship between the time you wake up and your personal earnings, after controlling for gender. 
 
 
 ## 3. Fit the models
 
 ```{r}
-lm(Sepal.Width ~ Petal.Width, data=iris)
+lm.mod1 <- lm(income ~ wakeup, data=addhealth)
+pander(summary(lm.mod1))
 ```
 
 ```{r}
-lm(Sepal.Width ~ Petal.Width + Species, data=iris)
+lm.mod2 <- lm(income ~ wakeup + female_c, data=addhealth)
+pander(summary(lm.mod2))
+kable(confint(lm.mod2), digits=2)
 ```
 
 
@@ -88,6 +100,7 @@ lm(Sepal.Width ~ Petal.Width + Species, data=iris)
     - If it is still significant, the third variable is NOT a confounder because after controlling for the effects of the third variable from the relationship between the predictor and response it is still significant. When control for it, you are essentially putting everyone on the same level regarding that third variable.
     - If the p-value for explanatory variable is no longer significant, then the third variable is a confounding variable. This means that the third variable is explaining the relationship between the explanatory variable and the response variable.
 
+The relationship between income and wake up time is still significant. Gender is not a confounder. 
 
 ## 5. Conclusion
 
@@ -96,10 +109,13 @@ Replace the **bold** words with your variables, the `highlighted` words with dat
 
 After adjusting for the potential confounding factor of **third variable**, **explanatory variable** ($\beta_{1}$ = `parameter estimate, CI confidence interval range, p = significance value`) was ***significantly/not significantly** and **positively/negatively** associated with **response variable**. Approximately `R-Square*100` of the variance of **response** can be accounted for by **explanatory** after controlling for **third variable**. Based on these analyses, **third variable** _is not/is_ a confounding factor because the association between **explanatory** and **response** _is still/is no longer_ significant after accounting for **third variable**. 
 
-## Examples
+So the conclusion for this analysis reads: 
 
-> * After adjusting for the potential confounding factor of gender, number of times an adolescent has skipped school (Beta = -0.021, 95% CI -0.03, -0.012, p = .0001) was significantly and negatively associated with GPA. Approximately 6.58% of the variance in GPA can be accounted for by skipping school after controlling for gender. Based on these analyses, gender is not a confounding factor because the association between skipping school and GPA is still significant after accounting for gender. 
-> * After adjusting for the potential confounding factor of gender, an adolescent’s weight (Beta = 1.34, 95% CI -0.53, 3.21, p = .1558) was not significantly associated with the number of cigarettes smoked in the past 30 days. Approximately 0.78% of the variance in cigarettes smoked can be accounted for by weight after controlling for gender. Based on these analyses, gender is a confounding factor because the association between weight and cigarettes smoked is no longer significant after accounting for gender. 
+> After adjusting for the potential confounding factor of **gender**, **wake up time** ($\beta_{1}$ = `-611, -904, -318, p<.0001`) was **significantly** and **negatively** associated with **income**. Approximately `3.2%` of the variance of **income** can be accounted for by **wake up time** after controlling for **gender**. Based on these analyses, **gender** _is not_ a confounding factor because the association between **wake up time** and **income** _is still_ significant after accounting for **gender**.
+
+Additional example interpretation
+
+> After adjusting for the potential confounding factor of gender, an adolescent’s weight (Beta = 1.34, 95% CI -0.53, 3.21, p = .1558) was not significantly associated with the number of cigarettes smoked in the past 30 days. Approximately 0.78% of the variance in cigarettes smoked can be accounted for by weight after controlling for gender. Based on these analyses, gender is a confounding factor because the association between weight and cigarettes smoked is no longer significant after accounting for gender. 
 
 
 # Logistic Regression (B ~ Q + B)
@@ -149,7 +165,7 @@ Replace the **bold** words with your variables, the `highlighted` words with dat
 After adjusting for the potential confounding factor of **third variable**, **explanatory variable** (`OR odds ratio estimate, CI confidence interval range, p = significance value`) was _significantly/not significantly_ and _positively/negatively_ associated with the likelihood of **response variable**. In this analysis, the odds ratio tells us that those who are **[describe what dummy code 1 of your explanatory variable means here]** are `odds ratio estimate` times _more (if OR greater than 1)/less (if OR less than 1)_ likely to **[describe what dummy code 1 of your response variable means here]**.  Based on these analyses, **third variable** _is not/is_ a confounding factor because the association between **explanatory** and **response** _is still/is no longer_ significant after accounting for **third variable**. 
 
 
-## Examples
+Additional example interpretation
 
 > * After adjusting for the potential confounding factor of gender, being overweight (OR 0.920, CI 0.822 – 1.028, p = .1420) was not significantly associated with the likelihood of participating in an active sport. In this analysis, the odds ratio tells us that those adolescents who are overweight are 0.920 times less likely to participate in an active sport. Based on these analyses, gender is a confounding factor because the association between being overweight and active sport participation is no longer significant after accounting for gender.
 > * After adjusting for the potential confounding factor of gender, being overweight (OR 3.65, CI 1.573 – 4.891, p = .0001) was significantly and positively associated with the likelihood of participating in an active sport. In this analysis, the odds ratio tells us that those adolescents who are overweight are 3.65 times more likely to participate in an active sport. Based on these analyses, gender is not a confounding factor because the association between being overweight and active sport participation is still significant after accounting for gender. 
