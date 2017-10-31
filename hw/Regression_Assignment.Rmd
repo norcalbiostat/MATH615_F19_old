@@ -14,25 +14,16 @@ css: ../css/customh5.css
 
 # Assignment Overview
 
-You will perform <span style="color:blue">X</span> regression analyses in this assignment.
+You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder.
 
-1. Multiple Linear Regression: $Y \sim Q + B$
-    - Quantitative response variable (Y)
-    - Quantitative explanatory variable (Q)
-    - Binary third variable (B)
+1. Multiple Linear Regression: $Q \sim Q + B$
 2. Logistic Regression: $B \sim Q + B$
-    - Binary response variable (B)
-    - Quantitative explanatory variable (Q)
-    - Binary third variable (B)
-3. Log-Linear Regression: $log(Y) \sim Q + B$
-    - Log-transformed Quantitative response variable (log(Y))
-    - Quantitative explanatory variable (Q)
-    - Binary third variable (B)
+3. Log-Linear Regression: $log(Q) \sim Q + B$
 
-You will also take one of the above analyses and 
+You will then take one of the above analyses and 
 
 4. Add and interpret categorical variables
-5. Assess the model fit with and without the additional categorical variable. 
+5. Conduct a Likelihood Ratio Test to compare the model fit with and without the additional categorical variable. 
 
 
 #### Submission Guidelines
@@ -42,60 +33,50 @@ You will also take one of the above analyses and
 * Similar to the Bivariate Inference assignment, post a copy of this assignment to your blog as you complete each stage. 
 
 
-# Multiple Linear Regression
+# Instructions
+1. Identify variables under consideration
+    - Determine a third variable that you want to test as a potential confounder.  
+    - Consider the relationship and ask yourself if I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable or variables what would they be?
+    - For the purposes of this assignment, your third variables must be binary. 
+    - If you are using a “strongly agree” to “strongly disagree” (Likert scale) variable, decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 1 (i.e., yes to the statement) and all other levels are dummy coded to 0 (i.e., no to the statement).
 
+2. State the research Hypothesis
+    - Write out your Research Question, Null, and Alternative Hypothesis **for both analyses** you intend to run to determine if the Third Variable is a Confound or not. 
+    - These will be written the same, except the second hypothesis will include the phrasing of “after controlling for ‘Third Variable’.” 
+3. Fit two models
+    - The first with just the response variable $y$ and the explanatory variable $x$ `lm(y ~ x)`
+    - The second includes a third variable $z$. `lm(y ~ x + z)`
+4. Interpret the Results
+    - Details in each section below. 
+5. Conclusion
+    - Structured response template in each section below. 
+
+# Multiple Linear Regression (Q ~ Q + B)
 
 ## 1. Identify variables under consideration
 
-Determine what statistically significant relationships you want to test to see if a variables is a confounds, or if significantly related to the Predictor Variable (i.e., Explanatory) and Criterion Variable (i.e., Response), therefore, increasing your ability to predict a future participants response.
+This will work best if your Q~Q relationship under consideration is significant. If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable.
+
  
- 
- 
-Step 1a: Determine for each relationship if you need to do a Multiple Regression or Logistic Regression.
-* If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable.
-* Multiple Regression - Predictor/Explanatory Variable is Categorical (binary, only two levels) or Quantitative & Response Variable is Quantitative, Third Variables are Categorical (binary, only two levels).
-* C  Q look to ANOVA assignment (will need to collapse C into 2 levels)
-* Q  Q look to correlation assignment
-
-
-* If you are using an association from your old ANOVA lab here, change your categorical variable that you are using as an explanatory variable down to two levels. You want those two levels to be essentially yes = 0 and no = 1.
-* Example if using a “strongly agree” to “strongly disagree” variable - decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 0 (i.e., yes to the statement) and all other levels are dummy coded to 1 (i.e., no to the statement).
-
-* When you recode the original variable, you want to make it easiest on you for interpreting the results. Therefore, for this assignment for MULTIPLE REGRESSION you MUST recode so the yes = 0 and no = 1. You CANNOT use any other dummy codes to represent a category with multiple regression. Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it. 
-
-
-
-
-Determine a third variable (or confounder) you want to test in each of these relationships. 
-
-* You may use the same third variable in each analysis if it makes sense. 
-* For the purposes of this assignment, your third variables must be CATEGORICAL and contain ONLY TWO LEVELS. 
-* Consider the relationship and ask yourself if I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable or variables what would they be? 
-
 ## 2. State the research Hypothesis
 
-Write out your Research Question, Null, and Alternative Hypothesis for both analyses you intend to run to determine if the Third Variable is a Confound or not. 
+Bivariate model: 
+Null: There is no relationship between
+Alternative: There is a relationship between
 
-* These will be written the same as before except include the phrasing of “after controlling for ‘Third Variable’.”
+Multivariable model: 
+Null: There is no relationship between
+Alternative: There is a relationship between
 
-> We are testing to see if the relationship between ___ and ___ is still significant after controlling for ____. 
 
-
-```{r}
-iris$spec_setosa <- ifelse(iris$Species == "setosa", 1, 0)
-table(iris$spec_setosa, iris$Species)
-```
-
-## 3. Fit the model
-
-Fit two models, one with just the response variable $y$ and the explanatory variable $x$, and a second one that includes a third variable $z$. 
+## 3. Fit the models
 
 ```{r}
-summary(lm(Petal.Length~Petal.Width, data=iris))
+lm(Sepal.Width ~ Petal.Width, data=iris)
 ```
 
 ```{r}
-summary(lm(Petal.Length~Petal.Width + spec_setosa, data=iris))
+lm(Sepal.Width ~ Petal.Width + Species, data=iris)
 ```
 
 
@@ -121,16 +102,9 @@ After adjusting for the potential confounding factor of **third variable**, **ex
 > * After adjusting for the potential confounding factor of gender, an adolescent’s weight (Beta = 1.34, 95% CI -0.53, 3.21, p = .1558) was not significantly associated with the number of cigarettes smoked in the past 30 days. Approximately 0.78% of the variance in cigarettes smoked can be accounted for by weight after controlling for gender. Based on these analyses, gender is a confounding factor because the association between weight and cigarettes smoked is no longer significant after accounting for gender. 
 
 
-# Logistic Regression 
+# Logistic Regression (B ~ Q + B)
 
-* Logistic Regression (B ~ X1 + X2) Response variable is Binary categorida.Explanatory Variable is Binary categorical (binary, only two levels) or Quantitative & Response is Categorical (binary, only two levels), Third Variables are Categorical (binary, only two levels).
-
-
-
-* Change your categorical variables that you are using as explanatory, response, and third variables down to two levels. 
-* Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it. 
-
-> Example if using a “strongly agree” to “strongly disagree” variable - decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 1 (i.e., yes to the statement) and all other levels are dummy coded to 0 (i.e., no to the statement).
+Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it. 
 
 ## 1. Identify variables under consideration
 
@@ -182,9 +156,9 @@ After adjusting for the potential confounding factor of **third variable**, **ex
  
 
 
-# Log Linear Regression
+# Log Linear Regression (log(Q) + Q + B)
 
-We are going to analyze personal income as the quantitative outcome for this piece of the assignment. You must use this variable as your outcome. First however, you need to clean up, and log transform the variable for personal earnings `H4EC2` by following the steps below _in order_. 
+We are going to analyze personal income as the quantitative outcome for this piece of the assignment. **You must use this variable as your outcome for this question.** First however, you need to clean up, and log transform the variable for personal earnings `H4EC2` by following the steps below _in order_. 
 
 1. Remove values above 999995 (structural missing). 
 2. Create a binary indicator variable called `poverty`, where `poverty=1` if `H4EC2<10210` and 0 otherwise.

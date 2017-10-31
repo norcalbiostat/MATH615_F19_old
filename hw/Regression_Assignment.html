@@ -245,38 +245,23 @@ div.tocify {
 
 <h1 class="title toc-ignore">Regression Assignment</h1>
 <h4 class="author"><em>Robin Donatello</em></h4>
-<h4 class="date"><em>Last Updated 2017-10-29 00:11:39</em></h4>
+<h4 class="date"><em>Last Updated 2017-10-30 19:17:45</em></h4>
 
 </div>
 
 
 <div id="assignment-overview" class="section level1">
 <h1>Assignment Overview</h1>
-<p>You will perform <span style="color:blue">X</span> regression analyses in this assignment.</p>
+<p>You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder.</p>
 <ol style="list-style-type: decimal">
-<li>Multiple Linear Regression: <span class="math inline">\(Y \sim Q + B\)</span>
-<ul>
-<li>Quantitative response variable (Y)</li>
-<li>Quantitative explanatory variable (Q)</li>
-<li>Binary third variable (B)</li>
-</ul></li>
-<li>Logistic Regression: <span class="math inline">\(B \sim Q + B\)</span>
-<ul>
-<li>Binary response variable (B)</li>
-<li>Quantitative explanatory variable (Q)</li>
-<li>Binary third variable (B)</li>
-</ul></li>
-<li>Log-Linear Regression: <span class="math inline">\(log(Y) \sim Q + B\)</span>
-<ul>
-<li>Log-transformed Quantitative response variable (log(Y))</li>
-<li>Quantitative explanatory variable (Q)</li>
-<li>Binary third variable (B)</li>
-</ul></li>
+<li>Multiple Linear Regression: <span class="math inline">\(Q \sim Q + B\)</span></li>
+<li>Logistic Regression: <span class="math inline">\(B \sim Q + B\)</span></li>
+<li>Log-Linear Regression: <span class="math inline">\(log(Q) \sim Q + B\)</span></li>
 </ol>
-<p>You will also take one of the above analyses and</p>
+<p>You will then take one of the above analyses and</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Add and interpret categorical variables</li>
-<li>Assess the model fit with and without the additional categorical variable.</li>
+<li>Conduct a Likelihood Ratio Test to compare the model fit with and without the additional categorical variable.</li>
 </ol>
 <div id="submission-guidelines" class="section level4">
 <h4>Submission Guidelines</h4>
@@ -287,82 +272,68 @@ div.tocify {
 </ul>
 </div>
 </div>
-<div id="multiple-linear-regression" class="section level1">
-<h1>Multiple Linear Regression</h1>
+<div id="instructions" class="section level1">
+<h1>Instructions</h1>
+<ol style="list-style-type: decimal">
+<li>Identify variables under consideration
+<ul>
+<li>Determine a third variable that you want to test as a potential confounder.<br />
+</li>
+<li>Consider the relationship and ask yourself if I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable or variables what would they be?</li>
+<li>For the purposes of this assignment, your third variables must be binary.</li>
+<li>If you are using a “strongly agree” to “strongly disagree” (Likert scale) variable, decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 1 (i.e., yes to the statement) and all other levels are dummy coded to 0 (i.e., no to the statement).</li>
+</ul></li>
+<li>State the research Hypothesis
+<ul>
+<li>Write out your Research Question, Null, and Alternative Hypothesis <strong>for both analyses</strong> you intend to run to determine if the Third Variable is a Confound or not.</li>
+<li>These will be written the same, except the second hypothesis will include the phrasing of “after controlling for ‘Third Variable’.”</li>
+</ul></li>
+<li>Fit two models
+<ul>
+<li>The first with just the response variable <span class="math inline">\(y\)</span> and the explanatory variable <span class="math inline">\(x\)</span> <code>lm(y ~ x)</code></li>
+<li>The second includes a third variable <span class="math inline">\(z\)</span>. <code>lm(y ~ x + z)</code></li>
+</ul></li>
+<li>Interpret the Results
+<ul>
+<li>Details in each section below.</li>
+</ul></li>
+<li>Conclusion
+<ul>
+<li>Structured response template in each section below.</li>
+</ul></li>
+</ol>
+</div>
+<div id="multiple-linear-regression-q-q-b" class="section level1">
+<h1>Multiple Linear Regression (Q ~ Q + B)</h1>
 <div id="identify-variables-under-consideration" class="section level2">
 <h2>1. Identify variables under consideration</h2>
-<p>Determine what statistically significant relationships you want to test to see if a variables is a confounds, or if significantly related to the Predictor Variable (i.e., Explanatory) and Criterion Variable (i.e., Response), therefore, increasing your ability to predict a future participants response.</p>
-<p>Step 1a: Determine for each relationship if you need to do a Multiple Regression or Logistic Regression. * If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable. * Multiple Regression - Predictor/Explanatory Variable is Categorical (binary, only two levels) or Quantitative &amp; Response Variable is Quantitative, Third Variables are Categorical (binary, only two levels). * C  Q look to ANOVA assignment (will need to collapse C into 2 levels) * Q  Q look to correlation assignment</p>
-<ul>
-<li>If you are using an association from your old ANOVA lab here, change your categorical variable that you are using as an explanatory variable down to two levels. You want those two levels to be essentially yes = 0 and no = 1.</li>
-<li><p>Example if using a “strongly agree” to “strongly disagree” variable - decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 0 (i.e., yes to the statement) and all other levels are dummy coded to 1 (i.e., no to the statement).</p></li>
-<li><p>When you recode the original variable, you want to make it easiest on you for interpreting the results. Therefore, for this assignment for MULTIPLE REGRESSION you MUST recode so the yes = 0 and no = 1. You CANNOT use any other dummy codes to represent a category with multiple regression. Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it.</p></li>
-</ul>
-<p>Determine a third variable (or confounder) you want to test in each of these relationships.</p>
-<ul>
-<li>You may use the same third variable in each analysis if it makes sense.</li>
-<li>For the purposes of this assignment, your third variables must be CATEGORICAL and contain ONLY TWO LEVELS.</li>
-<li>Consider the relationship and ask yourself if I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable or variables what would they be?</li>
-</ul>
+<p>This will work best if your Q~Q relationship under consideration is significant. If you have a “Strongly Agree” to “Strongly Disagree” variable that you have kept all 5 levels, you can treat it as a Quantitative Variable.</p>
 </div>
 <div id="state-the-research-hypothesis" class="section level2">
 <h2>2. State the research Hypothesis</h2>
-<p>Write out your Research Question, Null, and Alternative Hypothesis for both analyses you intend to run to determine if the Third Variable is a Confound or not.</p>
-<ul>
-<li>These will be written the same as before except include the phrasing of “after controlling for ‘Third Variable’.”</li>
-</ul>
-<blockquote>
-<p>We are testing to see if the relationship between ___ and ___ is still significant after controlling for ____.</p>
-</blockquote>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris<span class="op">$</span>spec_setosa &lt;-<span class="st"> </span><span class="kw">ifelse</span>(iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &quot;setosa&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)
-<span class="kw">table</span>(iris<span class="op">$</span>spec_setosa, iris<span class="op">$</span>Species)</code></pre></div>
-<pre><code>##    
-##     setosa versicolor virginica
-##   0      0         50        50
-##   1     50          0         0</code></pre>
+<p>Bivariate model: Null: There is no relationship between Alternative: There is a relationship between</p>
+<p>Multivariable model: Null: There is no relationship between Alternative: There is a relationship between</p>
 </div>
-<div id="fit-the-model" class="section level2">
-<h2>3. Fit the model</h2>
-<p>Fit two models, one with just the response variable <span class="math inline">\(y\)</span> and the explanatory variable <span class="math inline">\(x\)</span>, and a second one that includes a third variable <span class="math inline">\(z\)</span>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(Petal.Length<span class="op">~</span>Petal.Width, <span class="dt">data=</span>iris))</code></pre></div>
+<div id="fit-the-models" class="section level2">
+<h2>3. Fit the models</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lm</span>(Sepal.Width <span class="op">~</span><span class="st"> </span>Petal.Width, <span class="dt">data=</span>iris)</code></pre></div>
 <pre><code>## 
 ## Call:
-## lm(formula = Petal.Length ~ Petal.Width, data = iris)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.33542 -0.30347 -0.02955  0.25776  1.39453 
+## lm(formula = Sepal.Width ~ Petal.Width, data = iris)
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  1.08356    0.07297   14.85   &lt;2e-16 ***
-## Petal.Width  2.22994    0.05140   43.39   &lt;2e-16 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.4782 on 148 degrees of freedom
-## Multiple R-squared:  0.9271, Adjusted R-squared:  0.9266 
-## F-statistic:  1882 on 1 and 148 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(<span class="kw">lm</span>(Petal.Length<span class="op">~</span>Petal.Width <span class="op">+</span><span class="st"> </span>spec_setosa, <span class="dt">data=</span>iris))</code></pre></div>
+## (Intercept)  Petal.Width  
+##      3.3084      -0.2094</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lm</span>(Sepal.Width <span class="op">~</span><span class="st"> </span>Petal.Width <span class="op">+</span><span class="st"> </span>Species, <span class="dt">data=</span>iris)</code></pre></div>
 <pre><code>## 
 ## Call:
-## lm(formula = Petal.Length ~ Petal.Width + spec_setosa, data = iris)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.00220 -0.20364 -0.07211  0.19326  1.28561 
+## lm(formula = Sepal.Width ~ Petal.Width + Species, data = iris)
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  2.27619    0.16169  14.077  &lt; 2e-16 ***
-## Petal.Width  1.56910    0.09346  16.788  &lt; 2e-16 ***
-## spec_setosa -1.20019    0.15062  -7.968 4.08e-13 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.401 on 147 degrees of freedom
-## Multiple R-squared:  0.9491, Adjusted R-squared:  0.9484 
-## F-statistic:  1370 on 2 and 147 DF,  p-value: &lt; 2.2e-16</code></pre>
+##       (Intercept)        Petal.Width  Speciesversicolor  
+##             3.236              0.781             -1.501  
+##  Speciesvirginica  
+##            -1.844</code></pre>
 </div>
 <div id="interpret-the-results" class="section level2">
 <h2>4. Interpret the Results</h2>
@@ -391,23 +362,16 @@ div.tocify {
 </blockquote>
 </div>
 </div>
-<div id="logistic-regression" class="section level1">
-<h1>Logistic Regression</h1>
-<ul>
-<li><p>Logistic Regression (B ~ X1 + X2) Response variable is Binary categorida.Explanatory Variable is Binary categorical (binary, only two levels) or Quantitative &amp; Response is Categorical (binary, only two levels), Third Variables are Categorical (binary, only two levels).</p></li>
-<li>Change your categorical variables that you are using as explanatory, response, and third variables down to two levels.</li>
-<li><p>Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it.</p></li>
-</ul>
-<blockquote>
-<p>Example if using a “strongly agree” to “strongly disagree” variable - decide if you want to compare those that “strongly agreed” on question to all those people that did not or if you want to compare those that “strongly disagreed” on question to all those people that did not. Then recode the original variable so that those that are “strongly agree” are dummy coded to 1 (i.e., yes to the statement) and all other levels are dummy coded to 0 (i.e., no to the statement).</p>
-</blockquote>
+<div id="logistic-regression-b-q-b" class="section level1">
+<h1>Logistic Regression (B ~ Q + B)</h1>
+<p>Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it.</p>
 <div id="identify-variables-under-consideration-1" class="section level2">
 <h2>1. Identify variables under consideration</h2>
 </div>
 <div id="state-the-research-hypothesis-1" class="section level2">
 <h2>2. State the research Hypothesis</h2>
 </div>
-<div id="fit-the-models" class="section level2">
+<div id="fit-the-models-1" class="section level2">
 <h2>3. Fit the models</h2>
 <pre><code>log.mod.1 &lt;- glm(y~x, data=, family='binomial')
 summary(log.mod.1)
@@ -450,9 +414,9 @@ exp(confint(log.mod.2))</code></pre>
 </blockquote>
 </div>
 </div>
-<div id="log-linear-regression" class="section level1">
-<h1>Log Linear Regression</h1>
-<p>We are going to analyze personal income as the quantitative outcome for this piece of the assignment. You must use this variable as your outcome. First however, you need to clean up, and log transform the variable for personal earnings <code>H4EC2</code> by following the steps below <em>in order</em>.</p>
+<div id="log-linear-regression-logq-q-b" class="section level1">
+<h1>Log Linear Regression (log(Q) + Q + B)</h1>
+<p>We are going to analyze personal income as the quantitative outcome for this piece of the assignment. <strong>You must use this variable as your outcome for this question.</strong> First however, you need to clean up, and log transform the variable for personal earnings <code>H4EC2</code> by following the steps below <em>in order</em>.</p>
 <ol style="list-style-type: decimal">
 <li>Remove values above 999995 (structural missing).</li>
 <li>Create a binary indicator variable called <code>poverty</code>, where <code>poverty=1</code> if <code>H4EC2&lt;10210</code> and 0 otherwise.
@@ -473,7 +437,7 @@ exp(confint(log.mod.2))</code></pre>
 <div id="state-the-research-hypothesis-2" class="section level2">
 <h2>2. State the research hypothesis</h2>
 </div>
-<div id="fit-the-model-1" class="section level2">
+<div id="fit-the-model" class="section level2">
 <h2>3. Fit the model</h2>
 </div>
 <div id="interpret-the-results-2" class="section level2">
