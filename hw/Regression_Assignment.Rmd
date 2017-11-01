@@ -14,12 +14,16 @@ css: ../css/customh5.css
 
 # Assignment Overview
 
-You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder.
+You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder $Z$.
 
-1. Multiple Linear Regression: $Q \sim Q + B$
-    - The bivariate $Q \sim Q$ relationship must be significant. 
-2. Logistic Regression: $B \sim Q + B$
-3. Log-Linear Regression: $log(Q) \sim Q + B$
+1. Multiple Linear Regression: $Q \sim X + Z$
+    - For this assignment choose a quantitative $X$ and a binary confounder $Z$, where the bivariate $Q \sim Q$ relationship is significant.
+2. Logistic Regression: $logit(B) \sim X + Z$
+    - Your binary response variable $Y$ must be coded as 1 (event) and 0 (non-event).
+    - For this assignment, choose a binary $X$ and a binary confounder $Z$. 
+3. Log-Linear Regression: $log(Q) \sim X + Z$
+    - The explanatory varible $X$ can be binary or quantitative. 
+    
 
 You will then take one of the three above analyses and 
 
@@ -36,10 +40,9 @@ You will then take one of the three above analyses and
 
 # Instructions
 1. Identify variables under consideration
-    - Determine a third variable that you want to test as a potential confounder.  
+    - Determine a third variable $Z$ that you want to test as a potential confounder.  
     - Consider the relationship and ask yourself: "_If I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable(s), what would they be?_"
-    - For the purposes of this assignment, your <span style="color:red">potential confounder must be binary</span>.
-    - For the purposes of this assignment, your <span style="color:red"> Q~Q relationship must be significant</span>. This is only required for the multivariable linear regression model. 
+    - <span style="color:red">For the purposes of this assignment your potential confounder $Z$ must be binary</span>. In reality, confounders, covariates, mediators, and moderators can come in all data types. 
 2. Write out the null, alternative, and confounder Hypotheses statements.
     - **Null** - that there is no relationship between response and explanatory variables
     - **Alternative** - that there is a relationship between response and explanatory variables. 
@@ -50,13 +53,11 @@ You will then take one of the three above analyses and
 4. Fit the multivariable model. 
     - Only do this if you rejected the null.
     - Model the response variable on the explanatory variable and the third variable. `y ~ x + z`
-5. Interpret the Confounder
-    - When the third variable is included in the code, look at the p-value for the explanatory variable. 
+    - Determine if $Z$ is a confounder by looking at the p-value for the explanatory variable. 
         - If it is still significant, the third variable is not a confounding variable. 
         - If it is no longer significant, the third variable is a confounding variable. This means that the third variable is explaining the relationship between the explanatory variable and the response variable.
-6. Conclusion
-    - Details included in each section below. 
-    - A structured response template is provided. 
+5. Interpret all regression coefficients except the intercept. 
+6. Write a conclusion. A structured response template is provided. 
 
 ```{r, warning=FALSE, message=FALSE}
 library(knitr)
@@ -87,13 +88,13 @@ If you have a “Strongly Agree” to “Strongly Disagree” variable that you 
 
 
 ## 3. Fit the simple model
-
+Is there a relationship between income and time a person wakes up? 
 ```{r}
-lm.mod1 <- lm(income ~ wakeup, data=addhealth) # fit the model on wakeup only
+lm.mod1 <- lm(income ~ wakeup, data=addhealth) 
 pander(summary(lm.mod1), caption = "Modeling income using wakeup time.")
 ```
 
-The p-value for the $b_{1}$ estimate of the regression coefficient for `wakeup` is significant at 0.001. There is reason to believe that the time you wakeup is associated with your income. 
+The p-value for the estimate of the regression coefficient for `wakeup` is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income. 
 
 
 ## 4. Fit the multivariable model
@@ -106,18 +107,22 @@ pander(summary(lm.mod2), caption="Modeling income using gender and wakeup time."
 ```
 
 
-## 5. Interpret the confounder
-
 The relationship between income and wake up time is still significant after controlling for gender. Gender is not a confounder. 
+
+## 5. Interpret the regression coefficients.
+
+* $b_{1}$: Holding gender constant, for every hour later a person wakes up, their predicted average income drops by $611. 
+* $b_{2}$: Controlling for the time someone wakes up in the morning, the predicted average income for females is $8,527 lower than for males. 
+
 
 ## 6. Conclusion
 
 * Use the numerical results from the multivariabel model to fill in the values in the conclusion below. 
 * Look at the Adjusted $R^{2}$ to see how much of the variance in the response you are accounting for with the predictor.
-* To get the confidence intervals for the regression coefficients you will use the function `confint()`. `kable` is used here to make a nicely formatted table upon knitting. 
+* To get the confidence intervals for the regression coefficients you will use the function `confint()`
 
 ```{r}
-kable(confint(lm.mod2), digits=2)
+confint(lm.mod2)
 ```
 
 Replace the **bold** words with your variables, the `highlighted` words with data from your analysis, and choose between _conclusion options_. 
@@ -127,7 +132,7 @@ After adjusting for the potential confounding factor of **third variable**, **ex
 
 So the conclusion for this analysis reads: 
 
-> After adjusting for the potential confounding factor of **gender**, **wake up time** ($\beta_{1}$ = `-611, -904, -318, p<.0001`) was **significantly** and **negatively** associated with **income**. Approximately `3.2%` of the variance of **income** can be accounted for by **wake up time** after controlling for **gender**. Based on these analyses, **gender** _is not_ a confounding factor because the association between **wake up time** and **income** _is still_ significant after accounting for **gender**.
+> After adjusting for the potential confounding factor of **gender**, **wake up time** ($\beta_{1}$ = `-611, (95% CI -904, -318), p<.0001`) was **significantly** and **negatively** associated with **income**. Approximately `3.2%` of the variance of **income** can be accounted for by **wake up time** after controlling for **gender**. Based on these analyses, **gender** _is not_ a confounding factor because the association between **wake up time** and **income** _is still_ significant after accounting for **gender**.
 
 Additional example interpretation
 
@@ -137,6 +142,7 @@ Additional example interpretation
 # Logistic Regression
 
 Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it. 
+
 
 ## 1. Identify variables
 

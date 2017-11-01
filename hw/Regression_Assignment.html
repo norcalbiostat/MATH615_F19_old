@@ -245,21 +245,28 @@ div.tocify {
 
 <h1 class="title toc-ignore">Regression Assignment</h1>
 <h4 class="author"><em>Robin Donatello</em></h4>
-<h4 class="date"><em>Last Updated 2017-11-01 14:54:05</em></h4>
+<h4 class="date"><em>Last Updated 2017-11-01 16:44:14</em></h4>
 
 </div>
 
 
 <div id="assignment-overview" class="section level1">
 <h1>Assignment Overview</h1>
-<p>You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder.</p>
+<p>You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder <span class="math inline">\(Z\)</span>.</p>
 <ol style="list-style-type: decimal">
-<li>Multiple Linear Regression: <span class="math inline">\(Q \sim Q + B\)</span>
+<li>Multiple Linear Regression: <span class="math inline">\(Q \sim X + Z\)</span>
 <ul>
-<li>The bivariate <span class="math inline">\(Q \sim Q\)</span> relationship must be significant.</li>
+<li>For this assignment choose a quantitative <span class="math inline">\(X\)</span> and a binary confounder <span class="math inline">\(Z\)</span>, where the bivariate <span class="math inline">\(Q \sim Q\)</span> relationship is significant.</li>
 </ul></li>
-<li>Logistic Regression: <span class="math inline">\(B \sim Q + B\)</span></li>
-<li>Log-Linear Regression: <span class="math inline">\(log(Q) \sim Q + B\)</span></li>
+<li>Logistic Regression: <span class="math inline">\(logit(B) \sim X + Z\)</span>
+<ul>
+<li>Your binary response variable <span class="math inline">\(Y\)</span> must be coded as 1 (event) and 0 (non-event).</li>
+<li>For this assignment, choose a binary <span class="math inline">\(X\)</span> and a binary confounder <span class="math inline">\(Z\)</span>.</li>
+</ul></li>
+<li>Log-Linear Regression: <span class="math inline">\(log(Q) \sim X + Z\)</span>
+<ul>
+<li>The explanatory varible <span class="math inline">\(X\)</span> can be binary or quantitative.</li>
+</ul></li>
 </ol>
 <p>You will then take one of the three above analyses and</p>
 <ol start="4" style="list-style-type: decimal">
@@ -280,11 +287,10 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li>Identify variables under consideration
 <ul>
-<li>Determine a third variable that you want to test as a potential confounder.<br />
+<li>Determine a third variable <span class="math inline">\(Z\)</span> that you want to test as a potential confounder.<br />
 </li>
 <li>Consider the relationship and ask yourself: “<em>If I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable(s), what would they be?</em>”</li>
-<li>For the purposes of this assignment, your <span style="color:red">potential confounder must be binary</span>.</li>
-<li>For the purposes of this assignment, your <span style="color:red"> Q~Q relationship must be significant</span>. This is only required for the multivariable linear regression model.</li>
+<li><span style="color:red">For the purposes of this assignment your potential confounder <span class="math inline">\(Z\)</span> must be binary</span>. In reality, confounders, covariates, mediators, and moderators can come in all data types.</li>
 </ul></li>
 <li>Write out the null, alternative, and confounder Hypotheses statements.
 <ul>
@@ -301,20 +307,14 @@ div.tocify {
 <ul>
 <li>Only do this if you rejected the null.</li>
 <li>Model the response variable on the explanatory variable and the third variable. <code>y ~ x + z</code></li>
-</ul></li>
-<li>Interpret the Confounder
-<ul>
-<li>When the third variable is included in the code, look at the p-value for the explanatory variable.
+<li>Determine if <span class="math inline">\(Z\)</span> is a confounder by looking at the p-value for the explanatory variable.
 <ul>
 <li>If it is still significant, the third variable is not a confounding variable.</li>
 <li>If it is no longer significant, the third variable is a confounding variable. This means that the third variable is explaining the relationship between the explanatory variable and the response variable.</li>
 </ul></li>
 </ul></li>
-<li>Conclusion
-<ul>
-<li>Details included in each section below.</li>
-<li>A structured response template is provided.</li>
-</ul></li>
+<li>Interpret all regression coefficients except the intercept.</li>
+<li>Write a conclusion. A structured response template is provided.</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(knitr)
 opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">warning=</span><span class="ot">FALSE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>) 
@@ -345,7 +345,8 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 </div>
 <div id="fit-the-simple-model" class="section level2">
 <h2>3. Fit the simple model</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup, <span class="dt">data=</span>addhealth) <span class="co"># fit the model on wakeup only</span>
+<p>Is there a relationship between income and time a person wakes up?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup, <span class="dt">data=</span>addhealth) 
 <span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod1), <span class="dt">caption =</span> <span class="st">&quot;Modeling income using wakeup time.&quot;</span>)</code></pre></div>
 <table style="width:88%;">
 <colgroup>
@@ -406,7 +407,7 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 </tr>
 </tbody>
 </table>
-<p>The p-value for the <span class="math inline">\(b_{1}\)</span> estimate of the regression coefficient for <code>wakeup</code> is significant at 0.001. There is reason to believe that the time you wakeup is associated with your income.</p>
+<p>The p-value for the estimate of the regression coefficient for <code>wakeup</code> is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income.</p>
 </div>
 <div id="fit-the-multivariable-model" class="section level2">
 <h2>4. Fit the multivariable model</h2>
@@ -479,50 +480,32 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 </tr>
 </tbody>
 </table>
-</div>
-<div id="interpret-the-confounder" class="section level2">
-<h2>5. Interpret the confounder</h2>
 <p>The relationship between income and wake up time is still significant after controlling for gender. Gender is not a confounder.</p>
+</div>
+<div id="interpret-the-regression-coefficients." class="section level2">
+<h2>5. Interpret the regression coefficients.</h2>
+<ul>
+<li><span class="math inline">\(b_{1}\)</span>: Holding gender constant, for every hour later a person wakes up, their predicted average income drops by $611.</li>
+<li><span class="math inline">\(b_{2}\)</span>: Controlling for the time someone wakes up in the morning, the predicted average income for females is $8,527 lower than for males.</li>
+</ul>
 </div>
 <div id="conclusion" class="section level2">
 <h2>6. Conclusion</h2>
 <ul>
 <li>Use the numerical results from the multivariabel model to fill in the values in the conclusion below.</li>
 <li>Look at the Adjusted <span class="math inline">\(R^{2}\)</span> to see how much of the variance in the response you are accounting for with the predictor.</li>
-<li>To get the confidence intervals for the regression coefficients you will use the function <code>confint()</code>. <code>kable</code> is used here to make a nicely formatted table upon knitting.</li>
+<li>To get the confidence intervals for the regression coefficients you will use the function <code>confint()</code></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">confint</span>(lm.mod2), <span class="dt">digits=</span><span class="dv">2</span>)</code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th align="right">2.5 %</th>
-<th align="right">97.5 %</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>(Intercept)</td>
-<td align="right">46303.12</td>
-<td align="right">51035.72</td>
-</tr>
-<tr class="even">
-<td>wakeup</td>
-<td align="right">-904.24</td>
-<td align="right">-318.41</td>
-</tr>
-<tr class="odd">
-<td>female_cFemale</td>
-<td align="right">-10074.58</td>
-<td align="right">-6979.58</td>
-</tr>
-</tbody>
-</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">confint</span>(lm.mod2)</code></pre></div>
+<pre><code>##                      2.5 %     97.5 %
+## (Intercept)     46303.1191 51035.7225
+## wakeup           -904.2448  -318.4088
+## female_cFemale -10074.5798 -6979.5823</code></pre>
 <p>Replace the <strong>bold</strong> words with your variables, the <code>highlighted</code> words with data from your analysis, and choose between <em>conclusion options</em>.</p>
 <p>After adjusting for the potential confounding factor of <strong>third variable</strong>, <strong>explanatory variable</strong> (b1 = <code>parameter estimate, CI confidence interval range, p = significance value</code>) was *<strong>significantly/not significantly</strong> and <strong>positively/negatively</strong> associated with <strong>response variable</strong>. Approximately <code>R-Square*100</code> of the variance of <strong>response</strong> can be accounted for by <strong>explanatory</strong> after controlling for <strong>third variable</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
 <p>So the conclusion for this analysis reads:</p>
 <blockquote>
-<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wake up time</strong> (<span class="math inline">\(\beta_{1}\)</span> = <code>-611, -904, -318, p&lt;.0001</code>) was <strong>significantly</strong> and <strong>negatively</strong> associated with <strong>income</strong>. Approximately <code>3.2%</code> of the variance of <strong>income</strong> can be accounted for by <strong>wake up time</strong> after controlling for <strong>gender</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>wake up time</strong> and <strong>income</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
+<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wake up time</strong> (<span class="math inline">\(\beta_{1}\)</span> = <code>-611, (95% CI -904, -318), p&lt;.0001</code>) was <strong>significantly</strong> and <strong>negatively</strong> associated with <strong>income</strong>. Approximately <code>3.2%</code> of the variance of <strong>income</strong> can be accounted for by <strong>wake up time</strong> after controlling for <strong>gender</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>wake up time</strong> and <strong>income</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
 </blockquote>
 <p>Additional example interpretation</p>
 <blockquote>
@@ -742,7 +725,7 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <div id="fit-the-multivariable-model-2" class="section level2">
 <h2>4. Fit the multivariable model</h2>
 </div>
-<div id="interpret-the-confounder-1" class="section level2">
+<div id="interpret-the-confounder" class="section level2">
 <h2>5. Interpret the confounder</h2>
 </div>
 <div id="conclusion-2" class="section level2">
