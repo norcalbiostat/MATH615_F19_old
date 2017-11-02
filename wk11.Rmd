@@ -50,4 +50,4 @@ Goals:
 
 ##### Assignments
 
-* [Regression Assignment](hw/regression.html)
+* [Regression Assignment](hw/Regression_Assignment.html)

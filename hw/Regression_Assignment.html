@@ -245,7 +245,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Regression Assignment</h1>
 <h4 class="author"><em>Robin Donatello</em></h4>
-<h4 class="date"><em>Last Updated 2017-11-01 16:44:14</em></h4>
+<h4 class="date"><em>Last Updated 2017-11-01 21:31:44</em></h4>
 
 </div>
 
@@ -322,7 +322,7 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <span class="kw">library</span>(ggplot2); <span class="kw">library</span>(gridExtra)
 <span class="kw">library</span>(pander) <span class="co"># Used for printing nice linear model tables</span>
 <span class="kw">panderOptions</span>(<span class="st">&quot;digits&quot;</span>, <span class="dv">3</span>)
-<span class="kw">load</span>(<span class="st">&quot;E:/MATH315/Project/addhealth_clean.Rdata&quot;</span>)</code></pre></div>
+<span class="kw">load</span>(<span class="st">&quot;J:/MATH315/Project/addhealth_clean.Rdata&quot;</span>)</code></pre></div>
 </div>
 <div id="multiple-linear-regression" class="section level1">
 <h1>Multiple Linear Regression</h1>
@@ -347,14 +347,14 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <h2>3. Fit the simple model</h2>
 <p>Is there a relationship between income and time a person wakes up?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod1 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup, <span class="dt">data=</span>addhealth) 
-<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod1), <span class="dt">caption =</span> <span class="st">&quot;Modeling income using wakeup time.&quot;</span>)</code></pre></div>
-<table style="width:88%;">
+<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod1), <span class="dt">digits=</span><span class="dv">2</span>)</code></pre></div>
+<table style="width:86%;">
 <colgroup>
 <col width="25%"></col>
 <col width="15%"></col>
 <col width="18%"></col>
 <col width="13%"></col>
-<col width="15%"></col>
+<col width="13%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -370,20 +370,20 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <td align="center"><strong>(Intercept)</strong></td>
 <td align="center">43548</td>
 <td align="center">1126</td>
-<td align="center">38.7</td>
-<td align="center">3.03e-276</td>
+<td align="center">39</td>
+<td align="center">3e-276</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>wakeup</strong></td>
 <td align="center">-488</td>
 <td align="center">151</td>
-<td align="center">-3.22</td>
-<td align="center">0.00127</td>
+<td align="center">-3.2</td>
+<td align="center">0.0013</td>
 </tr>
 </tbody>
 </table>
 <table style="width:88%;">
-<caption>Modeling income using wakeup time.</caption>
+<caption>Fitting linear model: income ~ wakeup</caption>
 <colgroup>
 <col width="20%"></col>
 <col width="30%"></col>
@@ -407,20 +407,20 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 </tr>
 </tbody>
 </table>
-<p>The p-value for the estimate of the regression coefficient for <code>wakeup</code> is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income.</p>
+<p>The estimate of the regression coefficient for <code>wakeup</code> is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income.</p>
 </div>
 <div id="fit-the-multivariable-model" class="section level2">
 <h2>4. Fit the multivariable model</h2>
 <p>Fit the same multiple linear regression model and include the potential confounding variable. Determine if the third variable is a confounder.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lm.mod2 &lt;-<span class="st"> </span><span class="kw">lm</span>(income <span class="op">~</span><span class="st"> </span>wakeup <span class="op">+</span><span class="st"> </span>female_c, <span class="dt">data=</span>addhealth) 
-<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod2), <span class="dt">caption=</span><span class="st">&quot;Modeling income using gender and wakeup time.&quot;</span>)</code></pre></div>
-<table style="width:92%;">
+<span class="kw">pander</span>(<span class="kw">summary</span>(lm.mod2), <span class="dt">digits=</span><span class="dv">2</span>)</code></pre></div>
+<table style="width:90%;">
 <colgroup>
 <col width="29%"></col>
 <col width="15%"></col>
 <col width="18%"></col>
 <col width="13%"></col>
-<col width="15%"></col>
+<col width="13%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -436,27 +436,27 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <td align="center"><strong>(Intercept)</strong></td>
 <td align="center">48669</td>
 <td align="center">1207</td>
-<td align="center">40.3</td>
-<td align="center">2.06e-296</td>
+<td align="center">40</td>
+<td align="center">2.1e-296</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>wakeup</strong></td>
 <td align="center">-611</td>
 <td align="center">149</td>
-<td align="center">-4.09</td>
-<td align="center">4.37e-05</td>
+<td align="center">-4.1</td>
+<td align="center">4.4e-05</td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>female_cFemale</strong></td>
 <td align="center">-8527</td>
 <td align="center">789</td>
-<td align="center">-10.8</td>
-<td align="center">8.09e-27</td>
+<td align="center">-11</td>
+<td align="center">8.1e-27</td>
 </tr>
 </tbody>
 </table>
 <table style="width:86%;">
-<caption>Modeling income using gender and wakeup time.</caption>
+<caption>Fitting linear model: income ~ wakeup + female_c</caption>
 <colgroup>
 <col width="20%"></col>
 <col width="30%"></col>
@@ -496,16 +496,38 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <li>Look at the Adjusted <span class="math inline">\(R^{2}\)</span> to see how much of the variance in the response you are accounting for with the predictor.</li>
 <li>To get the confidence intervals for the regression coefficients you will use the function <code>confint()</code></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">confint</span>(lm.mod2)</code></pre></div>
-<pre><code>##                      2.5 %     97.5 %
-## (Intercept)     46303.1191 51035.7225
-## wakeup           -904.2448  -318.4088
-## female_cFemale -10074.5798 -6979.5823</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">confint</span>(lm.mod2), <span class="dt">digits=</span><span class="dv">2</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">2.5 %</th>
+<th align="right">97.5 %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td align="right">46303.12</td>
+<td align="right">51035.72</td>
+</tr>
+<tr class="even">
+<td>wakeup</td>
+<td align="right">-904.24</td>
+<td align="right">-318.41</td>
+</tr>
+<tr class="odd">
+<td>female_cFemale</td>
+<td align="right">-10074.58</td>
+<td align="right">-6979.58</td>
+</tr>
+</tbody>
+</table>
 <p>Replace the <strong>bold</strong> words with your variables, the <code>highlighted</code> words with data from your analysis, and choose between <em>conclusion options</em>.</p>
 <p>After adjusting for the potential confounding factor of <strong>third variable</strong>, <strong>explanatory variable</strong> (b1 = <code>parameter estimate, CI confidence interval range, p = significance value</code>) was *<strong>significantly/not significantly</strong> and <strong>positively/negatively</strong> associated with <strong>response variable</strong>. Approximately <code>R-Square*100</code> of the variance of <strong>response</strong> can be accounted for by <strong>explanatory</strong> after controlling for <strong>third variable</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
 <p>So the conclusion for this analysis reads:</p>
 <blockquote>
-<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wake up time</strong> (<span class="math inline">\(\beta_{1}\)</span> = <code>-611, (95% CI -904, -318), p&lt;.0001</code>) was <strong>significantly</strong> and <strong>negatively</strong> associated with <strong>income</strong>. Approximately <code>3.2%</code> of the variance of <strong>income</strong> can be accounted for by <strong>wake up time</strong> after controlling for <strong>gender</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>wake up time</strong> and <strong>income</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
+<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wake up time</strong> (<span class="math inline">\(b_{1}\)</span> = <code>-611, 95% CI: (-904, -318), p&lt;.0001</code>) was <strong>significantly</strong> and <strong>negatively</strong> associated with <strong>income</strong>. Approximately <code>3.2%</code> of the variance of <strong>income</strong> can be accounted for by <strong>wake up time</strong> after controlling for <strong>gender</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>wake up time</strong> and <strong>income</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
 </blockquote>
 <p>Additional example interpretation</p>
 <blockquote>
@@ -520,7 +542,7 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <h2>1. Identify variables</h2>
 <ul>
 <li>Binary outcome: Poverty (variable <code>poverty</code>). _To see how this was created check my <a href="https://norcalbiostat.github.io/MATH315/hw/dm_addhealth.html">Add Health data management sample</a> page.</li>
-<li>Quantitative predictor: Time you wake up in the morning (variable <code>wakeup</code>)</li>
+<li>Binary predictor: Ever smoked a cigarette (variable <code>eversmoke_c</code>)</li>
 <li>Binary confounder: Gender (variable <code>female_c</code>)</li>
 </ul>
 </div>
@@ -535,113 +557,68 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <div id="fit-the-simple-model-1" class="section level2">
 <h2>3. Fit the simple model</h2>
 <p>Fit the logistic regression model (a.k.a generalized linear model) of the explanatory variable on the response variable. Decide to reject the null hypothesis in favor of the alternative.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log.mod.<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">glm</span>(poverty<span class="op">~</span>wakeup, <span class="dt">data=</span>addhealth, <span class="dt">family=</span><span class="st">'binomial'</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log.mod.<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">glm</span>(poverty<span class="op">~</span>eversmoke_c, <span class="dt">data=</span>addhealth, <span class="dt">family=</span><span class="st">'binomial'</span>)
 <span class="kw">summary</span>(log.mod.<span class="dv">1</span>)</code></pre></div>
 <pre><code>## 
 ## Call:
-## glm(formula = poverty ~ wakeup, family = &quot;binomial&quot;, data = addhealth)
+## glm(formula = poverty ~ eversmoke_c, family = &quot;binomial&quot;, data = addhealth)
 ## 
 ## Deviance Residuals: 
 ##     Min       1Q   Median       3Q      Max  
-## -0.8589  -0.6774  -0.6674  -0.6527   1.8614  
+## -0.7064  -0.7064  -0.7064  -0.6210   1.8659  
 ## 
 ## Coefficients:
-##             Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept) -1.58745    0.09984 -15.901   &lt;2e-16 ***
-## wakeup       0.03319    0.01308   2.539   0.0111 *  
+##                   Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)       -1.54800    0.06444 -24.021  &lt; 2e-16 ***
+## eversmoke_cSmoker  0.28711    0.07737   3.711 0.000207 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
-##     Null deviance: 4909.7  on 4833  degrees of freedom
-## Residual deviance: 4903.5  on 4832  degrees of freedom
-##   (1670 observations deleted due to missingness)
-## AIC: 4907.5
+##     Null deviance: 4907.4  on 4834  degrees of freedom
+## Residual deviance: 4893.3  on 4833  degrees of freedom
+##   (1669 observations deleted due to missingness)
+## AIC: 4897.3
 ## 
 ## Number of Fisher Scoring iterations: 4</code></pre>
-<p>The p-value for the b1 estimate of the regression coefficient for <code>wakeup</code> is significant at 0.011. There is reason to believe that the time you wakeup is associated with the probability of living below the poverty level.</p>
+<p>The p-value for the b1 estimate of the regression coefficient for <code>eversmoke_c</code> is significant at 0.0002. There is reason to believe that smoking status is associated with the probability of living below the poverty level.</p>
 </div>
 <div id="fit-the-multivariable-model-1" class="section level2">
 <h2>4. Fit the multivariable model</h2>
 <p>Fit the same logistic regression model and include the potential confounding variable. <strong>This is only done if there is a significant relationship between the explanatory and response variable.</strong> Determine if the third variable is a confounder.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log.mod.<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">glm</span>(poverty<span class="op">~</span>wakeup <span class="op">+</span><span class="st"> </span>female_c, <span class="dt">data=</span>addhealth, <span class="dt">family=</span><span class="st">'binomial'</span>)
-<span class="kw">pander</span>(<span class="kw">summary</span>(log.mod.<span class="dv">2</span>))</code></pre></div>
-<table style="width:90%;">
-<colgroup>
-<col width="29%"></col>
-<col width="15%"></col>
-<col width="18%"></col>
-<col width="13%"></col>
-<col width="13%"></col>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"> </th>
-<th align="center">Estimate</th>
-<th align="center">Std. Error</th>
-<th align="center">z value</th>
-<th align="center">Pr(&gt;|z|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><strong>(Intercept)</strong></td>
-<td align="center">-2.19</td>
-<td align="center">0.119</td>
-<td align="center">-18.4</td>
-<td align="center">6.36e-76</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>wakeup</strong></td>
-<td align="center">0.0459</td>
-<td align="center">0.0135</td>
-<td align="center">3.4</td>
-<td align="center">0.000683</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>female_cFemale</strong></td>
-<td align="center">0.848</td>
-<td align="center">0.0766</td>
-<td align="center">11.1</td>
-<td align="center">1.68e-28</td>
-</tr>
-</tbody>
-</table>
-<p>(Dispersion parameter for binomial family taken to be 1 )</p>
-<table style="width:67%;">
-<colgroup>
-<col width="29%"></col>
-<col width="37%"></col>
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center">Null deviance:</td>
-<td align="center">4909 on 4832 degrees of freedom</td>
-</tr>
-<tr class="even">
-<td align="center">Residual deviance:</td>
-<td align="center">4773 on 4830 degrees of freedom</td>
-</tr>
-</tbody>
-</table>
-<p>The p-value for the regression coefficient estimte of <code>wakeup</code> is still significant at 0.0007 after controlling for gender. Thus gender is <strong>not</strong> a confounder.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log.mod.<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">glm</span>(poverty<span class="op">~</span>eversmoke_c <span class="op">+</span><span class="st"> </span>female_c, <span class="dt">data=</span>addhealth, <span class="dt">family=</span><span class="st">'binomial'</span>)
+<span class="kw">summary</span>(log.mod.<span class="dv">2</span>)</code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = poverty ~ eversmoke_c + female_c, family = &quot;binomial&quot;, 
+##     data = addhealth)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -0.8335  -0.7048  -0.5652  -0.4716   2.1221  
+## 
+## Coefficients:
+##                   Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)       -2.14045    0.08662  -24.71  &lt; 2e-16 ***
+## eversmoke_cSmoker  0.38725    0.07886    4.91 9.09e-07 ***
+## female_cFemale     0.87450    0.07690   11.37  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 4906.9  on 4833  degrees of freedom
+## Residual deviance: 4755.4  on 4831  degrees of freedom
+##   (1670 observations deleted due to missingness)
+## AIC: 4761.4
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<p>The p-value for the regression coefficient estimte of <code>eversmoke_c</code> is still significant at &lt;.0001 after controlling for gender. Thus gender is <strong>not</strong> a confounder.</p>
 </div>
 <div id="interpret-the-results" class="section level2">
 <h2>5. Interpret the Results</h2>
-<p>Print out the odds ratio estimates for the confounding model. You will see one of three things:</p>
-<ul>
-<li><strong>OR = 1</strong> = equal chance of response variable being YES given any explanatory variable value. You are not able to predict participants’ responses by knowing their explanatory variable value. This would be a nonsignificant model when looking at the p-value for the explanatory variable in the parameter estimate table.</li>
-<li><strong>OR &gt; 1</strong> = as the explanatory variable value increases, the presence of a YES response is more likely. We can say that when a participant’s response to the explanatory variable is YES (1), they are more likely to have a response that is a YES (1).</li>
-<li><strong>OR &lt;1</strong> = as the explanatory variable value increases, the presence of a YES response is less likely. We can say that when a participant’s response to the explanatory variable is YES (1) they are less likely to have a response that is a YES (1).</li>
-</ul>
-<p>Interpreting confidence intervals for Odds Ratios</p>
-<ul>
-<li>Confidence intervals are a range for the population’s predicted odds ratio based on the sample data. We are 95% confident that any given population’s odds ratio would range between those two values.</li>
-<li>When the confidence intervals for the explanatory variables and third variables do not overlap , the variable with the higher values we can interpret as being more strongly associated with our response variable.</li>
-<li>For both the odds ratio and confidence interval interpretation, when you add in third variables it is explained in the same way except that you are controlling for the third variable or explanatory variable.</li>
-<li>When you add a third variable to the logistic regression, if you determine one is a confound then you do not interpret the variable that becomes nonsignificant in the odds ratio.</li>
-</ul>
+<p>Create a table containing the odds ratio estimates and 95% CI for those estimates using the confounding model. You will see one of three things:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># For your assignment - replace the saved model object `log.mod.2` with whatever YOU named this model. </span>
 <span class="kw">kable</span>(
   <span class="kw">data.frame</span>(
@@ -662,31 +639,50 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 <tbody>
 <tr class="odd">
 <td>(Intercept)</td>
-<td align="center">0.11</td>
-<td align="center">0.09</td>
+<td align="center">0.12</td>
+<td align="center">0.10</td>
 <td align="center">0.14</td>
 </tr>
 <tr class="even">
-<td>wakeup</td>
-<td align="center">1.05</td>
-<td align="center">1.02</td>
-<td align="center">1.07</td>
+<td>eversmoke_cSmoker</td>
+<td align="center">1.47</td>
+<td align="center">1.26</td>
+<td align="center">1.72</td>
 </tr>
 <tr class="odd">
 <td>female_cFemale</td>
-<td align="center">2.34</td>
-<td align="center">2.01</td>
-<td align="center">2.72</td>
+<td align="center">2.40</td>
+<td align="center">2.06</td>
+<td align="center">2.79</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>OR = 1</strong> = equal chance of response variable being YES given any explanatory variable value. You are not able to predict participants’ responses by knowing their explanatory variable value. This would be a nonsignificant model when looking at the p-value for the explanatory variable in the parameter estimate table.</li>
+<li><strong>OR &gt; 1</strong> = as the explanatory variable value increases, the presence of a YES response is more likely. We can say that when a participant’s response to the explanatory variable is YES (1), they are more likely to have a response that is a YES (1).</li>
+<li><strong>OR &lt;1</strong> = as the explanatory variable value increases, the presence of a YES response is less likely. We can say that when a participant’s response to the explanatory variable is YES (1) they are less likely to have a response that is a YES (1).</li>
+</ul>
+<blockquote>
+<p>For this example, the OR for the explanatory variable of eversmoker is 1.47 and the OR for gender is 2.40.</p>
+</blockquote>
+<p>Interpreting confidence intervals for Odds Ratios</p>
+<ul>
+<li>Confidence intervals are a range for the population’s predicted odds ratio based on the sample data. We are 95% confident that any given population’s odds ratio would range between those two values.</li>
+<li>When the confidence intervals for the explanatory variables and third variables do not overlap, the variable with the higher values we can interpret as being more strongly associated with our response variable.</li>
+<li>For both the odds ratio and confidence interval interpretation, when you add in third variables it is explained in the same way except that you are controlling for the third variable or explanatory variable.</li>
+<li>When you add a third variable to the logistic regression, if you determine one is a confound then you do not interpret the variable that becomes nonsignificant in the odds ratio.</li>
+</ul>
+</div>
+<div id="interpret-the-odds-ratios" class="section level2">
+<h2>5. Interpret the Odds Ratios</h2>
+<p>After controlling for gender, smokers have 1.47 times the odds of reporting making below the federal poverty level compared to non smokers. After controlling for smoking status, females have 2.4 time the odds of reporting annual earned wages below the federal poverty level compared to males. Gender is a stronger predictor of earning a lower wage than smoking status.</p>
 </div>
 <div id="conclusion-1" class="section level2">
-<h2>5. Conclusion</h2>
+<h2>Conclusion</h2>
 <p>Replace the <strong>bold</strong> words with your variables, the <code>highlighted</code> words with data from your analysis, and choose between <em>conclusion options</em>.</p>
 <p>After adjusting for the potential confounding factor of <strong>third variable</strong>, <strong>explanatory variable</strong> (<code>OR odds ratio estimate, CI confidence interval range, p = significance value</code>) was <em>significantly/not significantly</em> and <em>positively/negatively</em> associated with the likelihood of <strong>response variable</strong>. In this analysis, the odds ratio tells us that those who are <strong>[describe what dummy code 1 of your explanatory variable means here]</strong> are <code>0.05</code> times <em>more (if OR greater than 1)/less (if OR less than 1)</em> likely to <strong>[describe what dummy code 1 of your response variable means here]</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
 <p>So the conclusion for this analysis reads:</p>
-<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>wakeup time</strong> (<code>0.11, CI 0.09-0.14, p = .0007</code>) was <em>significantly</em> and <em>negatively</em> associated with the likelihood of <strong>earning under the poverty level</strong>. In this analysis, the odds ratio tells us that those who are <strong>female[describe what dummy code 1 of your explanatory variable means here]</strong> are <code>odds ratio estimate</code> times <em>more (if OR greater than 1)/less (if OR less than 1)</em> likely to <strong>[describe what dummy code 1 of your response variable means here]</strong>. Based on these analyses, <strong>third variable</strong> <em>is not/is</em> a confounding factor because the association between <strong>explanatory</strong> and <strong>response</strong> <em>is still/is no longer</em> significant after accounting for <strong>third variable</strong>.</p>
+<p>After adjusting for the potential confounding factor of <strong>gender</strong>, <strong>smoking status</strong> (<code>1.47, CI 1.26-1.72, p &lt;.0001</code>) was <em>significantly</em> and <em>positively</em> associated with the likelihood of <strong>earning under the poverty level</strong>. In this analysis, the odds ratio tells us that those who <strong>have ever smoked</strong> are <code>1.47</code> times <em>more</em> likely to <strong>earn income below the federal poverty level</strong>. Based on these analyses, <strong>gender</strong> <em>is not</em> a confounding factor because the association between <strong>smoking</strong> and <strong>poverty status</strong> <em>is still</em> significant after accounting for <strong>gender</strong>.</p>
 <p>Additional example interpretation</p>
 <blockquote>
 <ul>
@@ -696,8 +692,8 @@ opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">
 </blockquote>
 </div>
 </div>
-<div id="log-linear-regression" class="section level1">
-<h1>Log Linear Regression</h1>
+<div id="log-linear-regression-not-complete-yet-as-of-11117" class="section level1">
+<h1>Log Linear Regression (Not complete yet as of 11/1/17)</h1>
 <p>We are going to analyze personal income as the quantitative outcome for this piece of the assignment. <strong>You must use this variable as your outcome for this question.</strong> First however, you need to clean up, and log transform the variable for personal earnings <code>H4EC2</code> by following the steps below <em>in order</em>.</p>
 <ol style="list-style-type: decimal">
 <li>Remove values above 999995 (structural missing).</li>

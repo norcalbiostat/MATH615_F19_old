@@ -66,7 +66,7 @@ library(dplyr)
 library(ggplot2); library(gridExtra)
 library(pander) # Used for printing nice linear model tables
 panderOptions("digits", 3)
-load("E:/MATH315/Project/addhealth_clean.Rdata")
+load("J:/MATH315/Project/addhealth_clean.Rdata")
 ```
 
 # Multiple Linear Regression
@@ -91,10 +91,10 @@ If you have a “Strongly Agree” to “Strongly Disagree” variable that you 
 Is there a relationship between income and time a person wakes up? 
 ```{r}
 lm.mod1 <- lm(income ~ wakeup, data=addhealth) 
-pander(summary(lm.mod1), caption = "Modeling income using wakeup time.")
+pander(summary(lm.mod1), digits=2)
 ```
 
-The p-value for the estimate of the regression coefficient for `wakeup` is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income. 
+The estimate of the regression coefficient for `wakeup` is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income. 
 
 
 ## 4. Fit the multivariable model
@@ -103,7 +103,7 @@ Fit the same multiple linear regression model and include the potential confound
 
 ```{r}
 lm.mod2 <- lm(income ~ wakeup + female_c, data=addhealth) 
-pander(summary(lm.mod2), caption="Modeling income using gender and wakeup time.")
+pander(summary(lm.mod2), digits=2)
 ```
 
 
@@ -122,7 +122,7 @@ The relationship between income and wake up time is still significant after cont
 * To get the confidence intervals for the regression coefficients you will use the function `confint()`
 
 ```{r}
-confint(lm.mod2)
+kable(confint(lm.mod2), digits=2)
 ```
 
 Replace the **bold** words with your variables, the `highlighted` words with data from your analysis, and choose between _conclusion options_. 
@@ -132,7 +132,7 @@ After adjusting for the potential confounding factor of **third variable**, **ex
 
 So the conclusion for this analysis reads: 
 
-> After adjusting for the potential confounding factor of **gender**, **wake up time** ($\beta_{1}$ = `-611, (95% CI -904, -318), p<.0001`) was **significantly** and **negatively** associated with **income**. Approximately `3.2%` of the variance of **income** can be accounted for by **wake up time** after controlling for **gender**. Based on these analyses, **gender** _is not_ a confounding factor because the association between **wake up time** and **income** _is still_ significant after accounting for **gender**.
+> After adjusting for the potential confounding factor of **gender**, **wake up time** ($b_{1}$ = `-611, 95% CI: (-904, -318), p<.0001`) was **significantly** and **negatively** associated with **income**. Approximately `3.2%` of the variance of **income** can be accounted for by **wake up time** after controlling for **gender**. Based on these analyses, **gender** _is not_ a confounding factor because the association between **wake up time** and **income** _is still_ significant after accounting for **gender**.
 
 Additional example interpretation
 
@@ -143,11 +143,10 @@ Additional example interpretation
 
 Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding this way ensures you are predicting the presence of your categorical variable and not the absence of it. 
 
-
 ## 1. Identify variables
 
 * Binary outcome: Poverty (variable `poverty`). _To see how this was created check my [Add Health data management sample](https://norcalbiostat.github.io/MATH315/hw/dm_addhealth.html) page. 
-* Quantitative predictor: Time you wake up in the morning (variable `wakeup`)
+* Binary predictor: Ever smoked a cigarette (variable `eversmoke_c`)
 * Binary confounder: Gender (variable `female_c`)
  
 
@@ -161,39 +160,27 @@ Your outcome variable must be coded as 1 (event) and 0 (non-event). Recoding thi
 Fit the logistic regression model (a.k.a generalized linear model) of the explanatory variable on the response variable. Decide to reject the null hypothesis in favor of the alternative. 
 
 ```{r}
-log.mod.1 <- glm(poverty~wakeup, data=addhealth, family='binomial')
+log.mod.1 <- glm(poverty~eversmoke_c, data=addhealth, family='binomial')
 summary(log.mod.1)
 ```
 
-The p-value for the b1 estimate of the regression coefficient for `wakeup` is significant at 0.011. There is reason to believe that the time you wakeup is associated with the probability of living below the poverty level. 
+The p-value for the b1 estimate of the regression coefficient for `eversmoke_c` is significant at 0.0002. There is reason to believe that smoking status is associated with the probability of living below the poverty level. 
 
  
 ## 4. Fit the multivariable model
 Fit the same logistic regression model and include the potential confounding variable. **This is only done if there is a significant relationship between the explanatory and response variable.** Determine if the third variable is a confounder. 
 
 ```{r}
-log.mod.2 <- glm(poverty~wakeup + female_c, data=addhealth, family='binomial')
-pander(summary(log.mod.2))
+log.mod.2 <- glm(poverty~eversmoke_c + female_c, data=addhealth, family='binomial')
+summary(log.mod.2)
 ```
 
-The p-value for the regression coefficient estimte of `wakeup` is still significant at 0.0007 after controlling for gender. Thus gender is **not** a confounder. 
+The p-value for the regression coefficient estimte of `eversmoke_c` is still significant at <.0001 after controlling for gender. Thus gender is **not** a confounder. 
 
 
 ## 5. Interpret the Results
 
-Print out the odds ratio estimates for the confounding model. You will see one of three things: 
-
-* **OR = 1** = equal chance of response variable being YES given any explanatory variable value. You are not able to predict participants’ responses by knowing their explanatory variable value. This would be a nonsignificant model when looking at the p-value for the explanatory variable in the parameter estimate table.
-* **OR > 1** = as the explanatory variable value increases, the presence of a YES response is more likely. We can say that when a participant’s response to the explanatory variable is YES (1), they are more likely to have a response that is a YES (1). 
-* **OR <1** = as the explanatory variable value increases, the presence of a YES response is less likely. We can say that when a participant’s response to the explanatory variable is YES (1) they are less likely to have a response that is a YES (1). 
-
-
-Interpreting confidence intervals for Odds Ratios
-
-* Confidence intervals are a range for the population’s predicted odds ratio based on the sample data. We are 95% confident that any given population’s odds ratio would range between those two values. 
-* When the confidence intervals for the explanatory variables and third variables do not overlap , the variable with the higher values we can interpret as being more strongly associated with our response variable.
-* For both the odds ratio and confidence interval interpretation, when you add in third variables it is explained in the same way except that you are controlling for the third variable or explanatory variable.
-* When you add a third variable to the logistic regression, if you determine one is a confound then you do not interpret the variable that becomes nonsignificant in the odds ratio.
+Create a table containing the odds ratio estimates and 95% CI for those estimates using the confounding model. You will see one of three things: 
 
 ```{r}   
 # For your assignment - replace the saved model object `log.mod.2` with whatever YOU named this model. 
@@ -206,7 +193,25 @@ kable(
 digits=2, align = 'ccc')
 ```
 
-## 5. Conclusion
+* **OR = 1** = equal chance of response variable being YES given any explanatory variable value. You are not able to predict participants’ responses by knowing their explanatory variable value. This would be a nonsignificant model when looking at the p-value for the explanatory variable in the parameter estimate table.
+* **OR > 1** = as the explanatory variable value increases, the presence of a YES response is more likely. We can say that when a participant’s response to the explanatory variable is YES (1), they are more likely to have a response that is a YES (1). 
+* **OR <1** = as the explanatory variable value increases, the presence of a YES response is less likely. We can say that when a participant’s response to the explanatory variable is YES (1) they are less likely to have a response that is a YES (1). 
+
+
+> For this example, the OR for the explanatory variable of eversmoker is 1.47 and the OR for gender is 2.40. 
+
+Interpreting confidence intervals for Odds Ratios
+
+* Confidence intervals are a range for the population’s predicted odds ratio based on the sample data. We are 95% confident that any given population’s odds ratio would range between those two values. 
+* When the confidence intervals for the explanatory variables and third variables do not overlap, the variable with the higher values we can interpret as being more strongly associated with our response variable.
+* For both the odds ratio and confidence interval interpretation, when you add in third variables it is explained in the same way except that you are controlling for the third variable or explanatory variable.
+* When you add a third variable to the logistic regression, if you determine one is a confound then you do not interpret the variable that becomes nonsignificant in the odds ratio.
+
+## 5. Interpret the Odds Ratios
+
+After controlling for gender, smokers have 1.47 times the odds of reporting making below the federal poverty level compared to non smokers. After controlling for smoking status, females have 2.4 time the odds of reporting annual earned wages below the federal poverty level compared to males. Gender is a stronger predictor of earning a lower wage than smoking status. 
+
+## Conclusion
 
 Replace the **bold** words with your variables, the `highlighted` words with data from your analysis, and choose between _conclusion options_. 
 
@@ -215,7 +220,7 @@ After adjusting for the potential confounding factor of **third variable**, **ex
 
 So the conclusion for this analysis reads:
 
-After adjusting for the potential confounding factor of **gender**, **wakeup time** (`0.11, CI 0.09-0.14, p = .0007`) was _significantly_ and _negatively_ associated with the likelihood of **earning under the poverty level**. In this analysis, the odds ratio tells us that those who are **female[describe what dummy code 1 of your explanatory variable means here]** are `odds ratio estimate` times _more (if OR greater than 1)/less (if OR less than 1)_ likely to **[describe what dummy code 1 of your response variable means here]**.  Based on these analyses, **third variable** _is not/is_ a confounding factor because the association between **explanatory** and **response** _is still/is no longer_ significant after accounting for **third variable**. 
+After adjusting for the potential confounding factor of **gender**, **smoking status** (`1.47, CI 1.26-1.72, p <.0001`) was _significantly_ and _positively_ associated with the likelihood of **earning under the poverty level**. In this analysis, the odds ratio tells us that those who **have ever smoked** are `1.47` times _more_ likely to **earn income below the federal poverty level**.  Based on these analyses, **gender** _is not_ a confounding factor because the association between **smoking** and **poverty status** _is still_ significant after accounting for **gender**. 
 
 
 Additional example interpretation
@@ -225,7 +230,7 @@ Additional example interpretation
  
 
 
-# Log Linear Regression
+# Log Linear Regression (Not complete yet as of 11/1/17)
 
 We are going to analyze personal income as the quantitative outcome for this piece of the assignment. **You must use this variable as your outcome for this question.** First however, you need to clean up, and log transform the variable for personal earnings `H4EC2` by following the steps below _in order_. 
 
