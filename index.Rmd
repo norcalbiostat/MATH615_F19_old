@@ -4,6 +4,11 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
+### 11/7/17 - [Week 12](https://norcalbiostat.github.io/MATH615/wk12.html)
+* Tuesday - Poster progress discussion. Stage I revisions needed. 
+    - Adding and interpreting categorical predictors to your model. 
+* Thursday - Logistic regression! What to do with a binary outcome. 
+
 ### 10/30/17 - [Week 11](https://norcalbiostat.github.io/MATH615/wk11.html)
 * Tuesday - Study Design. How to set yourself up for success in research. 
 * Thursday - Multiple Regression. How to control for those pesky confounders, moderators and covariates. 

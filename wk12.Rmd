@@ -1,0 +1,57 @@
+---
+title: 'Week 11: 10/30 - 11/03'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+css: css/customh5.css
+---
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+#library(rmarkdown)
+opts_chunk$set(warning=FALSE, message=FALSE) 
+```
+
+
+# Tuesday: Interactions and Categorical Predictors
+Goals: 
+
+* Explain the difference between an interaction model and stratification
+* Identify how you can test a moderator using an interaction term
+* Write a mathematical model that contains a categorical predictor using reference coding. 
+* Interpret categorical predictor
+
+
+## Prepare 
+* Review the second half of the MLR notes [[HTML]](docs/lec07_MLR.html) [[PDF]](docs/lec07_MLR.pdf)
+* PMA5 CH7.8 (interactions)
+* PMA5Stratification (PMA5 7.9)
+
+## In class
+* Primarily lecture, board work on interpreting categorical predictors
+* Time pending, work on the Regression Assignment [[HTML]](hw/Regression_Assignment.html), [[PDF]](hw/Regression_Assignment.pdf)
+
+
+
+----
+
+# Thursday: Log transformed response variables
+
+Goals: 
+* Interpret a regression where the outcome has been log transformed 
+
+## Prepare 
+* Read [[UCLA IDRE page]] https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-a-regression-model-when-some-variables-are-log-transformed/ 
+* Multiple Regression Notes [[HTML]](docs/lec07_MLR.html) [[PDF]](docs/lec07_MLR.pdf)
+
+## In class
+* Short lecture 
+* Work on regression assignment
+
+##### Assignments
+
+* [Regression Assignment](hw/Regression_Assignment.html)
