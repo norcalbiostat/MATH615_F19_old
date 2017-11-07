@@ -3,11 +3,16 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 
 # Announcements
+<!--
+### 11/14/17 - [Week 13](https://norcalbiostat.github.io/MATH615/wk13.html)
+* Tuesday - Model building, variable selection
+* Thursday - Project Work
+-->
 
 ### 11/7/17 - [Week 12](https://norcalbiostat.github.io/MATH615/wk12.html)
 * Tuesday - Poster progress discussion. Stage I revisions needed. 
     - Adding and interpreting categorical predictors to your model. 
-* Thursday - Logistic regression! What to do with a binary outcome. 
+* Thursday - Transformations: Log and Logit
 
 ### 10/30/17 - [Week 11](https://norcalbiostat.github.io/MATH615/wk11.html)
 * Tuesday - Study Design. How to set yourself up for success in research. 

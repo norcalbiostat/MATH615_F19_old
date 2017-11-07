@@ -1,5 +1,5 @@
 ---
-title: 'Week 11: 10/30 - 11/03'
+title: 'Week 12: 11/4 - 11/12'
 date: "Last Updated `r Sys.time()`"
 output:
   html_document:
@@ -35,22 +35,26 @@ Goals:
 * Primarily lecture, board work on interpreting categorical predictors
 * Time pending, work on the Regression Assignment [[HTML]](hw/Regression_Assignment.html), [[PDF]](hw/Regression_Assignment.pdf)
 
-
-
 ----
 
-# Thursday: Log transformed response variables
+# Thursday: Transformations: Log and Logit
 
 Goals: 
+
 * Interpret a regression where the outcome has been log transformed 
+* Learn how to fit a model to a binary outcome
+* Interpret logistic regression coefficients as Odds Ratios
+
 
 ## Prepare 
 * Read [[UCLA IDRE page]] https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-a-regression-model-when-some-variables-are-log-transformed/ 
 * Multiple Regression Notes [[HTML]](docs/lec07_MLR.html) [[PDF]](docs/lec07_MLR.pdf)
+* PMA5 CH 12
+* Review the notes on Logistic Regression [[HTML]](docs/lec08_LogReg.html) [[PDF]](docs/lec08_LogReg.pdf)
+
 
 ## In class
-* Short lecture 
-* Work on regression assignment
+* Primarily Lecture and discussion
 
 ##### Assignments
 

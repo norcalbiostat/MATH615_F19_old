@@ -1,0 +1,407 @@
+---
+title: "Multiple Regression"
+author: "Robin Donatello"
+date: "Last Updated `r Sys.time()`"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+urlcolor: blue
+css: ../css/customh5.css
+---
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr); library(rmarkdown);library(ggplot2); library(gridExtra); 
+library(pander)
+opts_chunk$set(warning=FALSE, message=FALSE, fig.height=4, fig.width=5) 
+
+fev <- read.delim("https://norcalbiostat.netlify.com/data/Lung_081217.txt", 
+                    sep="\t", header=TRUE)
+```
+
+
+This topic is discussed in depth in PMA5, Chapter 7.
+The UCLA IDRE has constructed [[textbook examples]](https://stats.idre.ucla.edu/spss/examples/pma5/practical-multivariate-analysis-fifth-edition-by-afifi-may-and-clarkchapter-7-multiple-regression-and-correlation/) for this chapter.
+
+\newpage
+
+# Purpose
+
+The general purpose of multiple regression is to learn more about the relationship between several independent or predictor variables and a quantitative dependent variable. Multiple regression procedures are very widely used in research. In general, this inferential tool allows us to ask (and hopefully answer) the general question "_what is the best predictor of_...", and does “_additional variable A_” or “_additional variable B” confound the relationship between my explanatory and response variable?_” 
+
+> * Educational researchers might want to learn about the best predictors of success in high-school. 
+* Sociologists may want to find out which of the multiple social indicators best predict whether or not a new immigrant group will adapt to their new country of residence. 
+* Biologists may want to find out which factors (i.e. temperature, barometric pressure, humidity, etc.) best predict caterpillar reproduction. 
+
+
+Consider three variables that measure lung function: Age, Height, and FEV1 (The amount of air exhaled during the first second of a forced breath). 
+
+```{r, fig.width=10}
+a <- ggplot(fev, aes(y=FFEV1, x=FAGE)) + 
+        geom_point() + geom_smooth(se=FALSE) + theme_bw()
+b <- ggplot(fev, aes(y=FFEV1, x=FHEIGHT)) + 
+        geom_point() + geom_smooth(se=FALSE) + theme_bw()
+grid.arrange(a, b, ncol=2)
+```
+
+
+**Multiple Linear Regression**,
+
+* Extends simple linear regression.
+* Describes a linear relationship between a single continuous $Y$ variable, and several $X$ variables.
+* Predicts $Y$ from $X_{1}, X_{2}, \ldots , X_{P}$.
+
+Now it's no longer a 2D regression _line_, but a $p$ dimensional regression plane. 
+
+![](images/regression_plane.png)
+
+## Types of X variables
+* Fixed: The levels of $X$ are selected in advance with the intent to measure the affect on an outcome $Y$. 
+* Variable: Random sample of individuals from the population is taken and $X$ and $Y$ are measured on each individual.
+* X's can be continuous or discrete (categorical)
+* X's can be transformations of other X's, e.g., $log(x), x^{2}$. 
+
+## Mathematical Model
+
+$$ y_{i} = \beta_{0} + \beta_{1}x_{1i} + \ldots + \beta_{p}x_{pi} + \epsilon_{i}$$
+
+The assumptions on the residuals $\epsilon_{i}$ still hold:   
+
+* They have mean zero  
+* They are homoscedastic, that is all have the same finite variance: $Var(\epsilon_{i})=\sigma^{2}<\infty$  
+* Distinct error terms are uncorrelated: (Independent) $\text{Cov}(\epsilon_{i},\epsilon_{j})=0,\forall i\neq j.$  
+
+The regression model relates $y$ to a function of $\textbf{X}$ and $\mathbf{\beta}$, where $\textbf{X}$ is a $nxp$ matrix of $p$ covariates on $n$ observations and $\mathbf{\beta}$ is a length $p$ vector of regression coefficients.
+
+In matrix notation this looks like: 
+
+$$ \textbf{y} = \textbf{X} \mathbf{\beta} + \mathbf{\epsilon} $$
+
+## Parameter Estimation
+The goal of regression analysis is to minimize the residual error. 
+That is, to minimize the difference between the value of the dependent
+variable predicted by the model and the true value of the dependent variable.
+
+$$ \epsilon_{i} = \hat{y_{i}} - y_{i}$$
+
+The method of Least Squares accomplishes this by finding parameter estimates 
+$\beta_{0}$ and $\beta_{1}$ that minimized the sum of the squared residuals:
+
+$$ \sum_{i=1}^{n} \epsilon_{i} $$
+
+For simple linear regression the regression coefficient estimates that minimize the sum of squared errors can be calculated as: 
+$$ \hat{\beta_{0}} = \bar{y} - \hat{\beta_{1}}\bar{x} \quad \mbox{  and  } \quad  \hat{\beta_{1}} = r\frac{s_{y}}{s_{x}} $$
+
+For multiple linear regression, the fitted values $\hat{y_{i}}$ are calculated as the linear combination of x's and $\beta$'s, $\sum_{i=1}^{p}X_{ij}\beta_{j}$. The sum of the squared residual errors (the distance between the observed point $y_{i}$ and the fitted value) now has the following form: 
+
+$$ \sum_{i=1}^{n} |y_{i} - \sum_{i=1}^{p}X_{ij}\beta_{j}|^{2}$$
+
+Or in matrix notation
+
+$$ || \mathbf{y} - \mathbf{X}\mathbf{\beta} ||^{2} $$ 
+
+The details of methods to calculate the Least Squares estimate of $\beta$'s is left to a course in mathematical statistics. 
+
+## Continued Example: Lung Function
+
+In PMA5 Chapter 6, the data for fathers from the lung function data set were analyzed. These data fit the variable-X case. Height was used as the $X$ variable in order to predict `FEV`. 
+
+```{r}
+fev.ht.model <- lm(FFEV1 ~ FHEIGHT , data=fev)
+summary(fev.ht.model)
+round(confint(fev.ht.model),2)
+```
+
+This model concludes that FEV1 in fathers significantly increases by 0.12 (95% CI:0.09, 0.15) liters per additional inch in height (p<.0001). Looking at the multiple $R^{2}$ (correlation of determination), this simple model explains 25% of the variance seen in the outcome $y$. 
+
+However, FEV tends to decrease with age for adults, so we should be able to predict it better if we use both height and age as independent variables in a multiple regression equation. 
+
+*  What direction do you expect the slope coefficient for age to be? For height? 
+
+----
+
+# Model fitting
+
+## Simple Linear Regression
+Let's examine the bivarate relationship of FEV1 (forced expiratory volume in 1 minute) for fathers `FFEV1` on their age `FAGE`. 
+
+```{r}
+fev1.age.model <- lm(FFEV1 ~ FAGE, data=fev)
+summary(fev1.age.model)
+confint(fev1.age.model)
+```
+
+For every one year older the father gets, his FEV1 significantly decreases by 0.03 (95% CI 0.02, 0.04) liters (p = .00001).
+
+```{r}
+fev1.ht.model <- lm(FFEV1 ~ FHEIGHT, data=fev)
+summary(fev1.ht.model)
+confint(fev1.ht.model)
+```
+For every inch taller a father is, his FEV1 significantly increases by 0.11 (95%CI 0.09, 0.15) liters (p < .0001).
+
+## Multiple Linear Regression
+Fitting a regression model in R with more than 1 predictor is trivial. Just add each variable to the right hand side of the model notation connected with a `+`. 
+
+```{r}
+mv_model <- lm(FFEV1 ~ FAGE + FHEIGHT, data=fev)
+summary(mv_model)
+confint(mv_model)
+```
+Holding height constant, a father who is one year older is expected to have a FEV value 0.03 (0.01, 0.04) liters less than another man (p<.0001).
+
+Holding height constant, a father who is 1cm taller than another man is expected to have a FEV value of 0.11 (.08, 0.15) liter greater than the other man (p<.0001). 
+
+For the model that includes age, the coefficient for height is now `r round(mv_model$coefficients[3],2)`, which is interpreted as the rate of change of FEV1 as a function of height **after adjusting for age**. This is also called the **partial regression coefficient** of FEV1 on height after adjusting for age. 
+
+Both height and age are significantly associated with FEV in fathers (p<.0001 each).
+
+
+## Model Diagnostics 
+
+The same set of regression diagnostics can be examined to identify any potential influential points, outliers or other problems with the linear model. 
+
+```{r}
+par(mfrow=c(2,2))
+plot(mv_model)
+```
+
+
+## Multicollinearity
+
+* Occurs when some of the X variables are highly intercorrelated.
+* Affects estimates and their SE's (p. 143)
+* Look at tolerance, and its inverse, the Variance Inflation Factor (VIF)
+* Need tolerance < 0.01, or VIF > 100.
+
+```{r}
+library(car)
+vif(mv_model)
+tolerance = 1/vif(mv_model)
+tolerance
+```
+
+* Solution: use variable selection to delete some X variables.
+* Alternatively, use Principal Components (PMA5 Ch. 14)
+
+----
+
+
+# Interlude: The necessity of tidy data for analysis. 
+
+The data on Lung function originally was recorded in _wide_ format, with separate variables for mother's and father's FEV1 score (`MFEV1` and `FFEV`). In this format, the data is one record per family. 
+
+```{r}
+head(fev)
+```
+
+To analyze the effect of gender on FEV, the data need to be in _long_ format, with a single variable for `FEV` and a separate variable for gender. The following code chunk demonstrates one method of combining data on height, gender, age and FEV1 for both males and females. 
+
+```{r}
+fev2 <- data.frame(gender = c(fev$FSEX, fev$MSEX), 
+                   FEV = c(fev$FFEV1, fev$MFEV1), 
+                   ht = c(fev$FHEIGHT, fev$MHEIGHT), 
+                   age = c(fev$FAGE, fev$MAGE))
+fev2$gender <- factor(fev2$gender, labels=c("M", "F"))
+head(fev2)  
+```
+
+The UCLA IDRE [[textbook examples]](https://stats.idre.ucla.edu/spss/examples/pma5/practical-multivariate-analysis-fifth-edition-by-afifi-may-and-clarkchapter-7-multiple-regression-and-correlation/) shows you how to reshape this data long to wide using `varstocases`. 
+
+----
+
+# Stratification & Interactions 
+
+Recall when testing for a moderator, we fit models _stratified_ on the potential moderating variable. 
+In doing so, we were examining the regression equations for each subgroup of the population and seeing if the relationship between the response and explanatory variables _changed_ for at least one subgroup. 
+
+Consider the relationship between the length of an iris petal, and the length of it's sepal. Earlier we found that the iris species modified this relationship. Lets consider a binary indicator variable for species that groups _veriscolor_ and _virginica_ together. 
+
+```{r}
+iris$setosa <- ifelse(iris$Species=="setosa", 1, 0)
+table(iris$setosa, iris$Species)
+```
+
+Within the _setosa_ species, there is little to no relationship between sepal and petal length. For the other two species, the relationship looks still significantly positive, but in the combined sample there appears to be a strong positive relationship (blue). 
+
+```{r}
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length, col=as.factor(setosa))) + 
+            geom_point() + theme_bw() + theme(legend.position="top") + 
+            scale_color_manual(name="Species setosa", values=c("red", "darkgreen")) + 
+            geom_smooth(se=FALSE, method="lm") + 
+            geom_smooth(aes(x=Sepal.Length, y=Petal.Length), col="blue", se=FALSE, method='lm')
+```
+
+The mathematical model describing the relationship between Petal length ($Y$), and Sepal length ($X$), for species _setosa_ ($s$) versus not-setosa ($n$), is written as follows: 
+
+$$ Y_{is} \sim \beta_{0s} + \beta_{1s}*x_{i} + \epsilon_{is} \qquad \epsilon_{is} \sim \mathcal{N}(0,\sigma^{2}_{s})$$
+$$ Y_{in} \sim \beta_{0n} + \beta_{1n}*x_{i} + \epsilon_{in} \qquad \epsilon_{in} \sim \mathcal{N}(0,\sigma^{2}_{n}) $$
+
+In each model, the intercept, slope, and variance of the residuals can all be different. This is the unique and powerful feature of stratified models. The downside is that each model is only fit on the amount of data in that particular subset. Furthermore, each model has 3 parameters that need to be estimated: $\beta_{0}, \beta_{1}$, and $\sigma^{2}$, for a total of 6 for the two models. The more parameters that need to be estimated, the more data we need. 
+
+
+## Simplififcation of interaction models {#simplify}
+
+If we only care about how species changes the relationship between petal and sepal length, we can fit what is called an **interaction** model. Interactions are mathematically represented as a multiplication between the two variables that are interacting: here it is sepal length ($x_{1}$) and species ($x_{2}$). Note that both _main effects_ of sepal length, and species are also included in the model. 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}x_{2i} + \beta_{3}x_{1i}x_{2i}$$
+
+When $x_{2} = 0$, the record is on an iris not from the _setosa_ species. 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}(0) + \beta_{3}x_{1i}(0)$$
+which simplifies to 
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i}$$
+
+When $x_{2} = 1$, the record is on an iris of the _setosa_ species. 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}(1) + \beta_{3}x_{1i}(1)$$
+which simplifies to
+$$ Y_{i} \sim (\beta_{0} + \beta_{2}) + (\beta_{1} + \beta_{3})x_{i}$$
+
+These then **are** the stratified models! Each sub-model has a different intercept and slope, but we only had to estimate 4 parameters instead of 6. 
+
+
+Interactions are fit in `R` by simply multiplying `*` the two variables together in the model statement. 
+```{r}
+summary(lm(Petal.Length ~ Sepal.Length + setosa + Sepal.Length*setosa, data=iris))
+```
+
+The coefficient $b_{3}$ for the interaction term is significant, confirming that species changes the relationship between sepal length and petal length. How we interpret this, and the other coefficients will be discussed later. 
+
+## Adding more covariates to the model
+
+What if we now wanted to include other predictors in the model? How does sepal length relate to petal length after controlling for petal width? We add the variable for petal width into the model
+
+```{r}
+summary(lm(Petal.Length ~ Sepal.Length + setosa + Sepal.Length*setosa + Petal.Width, data=iris))
+```
+
+So far, petal width, and the combination of species and sepal length are both significantly associated with petal length. 
+
+_Note of caution: Stratification implies that the stratifying variable interacts with all other variables._ 
+So if we were to go back to the stratified model where we fit the model of petal length on sepal length AND petal width, stratified by species, we would  be implying that species interacts with both sepal length and petal width. 
+
+----
+
+
+# Categorical Predictors
+
+This topic is also discussed in more detail in PMA5 Chapter 9.3.
+
+
+## Example: Iris species
+Let's continue to model the length of the iris petal based on the length of the sepal, controlling for species. But here we'll keep species as a categorical variable. What happens if we just put the variable in the model? 
+
+```{r}
+summary(lm(Petal.Length ~ Sepal.Length + Species, data=iris))
+```
+
+Examine the coefficient names, `Speciesversicolor` and `Speciesvirginica`. R (and most software packages) automatically take a categorical variable and turn it into a series of binary indicator variables. Let's look at what the software program does in the background. Below is a sample of the iris data. The first column shows the row number, specifically I am only showing 2 sample rows from each species. The second column is the value of the sepal length, the third is the binary indicator for if the iris is from species _versicolor_, next the binary indicator for if the iris is from species _virginica_, and lastly the species as a 3 level categorical variable (which is what we're used to seeing at this point.)
+
+```{r, echo=FALSE}
+a <- model.matrix(Petal.Length ~ Sepal.Length + Species, data=iris)
+b <- data.frame(a, Species=iris$Species)[c(1:2,51:52,101:102),-1]
+pander(b)
+```
+
+## Factor variable coding
+
+* Most commonly known as "Dummy coding". Not an informative term to use. 
+* Better used term: Indicator variable
+* Math notation: **I(gender == "Female")**. 
+* A.k.a reference coding
+* For a nominal X with K categories, define K indicator variables.
+    - Choose a reference (referent) category:
+    - Leave it out
+    - Use remaining K-1 in the regression.
+    - Often, the largest category is chosen as the reference category.
+
+For the iris example, 2 indicator variables are created for _versicolor_ and _virginica_. Interpreting the regression coefficients are going to be **compared to the reference group**. In this case, it is species _setosa_. 
+
+The mathematical model is now written as follows, where $x_{1}$ is Sepal Length, $x_{2}$ is the indicator for _versicolor_, and $x_{3}$ the indicator for _virginica_ 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}x_{2i} + \beta_{3}x_{3i}+ \epsilon_{i}$$
+
+Let's look at the regression coefficients and their 95% confidence intervals from the main effects model again. 
+
+```{r}
+main.eff.model <- lm(Petal.Length ~ Sepal.Length + Species, data=iris)
+pander(main.eff.model)
+pander(confint(main.eff.model))
+```
+
+In this _main effects_ model, Species only changes the intercept. The effect of species is not multiplied by Sepal length. The interpretations are the following: 
+
+* $b_{1}$: After controlling for species, Petal length significantly increases with the length of the sepal (0.63, 95% CI 0.54-0.72, p<.0001). 
+* $b_{2}$: _Versicolor_ has on average 2.2cm longer petal lengths compared to _setosa_ (95% CI 2.1-2.3, p<.0001). 
+* $b_{3}$: _Virginica_ has on average 3.1cm longer petal lengths compared to _setosa_ (95% CI 2.9-3.3, p<.0001). 
+
+
+# Interactions between Q*B and Q*C
+
+Lastly let's look at how to fit and interpret a model with an interaction between a categorical and a continuous variable. Recall an interaction **changes the relationship** between an explanatory variable and the response variable. 
+
+
+## Q*B
+
+Let's revisit the interaction model where $x_{1}$ is Sepal Length and $x_{2}$ is the indicator for _setosa_. 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}x_{2i} + \beta_{3}x_{1i}*x_{2i}$$
+```{r}
+summary(lm(Petal.Length ~ Sepal.Length + setosa + Sepal.Length*setosa, data=iris))
+```
+
+<span style="color:red"> The main effects ($b_{1}$, $b_{2}$) cannot be interpreted by themselves when there is an interaction in the model. </span>
+
+* If $x_{2}=0$, then the effect of $x_{1}$ on $Y$ simplifies to: $\beta_{1}$
+    * $b_{1}$ The effect of sepal length on petal length **for non-setosa species of iris** (`setosa=0`) 
+    * For non-setosa species, the petal length increases 1.03cm for every additional cm of sepal length. 
+* If $x_{2}=1$, then the effect of $x_{1}$ on $Y$ model simplifies to: $\beta_{1} + \beta_{3}$
+    * For setosa species, the petal length increases by `1.03-0.9=0.13` cm for every additional cm of sepal length. 
+ 
+Don't remember how I got these model simplifications? See this [section](#simplify)
+
+## Q*C
+
+Let's up the game now and look at the full interaction model with a categorical version of species. Recall $x_{1}$ is Sepal Length, $x_{2}$ is the indicator for _versicolor_, and $x_{3}$ the indicator for _virginica_ . 
+
+$$ Y_{i} \sim \beta_{0} + \beta_{1}x_{i} + \beta_{2}x_{2i} + \beta_{3}x_{3i} + \beta_{4}x_{1i}x_{2i} + \beta_{5}x_{1i}x_{3i}+\epsilon_{i}$$
+```{r}
+summary(lm(Petal.Length ~ Sepal.Length + Species + Sepal.Length*Species, data=iris))
+```
+
+The slope of the relationship between sepal length and petal length is calculated as follows, for each species:   
+
+* _setosa_ $(x_{2}=0, x_{3}=0): b_{1}=0.13$ 
+* _versicolor_ $(x_{2}=1, x_{3}=0): b_{1} + b_{2} + b_{4} = 0.13+0.55 = 0.68$
+* _virginica_ $(x_{2}=0, x_{3}=1): b_{1} + b_{3} + b_{5} = 0.13+0.62 = 0.75$
+
+Compare this to the estimates gained from the stratified model: 
+
+```{r}
+coef(lm(Petal.Length ~ Sepal.Length, data=subset(iris, Species=="setosa")))
+coef(lm(Petal.Length ~ Sepal.Length, data=subset(iris, Species=="versicolor")))
+coef(lm(Petal.Length ~ Sepal.Length, data=subset(iris, Species=="virginica")))
+```
+
+They're the same! Proof that an interaction is equivelant to stratification. 
+
+**So why do an interaction? Why not stratify?**
+
+Stratification implies that the stratifying variable interacts with all other variables. Even variables that the variable is not directly interacting with. 
+
+E.g. the stratified model below
+
+* $Y = A + B + C + D + C*D$, when D=1
+* $Y = A + B + C + D + C*D$, when D=0
+
+is the same as the following interaction model: 
+
+* $Y = A + B + C + D + A*D + B*D + C*D$
+
+
+
+

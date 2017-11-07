@@ -1,0 +1,45 @@
+---
+title: 'Week 12: 11/13 - 11/17'
+date: "Last Updated `r Sys.time()`"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+css: css/customh5.css
+---
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+#library(rmarkdown)
+opts_chunk$set(warning=FALSE, message=FALSE) 
+```
+
+
+# Tuesday: Model Buliding/Model Fit
+
+Goals: 
+
+* Use different variable selection techniques to build a multivariable model. 
+* Compare models to assess model fit
+
+## Prepare 
+* PMA5 Chapter 8  
+* Variable Selection Notes [[HTML]](docs/lec09_VarSelect.html) [[PDF]](docs/lec09_VarSelect.pdf)
+
+## In class
+* Primarily lecture
+* Time pending, work on your project 
+
+---
+
+
+# Thursday: Project work
+
+Goals: 
+
+* Work on your multivariable models for your project
+* Finish poster prep slides stage III
+* Finish regression assignment.
+
