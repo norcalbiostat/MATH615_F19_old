@@ -1,15 +1,15 @@
 ---
-title: "Multiple Regression"
+title: "Variable Selection"
 author: "Robin Donatello"
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 urlcolor: blue
 css: ../css/customh5.css
 ---
@@ -23,117 +23,7 @@ depress$employ <- factor(depress$employ,
                          labels=c("FT", "PT", "Unemp", "Retired", "Houseperson", "Student", "Other"))
 ```
 
-# Introduction
-
-Variable selection methods are used mainly in exploratory situations where many independent variables have been measured and a final model explaining the dependent variable has not been reached. 
-
-**To do variable selection you need:**
-
-1. A general test, 
-2. Selection criteria, and
-3. A selection process.
-
-Consider a model with $P$ variables and you want to test if $Q$ additional variables are useful.   
-$H_{0}: Q$ additional variables are useless, i.e., their $\beta$'s all = 0  
-$H_{A}: Q$ additional variables are useful
-
-**Ex:** Y = FEV1, X1 = ht, X2 = age, X3 = ethnicity, X4 = location.   
-Test $H_{0}$: location does not matter.
-
-# A General Test
-
-## Likelihood Ratio (Deviance) Test
-* Deviance = -2 log likelihood
-* Under $H_{0}$, the _full model_, the deviance = $D_{0}, df_{0} = N-P-1$
-* Under $H_{a}$, the _reduced model_, the deviance = $D_{a}, df_{a} = N-P-Q-1$
-* LR (deviance) test statistic is:
-* $D_{0} - D_{a}$ is distributed approximately as $\chi^{2}$ with $Q$ degrees of freedom
-under $H_{0}$ for large $N$.
-
-If we assume normally distributed residuals, the LR test becomes an exact $F$=test. 
-
-$$F = \frac{(SSR_{red} - SSR_{full})/(df_{full} - df_{red})}{SSR_{full}/df_{full}} $$
-
-#### Likelihood
-Let $X$ be a random variable with pdf $f$ and that depends on the parameter $\theta$. The function $\mathcal{L}(\theta|x) = f_{\theta}(x)$ then is called the _Likelihood function_. It is the likelihood of $\theta$ given the outcome $x$. Many analyses rely on maximizing this function (Maximum likelihood estimate or MLE), but commonly do so by first taking the log of this function. Hence the _log likelihood_. 
-
-
-## Example: Testing adding $Q$ variables to a model
-Consider a model to predict depression using age, employment status and whether or not the person was chronically ill in the past year as covariates. 
-
-```{r}
-full_model <- lm(log(cesd+1) ~ age + chronill + employ, data=depress)
-pander(summary(full_model))
-```
-
-The results of this model show that age and chronic illness are statistically associated with CESD (each p<.006). However employment status is a mixed bag. 
-
-Recall that employment is a categorical variable, and all the coefficient estimates shown are the effect of being in that income category has on depression _compared to_ being employed full time. For example, the coefficient for PT employment is greater than zero, so they have a higher CESD score compared to someone who is fully employed. 
-
-```{r}
-exp(.379)
-```
-
-Specifically while holding all other variables constant, someone who is working part time has 46% higher CESD score as someone who is working full time. 
-
-_Since only a small constant was added to the CESD score, we can interpret the exponentiated coefficient as the fold change as seen previously with log(Y)._
-
-But what about employment status overall? Not all employment categories are significantly different from FT status. To test that employment status affects CESD we need to do a global test that all $\beta$'s are 0. 
-
-$H_{0}: \beta_{3} = \beta_{4} = \beta_{5} = \beta_{6} = \beta_{7} = \beta_{8} = 0$  
-$H_{A}$: At least one $\beta_{j}$ is not 0. 
-
-We fit the reduced model, the one without employment category.
-```{r}
-red_model <- lm(log(cesd+1) ~ age + chronill, data=depress)
-```
-
-and conduct a global F test by running an `anova()`. _Not to be confused with `aov()`_
-
-```{r}
-anova(full_model, red_model)
-```
-
-We see that as a whole, employment significantly predicts CESD score.
-
-**This only is valid for nested models** Meaning all variables in the reduced model are present in the full model. 
-
-# Selection Criteria
-
-## Coefficient of Determination
-If the model explains a large amount of variation in the outcome that's good right? So we could consider using $R^{2}$ as a selection criteria and trying to find the model that maximizes this value. 
-
-The residual sum of squares (RSS in the book or SSE) can be written as $\sum(Y-\hat{Y})^{2}(1-R^{2})$. Therefore minimizing the RSS is equivalent to maximizing the multiple correlation coefficient.  
-
-
-**Multiple $R^{2}$**
-Problem: The multiple $R^{2}$ _always_ increases as predictors are added to the model. 
-
-**Adjusted $R^{2}$**
-Ok, so let's add an adjustment, or a penalty, to keep this measure in check. $R^{2}_{adj} = R^{2} - \frac{p(1-R^{2})}{n-p-1}$
-
-## Information Criteria
-####Mallows Cp
-
-* Compares MSE of a reduced model to the full model. 
-* Penalized function, as P increases Cp decreases. 
-* Many investigators  recommend selecting those independent variables that minimize the values of Cp. 
-
-####Akaike Information Criterion (AIC)
-
-* A penalty is applied to the deviance that increases as the number of
-  parameters $p$ increase. 
-* AIC = $-2LL + 2p$ 
-* Smaller is better
-
-####Bayesian Information Criterion (BIC)
-* A different penalty function
-* BIC = $-2LL + p*ln(n)$
-* Compare nested and non-nested models
-* BIC identifies the model that is more likely to have generated the observed data.
-* Smaller is better
-
-
+Variable selection methods are used mainly in exploratory situations where many independent variables have been measured, but a final model explaining the dependent variable has not been reached. 
 
 # Selection Process
 We want to choose a set of independent variables that both will yield a good prediction using as few variables as possible. In many situations where regression is used, the investigator has strong justification for including certain variables in the model.
@@ -152,13 +42,106 @@ The set of independent variables can be broken down into logical subsets
 Partially model-driven regression analysis and partially an exploratory analysis. 
 
 
+
+# Selection Criteria
+
+## Coefficient of Determination
+If the model explains a large amount of variation in the outcome that's good right? So we could consider using $R^{2}$ as a selection criteria and trying to find the model that maximizes this value. 
+
+The residual sum of squares (RSS in the book or SSE) can be written as $\sum(Y-\hat{Y})^{2}(1-R^{2})$. Therefore minimizing the RSS is equivalent to maximizing the multiple correlation coefficient.  
+
+* **Multiple $R^{2}$**
+Problem: The multiple $R^{2}$ _always_ increases as predictors are added to the model. 
+
+* **Adjusted $R^{2}$**
+Ok, so let's add an adjustment, or a penalty, to keep this measure in check. $R^{2}_{adj} = R^{2} - \frac{p(1-R^{2})}{n-p-1}$
+
+## Akaike Information Criterion (AIC)
+
+* A penalty is applied to the deviance that increases as the number of
+  parameters $p$ increase. 
+* AIC = $-2LL + 2p$ 
+* Smaller is better
+
+
+
+# Wald test 
+
+The Wald test is used for simultaneous tests of $Q$ variables in a model
+
+* Consider a model with $P$ variables and you want to test if $Q$ additional variables are useful.   
+* $H_{0}: Q$ additional variables are useless, i.e., their $\beta$'s all = 0  
+* $H_{A}: Q$ additional variables are useful
+
+This can be done in R by using the `regTermTest()` function in the `survey` package. 
+
+```{r, eval=1}
+library(survey)
+regTermTest(model.name, "variable name to test") # not run
+```
+
+##### Example 1: Employment status on depression score
+Consider a model to predict depression using age, employment status and whether or not the person was chronically ill in the past year as covariates. 
+
+```{r}
+full_model <- lm(cesd ~ age + chronill + employ, data=depress)
+pander(summary(full_model))
+```
+
+The results of this model show that age and chronic illness are statistically associated with CESD (each p<.006). However employment status shows mixed results. Some employment statuses are significantly different from the reference group, some are not. So overall, is employment status associated with depression? 
+
+Recall that employment is a categorical variable, and all the coefficient estimates shown are the effect of being in that income category has on depression _compared to_ being employed full time. For example, the coefficient for PT employment is greater than zero, so they have a higher CESD score compared to someone who is fully employed. 
+
+But what about employment status overall? Not all employment categories are significantly different from FT status. To test that employment status affects CESD we need to do a global test that all $\beta$'s are 0. 
+
+$H_{0}: \beta_{3} = \beta_{4} = \beta_{5} = \beta_{6} = \beta_{7} = \beta_{8} = 0$  
+$H_{A}$: At least one $\beta_{j}$ is not 0. 
+
+```{r}
+regTermTest(full_model, "employ")
+```
+
+* Confirm that the degrees of freedom are correct. It should equal the # of categories in the variable you are testing, minus 1. 
+    - Employment has 7 levels, so $df=6$. 
+    - Or equivelantly, the degrees of freedom are the number of $beta$'s you are testing to be 0. 
+    
+The p-value of this Wald test is significant, thus employment significantly predicts CESD score.
+
+
+```{r, echo=FALSE}
+load("J:/MATH315/Project/addhealth_clean.Rdata")
+addhealth$smoke <- ifelse(addhealth$eversmoke_c=="Smoker", 1, 0)
+```
+
+#### Example 2: Blood Pressure
+Consider a logistic model on smoking status (0= never smoked, 1=has smoked) using gender, income, and blood pressure class (`bp_class`) as predictors. 
+
+$$
+logit(Y) = \beta_{0} + \beta_{1}\mbox{(female)} + \beta_{2}\mbox{(income)} + \beta_{3}\mbox{(Pre-HTN)} 
++ \beta_{4}\mbox{(HTN-I)} + \beta_{5}\mbox{(HTN-II)}
+$$
+
+```{r}
+bp.mod <- glm(smoke ~ female_c + income + bp_class, data=addhealth, family='binomial')
+pander(summary(bp.mod))
+```
+
+It is unlikely that blood pressure is associated with smoking status, all groups are not statistically significantly different from the reference group (all p-values are large). Let's test that hypothesis formally using a Wald Test. 
+
+```{r}
+regTermTest(bp.mod, "bp_class")
+```
+
+The Wald Test has a large p-value of 0.73, thus blood pressure classification is not associated with smoking status.
+
+* This means blood pressure classification should not be included in a model to explain smoking status. 
+
+
+
 # What to watch out for
 * Use previous research as a guide
 * Variables not included can bias the results
 * Significance levels are only a guide
-* Perform diagnostics after selection
-* _**Use common sense**_:
-    - A sub-optimal subset may make more sense than optimal one
-* Blind use of automated variable selection (forward/backward) is discouraged. See [[here]](http://www.stata.com/support/faqs/statistics/stepwise-regression-problems/) and [[here]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.126.4133&rep=rep1&type=pdf)
-In addition to the almost dozen entries in the textbook, see the following resources regarding areas of concern. 
+* Perform model diagnostics after selection to check model fit. 
+* _**Use common sense**_: A sub-optimal subset may make more sense than optimal one
 
