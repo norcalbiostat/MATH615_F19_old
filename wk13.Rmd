@@ -32,6 +32,11 @@ Goals:
 * Primarily lecture
 * Time pending, work on your project 
 
+## Additional resources
+
+* Comparing models in SPSS http://psych.unl.edu/psycrs/statpage/rhtest_eg1.pdf 
+* How to test a group of variables in SPSS [[UCLA IDRE]](https://stats.idre.ucla.edu/spss/faq/how-can-i-test-a-group-of-variables-in-spss-regression/)
+
 ---
 
 
