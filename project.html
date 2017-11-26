@@ -321,7 +321,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Project Information</h1>
-<h4 class="date"><em>Last Updated 2017-11-14 10:41:08</em></h4>
+<h4 class="date"><em>Last Updated 2017-11-26 15:50:29</em></h4>
 
 </div>
 
@@ -406,14 +406,10 @@ div.tocify {
 </div>
 <div id="stage-3" class="section level4">
 <h4><span style="color:blue"><strong>Stage 3</strong></span></h4>
-<p>Slides 12-13: Multivariate Analysis</p>
+<p>Slide 12-13: Multivariate Analysis</p>
+<p>You are trying to understand the relationship between your explanatory and response variable, in presenece of information contained in other variables.</p>
+<p><strong>Testing for moderators, and confounders</strong></p>
 <ul>
-<li>Build a multivariable model to explain your outcome variable.
-<ul>
-<li>Test for moderators, and confounders</li>
-<li>Add other necessary covariates to controll for.</li>
-<li>Assess the relationship between your explanatory and response variable after controlling for other measures.</li>
-</ul></li>
 <li>Moderation:
 <ul>
 <li>If you found a moderator: Remove the bivariate graph and write up from your poster and replace with explanation of moderator and graph of significant bivariate at the 3rd variable level.</li>
@@ -425,19 +421,33 @@ div.tocify {
 <li>If you did NOT find a confounder: Include a slide stating what relationships you tested for confounds and with what variable to see if it was a confound, explaining that it was not a moderator. Make sure to explain if it helped improve prediction of response variable.</li>
 </ul></li>
 </ul>
-<p>Slide 14. Discussion</p>
+<p><strong>Building a Multivariable Model</strong></p>
+<ul>
+<li>If no confounders or modifiers were found, you should build a multivariable model.</li>
+<li>Include any third variables that were found to be significantly associated with the outcome (but not modifiers or confounders)</li>
+<li>A table or a graphic of coefficients must be presented.
+<ul>
+<li>The <code>coefplot()</code> function in the <code>arm</code> package is an excellent way of displaying the results of a M model. Here is a <a href="https://druedin.com/2015/02/28/how-to-create-coefficient-plots-in-r-the-easy-way/">blog post on coefplot</a>, and <a href="https://www.r-bloggers.com/coefplot-new-package-for-plotting-model-coefficients/">another one</a>. It’s pretty straightforward to create: <code>my.model &lt;- lm(your model here)</code> then call <code>coefplot(my.model)</code>,</li>
+<li>At least one coefficient, the primary explanatory variable, must be interpreted in context of the problem.</li>
+</ul></li>
+</ul>
+<p>Slide 14. <strong>Discussion</strong></p>
 <ul>
 <li>Here you will explain what your graphical and inferential results tell you about your topic.</li>
 <li>Discuss if your research hypothesis was supported, if it was not, why you think that might be</li>
 <li>Explain the overall story/trend/what you learned when you consider your univariate, bivariate &amp; multivariate results about your topic.</li>
-<li>Compare your results to previous research results.</li>
+<li>Compare your results to previous research results. Do they agree or disagree?</li>
 </ul>
-<p>Slide 15. Implications</p>
+<p>Slide 15. <strong>Implications</strong></p>
 <ul>
 <li>What are the practical implications of your results?</li>
-<li>What future research needs to be conducted?</li>
+<li>What could others do with your findings?</li>
+<li>What future research needs to be conducted?
+<ul>
+<li>This needs to be more specific than “other variables could be explored”. Which variables and why? What other research articles indicate that those other variables are relevant?</li>
+</ul></li>
 </ul>
-<p>Slide 16. References</p>
+<p>Slide 16. <strong>References</strong></p>
 <ul>
 <li>You can use smaller font to get all references on one slide.</li>
 <li>Use references from research plan, and any additional references gathered along the way.</li>
@@ -450,20 +460,65 @@ div.tocify {
 <div id="final-posters" class="section level1">
 <h1>Final Posters</h1>
 <ul>
-<li>During week 14 you will transfer all findings into a research poster.</li>
-<li>You will present your poster to half the class during dead week (week 15)</li>
-<li><ul>
+<li>You will transfer all findings into a research poster, and then present your research to your classmates.
+<ul>
 <li>The day you are not presenting, you will be judging the other half of the class’s posters.</li>
 </ul></li>
-<li>Use these <a href="poster_guidelines.html">poster guidelines</a> to develop your poster.</li>
-<li>There will be one draft review process.</li>
+<li>All posters must be built in Powerpoint. No exceptions.</li>
+<li>Use these <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/">poster guidelines</a> to see templates and develop your poster.</li>
 </ul>
-<p>Poster Drafts and Final posters will be linked here.</p>
-<div id="poster-drafts-for-review" class="section level2">
-<h2>Poster Drafts for Review</h2>
+<div id="draft-version" class="section level2">
+<h2>Draft version</h2>
+<ul>
+<li>This draft is graded on how complete the poster is. You should consider this a draft that you would circulate to your colleagues for final review and comments.</li>
+<li>Use the <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation criteria</a> as a guide for what I am looking for.<br />
+</li>
+<li><strong>Submit your poster draft</strong> to <a href="https://www.dropbox.com/request/7pWvRwRGM1wRqCAl3jCB">this Dropbox folder</a>.</li>
+<li><strong>Peer Review</strong>
+<ul>
+<li>Download your <a href="https://docs.google.com/spreadsheets/d/1njtZX4tv_3G7OgbJA5KFyHF3ecU4KPV7qdnGxSGMbVA/edit#gid=0">Assigned</a> poster to review.
+<button data-toggle="collapse" data-target="#draft">
+Show/Hide Drafts for Review
+</button></li>
+<li>Write the comments directly into the poster file itself.</li>
+<li>provide at least two specific comments for each
+<ul>
+<li>something that can be improved</li>
+<li>something that is good</li>
+</ul></li>
+<li>Save this file with your initials at the end of the file name.</li>
+</ul></li>
+<li><strong>Upload your revision</strong> to <a href="https://drive.google.com/drive/folders/1_CWqJt0L9QUguxWwcaNaH84ctkLTQlS7?usp=sharing">this Google folder</a>.</li>
+</ul>
+<div id="draft" class="collapse">
+<h4 id="poster-drafts-to-review.">Poster drafts to review.</h4>
+<ul>
+<li>stuf</li>
+<li>stuff</li>
+<li>stuffs</li>
+</ul>
 </div>
-<div id="final-posters-for-review" class="section level2">
-<h2>Final posters for Review</h2>
+<p><br><br></p>
+</div>
+<div id="final-poster" class="section level2">
+<h2>Final poster</h2>
+<ul>
+<li>Upload your final poster to <a href="https://www.dropbox.com/request/NtC88NHRbo5oIyRcSxoD">this Dropbox folder</a>. PDF preferred. PPTX ok.</li>
+<li>Scoring will be done via <a href="https://goo.gl/forms/QORgO0jjqNzp3T5i2">Google Forms</a>. It looks exactly like the <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation criteria</a>.
+<ul>
+<li>When not presenting, you will walk around and learn about others research. Ask them questions, fill out the evaluation on your phone as you go. Printed copies will be available upon request.</li>
+</ul></li>
+<li>The final grade will be determined by
+<ul>
+<li>Base score = <strong>30%</strong> student score + <strong>70%</strong> instructor score <strong>+ bonus pts</strong> for best in show awards <strong>- 1</strong> point penalty for each day late.</li>
+</ul></li>
+</ul>
+<button data-toggle="collapse" data-target="#final">
+Show/Hide Final Versions
+</button>
+<div id="final" class="collapse">
+
+</div>
 </div>
 </div>
 
