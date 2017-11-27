@@ -119,7 +119,7 @@ Slide 16. **References**
 
 # Final Posters
 * You will transfer all findings into a research poster, and then present your research to your classmates. 
-    - The day you are not presenting, you will be judging the other half of the class's posters. 
+    - We will split the class in half. When not presneting, you will be scoring the other half of the class's posters. 
 * All posters must be built in Powerpoint. No exceptions.
 * Use these [poster guidelines](https://norcalbiostat.netlify.com/lec/poster_guidelines/) to see templates and develop your poster.
 
