@@ -139,10 +139,22 @@ Slide 16. **References**
 
 <div id="draft" class="collapse"> 
 #### Poster drafts to review. 
+```{r, message=FALSE, warning=FALSE}
+library(stringr); library(dplyr)
+library(knitr); library(kableExtra)
 
-* stuf
-* stuff
-* stuffs
+dta <- data.frame(filenames = paste0('PosterDraft/', list.files("PosterDraft/")))
+
+out <- dta %>% mutate(name = gsub("PosterDraft/",  "", filenames),
+                      link = sprintf("[%s](%s)",name, filenames)) %>%
+               select(link)
+
+x = kable(out, format="html") %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                  full_width=FALSE,  position = "left")
+gsub("<thead>.*</thead>", "", x)
+```
+
 </div>
 
 
