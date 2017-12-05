@@ -6,7 +6,9 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 ### 12/4/17 - Week 15
 * Fill out [This google form](https://goo.gl/forms/o3O43feULJFDGUun2) to provide input as to when I should hold OH during finals week. 
-* 
+* Citation information has been udpated to Project page (slide 16) on how to cite addhealth, R, and R studio
+* See [this abstract](http://www.cpc.unc.edu/projects/addhealth/publications/database/6893) for a demonstration on how to describe using the Add Health data set in an analysis.  
+
 
 ### 11/27/17 - Week 14
 * Poster building on Tuesday. See the project page for instructions. 
