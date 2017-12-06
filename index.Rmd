@@ -15,6 +15,8 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
         - [Survey](FinalDocs/OOL Questionnaire.pdf)
     - [Supplemental Info for Final Exam](FinalDocs/FinalExam_Fall17_Supplemental_Sample.pdf)
 
+* Regression assignment graded - feedback in returned document via Blackboard. 
+
 
 ### 11/27/17 - Week 14
 * Poster building on Tuesday. See the project page for instructions. 
