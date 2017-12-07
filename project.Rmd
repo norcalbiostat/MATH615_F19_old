@@ -178,5 +178,19 @@ gsub("<thead>.*</thead>", "", x)
 <button data-toggle="collapse" data-target="#final">Show/Hide Final Versions</button>
 <div id="final" class="collapse">
 
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+dta <- data.frame(filenames = paste0('FinalPoster/', list.files("FinalPoster/")))
+
+out <- dta %>% mutate(name = gsub("FinalPoster/",  "", filenames),
+                      link = sprintf("[%s](%s)",name, filenames)) %>%
+               select(link)
+
+x = kable(out, format="html") %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                  full_width=FALSE,  position = "left")
+gsub("<thead>.*</thead>", "", x)
+
+```
+
 </div>
 
