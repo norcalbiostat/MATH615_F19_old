@@ -14,6 +14,7 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
         - [Codebook](FinalDocs/OOL Codebook.pdf)
         - [Survey](FinalDocs/OOL Questionnaire.pdf)
     - [Supplemental Info for Final Exam](FinalDocs/FinalExam_Fall17_Supplemental_Sample.pdf)
+    - [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf). Download and review. Be prepared to summarize and explain key findings from this paper. 
 
 * Regression assignment has been hand graded. Feedback can be found in the returned document via Blackboard. 
     - You may have to turn on track changes to see the marks. 
