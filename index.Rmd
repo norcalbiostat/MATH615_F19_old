@@ -4,18 +4,34 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
+### 12/14/17 - Final Exam. 10-12noon. Holt 155
+
+<span style="color:red">**Office Hours for Finals Week**</span> 
+
+* Tuesday 2-4pm, Holt 155
+* Wednesday 1-3pm, Holt 202
+* Wednesday 8-9pm, Online Google Hangouts. Link will be included here a few minutes prior to the start of the session.
+
+
+The final exam will revolve around two items: The Outlook on Life Survey and a paper on smoking behavior in youth exposed to the child welfare system. 
+
+* Outlook on Life Survey. 
+    - Supplemental Info for Final Exam [[SAMPLE](FinalDocs/FinalExam_Fall17_Supplemental_Sample.pdf). This document consists of a summary of the survey, data management, univariate descriptions for variables used, and a few pages of analysis. 
+    - Print the official pages once they are posted. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages. Bring them to the final. 
+    - Be prepared to answer questions about modeling and interpreting these analyses. 
+* Additional information, such as full wording of the question on how the variables were coded can be found in the [[codebook](FinalDocs/OOL Codebook.pdf) and [[survey questionnaire]](FinalDocs/OOL Questionnaire.pdf), both are linked below. **Do not bring these to the final**. They are for you to use as referece material while you are learning to understand this survey.   
+
+* Paper on [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf).
+    - Print, read, comment on, and bring to the final. 
+    - Be prepared to answer questions about the methods, models, and results. 
+    
+
+
 ### 12/4/17 - Week 15
 * Fill out [This google form](https://goo.gl/forms/o3O43feULJFDGUun2) to provide input as to when I should hold OH during finals week. 
 * Citation information has been udpated to Project page (slide 16) on how to cite addhealth, R, and R studio
 * See [this abstract](http://www.cpc.unc.edu/projects/addhealth/publications/database/6893) for a demonstration on how to describe using the Add Health data set in an analysis.  
 * Final posters due Thursday before class. Upload your PDF to [this Dropbox link](https://www.dropbox.com/request/NtC88NHRbo5oIyRcSxoD).
-* **Final Exam Info** On Tuesday we'll talk a little bit about the Final Exam. Here are some supplemental files for you to download. 
-    - Outlook on Life Survey: 
-        - [Codebook](FinalDocs/OOL Codebook.pdf)
-        - [Survey](FinalDocs/OOL Questionnaire.pdf)
-    - [Supplemental Info for Final Exam](FinalDocs/FinalExam_Fall17_Supplemental_Sample.pdf)
-    - [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf). Download and review. Be prepared to summarize and explain key findings from this paper. 
-
 * Regression assignment has been hand graded. Feedback can be found in the returned document via Blackboard. 
     - You may have to turn on track changes to see the marks. 
 
