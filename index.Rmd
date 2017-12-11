@@ -16,15 +16,33 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 The final exam will revolve around two items: The Outlook on Life Survey and a paper on smoking behavior in youth exposed to the child welfare system. 
 
 * Outlook on Life Survey. 
-    - Supplemental Info for Final Exam [[SAMPLE](FinalDocs/FinalExam_Fall17_Supplemental_Sample.pdf). This document consists of a summary of the survey, data management, univariate descriptions for variables used, and a few pages of analysis. 
+    - Supplemental Info for Final Exam [[OFFICIAL]](FinalDocs/FinalExam_Fall17_Supplemental.pdf). This document consists of a summary of the survey, data management, univariate descriptions for variables used, and a few pages of analysis. 
     - Print the official pages once they are posted. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages. Bring them to the final. 
     - Be prepared to answer questions about modeling and interpreting these analyses. 
-* Additional information, such as full wording of the question on how the variables were coded can be found in the [[codebook](FinalDocs/OOL Codebook.pdf) and [[survey questionnaire]](FinalDocs/OOL Questionnaire.pdf), both are linked below. **Do not bring these to the final**. They are for you to use as referece material while you are learning to understand this survey.   
+* Additional information, such as full wording of the question on how the variables were coded can be found in the [[codebook](FinalDocs/OOL Codebook.pdf) and [[survey questionnaire]](FinalDocs/OOL Questionnaire.pdf), both are linked below. 
+    - **Do not bring these to the final**. They are for you to use as referece material while you are learning to understand this survey.   
 
 * Paper on [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf).
     - Print, read, comment on, and bring to the final. 
     - Be prepared to answer questions about the methods, models, and results. 
     
+<span style="color:red">**Review List**</span> 
+This final exam is comprehensive in that everything in this class builds upon previous topics. 
+Here are a list of topics to review. All topics have equal importance, regardless of the time that was spent on each topic during class. 
+
+* Probability
+* Creating and interpreting confidence intervals
+* Assumptions for statistical methods to be valid
+* Generalizability, representativeness, bias, sampling frame
+* Statistical Analysis Procedures: 
+    - Two-sample T-tests for means and proportions
+    - ANOVA and $\chi^{2}$ for multiple samples
+    - Linear and Logistic regression.
+* Identifying confounders, moderators and covariates. 
+* Interpreting regression coefficients and making predictions using models. 
+    - from linear and logistic models
+    - using continuous and categorical variables
+
 
 
 ### 12/4/17 - Week 15
