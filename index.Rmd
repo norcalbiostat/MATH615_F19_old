@@ -12,20 +12,21 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 * Wednesday 1-3pm, Holt 202
 * Wednesday 8-9pm, Online Google Hangouts. Link will be included here a few minutes prior to the start of the session.
 
+<span style="color:red">**Allowed Exam Materials**</span> 
 
-The final exam will revolve around two items: The Outlook on Life Survey and a paper on smoking behavior in youth exposed to the child welfare system. 
-
-* Outlook on Life Survey. 
-    - Supplemental Info for Final Exam [[OFFICIAL]](FinalDocs/FinalExam_Fall17_Supplemental.pdf). This document consists of a summary of the survey, data management, univariate descriptions for variables used, and a few pages of analysis. 
-    - Print the official pages once they are posted. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages. Bring them to the final. 
+* The [[OFFICIAL]](https://norcalbiostat.github.io/MATH615/FinalDocs/FinalExam_Fall17_Supplemental.pdf) supplemental information and analyses for the Outlook on Life Survey. 
+    - Print these pages. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages.
     - Be prepared to answer questions about modeling and interpreting these analyses. 
-* Additional information, such as full wording of the question on how the variables were coded can be found in the [[codebook](FinalDocs/OOL Codebook.pdf) and [[survey questionnaire]](FinalDocs/OOL Questionnaire.pdf), both are linked below. 
-    - **Do not bring these to the final**. They are for you to use as referece material while you are learning to understand this survey.   
-
 * Paper on [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf).
     - Print, read, comment on, and bring to the final. 
-    - Be prepared to answer questions about the methods, models, and results. 
+    - Be prepared to answer questions about the methods, models, and results.
+* A calculator
+* Your course notes
+* Up to 2 pages of notes
+
     
+Additional information on this new survey, such as full wording of the question on how the variables were coded can be found in the [[codebook]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Codebook.pdf) and [[survey questionnaire]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Questionnaire.pdf). **Do not bring these to the final**. They are for you to use as reference material while you are learning to understand this survey.   
+
 <span style="color:red">**Review List**</span> 
 This final exam is comprehensive in that everything in this class builds upon previous topics. 
 Here are a list of topics to review. All topics have equal importance, regardless of the time that was spent on each topic during class. 
@@ -42,6 +43,7 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Interpreting regression coefficients and making predictions using models. 
     - from linear and logistic models
     - using continuous and categorical variables
+
 
 
 
