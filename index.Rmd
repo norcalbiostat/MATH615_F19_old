@@ -21,8 +21,7 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
     - Print, read, comment on, and bring to the final. 
     - Be prepared to answer questions about the methods, models, and results.
 * A calculator
-* Your course notes
-* Up to 2 pages of notes
+* Up to 2 pages of additional notes (does not include your notes on the supplemental output)
 
     
 Additional information on this new survey, such as full wording of the question on how the variables were coded can be found in the [[codebook]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Codebook.pdf) and [[survey questionnaire]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Questionnaire.pdf). **Do not bring these to the final**. They are for you to use as reference material while you are learning to understand this survey.   
