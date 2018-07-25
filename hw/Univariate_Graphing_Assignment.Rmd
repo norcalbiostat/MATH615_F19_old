@@ -1,0 +1,40 @@
+---
+title: "Describing distributions of data"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+css: ../css/customh5.css
+---
+
+# Assignment Overview
+
+There are a variety of conventional ways to visualize data - tables, histograms, bar graphs, etc. Now that your data have been cleaned up, it is time to examine the distribution of variables related to your research question. You will create a plot, follow up each graphic with a table of summary statistics (for quantitative variables) or frequency and proportion table (for categorical), and then a summary paragraph that brings it all together. 
+
+
+# Instructions
+
+* **You must use your cleaned version of your research data for this!** This is the data file that was saved as a result of you running your data management script file. 
+0. Use the template provided: [[RMD]](Univariate_Graphing_template.Rmd) for R users, and [[Word]](Univariate_Graphing_template.docx) for SPSS users. 
+* Completely describe 2 categorical and 2 quantitative variables using 
+    - A table of summary statistics,
+    - An appropriate plot with titles and axes labels, 
+    - A short paragraph description in full complete english sentences. 
+   
+
+To guide your description of this distribution try to include the following information:
+
+* What is the trend in the data? What exactly does the chart show? (Use the chart title to help you answer this question)
+* What are the axes and what are the units?
+* Describe the shape:
+    - Symmetry/Skewness - Is it symmetric, skewed right, or skewed left?
+    - Modality - Is it uniform, unimodal, or bimodal?             
+* Describe the spread:
+    - Variability - What is the approximate range of the data (x-axis)?
+    - Does the variable have a lot of variability in the data (visually, are the participants responded to many different responses or mainly just one)?
+* Describe the center: What is the mean/median/midpoint of the data? (Pick one or two). Don't 
+* Describe the outliers (note: there may not be any for every graph):
+    - Are there any outliers for the variable?
+    - If yes, are these true outliers or false (due to data management or input error) outliers?
+
+

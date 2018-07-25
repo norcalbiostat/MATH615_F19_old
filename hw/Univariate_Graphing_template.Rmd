@@ -1,0 +1,70 @@
+---
+title: "Univariate Graphing Assignment"
+author: "your name here"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+  pdf_document: default
+  word_document: default
+---
+
+
+```{r}
+# put the code to read in your cleaned data here. Delete this text afterward.
+```
+
+# Name of quantitative variable 1 here
+> Describe this variable in words (what does it say in the codebook) then delete this text. 
+
+```{r}
+# put your summary table code here
+```
+
+```{r}
+# put your plotting code here
+```
+
+> Describe the distribution of the variable here in paragraph form. Then delete this text. 
+
+
+# Name of quantitative variable 2 here
+> Describe this variable in words (what does it say in the codebook) then delete this text. 
+
+```{r}
+# put your summary table code here
+```
+
+```{r}
+# put your plotting code here
+```
+
+> Describe the distribution of the variable here in paragraph form. Then delete this text. 
+
+
+# Name of categorical variable 1 here
+> Describe this variable in words (what does it say in the codebook) then delete this text. 
+
+```{r}
+# put your frequency and proportion table code here
+```
+
+```{r}
+# put your plotting code here
+```
+
+> Describe the distribution of the variable here in paragraph form. Then delete this text. 
+
+
+# Name of categorical variable 2 here
+> Describe this variable in words (what does it say in the codebook) then delete this text. 
+
+```{r}
+# put your frequency and proportion table code here
+```
+
+```{r}
+# put your plotting code here
+```
+
+> Describe the distribution of the variable here in paragraph form. Then delete this text. 

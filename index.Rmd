@@ -4,13 +4,13 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 
 # Announcements
 
-### 12/14/17 - Final Exam. 10-12noon. Holt 155
+<!----
+
+### 12/xx/18 - Final Exam. 10-12noon. Holt 155
 
 <span style="color:red">**Office Hours for Finals Week**</span> 
 
 * Tuesday 2-4pm, Holt 155
-* Wednesday 1-3pm, Holt 202
-* Wednesday 8-9pm, Online Google Hangouts. Over now. Apparently >10 people causes it to crash. I will find another method next time. Much apologies to those who came early but got cut out. 
 
 <span style="color:red">**Allowed Exam Materials**</span> 
 
@@ -157,14 +157,9 @@ This week we're going to get our hands dirty with data!
 * I have written up instructions regarding how to peer review blog posts. Check the project page (new!) for details and your assignments. 
 * The schedule page has been tweaked in attempt to be a little cleaner/easier to read. 
 
-### 8/21/17 - Welcome!
-* This course website is currently being revamped, but be sure to acquaint yourself with the organization. You will be here a lot. Bookmark this page.
-* Specifically click on the _schedule_ link in the top navigation bar to see the daily outline of topics. This will fill in as we go. 
-    - More importantly that page has links to all the weekly overview notes, materials and assignments
+--->
 
+### 8/27/18 - Welcome!
+* This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.
+* Specifically click on the _schedule_ link in the top navigation bar to see the daily outline of topics. This page will fill in as the semester progresses and contains links to the weekly overviews, notes, materials and assignments. 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-#rmarkdown::render("docs/lec01_intro_class.Rmd", quiet=TRUE)
-#rmarkdown::render("docs/lec02_data_prep.Rmd", quiet=TRUE)
-#rmarkdown::render("docs/syllabus_615_f17.Rmd", quiet=TRUE, output_format=c("html_document", "pdf_document"))
-```

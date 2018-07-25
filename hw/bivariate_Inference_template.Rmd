@@ -1,22 +1,13 @@
 ---
 title: "Bivariate Analysis Assignment"
-name: "your names here"
+author: "your name here"
 output:
   html_document:
     highlight: tango
     theme: flatly
   pdf_document: default
+  word_document: default
 ---
-
-```{r, warning=FALSE, message=FALSE}
-library(knitr); library(dplyr)
-library(ggplot2); library(descr)
-library(fifer) # New package for running post-hoc chi-squared tests
-opts_chunk$set(warning=FALSE, message=FALSE) 
-load("J:/MATH315/Project/addhealth_clean.Rdata")
-```
-
-Use the following template to conduct all <span style="color:blue">FIVE(5)</span> different types of bivariate analysis.
 
 
 # (Q ~ B) Two sample T-Test for Independent Groups
@@ -52,7 +43,7 @@ $H_{A}: \mu_{1} - \mu_{2} \neq 0$
 
 
 
-----
+\newpage
 
 # (Q ~ C) Analysis of Variance
 
@@ -88,7 +79,7 @@ $H_{A}:$ At least one group mean is different.
 
 
 
----- 
+\newpage 
  
 # (B ~ C) Chi-Square test of Association
 
@@ -122,7 +113,8 @@ $H_{A}:$ At least one proportion is different.
 
 
 
----- 
+
+\newpage
  
 # (Q ~ Q) Correlation  Analysis
 
@@ -156,7 +148,8 @@ $H_{A}: \rho \neq 0$
 
 
 
----- 
+
+\newpage
  
 # (Q ~ Q) Linear Regression Analysis
 
