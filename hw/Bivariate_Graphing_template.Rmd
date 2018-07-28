@@ -1,5 +1,5 @@
 ---
-title: "Univariate Graphing Assignment"
+title: "Bivariate Graphing Assignment"
 author: "your name here"
 output:
   word_document: default
@@ -15,8 +15,8 @@ output:
 # Delete this text afterward.
 ```
 
-# Name of quantitative variable 1 here
-> Describe this variable in words (what does it say in the codebook) then delete this text. 
+# C ~ C Association
+> Describe each variable in words (what does it say in the codebook) then delete this text. 
 
 ```{r}
 # put your code to create the summary table or statistics here
@@ -26,15 +26,12 @@ output:
 # put your code to create the plot here
 ```
 
-> Describe the distribution of the variable here in paragraph form. Then delete this text. 
+> Describe the association between the two variables here. Then delete this text. 
 
 
-# Name of quantitative variable 2 here
+# Q ~ C Association
 > same format as above
 
 
-# Name of categorical variable 1 here
+# Q ~ Q Association
 > ditto
-
-# Name of categorical variable 2 here
-> get the pattern? 

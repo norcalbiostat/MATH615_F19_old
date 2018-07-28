@@ -1,35 +1,52 @@
-name: "Robin Donatello"
-output_dir: "."
+name: Robin Donatello
+output_dir: .
 navbar:
-  title: "MATH 615"
+  title: MATH 615
   left:
-    - text: "Schedule & Materials"
+  - text: Schedule
+    icon: fa-book
+    href: schedule.html
+  - text: Materials
+    icon: fa-folder-open
+    menu:
+    - text: Notes
       icon: fa-book
-      href: schedule.html
-    - text: "Data"
+      href: ~
+    - text: Google Drive
+      icon: fa-google
+      href: ~
+    - text: Data
       icon: fa-database
       href: http://www.norcalbiostat.com/data/
-    - text: "Projects"
-      icon: fa-bar-chart
-      href: project.html
-    
-  right:
-    - text: "Syllabus"
+    - text: Syllabus
       icon: fa-info-circle
-      href: docs/syllabus_615_f17.html
-    - text: "Help/FAQ"
-      icon: fa-question
-      href: faq.html
-    - text: "Contact"
-      icon: fa-envelope-o
-      href: mailto:rdonatello@csuchico.edu
-    - text: "Dr. D's website"
-      icon: fa-paw
-      href: http://www.norcalbiostat.com/
-      
+      href: syllabus_615_f18.html
+  - text: Tools
+    icon: fa-wrench
+    menu:
+    - text: Slack (class discussions)
+      icon: fa-slack
+      href: https://math615.slack.com/
+    - text: Zoom (video conference)
+      icon: fa-video-camera
+      href: https://csuchico.zoom.us/
+    - text: Data Camp (Learn to code)
+      icon: fa-institution
+      href: https://www.datacamp.com/
+  right:
+  - text: Help/FAQ
+    icon: fa-question
+    href: faq.html
+  - text: Contact
+    icon: fa-envelope-o
+    href: mailto:rdonatello@csuchico.edu
+  - text: Dr. D's website
+    icon: fa-paw
+    href: http://www.norcalbiostat.com/
 output:
   html_document:
     theme: flatly
     highlight: tango
+    lib_dir: site_libs
+    self_contained: no
 
- 

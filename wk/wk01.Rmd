@@ -26,7 +26,7 @@ Goals:
 * Understand the concept of reproducible research and why it's important. Understand at what level reproducibility is expected in this class. 
 
 ## Prepare before class
-* Read the [Syllabus](docs/syllabus_615_f17.html)
+* Read the [Syllabus](docs/syllabus_615_f18.html)
 * Bookmark this class website 
 * Purchase the [textbook](https://www.amazon.com/Practical-Multivariate-Analysis-Chapman-Statistical/dp/1439816808) (PMA5). Pricey, but honestly one of those books that you are likely to keep as a reference textbook. 
 * Read [Passion Driven Statistics](docs/PDS_Intro_Stat.pdf) (ignore last page about timeline). We are going to take a similar approach in this class to conducting an analysis. 
@@ -39,7 +39,7 @@ Goals:
 
 ##### Assignments
 * Create a MATH615 folder on your computer - all course related files go in here. 
-* Blog post: Introduction/bio of yourself. 
+* Slack post: Introduction/bio of yourself. 
     - What's your research area?
     - One non-academic interest or hobby
 * Decide on the software program you will use. (Due before next Tuesday)

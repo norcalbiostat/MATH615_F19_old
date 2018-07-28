@@ -9,7 +9,7 @@ _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _
 ```{r , echo=FALSE, message=FALSE, warning=FALSE}
 rawdat <- read_excel("schedule_615.xlsx")
 
-cdat   <- rawdat %>% select(-c(Tuesday:Thursday)) %>% 
+cdat   <- rawdat %>% select(-SLO, -Tuesday, -Thursday) %>% 
                      mutate(wknum = str_pad(wk, width=2, side="left", pad="0"),
                             link = paste0("wk/wk", wknum, ".html"), 
                             Week = paste0("Week ", wknum, ": ",format(Date, format="%b %d")), 
@@ -22,12 +22,12 @@ cdat <- cdat %>% filter(wk < 15)
 
 # parse topics
 topiclist <- which(!is.na(cdat$Topics))
-cdat$Topics[topiclist] <- paste0("<ul><li>", cdat$Topics[topiclist], "</li></ul>")
+cdat$Topics[topiclist] <- paste0("<ul>", cdat$Topics[topiclist], "</li></ul>")
 cdat$Topics[topiclist] <- gsub("(+.)\\*", "</li><li>", cdat$Topics[topiclist])
 
 # parse notes
 mats <- which(!is.na(cdat$Materials))
-cdat$Materials[mats] <- paste0("<ul><li>", cdat$Materials[mats], "</li></ul>")
+cdat$Materials[mats] <- paste0("<ul>", cdat$Materials[mats], "</li></ul>")
 cdat$Materials[mats] <- gsub("(+.)\\*", "</li><li>", cdat$Materials[mats])
 
 # parse assignments
