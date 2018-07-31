@@ -18,6 +18,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 <br>
 
 _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _
+Back to the [Shedule](../schedule.html)
 <br>
 
 
