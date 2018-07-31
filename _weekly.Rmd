@@ -6,7 +6,11 @@ output:
     toc: yes
     toc_float: yes
 css: style.css
-title: "Week 01: Aug 28 - Sep 3"
+params:
+    w: 1
+    d1: '010118'
+    d2: '010118'
+title: "Week `r params$w`: `r format(params$d1, '%b %d')` - `r format(params$d2, '%b %d')`"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -22,17 +26,17 @@ _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-raw <- read_excel("../schedule_615.xlsx")
-week.w <- filter(raw, wk==1)
+raw <- read_excel("schedule_456.xlsx")
+week.w <- filter(raw, Week==params$w)
 
-#topics <- str_split(week.w$Topics, ",", simplify=TRUE)
-topics <- t(str_split(week.w$Topics, "\r\n", simplify=TRUE))
+topics <- str_split(week.w$Topics, ",", simplify=TRUE)
 SLO    <- t(str_split(week.w$SLO, "\r\n", simplify=TRUE))
 prep   <- t(str_split(week.w$Prepare, "\r\n", simplify=TRUE))
 mats   <- t(str_split(week.w$Materials, "\r\n", simplify=TRUE))
 hw     <- t(str_split(week.w$Assignments, "\r\n", simplify=TRUE))
-tue    <- t(str_split(week.w$Tuesday, "\r\n", simplify=TRUE))
-thu    <- t(str_split(week.w$Thursday, "\r\n", simplify=TRUE))
+mon    <- t(str_split(week.w$Monday, "\r\n", simplify=TRUE))
+wed    <- t(str_split(week.w$Wednesday, "\r\n", simplify=TRUE))
+fri    <- t(str_split(week.w$Friday, "\r\n", simplify=TRUE))
 ```
 
 ----
@@ -57,21 +61,26 @@ kable(mats) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 kable(hw) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
-
 ----
 
-# Tuesday: `r topics[1]`
+# Monday: `r topics[1]`
 
 ```{r}
-kable(tue) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+kable(mon) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
 
-# Thursday: `r topics[2]`
+# Wednesday: `r topics[2]`
 
 ```{r}
-kable(thu) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+kable(wed) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
+
+# Friday: `r topics[3]`
+
+```{r}
+kable(fri) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+```
 
 
