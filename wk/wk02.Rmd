@@ -6,7 +6,10 @@ output:
     toc: yes
     toc_float: yes
 css: ../css/customh5.css
-title: "Week 01: Aug 28 - Sep 3"
+params:
+    w: 2
+    d: '2018-09-04'
+title: "Week `r params$w`: `r format(as.Date(params$d) ,'%b %d')` - `r format(as.Date(params$d)+6 ,'%b %d')`"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -18,17 +21,14 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 
 _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _ 
 
-<br>
-
 Back to the [[Schedule]](../schedule.html)
 <br>
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 raw <- read_excel("../schedule_615.xlsx")
-week.w <- filter(raw, wk==1)
+week.w <- filter(raw, wk==params$w)
 
-#topics <- str_split(week.w$Topics, ",", simplify=TRUE)
 topics <- t(str_split(week.w$Topics, "\r\n", simplify=TRUE))
 SLO    <- t(str_split(week.w$SLO, "\r\n", simplify=TRUE))
 prep   <- t(str_split(week.w$Prepare, "\r\n", simplify=TRUE))

@@ -1,5 +1,5 @@
 ---
-title: 'Lec 03: Data screening'
+title: 'Data screening'
 date: "Last Updated `r Sys.time()`"
 output:
   html_document:

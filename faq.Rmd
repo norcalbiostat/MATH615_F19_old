@@ -11,6 +11,7 @@ _page in development_
 ### Online
 * Chico [R User Group](https://groups.google.com/forum/#!forum/chico-rug)
 * UCLA IDRE [[R Learning modules]](https://stats.idre.ucla.edu/r/modules/)
+* Our Slack Workspace
 
 ### In Person
 * **Robin Donatello** - Stat professor. Holt 202
@@ -21,15 +22,9 @@ _page in development_
     - MW 10-11am, 1-2pm Holt 204
     - T 1-2pm Holt 204
     - R 2-3:50pm MLIB 442
-* **Eduardo Gomez** - peer mentor - egomez42@mail.csuchico.edu
-    - MW 3-4pm, Holt 155
-* **Ricardo Aguilar** - peer mentor - raguilar11@mail.csuchico.edu
-    - possibly available for personal tutoring
-* **Mariby Cruz** - peer mentor - mcruz27@mail.csuchico.edu
-    - TLC hours: Mon 10am-1pm, R 10-11am
-    - available for personal tutoring, including weekends
-* **Math Learning Lab (MLIB 4th floor)** [[Tutor Schedule]](https://docs.google.com/spreadsheets/d/1xNQMfxpnIiS5bUCS9jB2_EE1Sc4C06JRaw6jyEO3nVE/edit#gid=0)
-    - Mariby Cruz, Mitch Borgert, Matt Sterkel, Jerry Tucay
+
+* **Community Coding** Tutor Schedule TBD
+* **Math Learning Lab (MLIB 4th floor)** Tutor Schedule TBD
     
     
 # Helpful R code snippits
@@ -45,6 +40,5 @@ Here is a collection of helpful R [code snippits](snippits.html) for plotting, s
 * IBM Knowledge [[Center]](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html)
 
 ### In Person: 
-* Gina Gerace and David Philhour: BUTTE 211, Friday 10-11:30
 
 

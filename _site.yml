@@ -4,26 +4,23 @@ navbar:
   title: MATH 615
   left:
   - text: Schedule
-    icon: fa-book
+    icon: fa-calendar
     href: schedule.html
-  - text: Materials
-    icon: fa-folder-open
-    menu:
-    - text: Notes
-      icon: fa-book
-      href: ~
-    - text: Google Drive
-      icon: fa-google
-      href: ~
-    - text: Data
-      icon: fa-database
-      href: http://www.norcalbiostat.com/data/
-    - text: Syllabus
-      icon: fa-info-circle
-      href: syllabus_615_f18.html
+  - text: Notes
+    icon: fa-book
+    href: notes.html
+  - text: Data
+    icon: fa-database
+    href: http://www.norcalbiostat.com/data/
+  - text: Project
+    icon: fa-line-chart
+    href: project.html
   - text: Tools
     icon: fa-wrench
     menu:
+    - text: Google Drive
+      icon: fa-google
+      href: https://drive.google.com/drive/folders/0B2-FPH8JVeuebFpnV3RZaU9KbTg?usp=sharing
     - text: Slack (class discussions)
       icon: fa-slack
       href: https://math615.slack.com/
@@ -34,12 +31,9 @@ navbar:
       icon: fa-institution
       href: https://www.datacamp.com/
   right:
-  - text: Help/FAQ
-    icon: fa-question
-    href: faq.html
-  - text: Contact
-    icon: fa-envelope-o
-    href: mailto:rdonatello@csuchico.edu
+  - text: Syllabus
+    icon: fa-info-circle
+    href: syllabus_615_f18.html
   - text: Dr. D's website
     icon: fa-paw
     href: http://www.norcalbiostat.com/

@@ -2,15 +2,14 @@
 output:
   html_document:
     highlight: tango
-    theme: journal
+    theme: flatly
     toc: yes
     toc_float: yes
-css: style.css
+css: ../css/customh5.css
 params:
     w: 1
-    d1: '010118'
-    d2: '010118'
-title: "Week `r params$w`: `r format(params$d1, '%b %d')` - `r format(params$d2, '%b %d')`"
+    d: '2018-08-28'
+title: "Week `r params$w`: `r format(as.Date(params$d) ,'%b %d')` - `r format(as.Date(params$d)+6 ,'%b %d')`"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -21,22 +20,21 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 ```
 <br>
 
-_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _
+_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _  
+Back to the [[Schedule]](../schedule.html)
 <br>
 
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-raw <- read_excel("schedule_456.xlsx")
-week.w <- filter(raw, Week==params$w)
+raw <- read_excel("../schedule_615.xlsx")
+week.w <- filter(raw, wk==params$w)
 
-topics <- str_split(week.w$Topics, ",", simplify=TRUE)
+topics <- t(str_split(week.w$Topics, "\r\n", simplify=TRUE))
 SLO    <- t(str_split(week.w$SLO, "\r\n", simplify=TRUE))
 prep   <- t(str_split(week.w$Prepare, "\r\n", simplify=TRUE))
 mats   <- t(str_split(week.w$Materials, "\r\n", simplify=TRUE))
 hw     <- t(str_split(week.w$Assignments, "\r\n", simplify=TRUE))
-mon    <- t(str_split(week.w$Monday, "\r\n", simplify=TRUE))
-wed    <- t(str_split(week.w$Wednesday, "\r\n", simplify=TRUE))
-fri    <- t(str_split(week.w$Friday, "\r\n", simplify=TRUE))
+tue    <- t(str_split(week.w$Tuesday, "\r\n", simplify=TRUE))
+thu    <- t(str_split(week.w$Thursday, "\r\n", simplify=TRUE))
 ```
 
 ----
@@ -61,26 +59,20 @@ kable(mats) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 kable(hw) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
+
 ----
 
-# Monday: `r topics[1]`
+# Tuesday: `r topics[1]`
 
 ```{r}
-kable(mon) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+kable(tue) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
 
-# Wednesday: `r topics[2]`
+# Thursday: `r topics[2]`
 
 ```{r}
-kable(wed) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
-```
-
-
-# Friday: `r topics[3]`
-
-```{r}
-kable(fri) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+kable(thu) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
 

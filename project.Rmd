@@ -10,33 +10,21 @@ output:
 css: css/customh5.css
 ---
 
-# Peer Review of Blog Posts
-* For each assignment submitted via Blog post that is subject to review, your assignment is to leave a comment on two (2) classmates blog post for that assignment.
-    - For each review you need to provide 1 positive comment and 1 thing they can do better. (One up One down)
-* You can leave more comments for other people as well. These are the only ones that are graded. 
-* The assigned rotation ensures that everyone gets a chance throughout the semester to learn what everyone else is researching. 
-* Peer review rotation can be found at [[this Google Spreadsheet link]](https://docs.google.com/spreadsheets/d/1njtZX4tv_3G7OgbJA5KFyHF3ecU4KPV7qdnGxSGMbVA/edit?usp=sharing)
+# Overview
 
-----
+Throughout the entire semester you will be analyzing a data set with the end goal of creating a poster presentation and creat Much of your homework will include analysis of your 
+
+Your homework serves as a first draft of exploration into your research questions, and helps you build your story. Homework assignments alone will not be sufficient for a good analysis. 
 
 # Poster preparation
 
 You will organize your research in stages by building a "powerpoint" type presentation. This will help you concicely explain your research topic and findings in a way that you can more easily translate (fit) onto a poster. 
 
 ### Instructions
-* Create a Google Slides presentation directly into a [Add Health Posters](https://drive.google.com/open?id=0B83Z8_sNw3KPUWFRdXo3WUdiNUk) Google Drive Folder. 
-  - This folder is shared with MATH 315 as well. They are doing the same project. It will help them to see the quality of your writing and effort. 
+* Create a Google Slides presentation directly into the [Projects](https://drive.google.com/open?id=0B83Z8_sNw3KPUWFRdXo3WUdiNUk) Google Drive Folder. 
+  - This folder is shared with MATH 315 as well. They are doing a similar project. It will help them to see the quality of your writing and effort. 
   - Name your file using first_last name only. 
 * The required contents for each slide are listed below under **Stages**
-* At each stage drop a note in Blackboard learn under the correct assignment stating that your project is ready for review. Do not upload your project slides to Blackboard learn, they will be ignored and deleted. 
-   
-### Peer Review
-* Peer review starts the date the assignment is due, with a review window of 2-5 days. 
-* Use the peer rotation spreadsheet to find your assignment. 
-* Use the commenting feature directly in Google Sheets to provide feedback and suggestions. 
-* Use the same type of reviewing criteria, make sure you have at least 1 positive comment and 1 suggestion for improvement. 
-* <span style="color:red">Once you have completed this peer review drop a note in Blackboard under the specific review assignment stating that you are done.</span>
-
 
 ### Stages
 * At each stage you should update anything you need to change, such as correctly making graphics, writing results correctly etc. 
@@ -91,7 +79,7 @@ You are trying to understand the relationship between your explanatory and respo
 * If no confounders or modifiers were found, you should build a multivariable model. 
 * Include any third variables that were found to be significantly associated with the outcome (but not modifiers or confounders)
 * A table or a graphic of coefficients must be presented. 
-    - The `coefplot()` function in the `arm` package is an excellent way of displaying the results of a M model. Here is a [blog post on coefplot](https://druedin.com/2015/02/28/how-to-create-coefficient-plots-in-r-the-easy-way/), and [another one](https://www.r-bloggers.com/coefplot-new-package-for-plotting-model-coefficients/). It's pretty straightforward to create: `my.model <- lm(your model here)` then call `coefplot(my.model)`, 
+    - The `coefplot()` function in the `arm` package is an excellent way of displaying the results of a multivariable model. Here is a [blog post on coefplot](https://druedin.com/2015/02/28/how-to-create-coefficient-plots-in-r-the-easy-way/), and [another one](https://www.r-bloggers.com/coefplot-new-package-for-plotting-model-coefficients/). It's pretty straightforward to create: `my.model <- lm(your model here)` then call `coefplot(my.model)`, 
     - At least one coefficient, the primary explanatory variable, must be interpreted in context of the problem. 
 
 Slide 14. **Discussion**
