@@ -1,5 +1,5 @@
-name: Robin Donatello
-output_dir: .
+name: "Robin Donatello"
+output_dir: "."
 navbar:
   title: MATH 615
   left:

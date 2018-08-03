@@ -44,7 +44,7 @@ css: ../css/customh5.css
 * Each assignment will be graded by me, and peer reviewed by 2 of your classmates. 
 
 ## Peer review
-* The peer rotation schedule can be found [[here]](). 
+* The peer rotation schedule can be found in our [Google Drive](https://drive.google.com/open?id=0B2-FPH8JVeuebFpnV3RZaU9KbTg). 
 * After the assignment due date, go to the _Incoming_ folder and **download** a copy of each of the 2 assignments you are scheduled to review onto your computer. 
     - Do not edit directly in Google Docs unless you have already made a copy
     - File naming convention: `rdonatello_citation_rv_ricardo.pdf`
@@ -55,11 +55,12 @@ css: ../css/customh5.css
 
 # Descriptive vs. Inferential Statistics
 * Two main phases of Statistics. 
-* Also called Exploratory and Confirmatory 
+    - Also called Exploratory and Confirmatory 
 * [Passion Driven Statistics](../reading/PDS_Intro_Stat.pdf) 
     - Backbone theory behind the class. Read this PDF to get a sense of how statistics fits into science. 
     - The videos can be used as an additional learning tool. 
-* Google `data analysis lifecycle` and look at images. What sense do you get? 
+* Google `data analysis lifecycle` and look at [images](https://www.google.com/search?q=data+analytics+life+cycle&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi32cepp9DcAhXLhVQKHYR8AScQ_AUICigB&biw=1482&bih=876). What sense do you get? 
+
 
 
 # Computing and Reproducibility
@@ -79,31 +80,15 @@ css: ../css/customh5.css
     
 
 # Software program of choice (SPC)   
-* All my lecture notes use R. This entire website is built with R. I would prefer you to learn R, It will take you much further than other languages. 
-    - Your final product is much more professional looking - [here's an student-generated example](../reading/Final_chem_report.pdf)
+* This class is not a class on how to use the software program. You will be learning that on your own or in another class. 
+* All my lecture notes use R. This entire website is built with R. R is a pioneer in generating reproducible and publishable quality reports. 
+    - [Here's an student-generated example](../reading/Final_chem_report.pdf)
 * I will not dictate which software program you use in this class. 
 * But I will expect you to navigate and use code. You can point and click your way to an answer, but code must be saved and reusible with minimal changes. 
+* Be open to new things, there is power in being polyglottal. 
+* The first few weeks will be ramp up time. 
 
-## R
-* Free. 
-* Coding from day 1. Harder up front, more powerful in the end. 
-* Seamless integration with a multitude of other scientific analysis and reporting mechanisms. 
-* Becoming much more popular in all scientific fields of study. One of the primary languages for Data Science. 
-* Google `tidyverse` images. Compare it to the images of the data analysis life cycle. What sense do you get? 
-* My [instructions](https://norcalbiostat.netlify.com/post/software-overview/) on how to get setup.
-* On campus resources
-    - Introduction to R (MATH 130) 1 unit CR/NC
-    - Data Science Initiative workshops, talks, open drop in analysis time. 
-* Off Campus resources (a few)
-    - Chico R Users Group 
-        - [Meetup](https://www.meetup.com/Chico-R-Users-Group/)
-        - [Google l-serv](https://groups.google.com/forum/#!forum/chico-rug)
-    - [Data camp](http://www.datacamp.com)
-    - [Quick-R](http://www.statmethods.net/)
-    - [Cookbook for R](http://www.cookbook-r.com/)
-    - [R Examples Repository](http://dwoll.de/rexrepos/) (This site was also built using R Markdown, is open source and a fabulous example of reproducible research!)
-   
-   
+
 ## SPSS
 * [Purchase v24 or v25](http://www-03.ibm.com/software/products/en/spss-stats-gradpack) for $50 for 6mo rental. 
 * Point and click, but can save code and write scripts. 
@@ -117,9 +102,33 @@ css: ../css/customh5.css
     - Recommended [YouTube videos](https://www.youtube.com/results?search_query=andy+field+spss+tutorials) 
     - [UCLA IDRE PMA5 textbook examples](https://stats.idre.ucla.edu/other/examples/pma5/)
 
+## R
+* Free. 
+* Harder up front, more powerful in the end. 
+* Seamless integration with a multitude of other scientific analysis and reproducible reporting mechanisms. 
+* Becoming much more popular in all scientific fields of study. One of the primary languages for Data Science. 
+* Look at one [diagram](https://osf.io/69gub/wiki/home/) of the `tidyverse` (a suite of functions in R). Compare it to the images of the data analysis life cycle. What sense do you get? 
+* Need some motivation? 
+    - https://www.psychologicalscience.org/observer/why-you-should-become-a-user-a-brief-introduction-to-r 
+    - https://osf.io/j28w7/
+    - https://www.youtube.com/watch?v=jn_3N_o2d6Q
+* My [instructions](https://norcalbiostat.netlify.com/post/software-overview/) on how to get setup with necessary programs. 
+* On campus resources
+    - Introduction to R (MATH 130) 1 unit CR/NC
+    - Data Science Initiative workshops, talks, open drop in analysis time. 
+* Off Campus resources (a few)
+    - Chico R Users Group 
+        - [Meetup](https://www.meetup.com/Chico-R-Users-Group/)
+        - [Google l-serv](https://groups.google.com/forum/#!forum/chico-rug)
+    - [Data camp](http://www.datacamp.com)
+    - [Quick-R](http://www.statmethods.net/)
+    - [Cookbook for R](http://www.cookbook-r.com/)
+    - [R Examples Repository](http://dwoll.de/rexrepos/) (This site was also built using R Markdown, is open source and a fabulous example of reproducible research!)
+   
+   
 ## SAS? STATA? Python? 
 * SAS has only now working on literate and integrated programming by using Jupyter notebooks and SAS University Edition (free)
-* SPSS has a few user written packages that allow for the integration of $\latex$ or markdown into your code document. 
+* Stata has a few user written packages that allow for the integration of $\LaTeX$ or markdown into your code document. 
 * Python is the other primary language for Data Science. I am in the process of learning Python but the capabilities are very great. If you're thinking this route be sure to use Jupyter notebooks. 
 
 

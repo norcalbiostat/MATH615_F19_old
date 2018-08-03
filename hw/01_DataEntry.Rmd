@@ -11,10 +11,11 @@ css: ../css/customh5.css
 Although you will be working with previously collected data, it is important to understand what data looks like as well as how it is coded and entered into a spreadsheet or dataset for analysis. This can help you identify and avoid problems later when reading data into an analysis software program. For example if you mix letters and numbers in the same cell, the variable will be treated as character not numeric. 
 
 ## Instructions
-* Using the [PDF copies of medical records]() for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
-* You will create these in Excel, a popular spreadsheet program for data collection and entry. 
-* Save this excel file in your `MATH615\data` folder as `medical_records.xlsx`. 
-    - Name the first two worksheets within this file: `data` and `codebook`.
+* Using the [PDF copies of medical records](https://norcalbiostat.netlify.com/data/medical-records.pdf) for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
+* You will create these as either an Excel spreadsheet or directly in Google sheets. 
+    - If you use Google Sheets place your file in the [`01 Data Entry`](https://drive.google.com/open?id=1-yguQAv0SH6RoZJLlvmO4wojWd6U4Tlh) folder. 
+    - Name this file `userid_medrecords` where _userid_ is your chico state user id. 
+
     
 #### Data Entry
 1. Select 4 variables recorded on the medical forms
@@ -28,17 +29,20 @@ Although you will be working with previously collected data, it is important to 
 In a separate worksheet list the variable names, labels, data types, and response code or ranges in separate columns (4 columns total).
 
 An example of what this should look like is below. The only modification is that your codebook should be on a separate worksheet (not at the bottom like this one shows)
+
 ![](med_records.png)
 
 
 ## Data Import
 1. Using your software program of choice, import this data into the program using point and click GUI methods.
+    - If you used Google Sheets you should save your file as either `.csv` or `.xlsx` into your `MATH615\data` folder. 
+    - Name the first two worksheets within this file: `data` and `codebook`.
 2. Note and record any problems that you noticed and/or had to fix at the bottom of your `codebook` worksheet. 
     - Does your data file look like your spreadsheet? 
     - Did you have to specify missing values in any specific way?
 
 ## Submission
-Upload your excel file to Google Drive by the due date listed on the class calendar. 
+Upload your Excel file to Google Drive (`01 Data Entry` folder) by the due date listed on the class schedule. 
 
 
 
