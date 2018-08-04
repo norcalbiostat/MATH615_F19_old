@@ -38,4 +38,6 @@ To guide your description of this distribution try to include the following info
     - Are there any outliers for the variable?
     - If yes, are these true outliers or false (due to data management or input error) outliers?
 
-
+##### Submission
+* Upload the final PDF to `02 Univariate Graphics/Incoming` folder in Google Drive with the file name: _userid_univ_graph.pdf_
+* This assignment will be peer reviewed. 

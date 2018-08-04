@@ -90,7 +90,7 @@ css: ../css/customh5.css
 
 
 ## SPSS
-* [Purchase v24 or v25](http://www-03.ibm.com/software/products/en/spss-stats-gradpack) for $50 for 6mo rental. 
+* Purchase v24 or v25 from http://www-03.ibm.com/software/products/en/spss-stats-gradpack for $50 for 6mo rental. 
 * Point and click, but can save code and write scripts. 
 * Stand alone program. No integration. Licenses are not cheap. 
 * Will be used again in NSFC 600 (no exp necc for that class either)
@@ -99,20 +99,20 @@ css: ../css/customh5.css
     - Tutoring center in AJH108 run by Dr. Penelope Kuhn. 
     - The psyc depth lab is Modoc 224 but is pretty impacted with classes Monday thru Thursday. Friday's are pretty open.
 * Off Campus resources
-    - Recommended [YouTube videos](https://www.youtube.com/results?search_query=andy+field+spss+tutorials) 
-    - [UCLA IDRE PMA5 textbook examples](https://stats.idre.ucla.edu/other/examples/pma5/)
+    - Kent State University Tutorials: https://libguides.library.kent.edu/SPSS/home 
+    - UCLA Institute for Digital Research and Education: https://stats.idre.ucla.edu/spss/ 
+    - Recommended selection of YouTube videos https://www.youtube.com/results?search_query=andy+field+spss+tutorials
 
-## R
-* Free. 
+## R 
+* Free. Installation Instructions here: https://norcalbiostat.netlify.com/post/software-overview/
 * Harder up front, more powerful in the end. 
 * Seamless integration with a multitude of other scientific analysis and reproducible reporting mechanisms. 
 * Becoming much more popular in all scientific fields of study. One of the primary languages for Data Science. 
-* Look at one [diagram](https://osf.io/69gub/wiki/home/) of the `tidyverse` (a suite of functions in R). Compare it to the images of the data analysis life cycle. What sense do you get? 
+* Google at [diagram](https://osf.io/69gub/wiki/home/) of the `tidyverse` (a suite of functions in R). Compare it to the images of the data analysis life cycle. What sense do you get? 
 * Need some motivation? 
     - https://www.psychologicalscience.org/observer/why-you-should-become-a-user-a-brief-introduction-to-r 
     - https://osf.io/j28w7/
     - https://www.youtube.com/watch?v=jn_3N_o2d6Q
-* My [instructions](https://norcalbiostat.netlify.com/post/software-overview/) on how to get setup with necessary programs. 
 * On campus resources
     - Introduction to R (MATH 130) 1 unit CR/NC
     - Data Science Initiative workshops, talks, open drop in analysis time. 
@@ -124,6 +124,7 @@ css: ../css/customh5.css
     - [Quick-R](http://www.statmethods.net/)
     - [Cookbook for R](http://www.cookbook-r.com/)
     - [R Examples Repository](http://dwoll.de/rexrepos/) (This site was also built using R Markdown, is open source and a fabulous example of reproducible research!)
+
    
    
 ## SAS? STATA? Python? 

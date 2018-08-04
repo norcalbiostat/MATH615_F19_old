@@ -28,12 +28,11 @@ Back to the [[Schedule]](../schedule.html)
 raw <- read_excel("../schedule_615.xlsx")
 week.w <- filter(raw, wk==1)
 
-#topics <- str_split(week.w$Topics, ",", simplify=TRUE)
 topics <- t(str_split(week.w$Topics, "\r\n", simplify=TRUE))
-SLO    <- t(str_split(week.w$SLO, "\r\n", simplify=TRUE))
-prep   <- t(str_split(week.w$Prepare, "\r\n", simplify=TRUE))
-mats   <- t(str_split(week.w$Materials, "\r\n", simplify=TRUE))
-hw     <- t(str_split(week.w$Assignments, "\r\n", simplify=TRUE))
+SLO    <- paste("*", str_split(week.w$SLO, "\r\n", simplify=TRUE))
+prep   <- paste("*", str_split(week.w$Prepare, "\r\n", simplify=TRUE))
+mats   <- paste("*", str_split(week.w$Materials, "\r\n", simplify=TRUE))
+hw     <- paste("*", str_split(week.w$Assignments, "\r\n", simplify=TRUE))
 tue    <- t(str_split(week.w$Tuesday, "\r\n", simplify=TRUE))
 thu    <- t(str_split(week.w$Thursday, "\r\n", simplify=TRUE))
 ```
@@ -42,22 +41,26 @@ thu    <- t(str_split(week.w$Thursday, "\r\n", simplify=TRUE))
 
 # Learning Objectives
 ```{r}
-kable(SLO) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+x <- kable(SLO) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+gsub("<thead>.*</thead>", "", x)
 ```
 
 #Prepare
 ```{r}
-kable(prep) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+x <- kable(prep) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+gsub("<thead>.*</thead>", "", x)
 ```
 
 # Materials
 ```{r}
-kable(mats) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+x <- kable(mats) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+gsub("<thead>.*</thead>", "", x)
 ```
 
 # Assignments
 ```{r}
-kable(hw) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+x <- kable(hw) %>% kable_styling(bootstrap_options = c("striped", "condensed"))
+gsub("<thead>.*</thead>", "", x)
 ```
 
 

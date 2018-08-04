@@ -14,6 +14,7 @@ Although you will be working with previously collected data, it is important to 
 * Using the [PDF copies of medical records](https://norcalbiostat.netlify.com/data/medical-records.pdf) for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
 * You will create these as either an Excel spreadsheet or directly in Google sheets. 
     - If you use Google Sheets place your file in the [`01 Data Entry`](https://drive.google.com/open?id=1-yguQAv0SH6RoZJLlvmO4wojWd6U4Tlh) folder. 
+    - Name the first two worksheets within this file: `data` and `codebook`.
     - Name this file `userid_medrecords` where _userid_ is your chico state user id. 
 
     
@@ -35,14 +36,22 @@ An example of what this should look like is below. The only modification is that
 
 ## Data Import
 1. Using your software program of choice, import this data into the program using point and click GUI methods.
-    - If you used Google Sheets you should save your file as either `.csv` or `.xlsx` into your `MATH615\data` folder. 
-    - Name the first two worksheets within this file: `data` and `codebook`.
+    - Code is fine if you already know how. Point and click is just for the true newbies. 
+    - If you used Google Sheets you should save your file to your hard drive as a Comma Separated Value (`*.csv`). 
+    - R Studio: https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio 
+    - SPSS: https://libguides.library.kent.edu/SPSS/ImportData
+
 2. Note and record any problems that you noticed and/or had to fix at the bottom of your `codebook` worksheet. 
     - Does your data file look like your spreadsheet? 
     - Did you have to specify missing values in any specific way?
+3. Copy the code that is written for you when you import your data. Include this in the `codebook` worksheet at the bottom. 
+    - This may pop up in another window, (SPSS users have to specify to **paste this syntax**)
+    - This is a critical part of the assignment. 
+
 
 ## Submission
 Upload your Excel file to Google Drive (`01 Data Entry` folder) by the due date listed on the class schedule. 
+If you directly created a Google Sheet.. well then you're done!
 
 
 
