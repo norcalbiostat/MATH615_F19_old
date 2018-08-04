@@ -25,9 +25,18 @@ Back to the [[Schedule]](../schedule.html)
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Read in schedule and extract this week
 raw <- read_excel("../schedule_615.xlsx")
 week.w <- filter(raw, wk==1)
 
+# update relative paths
+week.w[,6:9] <- apply(week.w[,6:9], 2, FUN=function(x){
+  gsub("reading/", "../reading/", x) 
+  gsub("lecture/", "../lecture/", x) 
+  gsub("hw/", "../hw/", x)
+})
+  
+# strip columns into separate data sets
 topics <- t(str_split(week.w$Topics, "\r\n", simplify=TRUE))
 SLO    <- paste("*", str_split(week.w$SLO, "\r\n", simplify=TRUE))
 prep   <- paste("*", str_split(week.w$Prepare, "\r\n", simplify=TRUE))
