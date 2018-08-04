@@ -1,5 +1,5 @@
 ---
-title: 'Data screening'
+title: 'Data screening and transformations'
 date: "Last Updated `r Sys.time()`"
 output:
   html_document:
@@ -16,7 +16,7 @@ library(knitr)
 opts_chunk$set(warning=FALSE, message=FALSE) 
 ```
 
-# Data screening and transformations (_PMA5 Ch 4_)
+# Data screening and transformations (_PMA5 Ch 3 and 4_)
 Recall the aim of data preparation, screening, wrangling, or transforming is to 
 
 * Identify outliers and inconsistent values
@@ -27,7 +27,7 @@ Recall the aim of data preparation, screening, wrangling, or transforming is to
 ## Load data
 Load in your cleaned depression data set. 
 ```{r}
-depress <- read.table("~/GitHub/website/static/data/Depress_081217.txt", 
+depress <- read.table("https://norcalbiostat.netlify.com/data/depress_081217.txt", 
                       sep="\t", header=TRUE) 
 ```
 
