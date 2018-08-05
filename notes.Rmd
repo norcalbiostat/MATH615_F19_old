@@ -7,7 +7,7 @@ css: ../css/customh5.css
 ---
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-library(stringr); library(dplyr)
+library(stringr); library(dplyr); library(reshape2)
 library(knitr); library(kableExtra)
 
 lec <- data.frame(filenames = paste0('lecture/', list.files("lecture", pattern='*.pdf|*.html')))
@@ -15,20 +15,26 @@ read <- data.frame(filenames = paste0('reading/', list.files("reading", pattern=
 hw <- data.frame(filenames = paste0('hw/', list.files("hw", pattern='*.pdf|*.html')))
 
 out.lec <- lec %>% mutate(name = gsub("lecture/",  "", filenames), 
-                          link = sprintf("[%s](%s)",name, filenames))
+                          type = str_extract(lec$filenames,"\\.[a-z]{3}"),
+                          nam = gsub(".html|.pdf", "", name), 
+                          link = sprintf("[%s](%s)",type, filenames))
 
 out.read <- read %>% mutate(name = gsub("reading/",  "", filenames), 
                             link = sprintf("[%s](%s)",name, filenames))
 
 out.hw <- hw %>% mutate(name = gsub("hw/",  "", filenames), 
-                          link = sprintf("[%s](%s)",name, filenames))
+                          type = str_extract(hw$filenames,"\\.[a-z]{3}"),
+                          nam = gsub(".html|.pdf", "", name), 
+                          link = sprintf("[%s](%s)",type, filenames))
 ```
 
 ## Lecture Notes
-The General set of notes that span multiple topics from 315, 615 and 456.  [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html). Abbreviated as **AS Notebook**
+The [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) is a general set of notes that span multiple topics from 315, 615 and 456.  
+
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-x = out.lec %>% select(link) %>% kable(format="html") %>%
-    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+x = out.lec %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
+    kable(format="html") %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive", "bordered"), 
                   full_width=FALSE,  position = "left")
 gsub("<thead>.*</thead>", "", x)
 ```
@@ -36,7 +42,7 @@ gsub("<thead>.*</thead>", "", x)
 ## Reading Materials
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.read %>% select(link) %>% kable(format="html") %>%
-    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive" ,"bordered"), 
                   full_width=FALSE,  position = "left")
 gsub("<thead>.*</thead>", "", x)
 ```
@@ -46,8 +52,9 @@ Some of the Passion Driven Statistics (PDS) are available for your viewing. This
 
 ## Homework Assignment Files
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-x = out.hw %>% select(link) %>% kable(format="html") %>%
-    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+x = out.lec %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
+    kable(format="html") %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive" ,"bordered"), 
                   full_width=FALSE,  position = "left")
 gsub("<thead>.*</thead>", "", x)
 ```
