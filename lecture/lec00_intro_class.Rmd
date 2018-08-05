@@ -129,7 +129,7 @@ css: ../css/customh5.css
    
 ## SAS? STATA? Python? 
 * SAS has only now working on literate and integrated programming by using Jupyter notebooks and SAS University Edition (free)
-* Stata has a few user written packages that allow for the integration of $\LaTeX$ or markdown into your code document. 
+* Stata has a few user written packages that allow for the integration of LaTeX or markdown into your code document. 
 * Python is the other primary language for Data Science. I am in the process of learning Python but the capabilities are very great. If you're thinking this route be sure to use Jupyter notebooks. 
 
 

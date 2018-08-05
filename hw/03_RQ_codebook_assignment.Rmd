@@ -1,6 +1,7 @@
 ---
 title: "Research Question and personal codebook assignment"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
@@ -39,5 +40,6 @@ Now that you have a few topics and picked out variables for each topic, what que
 
 ##### Submission
 * Create a Google Doc in the appropriate assignment folder by the due date. 
+    - Use header level 1 formats to denote the 3 steps
 * This assignment will be peer reviewed. 
     

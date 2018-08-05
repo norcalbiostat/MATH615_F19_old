@@ -40,9 +40,9 @@ Are you looking at questions that only pertain to a specific subpopulation? (i.e
 5. **Do you need to make response codes more logical?**
 Some examples include:  
 
-* Think about how the “yes” and “no” variables are coded   
+* Think about how the "yes"" and "no"" variables are coded   
     - Does NO = 0 and YES = 1?  
-* Think about how the “strongly agree” to “strongly disagree” variables are coded
+* Think about how the "strongly agree" to "strongly disagree" variables are coded
     - Do the numbers make sense?  
 * Consider recoding a quantitative variable into a categorical variable  
 * Consider collapsing across categories 
