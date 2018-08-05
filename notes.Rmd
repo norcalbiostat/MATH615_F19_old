@@ -10,25 +10,22 @@ css: ../css/customh5.css
 library(stringr); library(dplyr)
 library(knitr); library(kableExtra)
 
-lec <- data.frame(filenames = paste0('lecture', list.files("lecture", pattern='*.pdf|*.html')))
-read <- data.frame(filenames = paste0('reading', list.files("reading", pattern='*.pdf|*.html')))
-hw <- data.frame(filenames = paste0('hw', list.files("hw", pattern='*.pdf|*.html')))
+lec <- data.frame(filenames = paste0('lecture/', list.files("lecture", pattern='*.pdf|*.html')))
+read <- data.frame(filenames = paste0('reading/', list.files("reading", pattern='*.pdf|*.html')))
+hw <- data.frame(filenames = paste0('hw/', list.files("hw", pattern='*.pdf|*.html')))
 
+out.lec <- lec %>% mutate(name = gsub("lecture/",  "", filenames), 
+                          link = sprintf("[%s](%s)",name, filenames))
 
-out.lec <- lec %>% mutate(sec=str_extract(filenames, "[0-9]+"), 
-               name = gsub("lecture",  "", filenames), 
-               link = sprintf("[%s](%s)",name, filenames))
+out.read <- read %>% mutate(name = gsub("reading/",  "", filenames), 
+                            link = sprintf("[%s](%s)",name, filenames))
 
-out.read <- read %>% mutate(sec=str_extract(filenames, "[0-9]+"), 
-               name = gsub("reading",  "", filenames), 
-               link = sprintf("[%s](%s)",name, filenames))
-
-out.hw <- read %>% mutate(sec=str_extract(filenames, "[0-9]+"), 
-               name = gsub("hw",  "", filenames), 
-               link = sprintf("[%s](%s)",name, filenames))
+out.hw <- hw %>% mutate(name = gsub("hw/",  "", filenames), 
+                          link = sprintf("[%s](%s)",name, filenames))
 ```
 
 ## Lecture Notes
+The General set of notes that span multiple topics from 315, 615 and 456.  [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html). Abbreviated as **AS Notebook**
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.lec %>% select(link) %>% kable(format="html") %>%
     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
@@ -45,7 +42,7 @@ gsub("<thead>.*</thead>", "", x)
 ```
 
 ## Videos
-
+Some of the Passion Driven Statistics (PDS) are available for your viewing. This may be helpful to see another take on a piece of content that was not clear in class. 
 
 ## Homework Assignment Files
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
@@ -54,3 +51,5 @@ x = out.hw %>% select(link) %>% kable(format="html") %>%
                   full_width=FALSE,  position = "left")
 gsub("<thead>.*</thead>", "", x)
 ```
+
+

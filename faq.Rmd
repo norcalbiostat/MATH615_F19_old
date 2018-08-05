@@ -1,7 +1,9 @@
 ---
 title: "Frequently Asked Questions"
+output:
+  pdf_document: default
+  html_document: default
 date: "Last Updated `r Sys.time()`"
-output: html_document
 ---
 
 _page in development_
@@ -39,6 +41,10 @@ Here is a collection of helpful R [code snippits](snippits.html) for plotting, s
 * Sigma Plus SPSS [Tutorials](https://www.spss-tutorials.com/basics/)
 * IBM Knowledge [[Center]](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html)
 
-### In Person: 
 
+# Other resources pending organization
 
+* http://www.wesleyan.edu/qac/curriculum/resources/syntax.html
+* PDS bookdown https://alanarnholt.github.io/PDS-Bookdown2/ 
+
+* sjPlot vignette - custom plot appearance: https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html 

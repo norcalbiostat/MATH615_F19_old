@@ -9,22 +9,21 @@ output:
     theme: flatly
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+```
 
 ```{r}
-# put the code to load any necessary libraries and read in your cleaned data here. 
-# Delete this text afterward.
+# put the code to load any necessary R libraries and read in your cleaned data here. Delete this text afterward.
 ```
 
 # Name of quantitative variable 1 here
-> Describe this variable in words (what does it say in the codebook) then delete this text. 
+> Describe this variable in words (what does it say in the codebook) then delete this text. i.e., tell us what you're going to look at
 
 ```{r}
-# put your code to create the summary table or statistics here
+# put your code to create the summary table, statistics, and plot here. 
 ```
 
-```{r}
-# put your code to create the plot here
-```
 
 > Describe the distribution of the variable here in paragraph form. Then delete this text. 
 

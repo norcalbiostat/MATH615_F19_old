@@ -4,23 +4,27 @@ output:
   html_document:
     highlight: tango
     theme: flatly
+  pdf_document: default
 css: ../css/customh5.css
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+```
 
 # Assignment Overview
 
 There are a variety of conventional ways to visualize data - tables, histograms, bar graphs, etc. Now that your data have been cleaned up, it is time to examine the distribution of variables related to your research question. You will create a plot, follow up each graphic with a table of summary statistics (for quantitative variables) or frequency and proportion table (for categorical), and then a summary paragraph that brings it all together. 
 
-
 # Instructions
 
-**You must use your cleaned version of your research data for this!** This is the data file that was saved as a result of you running your data management script file. 
+**You must use your cleaned version of your research data for this!** This is the data file that was saved as a result of you running your data management script file (`dm.Rmd` or `dm.sps`). 
 
 0. Use the template provided: [[RMD]](Univariate_Graphing_template.Rmd) for R users, and [[Word]](Univariate_Graphing_template.docx) for SPSS users. 
 1. Completely describe 2 categorical and 2 quantitative variables using 
     - A table of summary statistics,
     - An appropriate plot with titles and axes labels, 
-    - A short paragraph description in full complete english sentences. 
+    - A short paragraph description in full complete English sentences. 
    
 
 To guide your description of this distribution try to include the following information:
@@ -37,6 +41,60 @@ To guide your description of this distribution try to include the following info
 * Describe the outliers (note: there may not be any for every graph):
     - Are there any outliers for the variable?
     - If yes, are these true outliers or false (due to data management or input error) outliers?
+
+# Example
+This example uses the `mpg` data set from the `ggplot2` package.
+```{r}
+mpg <- ggplot2::mpg
+```
+
+## Basic categorical
+Draft style plot, direct computer output showing/copied. Poor grammar and/or sentence structure, no attempt at explaining what the variable means, extra unnecessary or incorrect information included. Typos. 
+
+> class
+
+```{r}
+library(descr)
+freq(mpg$class)
+```
+
+> theres more suvs than compacts. 2% are 2seaters. there are 5 2seaters 47 cmpact 41 midize 11 minivans 33 pickups 35% subcompacts, 62 suv and 234 total cars. 
+
+## Proficient categorical
+Cleaned up plot, full English sentences, useful text formatting of variable names and levels. Explained what the variable was named and what it measured. 
+
+> The `class` variable from the `mpg` data set is a catgorical variable that describes the type of vehicle being measured. Some levels of this categorical variable include _compact_, _pickup_ and _suv_. 
+
+```{r, fig.height=4, fig.align='center'}
+library(sjPlot); library(ggplot2)
+set_theme(base = theme_classic())
+sjp.frq(mpg$class)
+```
+
+> Sub compact cars are the most frequently reported type of car, making up over one-quarter (26.5%) of the cars in this data set with n=62 cars represented. The least represented car is a compact car with n=5 (2.1%) records. 
+
+## Basic quantitative 
+
+```{r}
+hist(mpg$cty)
+summary(mpg$cty)
+```
+
+## Proficient quantitative
+Overlaid a density curve on the histogram, also looked at a boxplot for outliers. Table of summary statistics present in a nicely formatted way, digits rounded appropriately. Plot cleaned up with appropriate axis and titles.  
+
+> The `cty` variable records the miles per gallon (mpg) achieved during city driving. This is a quantititative numeric variable. 
+
+```{r, fig.height=3, fig.width=4, fig.align='center'}
+ggplot(mpg, aes(x=cty)) + geom_histogram(aes(y=..density..), fill="grey", binwidth = 2) + 
+      geom_density()+ xlab("MPG") + ggtitle("City miles per gallon (MPG)") 
+boxplot(mpg$cty)
+knitr::kable(t(c(summary(mpg$cty), sd=sd(mpg$cty))), digits=1)
+```
+
+> The MPG in the city ranges from 9 to 35, unimodal and is slightly skewed right with a mean of 16.9 close to the median of 17 and a standard deviation of 4.3mpg. The boxplot indicates that there are at least 4 upper end outliers achieving a city MPG of approximately over 28 mpg. 
+
+
 
 ##### Submission
 * Upload the final PDF to `02 Univariate Graphics/Incoming` folder in Google Drive with the file name: _userid_univ_graph.pdf_

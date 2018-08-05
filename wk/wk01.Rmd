@@ -16,10 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
 
-_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _ 
-
-<br>
-
+_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _   
 Back to the [[Schedule]](../schedule.html)
 <br>
 
