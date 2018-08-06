@@ -52,7 +52,7 @@ Some of the Passion Driven Statistics (PDS) are available for your viewing. This
 
 ## Homework Assignment Files
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-x = out.lec %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
+x = out.hw %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
     kable(format="html") %>%
     kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive" ,"bordered"), 
                   full_width=FALSE,  position = "left")
