@@ -16,11 +16,11 @@ _Introduction to common procedures used to analyze data. Single and two-sample i
 **Phone Number:** 898-5767  
 **E-mail:** rdonatello@csuchico.edu  
 **Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, or MATH 350.  
-**Meeting Days and Times** TBD  
+**Meeting Days and Times** TR 11-12:15, Holt 155  
 **Office Hours** TBD  
 **Class Website** https://norcalbiostat.github.io/MATH615/  
-**Slack Channel**  math615.slack.com  
-**Google Drive**  https://drive.google.com/drive/folders/0B2-FPH8JVeuebFpnV3RZaU9KbTg?usp=sharing 
+**Slack Channel**  http://math615.slack.com  You will be sent an email invitation to your campus email. 
+**Google Drive**  You will be added to the Math 615 Team drive using your campus email. 
 
 You can download the Syllabus in PDF form by clicking [[this link]](syllabus_615_f18.pdf).
 
@@ -48,7 +48,7 @@ By the end of the semester students will be able to
 _Optional_  
 
 * Open Intro Statistics 3rd edition. If you need a refresher on your basic statistics. Free PDF available at https://www.openintro.org/stat/textbook.php?stat_book=os
-* [Chico R Users Google Group](https://groups.google.com/forum/#!forum/chico-rug). This is our discussion forum to ask (and answer) questions outside of class. **I do not answer coding questions over email.*
+* [Chico R Users Google Group](https://groups.google.com/forum/#!forum/chico-rug). This is our discussion forum to ask (and answer) questions outside of class. **I do not answer coding questions over email.**
     - https://groups.google.com/forum/#!forum/chico-rug
 * The [R Users Meetup group](https://www.meetup.com/Chico-R-Users-Group/) useful if you want to stay connected to the community and learn about upcoming events.
     - https://www.meetup.com/Chico-R-Users-Group/
@@ -56,24 +56,25 @@ _Optional_
 # Grading
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
-* The approximate contributions per category are: Participation XX%, Written Assignments XX%, Exams XX%, and Project related assignments XX%. 
+* The approximate contributions per category are: Participation 15%, Written Assignments 25%, Exams 30%, and Project related assignments 30%. 
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
-
+* Extra Credit can be earned through Slack participation. By asking and answering questions you can contribute to quality class-wide generation. Helping each other is more valuable than waiting for a response from me. Regular participation throughout the semester can earn you up to 10 points (~2%).
 
 # Schedule of Topics
 
 The general ordering of topics is:
 
-* Experimental Design
 * Data Collection and recording
 * Preparing data for analysis
 * Data Visualization
 * Foundations for Inference: Random variables, Parameters vs. Statistic, Confidence Intervals, Hypothesis Testing
 * Selecting appropriate analyses
-* Inference for a single sample (t-tests, $\chi^{2}$ tests)
 * Inference comparing multiple samples (t-tests, ANOVA, $\chi^{2}$ tests)
+* Study Design
 * Linear regression analysis (Simple and Multiple, Categorical predictors and contrasts)
 * Logistic regression analysis
+* Model building techniques and comparing model fit
+* Special analysis topics - how to identify when linear regression models won't work. 
 
 ----
 

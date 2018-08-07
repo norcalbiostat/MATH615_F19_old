@@ -1,6 +1,7 @@
 ---
 title: "Graphing Bivariate Relationships"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
@@ -11,9 +12,9 @@ css: ../css/customh5.css
 
 To fully explore the relationship between two variables both summary statistics and visualizations are important. For this assignment you will describe the relationship between these four specific combinations of data types: 
 
-* Categorical (or Binary) explanatory and categorical (or binary) explanatory variable. (C ~ C)
-* Quantitative explanatory and categorical (or binary) explanatory variable. (Q ~ C)
-* One of the above but specifically with a binary variable (B ~ C, C ~ B, or Q ~ B)
+* Categorical explanatory and categorical explanatory variable. (C ~ C)
+* Quantitative explanatory and categorical explanatory variable. (Q ~ C)
+* Any combination of the above with a binary variable (B ~ C, C ~ B, or Q ~ B)
 * Quantitative response and quantitative explanatory variable. (Q ~ Q)
 
 
@@ -77,3 +78,6 @@ ggplot(iris, aes(x=Species, y=Petal.Length, fill=Species)) +
 There are 50 iris plants within each species. There is clear difference in the average Petal length across the pecies. _Setosa_ has the smallest average petal length of 1.46 cm and the smallest variation with a standard deviation of 0.17cm.  _Veriscolor_ has an average petal length of 4.26cm with SD of 0.47cm, and _Virginica_ has the largest average petal length of 5.55cm and the largest variation with a standard deviation of 0.55cm.  
 
 
+##### Submission
+* Upload the final PDF to `hw03 Bivariate Graphics/Incoming` folder in Google Drive with the file name: _userid_biv_graph.pdf_
+* This assignment will be peer reviewed. 

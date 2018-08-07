@@ -1,6 +1,7 @@
 ---
 title: "Data entry and codebook creation"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
@@ -13,7 +14,7 @@ Although you will be working with previously collected data, it is important to 
 ## Instructions
 * Using the [PDF copies of medical records](https://norcalbiostat.netlify.com/data/medical-records.pdf) for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
 * You will create these as either an Excel spreadsheet or directly in Google sheets. 
-    - If you use Google Sheets place your file in the [`01 Data Entry`](https://drive.google.com/open?id=1-yguQAv0SH6RoZJLlvmO4wojWd6U4Tlh) folder. 
+    - If you use Google Sheets place your file in the `hw01 Data Entry` folder. 
     - Name the first two worksheets within this file: `data` and `codebook`.
     - Name this file `userid_medrecords` where _userid_ is your chico state user id. 
 
@@ -50,7 +51,7 @@ An example of what this should look like is below. The only modification is that
 
 
 ## Submission
-Upload your Excel file to Google Drive (`01 Data Entry` folder) by the due date listed on the class schedule. 
+Upload your Excel file to Google Drive (`hw01 Data Entry` folder) by the due date listed on the class schedule. 
 If you directly created a Google Sheet.. well then you're done!
 
 

@@ -12,18 +12,15 @@ css: css/customh5.css
 
 # Overview
 
-Throughout the entire semester you will be analyzing a data set with the end goal of creating a poster presentation and creat Much of your homework will include analysis of your 
-
-Your homework serves as a first draft of exploration into your research questions, and helps you build your story. Homework assignments alone will not be sufficient for a good analysis. 
+Throughout the entire semester you will be analyzing a data set with the end goal of creating a poster presentation to present your research. Often your homework serves as a first draft of exploration into your research questions, and helps you build your story. Homework assignments alone will not be sufficient for a good analysis. 
 
 # Poster preparation
 
 You will organize your research in stages by building a "powerpoint" type presentation. This will help you concicely explain your research topic and findings in a way that you can more easily translate (fit) onto a poster. 
 
 ### Instructions
-* Create a Google Slides presentation directly into the [Projects](https://drive.google.com/open?id=0B83Z8_sNw3KPUWFRdXo3WUdiNUk) Google Drive Folder. 
-  - This folder is shared with MATH 315 as well. They are doing a similar project. It will help them to see the quality of your writing and effort. 
-  - Name your file using first_last name only. 
+* Create a Google Slides presentation directly into the Project Slides folder in our Google Drive. 
+  - Name your file using `first_last` name only. 
 * The required contents for each slide are listed below under **Stages**
 
 ### Stages

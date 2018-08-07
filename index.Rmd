@@ -2,8 +2,10 @@
 This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](http://www.norcalbiostat.com). This page is used for posting of regular announcements and information for students of the class. 
 
 ```{r runallwks, eval=TRUE, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
-#source("render_all_wks.R")
-#source("render_all_lec.R")
+#source("_render_all_wks.R")
+#source("_render_all_lec.R")
+#source("_render_all_hw.R")
+#source("_render_all_prj.R")
 ```
 # Announcements
 
@@ -165,4 +167,7 @@ This week we're going to get our hands dirty with data!
 ### 8/27/18 - Welcome to Fall 18!
 * This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.
 * Specifically click on and explore items in the top navigation bar.  
+* Take this survey to help choose when I should hold Office Hours https://goo.gl/forms/qLBv2jMF6fBv3BTR2 
+* You have been sent email invitations to your campus email to be added to our Slack workspace, and our Google Drive. If you have not recieved these by the first day of class email me directly. 
+
 

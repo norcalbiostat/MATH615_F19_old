@@ -97,5 +97,5 @@ knitr::kable(t(c(summary(mpg$cty), sd=sd(mpg$cty))), digits=1)
 
 
 ##### Submission
-* Upload the final PDF to `02 Univariate Graphics/Incoming` folder in Google Drive with the file name: _userid_univ_graph.pdf_
+* Upload the final PDF to `hw02 Univariate Graphics/Incoming` folder in Google Drive with the file name: _userid_univ_graph.pdf_
 * This assignment will be peer reviewed. 
