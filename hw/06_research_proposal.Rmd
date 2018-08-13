@@ -1,6 +1,7 @@
 ---
 title: "Research Plan Outline"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
@@ -20,7 +21,7 @@ Using what you know now about your project and the model title in the reading, d
 * Your title should summarize the main idea of your research question.
 * Must include the variables under investigation.
 * Must be fully explanatory when standing alone. 
-* Include the terms “association between” or “relationship between” in your title to join your variables of interest.  
+* Include the terms "association between" or "relationship between" in your title to join your variables of interest.  
  
 
 ## Introduction 
@@ -37,7 +38,7 @@ Write an opening statement or questions to grab the reader. This statement intro
  
 ## Predicted Results
 * At least 2 outline points stating how you think your variables will be related/associated. 
-    - Look back to your research question and think about “answering” it.
+    - Look back to your research question and think about "answering" it.
     - Use some of your findings from your bivariate graphing assignment to help here. 
 
 # Example submissions
