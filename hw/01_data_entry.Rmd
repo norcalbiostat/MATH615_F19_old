@@ -1,21 +1,26 @@
 ---
 title: "Data entry and codebook creation"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
 ## Purpose
 Although you will be working with previously collected data, it is important to understand what data looks like as well as how it is coded and entered into a spreadsheet or dataset for analysis. This can help you identify and avoid problems later when reading data into an analysis software program. For example if you mix letters and numbers in the same cell, the variable will be treated as character not numeric. 
 
+There are three pieces to this assignment. 
+
+1. Entering raw data into a spreadsheet. 
+2. Creating a codebook
+3. Importing the data into your software program of choice (SPC)
+
 ## Instructions
 * Using the [PDF copies of medical records](https://norcalbiostat.netlify.com/data/medical-records.pdf) for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
-* You will create these as either an Excel spreadsheet or directly in Google sheets. 
-    - If you use Google Sheets place your file in the `hw01 Data Entry` folder. 
-    - Name the first two worksheets within this file: `data` and `codebook`.
+* You will enter data and create your codebook using your preferred spreadsheet program. 
+    - Name the first three worksheets within this file: `data`, `codebook`, `import`.
     - Name this file `userid_medrecords` where _userid_ is your chico state user id. 
 
     
@@ -51,8 +56,8 @@ An example of what this should look like is below. The only modification is that
 
 
 ## Submission
-Upload your Excel file to Google Drive (`hw01 Data Entry` folder) by the due date listed on the class schedule. 
-If you directly created a Google Sheet.. well then you're done!
+Upload your spreadsheet file to Blackboard Learn by the due date listed on the class schedule. 
+
 
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Syllabus Math 615 Fall 18"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Course Description
@@ -56,7 +56,8 @@ _Optional_
 # Grading
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
-* The approximate contributions per category are: Participation 15%, Written Assignments 25%, Exams 30%, and Project related assignments 30%. 
+* The approximate contributions per category are: Participation 13%, Written Assignments 20%, Exams 25%, and Project related assignments 40%. 
+    - Think of the written assignments as a draft version 1 of analyses that you will refine and present as part of your cumulative project. 
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 * Extra Credit can be earned through Slack participation. By asking and answering questions you can contribute to quality class-wide generation. Helping each other is more valuable than waiting for a response from me. Regular participation throughout the semester can earn you up to 10 points (~2%).
 

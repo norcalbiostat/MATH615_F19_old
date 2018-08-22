@@ -31,12 +31,15 @@ navbar:
       icon: fa-institution
       href: https://www.datacamp.com/
   right:
-  - text: Syllabus
-    icon: fa-info-circle
-    href: syllabus_615_f18.html
-  - text: Dr. D's website
-    icon: fa-paw
-    href: http://www.norcalbiostat.com/
+    - text: Help
+      icon: fa-question
+      href: faq.html
+    - text: Syllabus
+      icon: fa-info-circle
+      href: syllabus_615_f18.html
+    - text: Dr. D's website
+      icon: fa-paw
+      href: http://www.norcalbiostat.com/
 output:
   html_document:
     theme: flatly

@@ -1,14 +1,70 @@
 ---
 title: "Frequently Asked Questions"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 date: "Last Updated `r Sys.time()`"
 ---
 
 _page in development_
 
-# Where can I get help using R outside of class time? 
+Download this file as a [[PDF]](faq.pdf)
+
+# Assignments
+
+## How do I complete the assignments? 
+
+Most homework assignments will come with a template to use. This will be a R markdown (`*.Rmd`) file for R users, and a Word document (`*.doc`) for SPSS users. 
+
+R users write their code and answers directly into the Rmd file. SPSS users will copy their code and relevant output into the Word doc, along with writing their answers in the Word doc directly. 
+
+All homework files must be compiled or converted to PDF before submission. R users `knit` their file to PDF, SPSS users will `save as` their Word document as PDF. 
+
+Links to the templates can be found in the homework assignment itself. A list of all assignment files can be found on the [notes](notes.html) page. 
+    
+    
+## How do I turn in Homework?
+
+The file should be clearly named using this format: `userid_assignment.pdf`. E.g. `rdonatello_univ_graphics.pdf`
+
+Unless explicitly stated otherwise, assignments will be uploaded as PDFs to Blackboard Learn for grading by the instructor
+
+If an assignment is scheduled for Peer Review, you must also put a copy in the **Submitted Assignments** folder in our shared [[Google Drive]](https://drive.google.com/drive/u/2/folders/0B2-FPH8JVeuebFpnV3RZaU9KbTg)
+
+## What are you looking for when you grade? 
+
+* Many assignments have rubrics assigned to them in Blackboard. 
+* Most assignments include examples directly in the assignment file itself. 
+* Correct english grammer, spelling, formatting. 
+* Concice, clear and complete answers. 
+* Correct statistical methods used
+* That you answered the question posed. 
+* No extreneous output or code
+
+
+## How do I conduct a Peer Review
+
+1. Check the [Peer Review Rotation](https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit?usp=drive_web&ouid=106587371935129594479) spreadsheet to see who you are scheduled to review. 
+2. Go to the **Submitted Assignments** folder in our Google Drive (link above) and download a copy of the assignment for each person you are to review. 
+    - If one or more of your reviewees did not submit their assignment, randomly select a new person and review their work instead. 
+3. Using either track changes in Word, or comment bubbles/annotation in Adobe, provide feedback to your peer. 
+    - Be specific. Give the type of feedback that you want to recieve. 
+    - Two positive comments about what they did well, or should continue to do.
+    - Two corrections or suggestions for improvement. 
+4. Save your edited versions with your username at the end of the file name after `revby` `studentid_assignment_reviewerid.pdf`. E.g. If Kathy Gray were reviewing my assignment `rdonatello_univ_graphics.pdf`, her review file name would look like `rdonatello_univ_graphics_revby_kgray.pdf`
+5. Upload your commented file to your peer's personal folder under **Reviewed Assignments** in our Google Drive. 
+
+
+## Grading of peer reviews
+
+I will go through the **Reviewed Assignments** folder periodically and check for appropriate reviews. As I come across you review I will color the corresponding cell in the Peer Review rotation spreadsheet to denote that I have seen the review. 
+
+----
+----
+
+# Statistical Programming Help 
+
+## Where can I get help using R outside of class time? 
 
 ### Online
 * Chico [R User Group](https://groups.google.com/forum/#!forum/chico-rug)
@@ -17,24 +73,19 @@ _page in development_
 
 ### In Person
 * **Robin Donatello** - Stat professor. Holt 202
-    - MWF 3-4pm, Holt 155 (most weeks I won't be avb one of M or W)
-    - TR 10-11am, Holt 155
-    - T 11/2 2-3:30pm, SSC 426
 * **Edward Roualdes** - Stat professor. Holt 204 - eroualdes@csuchico.edu
-    - MW 10-11am, 1-2pm Holt 204
-    - T 1-2pm Holt 204
-    - R 2-3:50pm MLIB 442
-
 * **Community Coding** Tutor Schedule TBD
 * **Math Learning Lab (MLIB 4th floor)** Tutor Schedule TBD
     
     
-# Helpful R code snippits
+### Helpful R code snippits
+
+_not functional as of 8/22/18_
 
 Here is a collection of helpful R [code snippits](snippits.html) for plotting, subsetting, handling missing values and so forth. Think of it as a FAQ for R code. 
 
 
-# Where can I get help using SPSS outside of class time? 
+## Where can I get help using SPSS outside of class time? 
 
 ### Online
 * UCLA IDRE [[learning modules]](https://stats.idre.ucla.edu/spss/modules/)
@@ -42,9 +93,8 @@ Here is a collection of helpful R [code snippits](snippits.html) for plotting, s
 * IBM Knowledge [[Center]](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html)
 
 
-# Other resources pending organization
+## Other resources pending organization
 
 * http://www.wesleyan.edu/qac/curriculum/resources/syntax.html
 * PDS bookdown https://alanarnholt.github.io/PDS-Bookdown2/ 
-
 * sjPlot vignette - custom plot appearance: https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html 
