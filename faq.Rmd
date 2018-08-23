@@ -1,8 +1,8 @@
 ---
 title: "Frequently Asked Questions"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 date: "Last Updated `r Sys.time()`"
 ---
 
@@ -25,15 +25,15 @@ Links to the templates can be found in the homework assignment itself. A list of
     
 ## How do I turn in Homework?
 
-The file should be clearly named using this format: `userid_assignment.pdf`. E.g. `rdonatello_univ_graphics.pdf`
+Unless explicitly stated otherwise, 
 
-Unless explicitly stated otherwise, assignments will be uploaded as PDFs to Blackboard Learn for grading by the instructor
-
-If an assignment is scheduled for Peer Review, you must also put a copy in the **Submitted Assignments** folder in our shared [[Google Drive]](https://drive.google.com/drive/u/2/folders/0B2-FPH8JVeuebFpnV3RZaU9KbTg)
+* It should be in PDF format. 
+* The file should be clearly named using this format: `assignment_userid.pdf`. E.g. `univ_graphics_rdonatello.pdf`
+* Uploaded to the corresponding assignment folder under **Incoming** in Google Drive. 
+* Project assignments are also uploaded to BBL. See next section for reasoning. 
 
 ## What are you looking for when you grade? 
 
-* Many assignments have rubrics assigned to them in Blackboard. 
 * Most assignments include examples directly in the assignment file itself. 
 * Correct english grammer, spelling, formatting. 
 * Concice, clear and complete answers. 
@@ -41,23 +41,45 @@ If an assignment is scheduled for Peer Review, you must also put a copy in the *
 * That you answered the question posed. 
 * No extreneous output or code
 
+**Standard Assignments**
+
+Standard homework assignments just get checked off for completion. If it's complete full credit is awarded. 
+I will review each assignment, write comments, corrections and suggestions for improvement on the PDF itself. I will put my copy into your personal returned folder. 
+
+**Project Assignments**
+
+These assignments are **also** uploaded to Blackboard Learn. This allows me to use a rubric for grading. Project assignments should be considered quality work and such refined, reviewed, and absolutely spellchecked before submission. 
+
+
+## Why do we do peer review instead of just getting feedback from you? 
+
+* Everyone has different thought processes and may have approached the question from a different perspective that can help you learn the material. 
+* Co-authoring and reviewing your peers work is part of a professional research position. 
+* Learning how to provide good feedback will make you a better collaborator
+* This is a delayed version of paired programming - another set of eyeballs can typically help you find your mistake. 
+* I have 10fold more assignments to review than you do. You'll get your peer's reviews back faster than I can get yours back.
+* I will be looking for different things than your peers will be. This is a good thing. They are looking from "untrained eyes", which can be very critical to make sure you are explaining yourself clearly. I can better "figure out" what you are meaning to say  - they are the ones that will best tell you when/where you need to explain your findings better. 
+
 
 ## How do I conduct a Peer Review
 
-1. Check the [Peer Review Rotation](https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit?usp=drive_web&ouid=106587371935129594479) spreadsheet to see who you are scheduled to review. 
-2. Go to the **Submitted Assignments** folder in our Google Drive (link above) and download a copy of the assignment for each person you are to review. 
+1. Check the [Peer Review Rotation](https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit?usp=sharing) spreadsheet to see who you are scheduled to review. 
+2. Download a copy of the assignment for each person you are to review. 
+    - **Do not edit directly in Google Documents unless you make your own copy first.** This has resulted in lost work in the past. 
     - If one or more of your reviewees did not submit their assignment, randomly select a new person and review their work instead. 
 3. Using either track changes in Word, or comment bubbles/annotation in Adobe, provide feedback to your peer. 
     - Be specific. Give the type of feedback that you want to recieve. 
     - Two positive comments about what they did well, or should continue to do.
     - Two corrections or suggestions for improvement. 
-4. Save your edited versions with your username at the end of the file name after `revby` `studentid_assignment_reviewerid.pdf`. E.g. If Kathy Gray were reviewing my assignment `rdonatello_univ_graphics.pdf`, her review file name would look like `rdonatello_univ_graphics_revby_kgray.pdf`
-5. Upload your commented file to your peer's personal folder under **Reviewed Assignments** in our Google Drive. 
+4. Save your edited versions with your username at the end of the file name after `revby` `assignment_authorid_revby_reviewerid.pdf`. E.g. If Kathy Gray were reviewing my assignment `univ_graphics_rdonatello.pdf`, her review file name would look like `univ_graphics_rdonatello_revby_kgray.pdf`
+5. Upload your commented file to the top level **Reviewed** folder in our Google Drive. 
+    - You do not have access to anyone elses folder except your own. 
+    - I will move these into their author's folder after looking at your review. 
 
 
 ## Grading of peer reviews
 
-I will go through the **Reviewed Assignments** folder periodically and check for appropriate reviews. As I come across you review I will color the corresponding cell in the Peer Review rotation spreadsheet to denote that I have seen the review. 
+I will go through the **Reviewed** folder and spot check for appropriate reviews. As I come across your reviews I will move them to their author's folder and assign you credit for the review in Blackboard. If I find your review is not providing quality feedback to the author you will not recieve credit for that review. 
 
 ----
 ----

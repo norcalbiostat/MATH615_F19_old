@@ -19,10 +19,11 @@ There are three pieces to this assignment.
 
 ## Instructions
 * Using the [PDF copies of medical records](https://norcalbiostat.netlify.com/data/medical-records.pdf) for 5 patients seeking treatment in a hospital emergency room you are going to do data entry and create a codebook. 
-* You will enter data and create your codebook using your preferred spreadsheet program. 
+* You will enter data and create your codebook directly in Google Sheets.
+    - Start a new spreadsheet in the **Incoming/01 Data Entry** folder in our shared Google Drive. 
+    - Name this file `medrecords_userid` where _userid_ is your chico state user id. 
     - Name the first three worksheets within this file: `data`, `codebook`, `import`.
-    - Name this file `userid_medrecords` where _userid_ is your chico state user id. 
-
+    
     
 #### Data Entry
 1. Select 4 variables recorded on the medical forms
@@ -43,10 +44,9 @@ An example of what this should look like is below. The only modification is that
 ## Data Import
 1. Using your software program of choice, import this data into the program using point and click GUI methods.
     - Code is fine if you already know how. Point and click is just for the true newbies. 
-    - If you used Google Sheets you should save your file to your hard drive as a Comma Separated Value (`*.csv`). 
+    - Save your file to your hard drive as a Comma Separated Value (`*.csv`). 
     - R Studio: https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio 
     - SPSS: https://libguides.library.kent.edu/SPSS/ImportData
-
 2. Note and record any problems that you noticed and/or had to fix at the bottom of your `codebook` worksheet. 
     - Does your data file look like your spreadsheet? 
     - Did you have to specify missing values in any specific way?
@@ -56,8 +56,7 @@ An example of what this should look like is below. The only modification is that
 
 
 ## Submission
-Upload your spreadsheet file to Blackboard Learn by the due date listed on the class schedule. 
-
+No additional instructions. 
 
 
 

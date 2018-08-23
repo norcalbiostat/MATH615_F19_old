@@ -5,7 +5,7 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 #source("_render_all_wks.R")
 #source("_render_all_lec.R")
 #source("_render_all_hw.R")
-#source("_render_all_prj.R")
+#rmarkdown::render(notes.Rmd, output_format='html_document')
 ```
 # Announcements
 

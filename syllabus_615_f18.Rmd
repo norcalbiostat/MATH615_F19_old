@@ -1,8 +1,8 @@
 ---
 title: "Syllabus Math 615 Fall 18"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Course Description
@@ -20,7 +20,7 @@ _Introduction to common procedures used to analyze data. Single and two-sample i
 **Office Hours** TBD  
 **Class Website** https://norcalbiostat.github.io/MATH615/  
 **Slack Channel**  http://math615.slack.com  You will be sent an email invitation to your campus email. 
-**Google Drive**  You will be added to the Math 615 Team drive using your campus email. 
+**Google Drive**  You will be added to the Math 615 Google drive using your campus email. 
 
 You can download the Syllabus in PDF form by clicking [[this link]](syllabus_615_f18.pdf).
 
@@ -56,8 +56,8 @@ _Optional_
 # Grading
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
-* The approximate contributions per category are: Participation 13%, Written Assignments 20%, Exams 25%, and Project related assignments 40%. 
-    - Think of the written assignments as a draft version 1 of analyses that you will refine and present as part of your cumulative project. 
+* The approximate contributions per category are: Participation 20%, Written Assignments 10%, Exams 25%, and Project related assignments 45%. 
+    - Most written assignments are not graded for content. They will be reviewed and commented on by your peers and by the instructor. Credit is only given for a complete assignment. Think of the written assignments as a draft version 1 of analyses that you will refine and present as part of your cumulative project. 
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 * Extra Credit can be earned through Slack participation. By asking and answering questions you can contribute to quality class-wide generation. Helping each other is more valuable than waiting for a response from me. Regular participation throughout the semester can earn you up to 10 points (~2%).
 
