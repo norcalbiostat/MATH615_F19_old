@@ -79,5 +79,7 @@ There are 50 iris plants within each species. There is clear difference in the a
 
 
 ##### Submission
-* Upload the final PDF to `hw03 Bivariate Graphics/Incoming` folder in Google Drive with the file name: _userid_biv_graph.pdf_
+* Upload the final PDF to the **Incoming/05 Bivariate Graphics** folder in Google Drive
+  - Use the file name: _biv_graph_userid.pdf_
 * This assignment will be peer reviewed. 
+

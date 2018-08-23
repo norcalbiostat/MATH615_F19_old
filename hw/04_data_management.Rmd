@@ -1,10 +1,10 @@
 ---
 title: "Data Management"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
@@ -26,9 +26,14 @@ You will create a single code file that imports your raw data, performs some dat
 
 This code file must run successfully on my computer to earn credit. You can keep submitting files until it works. 
 
-See the DM file for Add Health from last fall: https://norcalbiostat.netlify.com/data/dm_addhlth.html as an example. _Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn't quite work the way we intended._ 
+# Resources
+
+* A list of data management preparation questions to ask yourself regarding data cleaning issues you may encounter: [[HTML]](../lec/lec01_dm_prep_questions.html), [[PDF]](../lec/lec01_dm_prep_questions.pdf)
+* An example data management file for the Add Health data from last fall: https://norcalbiostat.netlify.com/data/dm_addhlth.html as an example. _Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn't quite work the way we intended._ 
+
 
 # Submission
+
 * Upload your data management file to the appropriate assignment folder in Google Drive. 
     - Use this filename: `dm_userid.Rmd` for R users, or `dm_userid.sps` for SPSS users. 
     - I would advise **not** changing the copy of the `dm` file that you will be using later on. Only the one you upload for me to review. 
