@@ -11,7 +11,7 @@ _Taken from Passion Driven Statistics 2014 ibook_
 # Purpose
 The goal of research is to disseminate your work and allow it to guide further study. As such, writing is an important and ongoing part of the research process.
 
-Successful empirical writing minimizes descriptive or complex language so methodologies, conclusions, and theories are accessible to readers from all areas of expertise. Although this sounds easy, it is difficult to write clearly and concisely—especially when writing an empirical paper for the first time. What follows is information about how you should structure your paper, so you can focus on precise writing. We offer advice on how to write each section of a research proposal for an empirical paper; we discuss how to use evidence and sources in empirical writing; finally, we present conventions for empirical writing.
+Successful empirical writing minimizes descriptive or complex language so methodologies, conclusions, and theories are accessible to readers from all areas of expertise. Although this sounds easy, it is difficult to write clearly and concisely - especially when writing an empirical paper for the first time. What follows is information about how you should structure your paper, so you can focus on precise writing. We offer advice on how to write each section of a research proposal for an empirical paper; we discuss how to use evidence and sources in empirical writing; finally, we present conventions for empirical writing.
 
 ## Writing a Research Proposal for Empirical Research
 An empirical paper has six sections: 
@@ -32,6 +32,7 @@ A research proposal often has five sections:
 5. references. 
 
 Both paper types should have an "hourglass" shape: 
+
 * introduce broad statements
 * narrow to specific methodologies, and conclusions
 * then broaden again to discuss the general significance and implications of your work. 
@@ -75,7 +76,7 @@ The introduction describes the question you intend to investigate and how your r
 
 The following is a successful section of a literature review:
 
-> Through to the mid-1990s, most research suggested that academic censorship reduced college students’ respect for authority. However, results were inconsistent. In a landmark two-year case study of college student social dynamics, Jones (1996) found that college students’ respect for authority declined significantly after censorship was imposed. However, Jones relied exclusively on objective measures rather than self-reported measures of respect for authority.
+> Through to the mid-1990s, most research suggested that academic censorship reduced college students' respect for authority. However, results were inconsistent. In a landmark two-year case study of college student social dynamics, Jones (1996) found that college students' respect for authority declined significantly after censorship was imposed. However, Jones relied exclusively on objective measures rather than self-reported measures of respect for authority.
 
 
 * Observe that the first two sentences identify trends in the literature, the third sentence emphasizes major findings, and the fourth sentence suggests gaps in the literature that the present study will fill. 
@@ -97,9 +98,9 @@ Your introduction should build to and conclude with the research questions or st
 
 > One of the most potent risk factors consistently implicated in both the etiology of smoking behavior as well as the subsequent development of nicotine dependence is major depression. Evidence for this association comes from longitudinal investigations in which depression has been shown to increase risk of later smoking (Breslau, Peterson, Schultz, Chilcoat, & Andreski, 1998; Dierker, Avenevoli, Merikangas, Flaherty, & Stolar, 2001). This temporal ordering suggests the possibility of a causal relationship. In fact, the vast majority of research to date has focused on the role of major depression in increasing the probability and amount of smoking (Dierker, Avenevoli, Goldberg, & Glantz, 2004; Rohde, Kahler, Lewinsohn, & Brown, 2004; Rohde, Lewinsohn, Brown, Gau, & Kahler, 2003).
 > 
-> While it is true that smoking exposure is a necessary requirement for nicotine dependence, frequency and quantity of smoking are markedly imperfect indices for determining an individual’s probability of developing nicotine dependence (Kandel & Chen, 2000; Stanton, Lowe, & Silva, 1995). For example, a substantial number of individuals reporting daily and/or heavy smoking do not meet criteria for nicotine dependence (Kandel & Chen, 2000). Conversely, nicotine dependence has been seen among population subgroups reporting relatively low levels of daily and non daily smoking (Kandel & Chen, 2000).
+> While it is true that smoking exposure is a necessary requirement for nicotine dependence, frequency and quantity of smoking are markedly imperfect indices for determining an individual's probability of developing nicotine dependence (Kandel & Chen, 2000; Stanton, Lowe, & Silva, 1995). For example, a substantial number of individuals reporting daily and/or heavy smoking do not meet criteria for nicotine dependence (Kandel & Chen, 2000). Conversely, nicotine dependence has been seen among population subgroups reporting relatively low levels of daily and non daily smoking (Kandel & Chen, 2000).
 > 
-> A complementary or alternate role that major depression may play is as a cause or signal of greater sensitivity to nicotine dependence, over and above an individual’s level of smoking exposure. While major depression has been shown to increase an individual’s probability of smoking initiation, regular use and nicotine dependence, it remains unclear whether it may signal greater sensitivity for nicotine dependence regardless of smoking quantity. The present study will examine young adults from the National Epidemiologic Survey of Alcohol and Related Conditions (NESARC). The goals of the analysis will include 1) establishing the relationship between major depression and nicotine dependence; and 2) determining whether or not the relationship between major depression and nicotine dependence exists above and beyond smoking quantity.
+> A complementary or alternate role that major depression may play is as a cause or signal of greater sensitivity to nicotine dependence, over and above an individual's level of smoking exposure. While major depression has been shown to increase an individual’s probability of smoking initiation, regular use and nicotine dependence, it remains unclear whether it may signal greater sensitivity for nicotine dependence regardless of smoking quantity. The present study will examine young adults from the National Epidemiologic Survey of Alcohol and Related Conditions (NESARC). The goals of the analysis will include 1) establishing the relationship between major depression and nicotine dependence; and 2) determining whether or not the relationship between major depression and nicotine dependence exists above and beyond smoking quantity.
 
 
 ## Methods
@@ -113,7 +114,7 @@ The methods section describes how the research was conducted.
 
 The following is successful section of a sample description:
 
-> The sample of 1,203 pregnant women was drawn from two public prenatal clinics in Texas and Maryland. The ethnic composition was African American (n = 414, 34.4%), Hispanic, primarily Mexican American (n = 412, 34.2%), and White (n = 377, 31.3%). Most women were between the ages of 20 and 29 years; 30% were teenagers. All were urban residents, and most (94%) had incomes below the poverty level as defined using each state’s criteria for Women, Infants, and Children (WIC) eligibility.
+> The sample of 1,203 pregnant women was drawn from two public prenatal clinics in Texas and Maryland. The ethnic composition was African American (n = 414, 34.4%), Hispanic, primarily Mexican American (n = 412, 34.2%), and White (n = 377, 31.3%). Most women were between the ages of 20 and 29 years; 30% were teenagers. All were urban residents, and most (94%) had incomes below the poverty level as defined using each state's criteria for Women, Infants, and Children (WIC) eligibility.
 
 This sample description is successful because it
 
@@ -157,7 +158,7 @@ This measures discussion is successful because it indicates how attitudes were m
 > 
 > 
 Procedure
-One adult was selected for interview in each household, and face-toface computer assisted interviews were conducted in respondents’ homes following informed consent procedures.
+One adult was selected for interview in each household, and face-toface computer assisted interviews were conducted in respondents’' homes following informed consent procedures.
 > 
 > Measures
 > Lifetime major depression (i.e. those experienced in the past 12 months and prior to the past 12 months) were assessed using the NIAAA, Alcohol Use Disorder and Associated Disabilities Interview Schedule – DSM-IV (AUDADIS-IV) (Grant et al., 2003; Grant, Harford, Dawson, & Chou, 1995). The tobacco module of the AUDADIS-IV contains detailed questions on the frequency, quantity, and patterning of tobacco use as well as symptom criteria for DSMIV nicotine dependence. Current smoking was evaluated through both smoking frequency ("About how often did you usually smoke in the past year?") coded dichotomously in terms of the presence or absence of daily smoking, and quantity ("On the days that you smoked in the last year, about how many cigarettes did you usually smoke?").
