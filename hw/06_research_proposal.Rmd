@@ -13,6 +13,13 @@ Your research proposal is an important component of your final research project.
 
 In preparation for writing the introduction section, you should have found and read at least 25 primary source articles, although only those that help provide important background and allow you to make an argument in support of your proposed research should be cited.
 
+# Instructions
+
+* Write your paper directly as a google doc in the `06 Research Proposal` folder in Google Drive with the file name: `proposal_userid`
+* Drop a note in Blackboard learn when your file is ready for grading. 
+* This assignment will be peer reviewed in a slightly different manner. See below for instructions. 
+    
+    
 # Writing Template
 ## Title
 Using what you know now about your project and the model title in the reading, develop a working title fully knowing it is going to probably change. 
@@ -58,13 +65,7 @@ Using what you know now about your project and the model title in the reading, d
 * Put the reference for the article in APA style. Here is a link to Purdue Owl APA style references that will guide you. https://owl.english.purdue.edu/owl/resource/560/05/ 
 
 
-##### Submission
 
-* Either create a Word doc or write your paper directly in Google Docs. **Do not convert to PDF this time.**
-* Upload your final version to the `Research Proposal` folder in Google Drive with the file name: `proposal_userid`
-* Submit a copy of this paper to Blackboard for grading via rubric. 
-* This assignment will be peer reviewed in a slightly different manner. See below for instructions. 
-    
 # Peer Review Guidelines
 _The comments are meant to help students meaningfully engage with the material, and the following questions guide students in providing more concrete feedback to the writer._
 

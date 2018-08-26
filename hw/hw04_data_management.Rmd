@@ -1,13 +1,14 @@
 ---
-title: "Data Management"
+title: "Data Management Assignment"
 output:
   pdf_document: default
   html_document:
+    theme: readable
     highlight: tango
-    theme: flatly
+    toc: yes
+    toc_float: yes
 css: ../css/customh5.css
 ---
-
 
 # Purpose
 
@@ -16,7 +17,7 @@ By now you should know what variables you want to use, and you've looked over th
 All raw data needs to stay raw, and all changes need to be documented. You will create a script/code file that will make all changes to the data in a programatically and reproducible way. You will create a single code file that imports your raw data, performs some data cleaning steps, and saves out an analysis ready data set that you will use throughout the semester. 
 
 ### Questions to ask 
-Ask yourself these questions as you go through this exercise: 
+Ask yourself and your partner these questions as you go through this exercise: 
 
 * Do you need to restrict the data to only one subgroup? (i.e., if you plan to use only participants of a certain age or sex or ethnicity, etc.). 
 * Do you need to code out missing data? (i.e. was 99 entered as a missing code?)
@@ -31,49 +32,46 @@ Ask yourself these questions as you go through this exercise:
         - `nd_sum=sum (of nd_symptom1 nd_symptom2 nd_symptom3 nd_symptom4)` [THIS IS SAS CODE DO NOT USE]
 
 
-You will create a single code file that imports your raw data, performs some data cleaning steps, and saves out an analysis ready data set. 
+Quite often you need to peek at the `head()` of the data set or to do a `table()` to check that what you thought you did actually did what you wanted to. 
+
+Call out specific variable names. For example
+
+* I am going to use gender in my analysis, and the variable `BIO_SEX` currently is `=1` for males and `=2` for females, and `=6` for unknown. I want an indicator of female so I will create a new variable `female` where `female==1` when `BIO_SEX==2`, `female==0` when `BIO_SEX==1` and `female==NA` when `BIO_SEX==6`. 
+
+
+
+# Submission instructions
+
+* This is a peer-reviewed team assignment
+* You will compile your RMD code to create a PDF file (knit to PDF)
+* Upload your RMD file to the `hw04 Data Management` assignment in Blackboard Learn. 
+    - I will download this file and run it on my computer.
+    - It must run for credit. If it compiles to PDF for you then this should be no problem for me. 
+* Upload the PDF file to the `04 Data Management` folder in Google Drive. 
+    - Manually change the file name of your PDF to include your user name before you upload to Google Drive.
+    - E.g. `dm_addhealth.pdf` becomes `dm_addhealth_DonatelloCoia.pdf` before upload. 
+    - If you forget to do this your file WILL be overwritten in Google Drive by the next person who forgets.
+    - Don't forget that if you knit the code file again (i.e. you forgot to add something) you will have to manually rename your file before uploading again. 
+
+You are not expected to have completed data management for every one of your variables under consideration by the submission date. I want to see a VERY good effort has been made (raw data read in, a half-dozen or so variables dealt with, analysis data saved out.)
+
+    
+# Coding instructions 
+
+1. Start a new R Markdown file.
+    - Delete all the template language, DONT DELETE THE YAML HEADER (part between the three dashes)
+    - Rename this file as `dm_dataname.Rmd` (i.e. `dm_addhealth.Rmd`) into your `MATH315/project/code` folder. 2. Read in raw data into a data frame named `raw` in the first code chunk. 
+3. Restrict the variables to only the ones you are investigating. 
+    - Suggested to use the `select` statement found in the `dplyr` package
+4. Do some data cleaning. 
+    - You must explain at each step what you are doing and why you are doing it. 
+    - Don't forget to confirm that any changes you make actually work. 
+5. Write out the resulting data set to your `data` folder as `datasetname_clean.Rdata` e.g. `addhealth_clean.Rdata`. 
+
 
 # Example
 
 Here is an example data management file for the Add Health data from last fall: https://norcalbiostat.netlify.com/data/dm_addhlth.html as an example. _Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn't quite work the way we intended._ 
 
 
-# Coding instructions 
 
-1. Start a new code file (`dm_dataname.Rmd` or `dm_dataname.sps`).
-    - Save this file into your `MATH615/project/code` folder.
-    - R users: Delete all the template language, DONT DELETE THE YAML HEADER (part between the three dashes)
-2. Read in raw data (should be located in your `MATH615/project/data` folder)
-3. Restrict the variables to only the ones you are investigating. 
-    - R users - use the `select` statement found in the `dplyr` package
-    - SPSS users use `KEEP`
-4. Do some data cleaning. 
-    - You must explain at each step what you are doing and why you are doing it. 
-    - Don't forget to confirm that any changes you make actually work. 
-    - SPSS users may perform tasks using point & click, but the code must be pasted into a `.sps` file that can be run on command. 
-5. Save the resulting data set to your `data` folder as `datasetname_clean.Rdata`, or `datasetname_clean.sav`. e.g. `addhealth_clean.Rdata`. 
-
-
-This code file must run successfully on my computer to earn credit. You can keep submitting files until it works. 
-
-
-# Submission instructions
-
-1. Upload a the PDF file to the `04 Data Management` folder in Google Drive. 
-    - R users compile your RMD file to create a PDF (knit to PDF)
-    - SPSS users present your output that is generated after running your script file.
-        - Save your output file as PDF? 
-        - copy paste output into word then save as PDF? 
-    - Manually change the file name of your PDF to include your user name before you upload to Google Drive.
-    - E.g. `dm_addhealth.pdf` becomes `dm_addhealth_Donatello.pdf` before upload. 
-    - If you forget to do this your file WILL be overwritten in Google Drive by the next person who forgets.
-2. Upload your code file (`.Rmd` or `.sps`) to corresponding assignment in Blackboard Learn. 
-    - I will download this file and run it on my computer.
-    - It must run for credit. If it compiles to PDF for you then this should be no problem for me. 
-
-This is a peer-reviewed assignment
-
-You are not expected to have completed data management for every one of your variables under consideration by the submission date. I want to see a VERY good effort has been made (raw data read in, a half-dozen or so variables dealt with, analysis data saved out.)
-
-    
-    

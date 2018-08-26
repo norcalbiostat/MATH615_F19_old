@@ -109,17 +109,54 @@ $(document).ready(function () {
 </div>
 
 
-<div id="purpose" class="section level2">
-<h2>Purpose</h2>
-<p>All raw data needs to stay raw, and all changes need to be documented. You will create a script/code file that will make all changes to the data in a programatically and reproducible way. This assignment uses your chosen research data, and the variables that you chose in the last assignment when you created a personal research codebook.</p>
+<div id="purpose" class="section level1">
+<h1>Purpose</h1>
+<p>By now you should know what variables you want to use, and you’ve looked over the codebook enough now that you have an idea of some potential problems that you will encounter. This assignment uses your chosen research data, and the variables that you chose in the last assignment when you created a personal research codebook. You will thoughtfully review the variables you are interested in, document which ones will need changed and how.</p>
+<p>All raw data needs to stay raw, and all changes need to be documented. You will create a script/code file that will make all changes to the data in a programatically and reproducible way. You will create a single code file that imports your raw data, performs some data cleaning steps, and saves out an analysis ready data set that you will use throughout the semester.</p>
+<div id="questions-to-ask" class="section level3">
+<h3>Questions to ask</h3>
+<p>Ask yourself these questions as you go through this exercise:</p>
+<ul>
+<li>Do you need to restrict the data to only one subgroup? (i.e., if you plan to use only participants of a certain age or sex or ethnicity, etc.).</li>
+<li>Do you need to code out missing data? (i.e. was 99 entered as a missing code?)</li>
+<li>Do you need to code out skip patterns? (i.e. are certain codes entered in for questions that won’t make sense for a particular group? For example non-smokers may have a response code of <code>-1: I don't smoke</code> to a question of “How many cigarettes in the past month have you smoked?”)</li>
+<li>Do you need to make response codes more logical?
+<ul>
+<li>Think about how the “yes” and “no” variables are coded. Does <code>NO = 0</code> and <code>YES = 1</code>?</li>
+<li>Think about how the “strongly agree” to “strongly disagree” variables are coded. Do the numbers make sense?</li>
+</ul></li>
+<li>Consider collapsing a quantitative variable into categories based on percentages of the data you find after examining the frequency table</li>
+<li>Consider collapsing across categories - maybe going from 5 dummy codes for strongly agree, agree, neutral, disagree, strongly disagree to 2 dummy codes that represent strongly agree and agree as one dummy code and disagree and strongly disagree as another code, then neutral coded as missing</li>
+<li>Do you need to create secondary variables? I.e. If you are working with a number of items that represent a single construct, it may be useful to create a composite variable/score.
+<ul>
+<li>For example, I want to use a list of nicotine dependence symptoms meant to address the presence or absence of nicotine dependence (i.e., tolerance, withdrawal, craving, etc.). Rather than using a dichotomous variable (i.e., nicotine dependence present/absent), I want to examine the construct as a dimensional scale (i.e., number of nicotine dependence symptoms). In this case, I would want to recode each symptom variable so that <code>YES = 1</code> and <code>NO = 0</code> and then sum the items so that they represent one composite score. In the code below, the <code>nd_sum</code> is the new variable I am creating and the variables after of are the variables I am totaling up.
+<ul>
+<li><code>nd_sum=sum (of nd_symptom1 nd_symptom2 nd_symptom3 nd_symptom4)</code> [THIS IS SAS CODE DO NOT USE]</li>
+</ul></li>
+</ul></li>
+</ul>
 <p>You will create a single code file that imports your raw data, performs some data cleaning steps, and saves out an analysis ready data set.</p>
+</div>
+</div>
+<div id="example" class="section level1">
+<h1>Example</h1>
+<p>Here is an example data management file for the Add Health data from last fall: <a href="https://norcalbiostat.netlify.com/data/dm_addhlth.html" class="uri">https://norcalbiostat.netlify.com/data/dm_addhlth.html</a> as an example. <em>Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn’t quite work the way we intended.</em></p>
+</div>
+<div id="coding-instructions" class="section level1">
+<h1>Coding instructions</h1>
 <ol style="list-style-type: decimal">
-<li>Read in raw data.</li>
+<li>Start a new code file (<code>dm_dataname.Rmd</code> or <code>dm_dataname.sps</code>).
+<ul>
+<li>Save this file into your <code>MATH615/project/code</code> folder.</li>
+<li>R users: Delete all the template language, DONT DELETE THE YAML HEADER (part between the three dashes)</li>
+</ul></li>
+<li>Read in raw data (should be located in your <code>MATH615/project/data</code> folder)</li>
 <li>Restrict the variables to only the ones you are investigating.
 <ul>
-<li>R users use the <code>select</code> statement, SPSS users use <code>KEEP</code>.</li>
+<li>R users - use the <code>select</code> statement found in the <code>dplyr</code> package</li>
+<li>SPSS users use <code>KEEP</code></li>
 </ul></li>
-<li>Do some data cleaning. You don’t have to have all variables cleaned by the submission date but you will be coming back to this code file very often during the semester.
+<li>Do some data cleaning.
 <ul>
 <li>You must explain at each step what you are doing and why you are doing it.</li>
 <li>Don’t forget to confirm that any changes you make actually work.</li>
@@ -129,22 +166,29 @@ $(document).ready(function () {
 </ol>
 <p>This code file must run successfully on my computer to earn credit. You can keep submitting files until it works.</p>
 </div>
-<div id="resources" class="section level1">
-<h1>Resources</h1>
+<div id="submission-instructions" class="section level1">
+<h1>Submission instructions</h1>
+<ol style="list-style-type: decimal">
+<li>Upload a the PDF file to the <code>04 Data Management</code> folder in Google Drive.
 <ul>
-<li>A list of data management preparation questions to ask yourself regarding data cleaning issues you may encounter: <a href="../lec/lec01_dm_prep_questions.html">[HTML]</a>, <a href="../lec/lec01_dm_prep_questions.pdf">[PDF]</a></li>
-<li>An example data management file for the Add Health data from last fall: <a href="https://norcalbiostat.netlify.com/data/dm_addhlth.html" class="uri">https://norcalbiostat.netlify.com/data/dm_addhlth.html</a> as an example. <em>Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn’t quite work the way we intended.</em></li>
-</ul>
-</div>
-<div id="submission" class="section level1">
-<h1>Submission</h1>
+<li>R users compile your RMD file to create a PDF (knit to PDF)</li>
+<li>SPSS users present your output that is generated after running your script file.
 <ul>
-<li>Upload your data management file to the appropriate assignment folder in Google Drive.
-<ul>
-<li>Use this filename: <code>dm_userid.Rmd</code> for R users, or <code>dm_userid.sps</code> for SPSS users.</li>
-<li>I would advise <strong>not</strong> changing the copy of the <code>dm</code> file that you will be using later on. Only the one you upload for me to review.</li>
+<li>Save your output file as PDF?</li>
+<li>copy paste output into word then save as PDF?</li>
 </ul></li>
-</ul>
+<li>Manually change the file name of your PDF to include your user name before you upload to Google Drive.</li>
+<li>E.g. <code>dm_addhealth.pdf</code> becomes <code>dm_addhealth_Donatello.pdf</code> before upload.</li>
+<li>If you forget to do this your file WILL be overwritten in Google Drive by the next person who forgets.</li>
+</ul></li>
+<li>Upload your code file (<code>.Rmd</code> or <code>.sps</code>) to corresponding assignment in Blackboard Learn.
+<ul>
+<li>I will download this file and run it on my computer.</li>
+<li>It must run for credit. If it compiles to PDF for you then this should be no problem for me.</li>
+</ul></li>
+</ol>
+<p>This is a peer-reviewed assignment</p>
+<p>You are not expected to have completed data management for every one of your variables under consideration by the submission date. I want to see a VERY good effort has been made (raw data read in, a half-dozen or so variables dealt with, analysis data saved out.)</p>
 </div>
 
 

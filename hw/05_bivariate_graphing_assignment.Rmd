@@ -8,7 +8,7 @@ output:
 css: ../css/customh5.css
 ---
 
-# Assignment Overview
+# Overview
 
 To fully explore the relationship between two variables both summary statistics and visualizations are important. For this assignment you will describe the relationship between these four specific combinations of data types: 
 
@@ -18,13 +18,13 @@ To fully explore the relationship between two variables both summary statistics 
 * Quantitative response and quantitative explanatory variable. (Q ~ Q)
 
 
-# Setup
+Before you start, 
 
-I.  Determine what variables you want to graph based on your research topic. 
+1. Determine what variables you want to graph based on your research topic. 
     * You will need a mixture of categorical and quantitative variables for this assignment. 
     * You should use variables that are relevant to your research topic. 
     * If you have not yet identified both a quantitative, a binary, and a categorical variable that you are interested in, now is the time to go back to the codebook and figure this out. 
-II. Recode variables as needed. 
+2. Recode variables as needed. 
     * If your response variable is categorical with many levels, you may want to collapse it down to fewer than 5 levels. 
     * It is perfectly acceptable to recode variables temporarily for exploratory purposes and not put it in your data management file.
 
@@ -57,6 +57,9 @@ For each bivariate relationship under consideration you will do the following:
         - Does one combination of categorical levels (C~C) seem to hold most the data? 
         - Are there any outlying data points? Don't list off each one, just state if there is and where approximately it's at. 
 
+5. Upload the final PDF to the **05 Bivariate Graphics** folder in Google Drive. Use the file name: _biv_graph_userid.pdf_
+
+
 ## Example
 
 This example explores the association between the length of an iris petal and the species of iris. The quantitative response variable is petal length (`Petal.Length`) and the categorical explanatory variable is species (`Species`). 
@@ -78,8 +81,4 @@ ggplot(iris, aes(x=Species, y=Petal.Length, fill=Species)) +
 There are 50 iris plants within each species. There is clear difference in the average Petal length across the pecies. _Setosa_ has the smallest average petal length of 1.46 cm and the smallest variation with a standard deviation of 0.17cm.  _Veriscolor_ has an average petal length of 4.26cm with SD of 0.47cm, and _Virginica_ has the largest average petal length of 5.55cm and the largest variation with a standard deviation of 0.55cm.  
 
 
-##### Submission
-* Upload the final PDF to the **Incoming/05 Bivariate Graphics** folder in Google Drive
-  - Use the file name: _biv_graph_userid.pdf_
-* This assignment will be peer reviewed. 
 

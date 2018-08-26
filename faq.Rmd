@@ -32,7 +32,7 @@ Links to the templates can be found in the homework assignment itself. A list of
 
 * All assignments should be in PDF format. 
 * The file should be clearly named using this format: `assignment_userid.pdf`. E.g. `univ_graphics_rdonatello.pdf`
-* Uploaded to the corresponding assignment folder under **Incoming** in Google Drive. 
+* Uploaded to the corresponding assignment folder in Google Drive. 
 * Standard homework assignments just get checked off for completion. 
   - I will still review and comment on each assignment, writing corrections and suggestions for improvement on the PDF itself. 
   - I will then put my copy into your personal returned folder in Google Drive. 
@@ -96,7 +96,7 @@ As I do my reviews on the same document, I will be reading and assessing your pe
 ### In Person
 * **Robin Donatello** - Stat professor. Holt 202
 * **Edward Roualdes** - Stat professor. Holt 204 - eroualdes@csuchico.edu
-* **Community Coding** Tutor Schedule TBD
+* **Community Coding** Fall Schedule TBD
 * **Math Learning Lab (MLIB 4th floor)** Tutor Schedule TBD
     
     
