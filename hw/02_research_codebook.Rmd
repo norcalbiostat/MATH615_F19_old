@@ -10,7 +10,7 @@ css: ../css/customh5.css
 
 # Purpose
 
-Now it is time for you to formulate your own Research Question. This will guide your focus for the rest of the semester. In this assignment you will
+Learn more about your chosen research data and formulate a Research Question. This will guide your focus for the rest of the semester. In this assignment you will
 
 1. Decide on a specific research topic
 2. Choose variables that relate to your topic
@@ -18,7 +18,7 @@ Now it is time for you to formulate your own Research Question. This will guide 
 
 
 # Instructions
-* You will conduct the work directly in a Google document in the `03 Research Quesetion and Codebook` folder. 
+* You will conduct the work directly in a Google document in the `02 Research Quesetion and Codebook` folder. 
 * Name this file `rq_userid` 
 * Drop a note in Blackboard Learn when your document is ready to grade. 
 * Use header formats to clearly denote steps 1-3.

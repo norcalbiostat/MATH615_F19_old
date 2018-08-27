@@ -3,10 +3,14 @@ title: "Preparation questions for Data Management"
 output:
   html_document:
     highlight: tango
-    theme: cerulean
+    theme: flatly
   pdf_document: default
 css: ../css/customh5.css
 ---
+
+_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _   
+Back to the [[Schedule]](../schedule.html)
+<br>
 
 You know what variables you want to use, and you've looked over the codebook enough now that you have an idea of some potential data issues that you will have to address. 
 
