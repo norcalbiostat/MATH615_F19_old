@@ -1,9 +1,9 @@
 ---
+css: ../css/customh5.css
 output:
   html_document:
     highlight: tango
     theme: flatly
-css: ../css/customh5.css
 ---
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
@@ -28,8 +28,16 @@ out.hw <- hw %>% mutate(name = gsub("hw/",  "", filenames),
                           link = sprintf("[%s](%s)",type, filenames))
 ```
 
-## Lecture Notes
-The [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) is a general set of notes that span multiple topics from 315, 615 and 456.  
+<br>
+
+## Textbook based lecture notes 
+
+* The [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) is a general set of notes that span multiple topics from 315, 615 and 456.  
+* If you are rusty on your basic statistics (i.e. what is a normal distribution, how do you interpret variance) then look into the [Open Intro Statistics](https://www.openintro.org/stat/textbook.php?stat_book=os) textbook. The PDF version is free and has links to videos in it etc. 
+
+## One-off lecture notes 
+
+* Other sets of lecture notes are listed below. 
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.lec %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
@@ -47,9 +55,6 @@ x = out.read %>% select(link) %>% kable(format="html") %>%
 gsub("<thead>.*</thead>", "", x)
 ```
 
-## Videos
-Some of the Passion Driven Statistics (PDS) are available for your viewing. This may be helpful to see another take on a piece of content that was not clear in class. 
-
 ## Homework Assignment Files
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.hw %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>% 
@@ -58,6 +63,5 @@ x = out.hw %>% select(link, type, nam) %>% dcast(nam~type, value.var="link") %>%
                   full_width=FALSE,  position = "left")
 gsub("<thead>.*</thead>", "", x)
 ```
-
 
 

@@ -271,26 +271,68 @@ div.tocify {
     Schedule
   </a>
 </li>
-<li>
-  <a href="notes.html">
-    <span class="fa fa-book"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-folder-open"></span>
      
-    Notes
-  </a>
-</li>
-<li>
-  <a href="http://www.norcalbiostat.com/data/">
-    <span class="fa fa-database"></span>
+    Materials
      
-    Data
+    <span class="caret"></span>
   </a>
-</li>
-<li>
-  <a href="project.html">
-    <span class="fa fa-line-chart"></span>
-     
-    Project
-  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notes.html">
+        <span class="fa fa-file-alt"></span>
+         
+        Lecture Notes/Homework/Reading
+      </a>
+    </li>
+    <li>
+      <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/">
+        <span class="fa fa-book-open"></span>
+         
+        Applied Stats Notebook
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: R
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: SPSS
+      </a>
+    </li>
+    <li>
+      <a href="http://www.norcalbiostat.com/data/">
+        <span class="fa fa-database"></span>
+         
+        Data
+      </a>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        <span class="fa fa-bar-chart"></span>
+         
+        Projects
+         
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
+        </li>
+        <li>
+          <a href="project.html">Project Instructions</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -364,7 +406,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Frequently Asked Questions</h1>
-<h4 class="date"><em>Last Updated 2018-08-26 15:04:04</em></h4>
+<h4 class="date"><em>Last Updated 2018-08-27 15:53:07</em></h4>
 
 </div>
 
@@ -409,6 +451,9 @@ div.tocify {
 <li>No extreneous output or code</li>
 </ul>
 </div>
+</div>
+<div id="peer-review" class="section level1">
+<h1>Peer Review</h1>
 <div id="why-do-we-do-peer-review" class="section level2">
 <h2>Why do we do peer review?</h2>
 <ul>
@@ -444,56 +489,58 @@ div.tocify {
 <div id="grading-of-peer-reviews" class="section level2">
 <h2>Grading of peer reviews</h2>
 <p>As I do my reviews on the same document, I will be reading and assessing your peer review. If I find your review is not providing quality feedback to the author you will not recieve credit for that review. You may see the cells in the peer review spreadsheet changing color as I check off your review.</p>
-</div>
-<div id="section" class="section level2">
-<h2>—-</h2>
+<hr />
 </div>
 </div>
 <div id="statistical-programming-help" class="section level1">
 <h1>Statistical Programming Help</h1>
-<div id="where-can-i-get-help-using-r-outside-of-class-time" class="section level2">
-<h2>Where can I get help using R outside of class time?</h2>
-<div id="online" class="section level3">
-<h3>Online</h3>
+<p>Below is a set of collaborative HackMD notes on how to do things in R and SPSS. (New for Fall 18)</p>
+<ul>
+<li>R <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg" class="uri">https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg</a></li>
+<li>SPSS <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w" class="uri">https://hackmd.io/00_J78IaQouu4DalQ-3P3w</a></li>
+</ul>
+<div id="r-r-studio-r-markdown" class="section level3">
+<h3>R, R Studio, R Markdown</h3>
+<div id="online" class="section level4">
+<h4>Online</h4>
 <ul>
 <li>Chico <a href="https://groups.google.com/forum/#!forum/chico-rug">R User Group</a></li>
 <li>UCLA IDRE <a href="https://stats.idre.ucla.edu/r/modules/">[R Learning modules]</a></li>
-<li>Our Slack Workspace</li>
 </ul>
 </div>
-<div id="in-person" class="section level3">
-<h3>In Person</h3>
+<div id="in-person" class="section level4">
+<h4>In Person</h4>
 <ul>
 <li><strong>Robin Donatello</strong> - Stat professor. Holt 202</li>
 <li><strong>Edward Roualdes</strong> - Stat professor. Holt 204 - <a href="mailto:eroualdes@csuchico.edu">eroualdes@csuchico.edu</a></li>
 <li><strong>Community Coding</strong> Fall Schedule TBD</li>
 <li><strong>Math Learning Lab (MLIB 4th floor)</strong> Tutor Schedule TBD</li>
+<li><strong>Tutors &amp; Learning assistants</strong>. Possibly available for private tutoring also.
+<ul>
+<li><strong>Victoria Coia</strong> Occasionally will be in class. You can also ping her on Slack.</li>
+<li><strong>Mariby Cruz</strong> Find her in the Math Tutor lab (4th floor of library).</li>
+<li><strong>Ricardo Aguilar</strong> <a href="mailto:raguilar11@mail.csuchico.edu">raguilar11@mail.csuchico.edu</a></li>
+</ul></li>
 </ul>
 </div>
-<div id="helpful-r-code-snippits" class="section level3">
-<h3>Helpful R code snippits</h3>
-<p><em>not functional as of 8/22/18</em></p>
-<p>Here is a collection of helpful R <a href="snippits.html">code snippits</a> for plotting, subsetting, handling missing values and so forth. Think of it as a FAQ for R code.</p>
 </div>
-</div>
-<div id="where-can-i-get-help-using-spss-outside-of-class-time" class="section level2">
-<h2>Where can I get help using SPSS outside of class time?</h2>
-<div id="online-1" class="section level3">
-<h3>Online</h3>
+<div id="spss" class="section level3">
+<h3>SPSS</h3>
+<div id="online-1" class="section level4">
+<h4>Online</h4>
 <ul>
 <li>UCLA IDRE <a href="https://stats.idre.ucla.edu/spss/modules/">[learning modules]</a></li>
 <li>Sigma Plus SPSS <a href="https://www.spss-tutorials.com/basics/">Tutorials</a></li>
 <li>IBM Knowledge <a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html">[Center]</a></li>
 </ul>
-</div>
-</div>
-<div id="other-resources-pending-organization" class="section level2">
-<h2>Other resources pending organization</h2>
+<hr />
+<p>Other resources pending organization</p>
 <ul>
 <li><a href="http://www.wesleyan.edu/qac/curriculum/resources/syntax.html" class="uri">http://www.wesleyan.edu/qac/curriculum/resources/syntax.html</a></li>
 <li>PDS bookdown <a href="https://alanarnholt.github.io/PDS-Bookdown2/" class="uri">https://alanarnholt.github.io/PDS-Bookdown2/</a></li>
 <li>sjPlot vignette - custom plot appearance: <a href="https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html" class="uri">https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html</a></li>
 </ul>
+</div>
 </div>
 </div>
 

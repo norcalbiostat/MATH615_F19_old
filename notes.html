@@ -175,26 +175,68 @@ $(document).ready(function () {
     Schedule
   </a>
 </li>
-<li>
-  <a href="notes.html">
-    <span class="fa fa-book"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-folder-open"></span>
      
-    Notes
-  </a>
-</li>
-<li>
-  <a href="http://www.norcalbiostat.com/data/">
-    <span class="fa fa-database"></span>
+    Materials
      
-    Data
+    <span class="caret"></span>
   </a>
-</li>
-<li>
-  <a href="project.html">
-    <span class="fa fa-line-chart"></span>
-     
-    Project
-  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notes.html">
+        <span class="fa fa-file-alt"></span>
+         
+        Lecture Notes/Homework/Reading
+      </a>
+    </li>
+    <li>
+      <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/">
+        <span class="fa fa-book-open"></span>
+         
+        Applied Stats Notebook
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: R
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: SPSS
+      </a>
+    </li>
+    <li>
+      <a href="http://www.norcalbiostat.com/data/">
+        <span class="fa fa-database"></span>
+         
+        Data
+      </a>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        <span class="fa fa-bar-chart"></span>
+         
+        Projects
+         
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
+        </li>
+        <li>
+          <a href="project.html">Project Instructions</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -271,9 +313,20 @@ $(document).ready(function () {
 </div>
 
 
-<div id="lecture-notes" class="section level2">
-<h2>Lecture Notes</h2>
-<p>The <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/index.html">Applied Statistics Notebook</a> (Abbreviated as <strong>AS Notebook</strong>) is a general set of notes that span multiple topics from 315, 615 and 456.</p>
+<p><br></p>
+<div id="textbook-based-lecture-notes" class="section level2">
+<h2>Textbook based lecture notes</h2>
+<ul>
+<li>The <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/index.html">Applied Statistics Notebook</a> (Abbreviated as <strong>AS Notebook</strong>) is a general set of notes that span multiple topics from 315, 615 and 456.<br />
+</li>
+<li>If you are rusty on your basic statistics (i.e. what is a normal distribution, how do you interpret variance) then look into the <a href="https://www.openintro.org/stat/textbook.php?stat_book=os">Open Intro Statistics</a> textbook. The PDF version is free and has links to videos in it etc.</li>
+</ul>
+</div>
+<div id="one-off-lecture-notes" class="section level2">
+<h2>One-off lecture notes</h2>
+<ul>
+<li>Other sets of lecture notes are listed below.</li>
+</ul>
 <table class="table table-striped table-hover table-condensed table-responsive table-bordered" style="width: auto !important; ">
 <tbody>
 <tr>
@@ -380,10 +433,6 @@ lec02b_writing_em
 </tbody>
 </table>
 </div>
-<div id="videos" class="section level2">
-<h2>Videos</h2>
-<p>Some of the Passion Driven Statistics (PDS) are available for your viewing. This may be helpful to see another take on a piece of content that was not clear in class.</p>
-</div>
 <div id="homework-assignment-files" class="section level2">
 <h2>Homework Assignment Files</h2>
 <table class="table table-striped table-hover table-condensed table-responsive table-bordered" style="width: auto !important; ">
@@ -452,17 +501,6 @@ lec02b_writing_em
 </td>
 <td style="text-align:left;">
 <a href="hw/06_research_proposal.pdf">.pdf</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-07_foundations_for_inference
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-<a href="hw/07_foundations_for_inference.pdf">.pdf</a>
 </td>
 </tr>
 </tbody>

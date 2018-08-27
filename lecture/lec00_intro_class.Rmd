@@ -7,6 +7,8 @@ output:
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
 css: ../css/customh5.css
 ---
 
@@ -19,40 +21,27 @@ css: ../css/customh5.css
     - Details on weekly topics can be found on the schedule
     - Includes links to notes, assignments and additional materials
 * Both are mobile friendly. 
-* Often links will be broken. Typo's happen. Notify me immediately and I'll get to it asap. 
+* Often links will be broken. Typo's happen. Notify me via slack and I'll get to it asap. 
 * The syllabus covers course details such as grading, office location and classroom policies. 
 
 
 # Online systems
 
-* Blackboard Learn (BBL) used for recording grades only.
-* Assignments will be turned and peer reviewed through Google Drive. 
-* The textbook used for data, reading and learning content. Sometimes problem sets. 
+* Blackboard Learn (BBL) used for recording grades
+    - Some assignments will ask you to "drop a note" in BBL when your assignments are ready for grading. 
+* Assignments will be turned in and peer reviewed through Google Drive. 
+* The textbook is used for data, reading and learning content. Sometimes problem sets. 
     - Great long term resource, but a new edition will be coming out next year. 
+    - I've provided a draft for select chapters in the 6th edition. 
 * Slack will be used for outside class discussions, homework help and general chatter. 
     - I will not answer programming questions through email. 
     - Download either the phone app or the desktop app (I use both) 
-    - Push notifications are not automatically turned on. You must opt in. 
+    - I don't think push notifications are not automatically turned on. You must opt in. 
+* Lecture notes
+    - Combination of Applied Statistics notebook, and stand alone lecture notes like these. 
+    - Available as PDF or HTML. 
 
-# Assignment process
-* When available, use the template provided. 
-* All assignments are uploaded as PDF's to our shared Google Drive. 
-   - Each assignment has it's own folder. 
-   - Assignments are uploaded to the _Incoming_ folder, and returned in the _Reviewed_ folder. 
-   - File naming convention: `userid_assignment.pdf` i.e. `rdonatello_citation.pdf` 
-   - No special characters or spaces in your file names. 
-* Each assignment will be graded by me, and peer reviewed by 2 of your classmates. 
-
-## Peer review
-* The peer rotation schedule can be found in our [Google Drive](https://drive.google.com/open?id=0B2-FPH8JVeuebFpnV3RZaU9KbTg). 
-* After the assignment due date, go to the _Incoming_ folder and **download** a copy of each of the 2 assignments you are scheduled to review onto your computer. 
-    - Do not edit directly in Google Docs unless you have already made a copy
-    - File naming convention: `rdonatello_citation_rv_ricardo.pdf`
-* Use the commenting features of Adobe PDF to make any corrections or comments 
-    - You must mention **two** things that are good about the assignment and **two** things that need improvement or corrections. 
-    - Be specific about each edit. Don't just say "great job". 
-    - Give the type of feedback and review that you want others to give to you. 
-
+    
 # Descriptive vs. Inferential Statistics
 * Two main phases of Statistics. 
     - Also called Exploratory and Confirmatory 
@@ -61,6 +50,17 @@ css: ../css/customh5.css
     - The videos can be used as an additional learning tool. 
 * Google `data analysis lifecycle` and look at [images](https://www.google.com/search?q=data+analytics+life+cycle&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi32cepp9DcAhXLhVQKHYR8AScQ_AUICigB&biw=1482&bih=876). What sense do you get? 
 
+# Project
+
+* This course will revolve around a data analysis project. 
+* Individual projects, but you will collaborate with each other
+* All assignments are desgined to support your research
+* Must choose a project out of select data sets.
+    - Individual research is typically not developed or robust enough to be demonstrative. 
+* More details are on the [project](project.html) page. 
+
+# Assignment Submission
+See the course [FAQ](faq.html) page. 
 
 
 # Computing and Reproducibility
@@ -131,5 +131,10 @@ css: ../css/customh5.css
 * SAS has only now working on literate and integrated programming by using Jupyter notebooks and SAS University Edition (free)
 * Stata has a few user written packages that allow for the integration of LaTeX or markdown into your code document. 
 * Python is the other primary language for Data Science. I am in the process of learning Python but the capabilities are very great. If you're thinking this route be sure to use Jupyter notebooks. 
+
+
+----
+
+Back to the Week 1 overview: https://norcalbiostat.github.io/MATH615/wk/wk01.html
 
 
