@@ -24,13 +24,13 @@ navbar:
     - text: Data
       icon: fa-database
       href: http://www.norcalbiostat.com/data/
-    - text: "Projects"
-      icon: fa-bar-chart
-      menu:
-      - text: "Project Data (Google Drive)"
-        href: https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY
-      - text: "Project Instructions"  
-        href: project.html
+  - text: "Projects"
+    icon: fa-bar-chart
+    menu:
+    - text: "Project Data (Google Drive)"
+      href: https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY
+    - text: "Project Instructions"  
+      href: project.html
   - text: Tools
     icon: fa-wrench
     menu:
