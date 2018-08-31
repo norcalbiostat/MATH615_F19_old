@@ -1,8 +1,8 @@
 ---
 title: "Syllabus Math 615 Fall 18"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Course Description
@@ -17,7 +17,7 @@ _Introduction to common procedures used to analyze data. Single and two-sample i
 **E-mail:** rdonatello@csuchico.edu  
 **Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, or MATH 350.  
 **Meeting Days and Times** TR 11-12:15, Holt 155  
-**Office Hours** TBD  
+**Office Hours** Holt 202: M-3pm, W-1pm, R-10am  
 **Class Website** https://norcalbiostat.github.io/MATH615/  
 **Slack Channel**  http://math615.slack.com  You will be sent an email invitation to your campus email. 
 **Google Drive**  You will be added to the Math 615 Google drive using your campus email. 
