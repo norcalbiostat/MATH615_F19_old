@@ -144,25 +144,24 @@ Here are a list of topics to review. All topics have equal importance, regardles
     - Many of you are using similar measures, I suggest getting together and splitting up the work (i.e. 1-2 people look for depression, others look for health/fitness measures etc)
 
 
-
-
-### 8/27/17 - Week 2
-
-This week we're going to get our hands dirty with data!
-
-* Using the `depression` data set from the textbook, we're going to learn what types of data preparation steps are common. 
-* We'll practice in class making these changes on the depression data, then you'll work on _your_ Add Health variables in the same way. 
-* On Thursday we'll talk about doing a literature review and proper citation, and then the rest of the period will be open work time. 
-
-#### Housekeeping
-
-* Office hours have been set. Thank you for contributing! MW 3-4pm, TR 10-11am, and by appointment. 
-    - **OH on Tuesday 8/29 is cancelled. I'm getting my braces off!! :smile:**
-* The syllabus has been updated to correctly reflect grade distribution and office hours
-* I have written up instructions regarding how to peer review blog posts. Check the project page (new!) for details and your assignments. 
-* The schedule page has been tweaked in attempt to be a little cleaner/easier to read. 
-
 --->
+
+### 9/04/18 - Week 2 (short week)
+
+Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing! 
+
+* Mon 3-4pm  
+* Wed 1-2pm  
+* Thu 10-11am  
+
+Appointments outside these hours can be made by using the appointment booking icon at the bottom of my personal website (link in the top right of this webpage). _Unfortunately_ i'm in/out of town this week at a conference in Sacramento. I won't be able to make any of my OH this week. 
+
+We've seen some pitfalls regarding data entry, and practiced reading in data into our SPC. 
+**SPSS users need to add information to the [collaborative SPSS notes](https://hackmd.io/00_J78IaQouu4DalQ-3P3w) on how to read data into SPSS**
+
+Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we'll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We're going to do this on the "dirty" data because visualization is a really good way to detect any problems in the data. 
+
+
 
 ### 8/27/18 - Welcome to Fall 18!
 * This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.
