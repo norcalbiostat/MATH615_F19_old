@@ -99,7 +99,7 @@ Below is a set of collaborative HackMD notes on how to do things in R and SPSS. 
 * UCLA IDRE [[R Learning modules]](https://stats.idre.ucla.edu/r/modules/)
 
 #### In Person
-* **Robin Donatello** - Stat professor. Holt 202
+* **Robin Donatello** - Stat professor. Holt 202. OH M-3pm, W-1pm, R-10am
 * **Edward Roualdes** - Stat professor. Holt 204 - eroualdes@csuchico.edu
 * **Community Coding** Fall Schedule TBD
 * **Math Learning Lab (MLIB 4th floor)** Tutor Schedule TBD
