@@ -1,10 +1,10 @@
 ---
 title: "Graphing Bivariate Relationships"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
@@ -31,7 +31,7 @@ Before you start,
 
 # Instructions
 
-0. Use the template provided: [[RMD]](Bivariate_Graphing_template.Rmd) for R users, and [[Word]](Bivariate_Graphing_template.docx) for SPSS users. 
+0. Use the template provided: [[RMD]](bivariate_graphing_template.Rmd) for R users, and [[Word]](bivariate_graphing_template.docx) for SPSS users. 
 
 For each bivariate relationship under consideration you will do the following: 
 
@@ -61,11 +61,17 @@ For each bivariate relationship under consideration you will do the following:
 
 
 ## Example
+In this example I use `ggplot2` for plotting, `dplyr` for data management, and `knitr` to create the tables. (You do not need to report this information in your assignment. This is for your knowledge only.)
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2); library(dplyr); library(knitr)
+```
+
+
+### Q ~ C Association
 
 This example explores the association between the length of an iris petal and the species of iris. The quantitative response variable is petal length (`Petal.Length`) and the categorical explanatory variable is species (`Species`). 
 
 ```{r, fig.width=5, fig.height=3, fig.align='center', warning=FALSE, message=FALSE}
-library(tidyverse); library(knitr)
 iris %>% group_by(Species) %>% 
          summarise(mean=mean(Petal.Length), 
                    sd=sd(Petal.Length), 
@@ -79,6 +85,24 @@ ggplot(iris, aes(x=Species, y=Petal.Length, fill=Species)) +
 ```
 
 There are 50 iris plants within each species. There is clear difference in the average Petal length across the pecies. _Setosa_ has the smallest average petal length of 1.46 cm and the smallest variation with a standard deviation of 0.17cm.  _Veriscolor_ has an average petal length of 4.26cm with SD of 0.47cm, and _Virginica_ has the largest average petal length of 5.55cm and the largest variation with a standard deviation of 0.55cm.  
+
+### Q ~ Q Association
+
+This example explores the association between length of an iris petal and the length of the sepal. The quantitative response variable is petal length (`Petal.Length`) and the quantitative explanatory variable is sepal length (`Sepal.Length`).
+
+```{r}
+cor(iris$Petal.Length, iris$Sepal.Length) # calculate the correlation
+
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length)) + geom_point() + 
+  geom_smooth(se=FALSE, col="brown") + geom_smooth(se=FALSE, method="lm")
+```
+
+There is a positive association between sepal and petal length of an iris. The correlation coefficient is 0.87, but the form of the data may not be linear. There is a cluster of values below 2cm petal length which are separated away from the rest of the data. It is hard to assess the linearity of this relationship due to the separate clusters. 
+
+
+
+
+
 
 
 
