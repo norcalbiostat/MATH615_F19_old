@@ -11,13 +11,13 @@ css: ../css/customh5.css
 # Overview
 Your research proposal is an important component of your final research project. You will spend the next several weeks writing your research plan. Use the outline template below to structure your proposal.
 
-In preparation for writing the introduction section, you should have found and read at least 25 primary source articles, although only those that help provide important background and allow you to make an argument in support of your proposed research should be cited.
+In preparation for writing the introduction section, you should have found and read at least 15 primary source articles, although only those that help provide important background and allow you to make an argument in support of your proposed research should be cited.
 
 # Instructions
 
-* Write your paper directly as a google doc in the `06 Research Proposal` folder in Google Drive with the file name: `proposal_userid`
-* Drop a note in Blackboard learn when your file is ready for grading. 
-* This assignment will be peer reviewed in a slightly different manner. See below for instructions. 
+* Write your paper directly as a google doc in the `06 Research Proposal` folder in Google Drive with the file name: `proposal_userid` by the due date. 
+* This assignment will be peer reviewed in a more detailed manner. See below for instructions. 
+* After the optional review period, upload your final document to Blackboard learn for grading. 
     
     
 # Writing Template
