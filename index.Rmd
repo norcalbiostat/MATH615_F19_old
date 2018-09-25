@@ -119,7 +119,10 @@ Here are a list of topics to review. All topics have equal importance, regardles
 ### 9/18/17 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
 
 * Now that we've had a few weeks to settle into the semester, let's re-orient ourselves to the goals of this class. How are we achieving this goal?
-* Some clarifying information about formulation of good RQ's and terminology has been added to the bottom of [HW02 research codebook](hw/02_research_codebook.html). 
+* Housekeeping
+    * Adding comments in a PDF in Google Drive. Comment directly in browser, don't open in GDocs. 
+    * Some clarifying information about formulation of good RQ's and terminology has been added to the bottom of [HW02 research codebook](hw/02_research_codebook.html). 
+    * I also added an example of C~C to [HW 06 Bivariate Graphing]
 * Next big assignment is the Research plan. 
 * Assigned reading: Difference between writing a research plan, and writing empirical research, how to conduct a literature review without getting burnt out, examples of how to use literature reviews to refine your RQ (citation assignment that is not assigned). 
 
