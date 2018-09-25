@@ -11,7 +11,7 @@ _Taken from Passion Driven Statistics 2014 ibook_
 # Purpose
 The goal of research is to disseminate your work and allow it to guide further study. As such, writing is an important and ongoing part of the research process.
 
-Successful empirical writing minimizes descriptive or complex language so methodologies, conclusions, and theories are accessible to readers from all areas of expertise. Although this sounds easy, it is difficult to write clearly and concisely - especially when writing an empirical paper for the first time. What follows is information about how you should structure your paper, so you can focus on precise writing. We offer advice on how to write each section of a research proposal for an empirical paper; we discuss how to use evidence and sources in empirical writing; finally, we present conventions for empirical writing.
+Successful empirical writing minimizes descriptive or complex language so methodologies, conclusions, and theories are accessible to readers from all areas of expertise. Although this sounds easy, it is difficult to write clearly and concisely -  especially when writing an empirical paper for the first time. What follows is information about how you should structure your paper, so you can focus on precise writing. We offer advice on how to write each section of a research proposal for an empirical paper; we discuss how to use evidence and sources in empirical writing; finally, we present conventions for empirical writing.
 
 ## Writing a Research Proposal for Empirical Research
 An empirical paper has six sections: 
@@ -31,13 +31,15 @@ A research proposal often has five sections:
 4. predicted results or implications
 5. references. 
 
-Both paper types should have an "hourglass" shape: 
+Both paper types should have an "hourglass" shape:  
 
 * introduce broad statements
 * narrow to specific methodologies, and conclusions
 * then broaden again to discuss the general significance and implications of your work. 
 
 Thus, the beginning of your introduction and end of your discussion should contain your broadest statements, and the methodology and results sections should contain your most specific statements.
+
+\newpage
 
 # Sections
 
@@ -158,10 +160,10 @@ This measures discussion is successful because it indicates how attitudes were m
 > 
 > 
 Procedure
-One adult was selected for interview in each household, and face-toface computer assisted interviews were conducted in respondents’' homes following informed consent procedures.
+One adult was selected for interview in each household, and face-toface computer assisted interviews were conducted in respondents' homes following informed consent procedures.
 > 
 > Measures
-> Lifetime major depression (i.e. those experienced in the past 12 months and prior to the past 12 months) were assessed using the NIAAA, Alcohol Use Disorder and Associated Disabilities Interview Schedule – DSM-IV (AUDADIS-IV) (Grant et al., 2003; Grant, Harford, Dawson, & Chou, 1995). The tobacco module of the AUDADIS-IV contains detailed questions on the frequency, quantity, and patterning of tobacco use as well as symptom criteria for DSMIV nicotine dependence. Current smoking was evaluated through both smoking frequency ("About how often did you usually smoke in the past year?") coded dichotomously in terms of the presence or absence of daily smoking, and quantity ("On the days that you smoked in the last year, about how many cigarettes did you usually smoke?").
+> Lifetime major depression (i.e. those experienced in the past 12 months and prior to the past 12 months) were assessed using the NIAAA, Alcohol Use Disorder and Associated Disabilities Interview Schedule - DSM-IV (AUDADIS-IV) (Grant et al., 2003; Grant, Harford, Dawson, & Chou, 1995). The tobacco module of the AUDADIS-IV contains detailed questions on the frequency, quantity, and patterning of tobacco use as well as symptom criteria for DSMIV nicotine dependence. Current smoking was evaluated through both smoking frequency ("About how often did you usually smoke in the past year?") coded dichotomously in terms of the presence or absence of daily smoking, and quantity ("On the days that you smoked in the last year, about how many cigarettes did you usually smoke?").
 
 ## Predicted Results or Implications
 

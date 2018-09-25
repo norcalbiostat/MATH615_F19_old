@@ -1,10 +1,10 @@
 ---
 title: "Research Question and personal codebook assignment"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
@@ -42,12 +42,29 @@ Create your personal codebook. You will create a trimmed down version of the cod
 
 ## Step 3: Research Questions: 
 
-Now that you have a few topics and picked out variables for each topic, what questions are you interested in trying to answer about your topics? One of the simplest research questions that can be asked is whether two constructs are associated.
+Now that you have a few topics and picked out variables for each topic, what questions are you interested in trying to answer about your topics? 
 
-> Questions example:  
+* Start by asking whether two constructs are associated. This is referred to as a **testable hypothesis**. A testable hypothsis is one that can be answered with a "yes" or "no". 
+* Good RQ's are made up by asking how does 1 explanatory variable affect 1 response variable. Stick with two variables only. You have to start somewhere. You can always build up but you have to start with 2.
+* Be explicit with your measures. If you want to measure smoking quantity, you should have a variable in your personal coebook (step 2) that measures smoking quantity. 
+* Avoid being vague. This is easy to do. 
+
+
+> Example:  
 > a) Does smoking quantity relate to nicotine dependence?  
 > b) Is there a relationship between smoking frequency and suicide?  
 > c) Does a smoker have more suicidal behaviors than a non-smoker?  
 
+Now: Re-read your question out loud. Does it make sense? Can you clearly identify what your IV and DV (see below) are? 
 
+
+**A note about the `explanatory` vs `response` variable terminology:**
+
+Depending on your field of study, these terms may be called different things. Statisticians tend to say _covariate_ and _outcome_. Public health and the Social Sciences tend to use Independent variable (IV) and dependent variable (DV). Regardless of the word you use... the explanatory variable tries to **explain** the response variable. 
+
+| Explanatory          | Response           |
+|----------------------|--------------------|
+| X                    | Y                  |
+| independent variable | dependent variable |
+| covariate            | outcome            |
 
