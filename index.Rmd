@@ -97,24 +97,21 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Tuesday is a little bit of recap on how to compare two means and two proportion. 
 * Then we launch into comparing multiple means on Thursday with an ANOVA. 
 * Still working out of the Open Intro textbook (with associated videos.)
-* MW OH cancelled, extra OH TR @ 2pm
 
 
 ### 10/1/17 - [Week 7](https://norcalbiostat.github.io/MATH615/wk07.html)
-* As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability. 
-    - Week 7 overview has been posted and includes reading material and learning videos. 
-* An optional Exam error assessment has been posted to [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html#thursday:_exam_1)
-* The storage location for your poster prep Google Slides has changed. See project page for details. 
-
-
-### 9/24/17 - [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html)
-* Schedule has been updated to reflect new poster preparation assignments. Check the Project page for details. 
 * Lecture on choosing appropriate analyses on Tuesday. 
 * Introduction to the next phase of the project analysis preparation. 
 * Midterm on Thursday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
+* An optional Exam error assessment has been posted to [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html#thursday:_exam_1)
 
 
 --->
+
+### 9/24/17 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
+* As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability, distributions, confidence intervals.
+* On thursday we'll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #'s from your data for this)
+
 
 ### 9/18/17 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
 
