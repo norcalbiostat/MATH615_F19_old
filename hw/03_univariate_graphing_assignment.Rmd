@@ -18,7 +18,7 @@ There are a variety of conventional ways to visualize data - tables, histograms,
 
 # Instructions
 
-* Use the template provided: [[RMD]](univariate_graphing_template.Rmd) for R users, and [[Word]](univariate_graphing_template.docx) for SPSS users. Rename this file to `univ_graphing_userid`
+* Use the template provided: [[RMD]](03_univariate_graphing_template.Rmd) for R users, and [[Word]](03_univariate_graphing_template.docx) for SPSS users. Rename this file to `univ_graphing_userid`
 * Completely describe 2 categorical and 2 quantitative variables using 
     - A table of summary statistics,
     - An appropriate plot with titles and axes labels, 

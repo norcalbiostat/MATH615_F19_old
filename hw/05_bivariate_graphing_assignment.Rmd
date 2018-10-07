@@ -31,7 +31,7 @@ Before you start,
 
 # Instructions
 
-0. Use the template provided: [[RMD]](bivariate_graphing_template.Rmd) for R users, and [[Word]](bivariate_graphing_template.docx) for SPSS users. 
+0. Use the template provided: [[RMD]](05_bivariate_graphing_template.Rmd) for R users, and [[Word]](05_bivariate_graphing_template.docx) for SPSS users. 
 
 For each bivariate relationship under consideration you will do the following: 
 

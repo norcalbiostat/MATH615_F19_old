@@ -13,6 +13,7 @@ output:
 ```{r}
 # put the code to load any necessary libraries and read in your cleaned data here. 
 # Delete this text afterward.
+# SPSS users can ignore and delete this part. 
 ```
 
 # C ~ C Association
@@ -35,3 +36,8 @@ output:
 
 # Q ~ Q Association
 > ditto
+
+
+
+# B ~ Q/C Association
+
