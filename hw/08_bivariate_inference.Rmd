@@ -43,7 +43,7 @@ For each analysis you will do the following steps:
 
 ## Submission Instructions:  
 
-* Use [this template](08_bivariate_inference_template.Rmd) to answer the questions. 
+* Use the [RMD](08_bivariate_inference_template.Rmd) or [WORD](08_bivariate_inference_template.docx) to template answer the questions. 
     - Save the file as `name_bivariate.Rmd`
 * After each completed question - upload your document (word or pdf) to the assignment folder in Google Drive
     - This assignment is *not* officially peer reviewed, but allows others who may be struggling to see what you have done. 
