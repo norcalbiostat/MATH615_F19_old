@@ -44,8 +44,10 @@ For each analysis you will do the following steps:
 ## Submission Instructions:  
 
 * Use the [RMD](08_bivariate_inference_template.Rmd) or [WORD](08_bivariate_inference_template.docx) to template answer the questions. 
-    - Save the file as `name_bivariate.Rmd`
-* After each completed question - upload your document (word or pdf) to the assignment folder in Google Drive
+* As you complete each question 
+    - upload your document (word or pdf) to the assignment folder in Google Drive
+    - Add your code (or SPSS Menu instructions) to HackMD to help others. If code is already there, add comments, correct or
+      clarify the instructions, make the code generic. 
     - This assignment is *not* officially peer reviewed, but allows others who may be struggling to see what you have done. 
     - Everyone is encouraged to leave comments and questions on your peers' submission. 
     - You have access to a large learning community - contribute to it and use it!

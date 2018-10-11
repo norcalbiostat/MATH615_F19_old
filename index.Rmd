@@ -98,23 +98,25 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Then we launch into comparing multiple means on Thursday with an ANOVA. 
 * Still working out of the Open Intro textbook (with associated videos.)
 
-
-### 10/1/17 - [Week 7](https://norcalbiostat.github.io/MATH615/wk07.html)
-* Lecture on choosing appropriate analyses on Tuesday. 
-* Introduction to the next phase of the project analysis preparation. 
-* Midterm on Thursday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. [[Sample Exam]](https://norcalbiostat.github.io/MATH315/docs/Sample_Exam_1.pdf)
-* An optional Exam error assessment has been posted to [Week 6](https://norcalbiostat.github.io/MATH615/wk06.html#thursday:_exam_1)
-
-
 --->
 
-### 9/24/17 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
+### 10/8/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
+* Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. 
+* Lecture on choosing appropriate analyses on Thursday 
+* A recap on hypothesis testing, the types of bivariate analysis we'll be conducting, and how to choose the correct analysis procedure for your research hypothesis. 
+* Project updates: 
+    - Introduction to Phase II of the project analysis preparation, 
+    - Poster prep I instructions too vague to ensure quality work, going to roll points & grading into Stage II. 
+    - I am in the process of commenting on everyones posters so far. 
+* Instructions on Bivariate Inference Homework. 
+
+
+### 10/1/18 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
 * As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability, distributions, confidence intervals.
 * On thursday we'll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #'s from your data for this)
 
 
-### 9/18/17 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
-
+### 9/24/18 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
 * Now that we've had a few weeks to settle into the semester, let's re-orient ourselves to the goals of this class. How are we achieving this goal?
 * Housekeeping
     * Adding comments in a PDF in Google Drive. Comment directly in browser, don't open in GDocs. 
@@ -124,8 +126,7 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Assigned reading: Difference between writing a research plan, and writing empirical research, how to conduct a literature review without getting burnt out, examples of how to use literature reviews to refine your RQ (citation assignment that is not assigned). 
 
 
-
-### 9/11/17 - [Week 4](https://norcalbiostat.github.io/MATH615/wk/wk04.html)
+### 9/17/18 - [Week 4](https://norcalbiostat.github.io/MATH615/wk/wk04.html)
 
 * You will be exploring relationships between two variables using graphical and summary methods. 
 * You will also start the work to build your research poster. See the [project instructions](project.html) page for details. 
