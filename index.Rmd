@@ -91,16 +91,19 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Tuesday - Analysis of categorical data using $\chi^{2}$ tests
 * Thursday - Correlation and Regression
 
-
-### 10/1/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk08.html)
-* Overarching theme is bivariate analyses. 
-* Tuesday is a little bit of recap on how to compare two means and two proportion. 
-* Then we launch into comparing multiple means on Thursday with an ANOVA. 
-* Still working out of the Open Intro textbook (with associated videos.)
-
 --->
 
-### 10/8/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
+### 10/16/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk08.html)
+* Comments on foundations assignment
+    - CI and HT are statements about the population, not the sample
+    - CI is a range of plausible values, need to compare interval to hypothesized value. 
+    - Great resource for more learning: [Open Intro Statistics](https://www.openintro.org/stat/textbook.php) Chapter 4 (free pdf)
+    - Short worksheet for practice writing/conducting hypothesis tests. 
+* Tuesday - comparing two means using a T-test for a difference in means
+* Thursday - Analysis of Variance for comparing means across multiple groups
+
+
+### 10/9/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
 * Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. 
 * Lecture on choosing appropriate analyses on Thursday 
 * A recap on hypothesis testing, the types of bivariate analysis we'll be conducting, and how to choose the correct analysis procedure for your research hypothesis. 
