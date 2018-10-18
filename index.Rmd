@@ -101,6 +101,9 @@ Here are a list of topics to review. All topics have equal importance, regardles
     - Short worksheet for practice writing/conducting hypothesis tests. 
 * Tuesday - comparing two means using a T-test for a difference in means
 * Thursday - Analysis of Variance for comparing means across multiple groups
+    - Lots of board work today
+* Reading and reference material posted on schedule
+
 
 
 ### 10/9/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
