@@ -2,19 +2,19 @@
 title: 'Lec 03: Categorical Data Analysis'
 date: "Last Updated `r Sys.time()`"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr); library(rmarkdown); library(dplyr)
-library(xtable)
-opts_chunk$set(warning=FALSE, message=FALSE) 
+library(xtable); library(ggplot2); library(scales)
+opts_chunk$set(warning=FALSE, message=FALSE, echo=FALSE) 
 ```
 
 # Introduction
@@ -30,7 +30,9 @@ The research question of interest is
 
 or more generally, 
 
-> Is there an association between numbers in an email and the email being flagged as spam. 
+> Is there an association between numbers in an email and the email being flagged as spam? 
+
+\newpage
 
 # Data setup
 
@@ -70,24 +72,40 @@ email$hasnum_cat <- ifelse(email$number %in% c("big", "small"), "Yes", "No")
 table(email$hasnum_cat, email$number, useNA="always")
 ```
 
+\newpage
+
 # Exploratory Data Analsysis 
 
-* Both the explanatory and the response variables are categorical (Nominal or Ordinal)
-* Tables representing all combinations of levels of explanatory and response variables
-* A.k.a Two-way tables or _cross-tabs_
-* Numbers in table represent Counts of the number of cases in each cell
+Looking at the frequency and column percent tables we see that
+
+* 27.1% (149/549) of emails without numbers are flagged as spam
+* 6.5% (218/3372) of emails with numbers in them are flagged as spam. 
 
 ```{r}
-table(email$spam_cat, email$hasnum_cat)
+tab.spam.hasnum <- table(email$spam_cat, email$hasnum_cat,dnn=c("Spam", "Has Number"))
+addmargins(tab.spam.hasnum)
+round(prop.table(tab.spam.hasnum,margin=2)*100,1)
 ```
 
+```{r, fig.height=4, fig.width=5}
+df.table <- data.frame(prop.table(tab.spam.hasnum, margin=2))
+plot.spam <- filter(df.table, Spam=="Spam")
 
+ggplot(plot.spam, aes(x=Has.Number, y=Freq)) + 
+        geom_col(position = position_dodge()) + theme_bw() + 
+        geom_text(aes(y=Freq+.04, label=paste0(round(Freq,2)*100, "%")), 
+                      position = position_dodge(width=1)) + 
+        labs(x="Has a Number", y="%", 
+             title="Proportion of emails flagged as spam") + 
+        scale_y_continuous(limits=c(0,1), labels=percent)
+```
 
+\newpage
 
 # Chi-Squared Distribution
 Much of categorical data analysis uses the $\chi^{2}$ distribution. It is a probability distribution, but it has a different shape compared to the Normal. It looks a little bit like an F-distribution. 
 
-```{r, echo=FALSE, fig.align='center', fig.height=5, fig.width=5}
+```{r, echo=FALSE, fig.align='center', fig.height=4, fig.width=4}
 x <- seq(0,10, by=.01)
 df <- c(1,2,3,4,6,8)
 plot(c(0,10), c(0,1), type="n", xlab="x", ylab="P(X=x)", axes=FALSE, 
@@ -111,6 +129,7 @@ axis(1); axis(2, las=2); box()
     * The ANOVA F-statistic is the ratio of two $\chi^{2}$ distributions divided by 
       their respective degrees of freedom. 
 
+\newpage
 
 # Difference of two proportions
 
@@ -123,15 +142,10 @@ You may have already guessed the form of the estimate: $\hat{p}_1 - \hat{p}_2$.
 
 ### Example 1: Do numbers in emails affect rate of spam? 
 
-
-
 If we look at the rate of spam for emails with and without numbers, 
 we see that 6% of emails with numbers are flagged as spam compared to 
 27% of emails without numbers are flagged as spam. 
 
-```{r}
-email %>% group_by(hasnum) %>% summarize(p.spam=round(mean(spam),2))
-```
 
 This is such a large difference that we don't really _need_ a statistical
 test to tell us that this difference is significant. 
@@ -146,10 +160,9 @@ Let $p_{hasnum}$ be the proportion of emails _with_ numbers that are flagged as 
 $H_{0}: p_{nonum} = p_{hasnum}$   
 $H_{A}: p_{nonum} \neq p_{hasnum}$ 
 
-4. **Check assumptions:** Use the pooled proportion $\hat{p}$ to check the success-failure condition. 
+4. **Check assumptions:** Use the pooled proportion $\hat{p} = 367/3921 = .094$ to check the success-failure condition. 
 ```{r}
 p.hat <- mean(email$spam)
-p.hat
 ```
 
 * $\hat{p}*n_{nonum}$ = `p.hat * sum(email$hasnum==0)` = `r p.hat * sum(email$hasnum==0)`
@@ -169,20 +182,15 @@ chisq.test(email$spam_cat, email$hasnum_cat)
 Significantly more emails with numbers were flagged as spam compared to emails without numbers (27.1% versus 6.4% , p<.0001). 
 
 
-
+\newpage
 
 # Tests of Association
 
-There are three main tests of association for $rxc$ contingency table. 
+There are three main tests of association for $rxc$ contingency table, where $r$ is the number of rows and indexed by $i$, and $c$ is the number of columns and indexed by $j$. 
 
 * Test of Goodness of Fit
 * Tests of Independence
 * Test of Homogeneity
-
-**Notation**
-
-* $r$ is the number of rows and indexed by $i$
-* $c$ is the number of columns and indexed by $j$. 
 
 <br></br>
 
@@ -274,44 +282,35 @@ prop.test(table(email$number, email$spam))
 ```
 
 * Chi-squared contingency table tests and goodness-of-fit tests using `chisq.test()`.  
-This function can take raw data as input
 ```{r}
 chisq.test(email$number, email$spam)
 ```
-or a table object.
-```{r}
-chisq.test(tab)
-```
 
-### prop.test vs chisq.test()
-```{r}
-pt.out <- prop.test(table(email$number, email$spam))
-cs.out <- chisq.test(tab)
-```
-
-* Same calculated test statistic and p-value
-```{r}
-c(pt.out$statistic, pt.out$p.value)
-c(cs.out$statistic, cs.out$p.value)
-```
 * `prop.test` 
     - has a similar output appearance to other hypothesis tests 
     - shows sample proportions of outcome within each group
 * `chisq.test`
-    - stores the matricies of $O_{ij}$, $E_{ij}$, the residuals and standardized residuals
+    - stores the matrices of $O_{ij}$, $E_{ij}$, the residuals and standardized residuals
 
 ```{r}
-cs.out$expected
+results.table <- chisq.test(email$number, email$spam)
+results.table$expected
 ```
+
+### Conducting these tests in SPSS
+
+https://libguides.library.kent.edu/SPSS/ChiSquare
+
 
 ### Mosaicplots
 
 * The Pearson $\chi^{2}$ test statistic = Sum of squared residuals. 
-* A shaded mosaicplot shows the magnitude of the residuals. 
+* A shaded mosaic plot shows the magnitude of the residuals. 
     * Blue (positive residuals) = More frequent than expected
     * Red (negative residuals) = Less frequent than expected. 
 
 ```{r}
+tab <- table(email$number, email$spam)
 mosaicplot(tab, shade=TRUE, main="Association of spam status and number size in emails")
 ```
 
