@@ -1,15 +1,19 @@
 ---
 title: "Moderation"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
     toc_depth: 2
+  pdf_document: default
 css: ../css/customh5.css
 ---
+
+_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _  
+Back to the [[Schedule]](../schedule.html)
+<br>
 
 # Introduction
 
