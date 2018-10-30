@@ -250,6 +250,8 @@ div.tocify {
 </div>
 
 
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
 <p>Moderation occurs when the relationship between two variables depends on a third variable.</p>
 <ul>
 <li>The third variable is referred to as the moderating variable or simply the moderator.</li>
@@ -277,6 +279,7 @@ div.tocify {
 <p><strong>Chi-Square</strong> - look at the p-value, the percents for the columns in the cross tabs table, and the graph for the Chi-Square and compare to those values in the Moderation (i.e., each level of third variable) output to determine if third variable is a moderator or not.</p>
 <p><strong>Correlation</strong> - look at the correlation coefficient (r), p-value, calculate the r-squared, and the graph for the Correlation and compare to those values in the Moderation (i.e., each level of third variable) output to determine if third variable is a moderator or not.</p>
 
+</div>
 </div>
 <div id="examples" class="section level1">
 <h1>Examples</h1>
@@ -414,11 +417,11 @@ threeway.boxplot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(bm
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pander</span>(<span class="kw">summary</span>(<span class="kw">aov</span>(BMI <span class="op">~</span><span class="st"> </span>genhealth, 
                    <span class="dt">data=</span><span class="kw">filter</span>(addhealth, eversmoke_c<span class="op">==</span><span class="st">&quot;Smoker&quot;</span>))), 
        <span class="dt">caption=</span><span class="st">&quot;Model for Smokers&quot;</span>)</code></pre></div>
-<p>Quitting from lines 126-133 (lec04_moderation.Rmd) Error in <code>contrasts&lt;-</code>(<code>*tmp*</code>, value = contr.funs[1 + isOF[nn]]) : contrasts can be applied only to factors with 2 or more levels Calls: <Anonymous> … model.matrix -&gt; model.matrix.default -&gt; contrasts&lt;-</p>
+<p>Quitting from lines 128-135 (lec04_moderation.Rmd) Error in <code>contrasts&lt;-</code>(<code>*tmp*</code>, value = contr.funs[1 + isOF[nn]]) : contrasts can be applied only to factors with 2 or more levels Calls: <Anonymous> … model.matrix -&gt; model.matrix.default -&gt; contrasts&lt;-</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pander</span>(<span class="kw">summary</span>(<span class="kw">aov</span>(BMI <span class="op">~</span><span class="st"> </span>genhealth, 
                    <span class="dt">data=</span><span class="kw">filter</span>(addhealth, eversmoke_c<span class="op">==</span><span class="st">&quot;Non Smoker&quot;</span>))), 
        <span class="dt">caption=</span><span class="st">&quot;Model for Non-Smokers&quot;</span>)</code></pre></div>
-<p>Quitting from lines 126-133 (lec04_moderation.Rmd) Error in <code>contrasts&lt;-</code>(<code>*tmp*</code>, value = contr.funs[1 + isOF[nn]]) : contrasts can be applied only to factors with 2 or more levels Calls: <Anonymous> … model.matrix -&gt; model.matrix.default -&gt; contrasts&lt;-</p>
+<p>Quitting from lines 128-135 (lec04_moderation.Rmd) Error in <code>contrasts&lt;-</code>(<code>*tmp*</code>, value = contr.funs[1 + isOF[nn]]) : contrasts can be applied only to factors with 2 or more levels Calls: <Anonymous> … model.matrix -&gt; model.matrix.default -&gt; contrasts&lt;-</p>
 <ol start="5" style="list-style-type: decimal">
 <li><strong>Determine if the Third Variable is a moderator or not.</strong></li>
 </ol>
