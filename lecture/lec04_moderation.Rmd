@@ -1,13 +1,13 @@
 ---
 title: "Moderation"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
     toc_depth: 2
-  pdf_document: default
 css: ../css/customh5.css
 ---
 
@@ -130,11 +130,11 @@ pander(twoway.anova, caption="Original model")
 
 ```{r}
 pander(summary(aov(BMI ~ genhealth, 
-                   data=filter(addhealth, eversmoke_c=="Smoker"))), 
+                   data=filter(addhealth, eversmoke_c=="Smoked at least once"))), 
        caption="Model for Smokers")
 
 pander(summary(aov(BMI ~ genhealth, 
-                   data=filter(addhealth, eversmoke_c=="Non Smoker"))), 
+                   data=filter(addhealth, eversmoke_c=="Never Smoked"))), 
        caption="Model for Non-Smokers")
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Regression Assignment"
+title: "Multiple Regression Assignment"
 author: "YOUR NAME HERE"
 date: "Last Updated `r Sys.time()`"
 output:
@@ -14,7 +14,6 @@ library(dplyr)
 library(ggplot2); library(gridExtra)
 library(pander) # Used for printing nice linear model tables
 panderOptions("digits", 3)
-load("J:/MATH315/Project/addhealth_clean.Rdata")
 ```
 
 # Multiple Linear Regression

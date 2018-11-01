@@ -3,12 +3,12 @@ title: "Regression Assignment"
 author: "Robin Donatello"
 date: "Last Updated `r Sys.time()`"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document: default
 css: ../css/customh5.css
 ---
 
@@ -26,11 +26,11 @@ You will perform <span style="color:blue">3</span> regression analyses in this a
 
 4. Using one of the three above analyses (or a new model) add a third categorical (more than 2 levels) variable e.g.: $Q \sim Q + C$.
 
-Worked out examples are available as [[HTML]](Regression_Assignment_Examples.html) or [[PDF]](Regression_Assignment_Examples.pdf)
+Worked out examples are available as [[HTML]](10_multiple_regression_examples.html) or [[PDF]](10_multiple_regression_examples.pdf)
 
 # Instructions
 
-0. Use the template provided: [[RMD]](Regression_template.Rmd) for R users, and [[Word]](Regression_template.docx) for SPSS users. 
+0. Use the template provided: [[RMD]](10_multiple_regression_template.Rmd) for R users, and [[Word]](10_multiple_regression_template.docx) for SPSS users. 
 1. Identify variables under consideration
     - Determine a third variable $Z$ that you want to test as a potential confounder.
     - Consider the relationship and ask yourself: "_If I had to predict a future persons response based on the Predictor/Explanatory variable and some other variable(s), what would they be?_"
@@ -64,7 +64,7 @@ library(dplyr)
 library(ggplot2); library(gridExtra)
 library(pander) # Used for printing nice linear model tables
 panderOptions("digits", 3)
-load("J:/MATH315/Project/addhealth_clean.Rdata")
+load("C:/Box Sync/Data/AddHealth/addhealth_clean.Rdata")
 ```
 
 # Multiple Linear Regression
@@ -87,9 +87,8 @@ If you have a “Strongly Agree” to “Strongly Disagree” variable that you 
 
 ## 3. Fit the simple model
 Is there a relationship between income and time a person wakes up? 
-```{r}
+```{r, results='asis'}
 lm.mod1 <- lm(income ~ wakeup, data=addhealth) 
-pander(summary(lm.mod1), digits=2)
 ```
 
 The estimate of the regression coefficient for `wakeup` is significant (b1=-488, p= 0.001). There is reason to believe that the time you wakeup is associated with your income. 
@@ -101,9 +100,12 @@ Fit the same multiple linear regression model and include the potential confound
 
 ```{r}
 lm.mod2 <- lm(income ~ wakeup + female_c, data=addhealth) 
-pander(summary(lm.mod2), digits=2)
 ```
 
+```{r, results='asis'}
+library(stargazer) # alternative package for printing regression results nicely
+stargazer(lm.mod1, lm.mod2,  type='html', ci=TRUE, single.row=TRUE, digits=2)
+```
 
 The relationship between income and wake up time is still significant after controlling for gender. Gender is not a confounder. 
 
