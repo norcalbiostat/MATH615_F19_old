@@ -1,7 +1,6 @@
 ---
 title: "Multiple Regression Assignment"
 author: "YOUR NAME HERE"
-date: "Last Updated `r Sys.time()`"
 output:
   word_document: default
   pdf_document: default
@@ -40,6 +39,8 @@ panderOptions("digits", 3)
 
 ## 6. Conclusion
 
+----
+
 # Logistic Regression
 
 
@@ -68,6 +69,8 @@ panderOptions("digits", 3)
 
 ## 6. Conclusion
 
+----
+
 # Log Transformed Response 
 
 ## 1. Identify variables
@@ -83,6 +86,7 @@ panderOptions("digits", 3)
 
 ## 6. Conclusion
 
+----
 
 # Categorical predictors
 

@@ -3,18 +3,18 @@ title: "Regression Assignment"
 author: "Robin Donatello"
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document: default
 css: ../css/customh5.css
 ---
 
 # Assignment Overview
 
-You will perform <span style="color:blue">3</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder $Z$.
+You will perform <span style="color:blue">4</span> regression analyses in this assignment. For each you will interpret the regression coefficients, and test for a potential confounder $Z$.
 
 1. Multiple Linear Regression: $Q \sim X + Z$
     - For this assignment choose a quantitative $X$ and a binary confounder $Z$, where the bivariate $Q \sim Q$ relationship is significant.
@@ -25,8 +25,6 @@ You will perform <span style="color:blue">3</span> regression analyses in this a
     - The explanatory variable $X$ can be binary or quantitative. 
 
 4. Using one of the three above analyses (or a new model) add a third categorical (more than 2 levels) variable e.g.: $Q \sim Q + C$.
-
-Worked out examples are available as [[HTML]](10_multiple_regression_examples.html) or [[PDF]](10_multiple_regression_examples.pdf)
 
 # Instructions
 
@@ -53,11 +51,7 @@ Worked out examples are available as [[HTML]](10_multiple_regression_examples.ht
 
 ----
 
-# Examples
-
-
-
-```{r, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
 library(knitr)
 opts_chunk$set(warning=FALSE, message=FALSE) 
 library(dplyr)
@@ -100,14 +94,20 @@ Fit the same multiple linear regression model and include the potential confound
 
 ```{r}
 lm.mod2 <- lm(income ~ wakeup + female_c, data=addhealth) 
+kable(confint(lm.mod2), digits=2)
 ```
+
+
+The relationship between income and wake up time is still significant after controlling for gender. Gender is not a confounder.  Don't forget to calculate the confidence interval for each coefficient to use in your conclusion. 
+
+
+> Optional new package `stargazer` for printing regression models as columns. Great for comparisons, looks like journal articles. Your R code chunk header must look like this: ` ```{r, results='asis'}` and be sure to use the correct output format: `type='html'` or `type='latex'`. Vignette found at: https://www.jakeruss.com/cheatsheets/stargazer/ 
 
 ```{r, results='asis'}
-library(stargazer) # alternative package for printing regression results nicely
-stargazer(lm.mod1, lm.mod2,  type='html', ci=TRUE, single.row=TRUE, digits=2)
+library(stargazer) 
+stargazer(lm.mod1, lm.mod2,  type='latex', ci=TRUE, single.row=TRUE, digits=1, 
+          omit.stat="rsq", column.labels=c("SLR", "MLR"), model.numbers=FALSE)
 ```
-
-The relationship between income and wake up time is still significant after controlling for gender. Gender is not a confounder. 
 
 ## 5. Interpret the regression coefficients.
 
@@ -119,11 +119,6 @@ The relationship between income and wake up time is still significant after cont
 
 * Use the numerical results from the multivariable model to fill in the values in the conclusion below. 
 * Look at the Adjusted $R^{2}$ to see how much of the variance in the response you are accounting for with the predictor.
-* To get the confidence intervals for the regression coefficients you will use the function `confint()`
-
-```{r}
-kable(confint(lm.mod2), digits=2)
-```
 
 Replace the **bold** words with your variables, the `highlighted` words with data from your analysis, and choose between _conclusion options_. 
 
@@ -191,9 +186,6 @@ kable(
     UCL = exp(confint(log.mod.2))[,2]
   ),
 digits=2, align = 'ccc')
-
-# Try to figure out what the functions coef() and confint() do? 
-# Type coef(log.mod.2) and conf(log.mod.2) into the console and make sure you understand what output it is giving you. Compare it to the output you receive when typing summary(log.mod.2)
 ```
 
 * **OR = 1** = equal chance of response variable being YES given any explanatory variable value. You are not able to predict participants’ responses by knowing their explanatory variable value. This would be a non significant model when looking at the p-value for the explanatory variable in the parameter estimate table.
@@ -233,7 +225,7 @@ Additional example interpretation
  
 
 
-## Log Transformed Response 
+# Log Transformed Response 
 
 We are going to analyze personal income as the quantitative outcome for this piece of the assignment.  First I need to clean up, and log transform the variable for personal earnings `H4EC2` by following the steps below _in order_. 
 
@@ -305,7 +297,7 @@ Don't forget to add the confidence intervals and p-values into your conclusion.
 Both gender and time one wakes up are significantly associated with the amount of personal earnings one makes. Waking up later in the morning is associated with 1.4% (95% CI 0.8%-2%, p<.0001) percent lower income than someone who wakes up one hour earlier. Females have 17% (95% CI 15%-20%, p<.0001) percent lower income than males. 
 
 
-## Categorical predictors
+# Categorical predictors
 
 For any of the regression models above, or a new model if you choose, add a categorical variable with more than 2 levels.
 * If the confounder was significant, use the multivariable model including confounder. 
