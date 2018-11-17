@@ -70,8 +70,14 @@ Here are a list of topics to review. All topics have equal importance, regardles
 --->
 
 ### 11/26/18 - [Week 13](https://norcalbiostat.github.io/MATH615/wk/wk13.html)
+<span style="color:red">**Summary of schedule updates**</span> 
+* MLR assignment has been re-drafted and cut down significantly
+* Poster prep stage III will not have a peer review
+* Final we be take home, poster presentations will occur during the 2 hour final period. 
+
+This week, let's ease back into things. Try to come back to "normal", when life is anything but normal. 
 * Tuesday - Section review, recap, reorient
-* Thursday - Log and Logit transformations
+* Thursday - Logistic regression
 
 
 ### 11/19/18 - Fall Break. 
