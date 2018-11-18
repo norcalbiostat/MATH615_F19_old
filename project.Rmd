@@ -135,11 +135,16 @@ You are trying to understand the relationship between your explanatory and respo
 ### Draft version
 * This draft is graded on how complete the poster is. You should consider this a draft that you would circulate to your colleagues for final review and comments. 
 * Use the [evaluation criteria](https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria) as a guide for what I am looking for.
+* This assignment is graded in Blackboard using a rubric - be sure to look at this before you submit. 
+    - Points are awarded based off how close to presentation quality your poster is by the time the draft is due. 
+    - Basically the more work I think you need to put into your poster to make it presentable, the lower the points you get for the draft. 
+
 
 **Submission and Peer Review Instructions**
 
 * Upload your draft (PPTX or PDF) to the `Google Drive/Project Poster/Draft` folder
     - Name this file `authorname_poster_draft.pptx`
+* Drop a note in Blackboard to say this assignment is complete.  
 * To conduct your peer review: 
     - Download your Assigned posters to review. 
     - Use the comment  feature to write the comments directly into the poster file itself. 
@@ -177,7 +182,7 @@ gsub("<thead>.*</thead>", "", x)
 * Upload your final poster (as printed) to Blackboard Learn
     - PDF preferred. PPTX ok.
 * Scoring will be done via [Google Forms](https://goo.gl/forms/QORgO0jjqNzp3T5i2). It looks exactly like the [evaluation criteria](https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria).
-    - When not presenting, you will walk around and learn about others research. Ask them questions, fill out the evaluation on your phone as you go. Printed copies will be available upon request. 
+    - When not presenting, you will walk around and learn about others research. Ask them questions, fill out the evaluation on your phone as you go. Printed copies will be available upon request so you can submit later. 
 * The final grade will be determined by
     - Base score = **30%** student score + **70%** instructor score **+ bonus pts** for best in show awards **- 1** point penalty for each day late. 
 
