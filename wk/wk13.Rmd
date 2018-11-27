@@ -7,7 +7,7 @@ output:
     toc_float: yes
 css: ../css/customh5.css
 params:
-    w: 12
+    w: 13
     d: '2018-11-27'
 title: "Week `r params$w`: `r format(as.Date(params$d) ,'%b %d')` - `r format(as.Date(params$d)+6 ,'%b %d')`"
 ---
