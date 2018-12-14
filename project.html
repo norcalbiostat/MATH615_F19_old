@@ -23,7 +23,6 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
 <script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
 <script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
@@ -411,7 +410,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Project Information</h1>
-<h4 class="date"><em>Last Updated 2018-12-10 11:18:26</em></h4>
+<h4 class="date"><em>Last Updated 2018-12-13 16:33:41</em></h4>
 
 </div>
 
@@ -489,11 +488,6 @@ div.tocify {
 <li>If you did NOT find a moderator: Include a slide stating what relationships you tested for moderation and with what variable to see if it was a moderator, explaining that it was not a moderator. No graphs needed</li>
 </ul></li>
 </ul>
-<!---
-* Confounding: 
-    - If you found a confounder: on slide with bivariate relationship that was confounded put a bullet point that explains what variable confounded the relationship and put the written results that are shown in the confounding assignment on how to write results. Make sure to explain if it helped improve prediction of response variable. 
-    - If you did NOT find a confounder: Include a slide stating what relationships you tested for confounds and with what variable to see if it was a confound, explaining that it was not a moderator. Make sure to explain if it helped improve prediction of response variable. 
---->
 <p><strong>Slide 13: Results from a Multivariable Model</strong></p>
 <ul>
 <li>Build a multivariable model by adding additional predictors to the model.
@@ -573,7 +567,7 @@ div.tocify {
 <ul>
 <li>This draft is graded on how complete the poster is. You should consider this a draft that you would circulate to your colleagues for final review and comments.</li>
 <li>Use the <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation criteria</a> as a guide for what I am looking for.</li>
-<li>This assignment is graded in Blackboard using a rubric - be sure to look at this before you submit.
+<li><strong>This assignment is graded in Blackboard using a rubric</strong> - be sure to look at this before you submit.
 <ul>
 <li>Points are awarded based off how close to presentation quality your poster is by the time the draft is due.</li>
 <li>Basically the more work I think you need to put into your poster to make it presentable, the lower the points you get for the draft.</li>
@@ -581,57 +575,17 @@ div.tocify {
 </ul>
 <p><strong>Submission and Peer Review Instructions</strong></p>
 <ul>
-<li>Upload your draft (PPTX or PDF) to the <code>Google Drive/Project Poster/Draft</code> folder
+<li>Save your poster as a PDF and upload to the <code>Google Drive/Project Poster Drafts</code> folder.</li>
+<li>To conduct your peer review, open the PDF from Google Drive directly in your browser.
 <ul>
-<li>Name this file <code>authorname_poster_draft.pptx</code></li>
-</ul></li>
-<li>Drop a note in Blackboard to say this assignment is complete.<br />
-</li>
-<li>To conduct your peer review:
-<ul>
-<li>Download your Assigned posters to review.</li>
 <li>Use the comment feature to write the comments directly into the poster file itself.</li>
 <li>provide at least two specific comments for each
 <ul>
 <li>something that can be improved</li>
 <li>something that is good</li>
 </ul></li>
-<li>Save this file with your initials at the end of the file name. <code>authorname_poster_draft_RAD.pptx</code></li>
 </ul></li>
-<li>Upload your revision to the <code>Google Drive/Project Poster/Draft/Reviewed</code> folder</li>
 </ul>
-<!---
-<div id="draft" class="collapse"> 
-#### Poster drafts to review. 
-
-```r
-library(stringr); library(dplyr)
-library(knitr); library(kableExtra)
-
-dta <- data.frame(filenames = paste0('PosterDraft/', list.files("PosterDraft/")))
-
-out <- dta %>% mutate(name = gsub("PosterDraft/",  "", filenames),
-                      link = sprintf("[%s](%s)",name, filenames)) %>%
-               select(link)
-
-x = kable(out, format="html") %>%
-    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
-                  full_width=FALSE,  position = "left")
-gsub("<thead>.*</thead>", "", x)
-```
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; ">
- 
-<tbody>
-  <tr>
-   <td style="text-align:left;"> [](PosterDraft/) </td>
-  </tr>
-</tbody>
-</table>
-
-</div>
-
---->
 </div>
 <div id="final-version" class="section level3">
 <h3>Final Version</h3>
@@ -649,22 +603,6 @@ gsub("<thead>.*</thead>", "", x)
 <li>Base score = <strong>30%</strong> student score + <strong>70%</strong> instructor score <strong>+ bonus pts</strong> for best in show awards <strong>- 1</strong> point penalty for each day late.</li>
 </ul></li>
 </ul>
-<!---
-
-<button data-toggle="collapse" data-target="#final">Show/Hide Final Versions</button>
-<div id="final" class="collapse">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; ">
- 
-<tbody>
-  <tr>
-   <td style="text-align:left;"> [](FinalPoster/) </td>
-  </tr>
-</tbody>
-</table>
-
-</div>
---->
 </div>
 </div>
 </div>
