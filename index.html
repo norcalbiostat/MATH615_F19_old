@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>index.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,9 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 
@@ -55,9 +54,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -82,6 +79,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -96,7 +96,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -116,6 +115,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -137,19 +173,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -314,9 +416,11 @@ $(document).ready(function () {
 </div>
 
 
-<p><br> This is the landing page for <span style="color:blue"><strong>Statistical Methods for Graduate Research</strong></span> course taught by <a href="http://www.norcalbiostat.com">Dr. Robin Donatello</a>. This page is used for posting of regular announcements and information for students of the class.</p>
-<div id="announcements" class="section level1">
-<h1>Announcements</h1>
+<p><br></p>
+<div id="math-615-homepage" class="section level1">
+<h1>Math 615 Homepage</h1>
+<p>This is the landing page for <span style="color:blue"><strong>Statistical Methods for Graduate Research</strong></span> course taught by <a href="http://www.norcalbiostat.com">Dr. Robin Donatello</a> for <span style="color:blue"><strong>Fall 2019</strong></span>.<br />
+This page is used for posting of regular announcements and information for students of the class.</p>
 <!----
 
 ### 12/xx/18 - Final Exam. 10-12noon. Holt 155
@@ -375,163 +479,142 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Discussion of special topics on Thursday. 
     - Be ready to discuss an example of a paper/topic/RQ you have encountered for one of these topics. Have a backup (or two), not everyone can talk about Factor Analysis! Or at least not the same project. 
 
+
+
+### 11/26/18 - [Week 13](https://norcalbiostat.github.io/MATH615/wk/wk13.html)
+<span style="color:red">**Summary of schedule updates**</span>   
+
+* MLR assignment has been re-drafted and cut down significantly
+* Poster prep stage III will not have a peer review
+* Final we be take home, poster presentations will occur during the 2 hour final period. 
+
+This week, let's ease back into things. Try to come back to "normal", when life is anything but normal.  
+
+* Tuesday - Section review, recap, reorient
+* Thursday - Logistic regression
+
+
+### 11/19/18 - Fall Break. 
+* Don't think about school, assignments or anything. 
+* Please take some time to be among your family and practice self care in this incredibly stressful time. 
+
+
+### 11/12/18 - Week 12 - Campus closed due to the Camp Fire
+* Please check in with me on Slack or email to let me know you're OK (or if you're not OK. I want to know that too!)
+* If you lived in the fire affected area please let me know. I want to support you in any way I can to finish the semester. Please check out campus resources: https://www.csuchico.edu/campfire/assistance.shtml 
+* If you were not affected, please consider volunteering to help out those that have been, and/or helping raise funds through the Wildcats Rise Fire recovery fund https://app.mobilecause.com/vf/WildcatsRise 
+
+
+### 11/6/18 - [Week 11](https://norcalbiostat.github.io/MATH615/wk/wk11.html)
+* Tuesday: Writing and interpreting multivariable models
+* Thursday: Moderation vs Confounding (bad lecture, too distracted)
+
+
+### 10/30/18 - [Week 10](https://norcalbiostat.github.io/MATH615/wk/wk10.html)
+* Tuesday: Moderation. What happens if we throw another variable into the mix? 
+* Thursday: Study design. How to set yourself up for success in research. 
+
+
+### 10/23/18 - [Week 9](https://norcalbiostat.github.io/MATH615/wk/wk09.html)
+* Tuesday - Analysis of categorical data using $\chi^{2}$ tests
+    - Additional lecture notes (lec03_cda) can be found on this topic under [Materials/Lecture notes](https://norcalbiostat.github.io/MATH615/notes.html)
+* Thursday - Correlation and Regression
+
+
+
+### 10/16/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk/wk08.html)
+* Comments on foundations assignment
+    - CI and HT are statements about the population, not the sample
+    - CI is a range of plausible values, need to compare interval to hypothesized value. 
+    - Great resource for more learning: [Open Intro Statistics](https://www.openintro.org/stat/textbook.php) Chapter 4 (free pdf)
+    - Short worksheet for practice writing/conducting hypothesis tests. 
+* Tuesday - comparing two means using a T-test for a difference in means
+* Thursday - Analysis of Variance for comparing means across multiple groups
+    - Lots of board work today
+* Reading and reference material posted on schedule
+
+
+
+### 10/9/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
+* Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. 
+* Lecture on choosing appropriate analyses on Thursday 
+* A recap on hypothesis testing, the types of bivariate analysis we'll be conducting, and how to choose the correct analysis procedure for your research hypothesis. 
+* Project updates: 
+    - Introduction to Phase II of the project analysis preparation, 
+    - Poster prep I instructions too vague to ensure quality work, going to roll points & grading into Stage II. 
+    - I am in the process of commenting on everyones posters so far. 
+* Instructions on Bivariate Inference Homework. 
+
+
+### 10/1/18 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
+* As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability, distributions, confidence intervals.
+* On thursday we'll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #'s from your data for this)
+
+
+### 9/24/18 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
+* Now that we've had a few weeks to settle into the semester, let's re-orient ourselves to the goals of this class. How are we achieving this goal?
+* Housekeeping
+    * Adding comments in a PDF in Google Drive. Comment directly in browser, don't open in GDocs. 
+    * Some clarifying information about formulation of good RQ's and terminology has been added to the bottom of [HW02 research codebook](hw/02_research_codebook.html). 
+    * I also added an example of C~C to [HW 06 Bivariate Graphing]
+* Next big assignment is the Research plan. 
+* Assigned reading: Difference between writing a research plan, and writing empirical research, how to conduct a literature review without getting burnt out, examples of how to use literature reviews to refine your RQ (citation assignment that is not assigned). 
+
+
+### 9/17/18 - [Week 4](https://norcalbiostat.github.io/MATH615/wk/wk04.html)
+
+* You will be exploring relationships between two variables using graphical and summary methods. 
+* You will also start the work to build your research poster. See the [project instructions](project.html) page for details. 
+
+
+### 9/11/18 - [Week 3](https://norcalbiostat.github.io/MATH615/wk/wk03.html)
+
+I'll try to keep lecture this week to 30 min and let you have the rest of the time to work. 
+
+
+**Visualizing Data!**
+
+* One of the most important things you can do to learn about your variables is to create descriptive plots. 
+* We spent time last week talking about how to choose appropriate visualizations and how to interpret them. You were then supposed to go create those plots on your own. 
+    - Then I found out that SPSS doesn't let you use the chart builder on un-prepared data. 
+* So the due date for the Univariate graphing assignment has been pushed back to next Monday 9/17.
+
+**Preparing your data for analysis.**
+
+We'll talk about how to identify features of data that will need to be changed prior to analysis. We can't cover them all, nor would you remember them all. This is a place where experience and repetition will be the true learning method. In the meantime, I provide a number of resources to help you identify what to look for. 
+
+* AS notebook chapter 1
+* Data management preparation questions
+* PMAS6 Draft Chapter 3.4
+* PMAS5 Chapter 4 (transformations)
+
+
+
+
+----
+
+### 09-02-2019: Week 2
+
+Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing! 
+
+* Mon 3-4pm  
+* Wed 1-2pm  
+* Thu 10-11am  
+
+We've seen some pitfalls regarding data entry, and practiced reading in data into our SPC. 
+**SPSS users need to add information to the [collaborative SPSS notes](https://hackmd.io/00_J78IaQouu4DalQ-3P3w) on how to read data into SPSS**
+
+Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we'll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We're going to do this on the "dirty" data because visualization is a really good way to detect any problems in the data. 
+
 --->
-<div id="week-13" class="section level3">
-<h3>11/26/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk13.html">Week 13</a></h3>
-<p><span style="color:red"><strong>Summary of schedule updates</strong></span></p>
-<ul>
-<li>MLR assignment has been re-drafted and cut down significantly</li>
-<li>Poster prep stage III will not have a peer review</li>
-<li>Final we be take home, poster presentations will occur during the 2 hour final period.</li>
-</ul>
-<p>This week, let’s ease back into things. Try to come back to “normal”, when life is anything but normal.</p>
-<ul>
-<li>Tuesday - Section review, recap, reorient</li>
-<li>Thursday - Logistic regression</li>
-</ul>
-</div>
-<div id="fall-break." class="section level3">
-<h3>11/19/18 - Fall Break.</h3>
-<ul>
-<li>Don’t think about school, assignments or anything.</li>
-<li>Please take some time to be among your family and practice self care in this incredibly stressful time.</li>
-</ul>
-</div>
-<div id="week-12---campus-closed-due-to-the-camp-fire" class="section level3">
-<h3>11/12/18 - Week 12 - Campus closed due to the Camp Fire</h3>
-<ul>
-<li>Please check in with me on Slack or email to let me know you’re OK (or if you’re not OK. I want to know that too!)</li>
-<li>If you lived in the fire affected area please let me know. I want to support you in any way I can to finish the semester. Please check out campus resources: <a href="https://www.csuchico.edu/campfire/assistance.shtml" class="uri">https://www.csuchico.edu/campfire/assistance.shtml</a></li>
-<li>If you were not affected, please consider volunteering to help out those that have been, and/or helping raise funds through the Wildcats Rise Fire recovery fund <a href="https://app.mobilecause.com/vf/WildcatsRise" class="uri">https://app.mobilecause.com/vf/WildcatsRise</a></li>
-</ul>
-</div>
-<div id="week-11" class="section level3">
-<h3>11/6/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk11.html">Week 11</a></h3>
-<ul>
-<li>Tuesday: Writing and interpreting multivariable models</li>
-<li>Thursday: Moderation vs Confounding (bad lecture, too distracted)</li>
-</ul>
-</div>
-<div id="week-10" class="section level3">
-<h3>10/30/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk10.html">Week 10</a></h3>
-<ul>
-<li>Tuesday: Moderation. What happens if we throw another variable into the mix?</li>
-<li>Thursday: Study design. How to set yourself up for success in research.</li>
-</ul>
-</div>
-<div id="week-9" class="section level3">
-<h3>10/23/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk09.html">Week 9</a></h3>
-<ul>
-<li>Tuesday - Analysis of categorical data using <span class="math inline">\(\chi^{2}\)</span> tests
-<ul>
-<li>Additional lecture notes (lec03_cda) can be found on this topic under <a href="https://norcalbiostat.github.io/MATH615/notes.html">Materials/Lecture notes</a></li>
-</ul></li>
-<li>Thursday - Correlation and Regression</li>
-</ul>
-</div>
-<div id="week-8" class="section level3">
-<h3>10/16/17 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk08.html">Week 8</a></h3>
-<ul>
-<li>Comments on foundations assignment
-<ul>
-<li>CI and HT are statements about the population, not the sample</li>
-<li>CI is a range of plausible values, need to compare interval to hypothesized value.</li>
-<li>Great resource for more learning: <a href="https://www.openintro.org/stat/textbook.php">Open Intro Statistics</a> Chapter 4 (free pdf)</li>
-<li>Short worksheet for practice writing/conducting hypothesis tests.</li>
-</ul></li>
-<li>Tuesday - comparing two means using a T-test for a difference in means</li>
-<li>Thursday - Analysis of Variance for comparing means across multiple groups
-<ul>
-<li>Lots of board work today</li>
-</ul></li>
-<li>Reading and reference material posted on schedule</li>
-</ul>
-</div>
-<div id="week-7" class="section level3">
-<h3>10/9/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk07.html">Week 7</a></h3>
-<ul>
-<li>Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics.</li>
-<li>Lecture on choosing appropriate analyses on Thursday</li>
-<li>A recap on hypothesis testing, the types of bivariate analysis we’ll be conducting, and how to choose the correct analysis procedure for your research hypothesis.</li>
-<li>Project updates:
-<ul>
-<li>Introduction to Phase II of the project analysis preparation,</li>
-<li>Poster prep I instructions too vague to ensure quality work, going to roll points &amp; grading into Stage II.</li>
-<li>I am in the process of commenting on everyones posters so far.</li>
-</ul></li>
-<li>Instructions on Bivariate Inference Homework.</li>
-</ul>
-</div>
-<div id="week-6" class="section level3">
-<h3>10/1/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk06.html">Week 6</a></h3>
-<ul>
-<li>As we start our next phase of the class learning about <em>Inferential Statistics</em>, we need to first refresh our understanding about probability, distributions, confidence intervals.</li>
-<li>On thursday we’ll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #’s from your data for this)</li>
-</ul>
-</div>
-<div id="week-5" class="section level3">
-<h3>9/24/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk05.html">Week 5</a></h3>
-<ul>
-<li>Now that we’ve had a few weeks to settle into the semester, let’s re-orient ourselves to the goals of this class. How are we achieving this goal?</li>
-<li>Housekeeping
-<ul>
-<li>Adding comments in a PDF in Google Drive. Comment directly in browser, don’t open in GDocs.</li>
-<li>Some clarifying information about formulation of good RQ’s and terminology has been added to the bottom of <a href="hw/02_research_codebook.html">HW02 research codebook</a>.</li>
-<li>I also added an example of C~C to [HW 06 Bivariate Graphing]</li>
-</ul></li>
-<li>Next big assignment is the Research plan.</li>
-<li>Assigned reading: Difference between writing a research plan, and writing empirical research, how to conduct a literature review without getting burnt out, examples of how to use literature reviews to refine your RQ (citation assignment that is not assigned).</li>
-</ul>
-</div>
-<div id="week-4" class="section level3">
-<h3>9/17/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk04.html">Week 4</a></h3>
-<ul>
-<li>You will be exploring relationships between two variables using graphical and summary methods.</li>
-<li>You will also start the work to build your research poster. See the <a href="project.html">project instructions</a> page for details.</li>
-</ul>
-</div>
-<div id="week-3" class="section level3">
-<h3>9/11/18 - <a href="https://norcalbiostat.github.io/MATH615/wk/wk03.html">Week 3</a></h3>
-<p>I’ll try to keep lecture this week to 30 min and let you have the rest of the time to work.</p>
-<p><strong>Visualizing Data!</strong></p>
-<ul>
-<li>One of the most important things you can do to learn about your variables is to create descriptive plots.</li>
-<li>We spent time last week talking about how to choose appropriate visualizations and how to interpret them. You were then supposed to go create those plots on your own.
-<ul>
-<li>Then I found out that SPSS doesn’t let you use the chart builder on un-prepared data.</li>
-</ul></li>
-<li>So the due date for the Univariate graphing assignment has been pushed back to next Monday 9/17.</li>
-</ul>
-<p><strong>Preparing your data for analysis.</strong></p>
-<p>We’ll talk about how to identify features of data that will need to be changed prior to analysis. We can’t cover them all, nor would you remember them all. This is a place where experience and repetition will be the true learning method. In the meantime, I provide a number of resources to help you identify what to look for.</p>
-<ul>
-<li>AS notebook chapter 1</li>
-<li>Data management preparation questions</li>
-<li>PMAS6 Draft Chapter 3.4</li>
-<li>PMAS5 Chapter 4 (transformations)</li>
-</ul>
-</div>
-<div id="week-2-short-week" class="section level3">
-<h3>9/04/18 - Week 2 (short week)</h3>
-<p>Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing!</p>
-<ul>
-<li>Mon 3-4pm<br />
-</li>
-<li>Wed 1-2pm<br />
-</li>
-<li>Thu 10-11am</li>
-</ul>
-<p>Appointments outside these hours can be made by using the appointment booking icon at the bottom of my personal website (link in the top right of this webpage). <em>Unfortunately</em> i’m in/out of town this week at a conference in Sacramento. I won’t be able to make any of my OH this week.</p>
-<p>We’ve seen some pitfalls regarding data entry, and practiced reading in data into our SPC. <strong>SPSS users need to add information to the <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w">collaborative SPSS notes</a> on how to read data into SPSS</strong></p>
-<p>Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we’ll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We’re going to do this on the “dirty” data because visualization is a really good way to detect any problems in the data.</p>
-</div>
-<div id="welcome-to-fall-18" class="section level3">
-<h3>8/27/18 - Welcome to Fall 18!</h3>
+<hr />
+<div id="welcome-to-fall-19" class="section level3">
+<h3>08-26-2019: Welcome to Fall 19!</h3>
 <ul>
 <li>This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.</li>
 <li>Specifically click on and explore items in the top navigation bar.<br />
 </li>
-<li>Take this survey to help choose when I should hold Office Hours <a href="https://goo.gl/forms/qLBv2jMF6fBv3BTR2" class="uri">https://goo.gl/forms/qLBv2jMF6fBv3BTR2</a></li>
+<li>Take this survey to help choose when I should hold Office Hours [TBD]</li>
 <li>You have been sent email invitations to your campus email to be added to our Slack workspace, and our Google Drive. If you have not recieved these by the first day of class email me directly.</li>
 </ul>
 </div>

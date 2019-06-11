@@ -1,48 +1,51 @@
+---
+title: "Topics and Schedule"
+output: html_document
+---
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr);library(readxl); library(kableExtra);library(stringr)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
 ```
-<br>
 
-_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _
+# Last Updated: `r format(Sys.time(), "%a %b %d %X")` {.tabset .tabset-fade .tabset-pills}
+
+## Weekly
+
+<br>
+Unless specified otherwise, all assignments are due at midnight on the due date listed.
+Times listed next to video numbers is the approximate minutes into the video at which that topic starts.
 <br>
 ```{r , echo=FALSE, message=FALSE, warning=FALSE}
-rawdat <- read_excel("schedule_615.xlsx")
+rawdat <- read_xlsx("schedule_315.xlsx", sheet='topic_overview')
 
-cdat   <- rawdat %>% select(-SLO, -Tuesday, -Thursday) %>% 
-                     mutate(wknum = str_pad(wk, width=2, side="left", pad="0"),
-                            link = paste0("wk/wk", wknum, ".html"), 
-                            Week = paste0("Week ", wknum, ": ",format(Date, format="%b %d")), 
-                            Link = sprintf("[%s](%s)",Week, link))
-
-cdat$Link[c(13,17)] <- c("Fall Break", "Finals")
-
-
-# parse topics
-topiclist <- which(!is.na(cdat$Topics))
-cdat$Topics[topiclist] <- paste0("<ul><li>", cdat$Topics[topiclist], "</li></ul>")
-cdat$Topics[topiclist] <- gsub("\r\n", "</li><li>", cdat$Topics[topiclist])
-
-# parse notes
-mats <- which(!is.na(cdat$Materials))
-cdat$Materials[mats] <- paste0("<ul><li>", cdat$Materials[mats], "</li></ul>")
-cdat$Materials[mats] <- gsub("\r\n", "</li><li>", cdat$Materials[mats])
-
-# parse assignments
-evallist <- which(!is.na(cdat$Assignments))
-cdat$Assignments[evallist] <- paste0("<ul><li>", cdat$Assignments[evallist], "</li></ul>")
-cdat$Assignments[evallist] <- gsub("\r\n", "</li><li>", cdat$Assignments[evallist])
-cdat$Assignments[evallist] <- gsub(" (", " (<b>", cdat$Assignments[evallist], fixed=TRUE)
-cdat$Assignments[evallist] <- gsub(" )", "</b>)", cdat$Assignments[evallist], fixed=TRUE)
-
+toshow <- rawdat[which(rawdat$Order==16.0):nrow(rawdat), ]
 ```
+  
+```{r, results='asis', echo=FALSE}
+out <- toshow %>% select(Week:Assignments)
+testrows <- grep("midterm|final", out$Topic, ignore.case=TRUE)
 
-```{r results='asis', echo=FALSE}
-out <- select(cdat, Link, Topics, Materials, Assignments)
 
-knitr::kable(out, align="l", escape=FALSE) %>% 
+out$Assignments <- gsub(" (", " (<b>", out$Assignments, fixed=TRUE)
+out$Assignments <- gsub(" )", "</b>)", out$Assignments, fixed=TRUE)
+out$Quiz <- gsub(" (", " (<b>", out$Quiz, fixed=TRUE)
+out$Quiz <- gsub(" )", "</b>)", out$Quiz, fixed=TRUE)
+
+knitr::kable(out, align="clcccc", escape=FALSE) %>% 
   kable_styling(bootstrap_options = c("hover", "striped", "responsive", "bordered")) %>% 
-  column_spec(1, width="10%") %>% column_spec(2, width="20%") %>% 
-  column_spec(3, width="30%") %>% column_spec(4, width="30%")
+  row_spec(testrows, background = "BurlyWood") %>% 
+  column_spec(5, width = "15%") %>% 
+  column_spec(5, width = "14%")
 ```
 
+*_This assignment is subject to peer review and revision_
+
+
+
+## Calendar - MWF
+
+<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mail.csuchico.edu_16sj77sfemp9kqgis2g89j91e0%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
+
+## Calendar -TR
+
+<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mail.csuchico.edu_nc66paji5lqqmd6uqfu1sdfvls%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>

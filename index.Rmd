@@ -1,13 +1,12 @@
 <br>
-This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](http://www.norcalbiostat.com). This page is used for posting of regular announcements and information for students of the class. 
-
-```{r runallwks, eval=TRUE, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
-#source("_render_all_wks.R")
-#source("_render_all_lec.R")
-#source("_render_all_hw.R")
-#rmarkdown::render(notes.Rmd, output_format='html_document')
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+wk1.date <- as.Date("2019-08-26")
 ```
-# Announcements
+# Math 615 Homepage
+
+This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](http://www.norcalbiostat.com) for <span style="color:blue">**Fall 2019**</span>.   
+This page is used for posting of regular announcements and information for students of the class. 
+
 
 <!----
 
@@ -67,7 +66,7 @@ Here are a list of topics to review. All topics have equal importance, regardles
 * Discussion of special topics on Thursday. 
     - Be ready to discuss an example of a paper/topic/RQ you have encountered for one of these topics. Have a backup (or two), not everyone can talk about Factor Analysis! Or at least not the same project. 
 
---->
+
 
 ### 11/26/18 - [Week 13](https://norcalbiostat.github.io/MATH615/wk/wk13.html)
 <span style="color:red">**Summary of schedule updates**</span>   
@@ -179,8 +178,9 @@ We'll talk about how to identify features of data that will need to be changed p
 
 
 
+----
 
-### 9/04/18 - Week 2 (short week)
+### `r format(wk1.date+7, "%m-%d-%Y")`: Week 2
 
 Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing! 
 
@@ -188,19 +188,20 @@ Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you
 * Wed 1-2pm  
 * Thu 10-11am  
 
-Appointments outside these hours can be made by using the appointment booking icon at the bottom of my personal website (link in the top right of this webpage). _Unfortunately_ i'm in/out of town this week at a conference in Sacramento. I won't be able to make any of my OH this week. 
-
 We've seen some pitfalls regarding data entry, and practiced reading in data into our SPC. 
 **SPSS users need to add information to the [collaborative SPSS notes](https://hackmd.io/00_J78IaQouu4DalQ-3P3w) on how to read data into SPSS**
 
 Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we'll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We're going to do this on the "dirty" data because visualization is a really good way to detect any problems in the data. 
 
+--->
 
+----
 
-### 8/27/18 - Welcome to Fall 18!
+### `r format(wk1.date, "%m-%d-%Y")`: Welcome to Fall 19!
+
 * This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.
 * Specifically click on and explore items in the top navigation bar.  
-* Take this survey to help choose when I should hold Office Hours https://goo.gl/forms/qLBv2jMF6fBv3BTR2 
+* Take this survey to help choose when I should hold Office Hours [TBD]
 * You have been sent email invitations to your campus email to be added to our Slack workspace, and our Google Drive. If you have not recieved these by the first day of class email me directly. 
 
 
