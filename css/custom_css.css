@@ -1,0 +1,18 @@
+h5 {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:link {
+color: #8f00b3; 
+}
+a:visited {
+color: #8f00b3; 
+}
+a:hover {
+color: #8f00b3; 
+}
+
+
+/* Primary background: #2c3e50 */

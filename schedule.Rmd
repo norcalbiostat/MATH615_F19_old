@@ -1,51 +1,81 @@
 ---
-title: "Topics and Schedule"
+title: "Schedule"
 output: html_document
 ---
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr);library(readxl); library(kableExtra);library(stringr)
 options(knitr.table.format = "html", knitr.kable.NA = '') 
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE) 
 ```
 
 # Last Updated: `r format(Sys.time(), "%a %b %d %X")` {.tabset .tabset-fade .tabset-pills}
 
 ## Weekly
 
-<br>
+<p>
 Unless specified otherwise, all assignments are due at midnight on the due date listed.
-Times listed next to video numbers is the approximate minutes into the video at which that topic starts.
-<br>
-```{r , echo=FALSE, message=FALSE, warning=FALSE}
-rawdat <- read_xlsx("schedule_315.xlsx", sheet='topic_overview')
+</p>
+```{r}
+# Read in schedule
+rawdat <- read_xlsx("schedule_615.xlsx", sheet='weekly_schedule')
 
-toshow <- rawdat[which(rawdat$Order==16.0):nrow(rawdat), ]
+# Set semester start date and format weeks nicely
+start.date <- as.Date("2019-08-26")
+wn <- which(!is.na(rawdat$wknum))
+wkdt <- rawdat$wknum[wn]*7 + start.date
+weekdates <- format(wkdt, "%m/%d")
+rawdat$Week[wn] <- paste0(rawdat$wknum[wn], " (", weekdates , ")")
+
+# Filter rows to display on schedule
+toshow <- rawdat[which(rawdat$Order==1.1):nrow(rawdat), ]
 ```
-  
-```{r, results='asis', echo=FALSE}
-out <- toshow %>% select(Week:Assignments)
-testrows <- grep("midterm|final", out$Topic, ignore.case=TRUE)
 
+
+  
+```{r, results='asis'}
+out <- toshow %>% select(Topic:Assignments)
+#week <- grep("midterm|final", out$Topic, ignore.case=TRUE)
 
 out$Assignments <- gsub(" (", " (<b>", out$Assignments, fixed=TRUE)
 out$Assignments <- gsub(" )", "</b>)", out$Assignments, fixed=TRUE)
 out$Quiz <- gsub(" (", " (<b>", out$Quiz, fixed=TRUE)
 out$Quiz <- gsub(" )", "</b>)", out$Quiz, fixed=TRUE)
+out$`Peer Review` <- gsub(" (", " (<b>", out$pr, fixed=TRUE)
+out$`Peer Review` <- gsub(" )", "</b>)", out$pr, fixed=TRUE)
 
-knitr::kable(out, align="clcccc", escape=FALSE) %>% 
+out$pr <- NULL
+wk.labs <-  "background-color: #364d63; color: #fff;"
+
+out %>% 
+  kable(align="lcccc", escape=FALSE) %>% 
   kable_styling(bootstrap_options = c("hover", "striped", "responsive", "bordered")) %>% 
-  row_spec(testrows, background = "BurlyWood") %>% 
-  column_spec(5, width = "15%") %>% 
-  column_spec(5, width = "14%")
+  pack_rows(paste0("Week 1 (", weekdates[1], ")"), 1,  wn[1], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 2 (", weekdates[2], ")"), wn[1]+1,  wn[2], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 3 (", weekdates[3], ")"), wn[2]+1,  wn[3], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 4 (", weekdates[4], ")"), wn[3]+1,  wn[4], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 5 (", weekdates[5], ")"), wn[4]+1,  wn[5], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 6 (", weekdates[6], ")"), wn[5]+1,  wn[6], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 7 (", weekdates[7], ")"), wn[6]+1,  wn[7], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 8 (", weekdates[8], ")"), wn[7]+1,  wn[8], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 9 (", weekdates[9], ")"), wn[8]+1,  wn[9], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 10 (", weekdates[10], ")"), wn[9]+1,  wn[10], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 11 (", weekdates[11], ")"), wn[10]+1,  wn[11], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 12 (", weekdates[12], ")"), wn[11]+1,  wn[12], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 13 (", weekdates[13], ")"), wn[12]+1,  wn[13], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 14 (", weekdates[14], ")"), wn[13]+1,  wn[14], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Week 15 (", weekdates[15], ")"), wn[14]+1,  wn[15], label_row_css =wk.labs) %>%
+  pack_rows(paste0("Finals Week (", weekdates[16], ")"), wn[15]+1,  nrow(rawdat), 
+            label_row_css =wk.labs) %>%
+  column_spec(1, width = "35%") %>% 
+  column_spec(2, width = "10%") %>% 
+  column_spec(3, width = "10%") %>% 
+  column_spec(4, width = "35%") %>% 
+  column_spec(5, width = "10%")
 ```
 
-*_This assignment is subject to peer review and revision_
 
 
+## Calendar
 
-## Calendar - MWF
+<iframe src="https://calendar.google.com/calendar/embed?src=mail.csuchico.edu_bpvuoivh18qp7ui1263m0dju3o%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
 
-<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mail.csuchico.edu_16sj77sfemp9kqgis2g89j91e0%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
-
-## Calendar -TR
-
-<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mail.csuchico.edu_nc66paji5lqqmd6uqfu1sdfvls%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>

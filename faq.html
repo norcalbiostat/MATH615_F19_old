@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Frequently Asked Questions</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MATH 615</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="schedule.html">
+    <span class="fa fa-calendar"></span>
+     
+    Schedule
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-folder-open"></span>
+     
+    Materials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notes.html">
+        <span class="fa fa-file-alt"></span>
+         
+        Lecture Notes/Homework/Reading
+      </a>
+    </li>
+    <li>
+      <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/">
+        <span class="fa fa-book-open"></span>
+         
+        Applied Stats Notebook
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: R
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w">
+        <span class="fa fa-code"></span>
+         
+        Collaborative notes: SPSS
+      </a>
+    </li>
+    <li>
+      <a href="http://www.norcalbiostat.com/data/">
+        <span class="fa fa-database"></span>
+         
+        Data
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Project Instructions</a>
+    </li>
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit#gid=0">Peer Review Assignments</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-wrench"></span>
+     
+    Tools
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://drive.google.com/drive/folders/1bgGnTDDfzJjUAiSb1w7aUjND7S1KypQG?usp=sharing">
+        <span class="fa fa-google"></span>
+         
+        Google Drive
+      </a>
+    </li>
+    <li>
+      <a href="https://math615.slack.com/">
+        <span class="fa fa-slack"></span>
+         
+        Slack (class discussions)
+      </a>
+    </li>
+    <li>
+      <a href="https://csuchico.zoom.us/">
+        <span class="fa fa-video-camera"></span>
+         
+        Zoom (video conference)
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="faq.html">
+    <span class="fa fa-question"></span>
+     
+    Help
+  </a>
+</li>
+<li>
+  <a href="syllabus_615_f18.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Frequently Asked Questions</h1>
+<h4 class="date">Last Updated 2019-06-11 14:15:41</h4>
+
+</div>
+
+
+<p><em>page in development</em></p>
+<p>Download this file as a <a href="faq.pdf">[PDF]</a></p>
+<div id="assignments" class="section level1">
+<h1>Assignments</h1>
+<div id="how-do-i-complete-the-assignments" class="section level2">
+<h2>How do I complete the assignments?</h2>
+<p>Most homework assignments will come with a template to use. This will be a R markdown (<code>*.Rmd</code>) file for R users, and a Word document (<code>*.doc</code>) for SPSS users.</p>
+<p>R users write their code and answers directly into the Rmd file. SPSS users will copy their code and relevant output into the Word doc, along with writing their answers in the Word doc directly.</p>
+<p>All homework files must be compiled or converted to PDF before submission. R users <code>knit</code> their file to PDF, SPSS users will <code>save as</code> their Word document as PDF.</p>
+<p>Links to the templates can be found in the homework assignment itself. A list of all assignment files can be found on the <a href="notes.html">notes</a> page.</p>
+</div>
+<div id="howwhere-do-i-submit-completed-assignments" class="section level2">
+<h2>How/where do I submit completed assignments?</h2>
+<p><strong>Standard Assignments</strong></p>
+<ul>
+<li>All assignments should be in PDF format.</li>
+<li>The file should be clearly named using this format: <code>assignment_userid.pdf</code>. E.g. <code>univ_graphics_rdonatello.pdf</code></li>
+<li>Uploaded to the corresponding assignment folder in Google Drive.</li>
+<li>Standard homework assignments just get checked off for completion.
+<ul>
+<li>I will still review and comment on each assignment, writing corrections and suggestions for improvement on the PDF itself.</li>
+<li>I will then put my copy into your personal returned folder in Google Drive.</li>
+</ul></li>
+</ul>
+<p><strong>Project Assignments</strong></p>
+<ul>
+<li>These assignments will be completed in Google Drive directly and will be peer reviewed.</li>
+<li>You also need to drop a note in the corresponding assignment in Blackboard learn when your document is ready for grading. This allows me to use a rubric for grading in addition to providing specific feedback on the document itself.</li>
+<li>Project assignments should be considered quality work and such refined, reviewed, and absolutely spellchecked before submission.</li>
+</ul>
+</div>
+<div id="what-are-you-looking-for-when-you-grade" class="section level2">
+<h2>What are you looking for when you grade?</h2>
+<ul>
+<li>Most assignments include examples directly in the assignment file itself.</li>
+<li>Correct english grammer, spelling, formatting.</li>
+<li>Concice, clear and complete answers.</li>
+<li>Correct statistical methods used</li>
+<li>That you answered the question posed.</li>
+<li>No extreneous output or code</li>
+</ul>
+</div>
+</div>
+<div id="peer-review" class="section level1">
+<h1>Peer Review</h1>
+<div id="why-do-we-do-peer-review" class="section level2">
+<h2>Why do we do peer review?</h2>
+<ul>
+<li>Everyone has different thought processes and may have approached the question from a different perspective that can help you learn the material.</li>
+<li>Co-authoring and reviewing your peers work is part of a professional research position.</li>
+<li>Learning how to provide good feedback will make you a better collaborator</li>
+<li>This is a delayed version of paired programming - another set of eyeballs can typically help you find your mistake.</li>
+<li>I have 10fold more assignments to review than you do.
+<ul>
+<li>You’ll get your peer’s reviews back faster than I can get yours back.</li>
+<li>The more eyes on your document the better.</li>
+</ul></li>
+<li>I will be looking for different things than your peers will be. This is a good thing. They are looking from “untrained eyes”, which can be very critical to make sure you are explaining yourself clearly. I can better “figure out” what you are meaning to say - they are the ones that will best tell you when/where you need to explain your findings better.</li>
+</ul>
+</div>
+<div id="how-do-i-conduct-a-peer-review" class="section level2">
+<h2>How do I conduct a Peer Review</h2>
+<ol style="list-style-type: decimal">
+<li>Check the <a href="https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit?usp=sharing">Peer Review Rotation</a> spreadsheet to see who you are scheduled to review.
+<ul>
+<li>If one of your reviewees did not submit the assignment then pick another person to review.</li>
+</ul></li>
+<li>Open the assignment file in Google Drive directly.</li>
+<li>Change from “editing” to “suggesting” in the top right.</li>
+<li>By editing the veribiage directly, or using comment bubbles, provide feedback to your peers.
+<ul>
+<li>Be specific. Give the type of feedback that you want to recieve.</li>
+<li>Minimum four positive comments about what they did well, or should continue to do.</li>
+<li>Minimum four corrections or suggestions for improvement. If it is reworking/grammer make these edits directly in the document.</li>
+</ul></li>
+</ol>
+</div>
+<div id="grading-of-peer-reviews" class="section level2">
+<h2>Grading of peer reviews</h2>
+<p>As I do my reviews on the same document, I will be reading and assessing your peer review. If I find your review is not providing quality feedback to the author you will not recieve credit for that review. You may see the cells in the peer review spreadsheet changing color as I check off your review.</p>
+<hr />
+</div>
+</div>
+<div id="statistical-programming-help" class="section level1">
+<h1>Statistical Programming Help</h1>
+<p>Below is a set of collaborative HackMD notes on how to do things in R and SPSS. (New for Fall 18)</p>
+<ul>
+<li>R <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg" class="uri">https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg</a></li>
+<li>SPSS <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w" class="uri">https://hackmd.io/00_J78IaQouu4DalQ-3P3w</a></li>
+</ul>
+<div id="r-r-studio-r-markdown" class="section level3">
+<h3>R, R Studio, R Markdown</h3>
+<div id="online" class="section level4">
+<h4>Online</h4>
+<ul>
+<li>Chico <a href="https://groups.google.com/forum/#!forum/chico-rug">R User Group</a></li>
+<li>UCLA IDRE <a href="https://stats.idre.ucla.edu/r/modules/">[R Learning modules]</a></li>
+</ul>
+</div>
+<div id="in-person" class="section level4">
+<h4>In Person</h4>
+<ul>
+<li><strong>Robin Donatello</strong> - Stat professor. Holt 202. OH M-3pm, W-1pm, R-10am</li>
+<li><strong>Edward Roualdes</strong> - Stat professor. Holt 204 - <a href="mailto:eroualdes@csuchico.edu" class="email">eroualdes@csuchico.edu</a></li>
+<li><strong>Community Coding</strong> Fall Schedule TBD</li>
+<li><strong>Math Learning Lab (MLIB 4th floor)</strong> Tutor Schedule TBD</li>
+<li><strong>Tutors &amp; Learning assistants</strong>. Possibly available for private tutoring also.
+<ul>
+<li><strong>Victoria Coia</strong> Occasionally will be in class. You can also ping her on Slack.</li>
+<li><strong>Mariby Cruz</strong> Find her in the Math Tutor lab (4th floor of library).</li>
+<li><strong>Ricardo Aguilar</strong> <a href="mailto:raguilar11@mail.csuchico.edu" class="email">raguilar11@mail.csuchico.edu</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="spss" class="section level3">
+<h3>SPSS</h3>
+<div id="online-1" class="section level4">
+<h4>Online</h4>
+<ul>
+<li>UCLA IDRE <a href="https://stats.idre.ucla.edu/spss/modules/">[learning modules]</a></li>
+<li>Sigma Plus SPSS <a href="https://www.spss-tutorials.com/basics/">Tutorials</a></li>
+<li>IBM Knowledge <a href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html">[Center]</a></li>
+</ul>
+<hr />
+<p>Other resources pending organization</p>
+<ul>
+<li><a href="http://www.wesleyan.edu/qac/curriculum/resources/syntax.html" class="uri">http://www.wesleyan.edu/qac/curriculum/resources/syntax.html</a></li>
+<li>PDS bookdown <a href="https://alanarnholt.github.io/PDS-Bookdown2/" class="uri">https://alanarnholt.github.io/PDS-Bookdown2/</a></li>
+<li>sjPlot vignette - custom plot appearance: <a href="https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html" class="uri">https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
