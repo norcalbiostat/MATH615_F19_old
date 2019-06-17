@@ -2,46 +2,48 @@
 title: "Introduction to MATH 615"
 date: "Last Updated `r Sys.time()`"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-css: ../css/customh5.css
+  pdf_document:
+    toc: yes
+css: ../css/custom_css.css
 ---
 
 _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _   
 Back to the [[Schedule]](../schedule.html)
 <br>
 
-# Navigating course resources
-* My website: http://norcalbiostat.com
-    - First stop for all class materials
-    - Links to individual classes, but shared resources on programming and data. 
-* This class website https://norcalbiostat.github.io/MATH615/ 
-    - Landing page for announcements
-    - Details on weekly topics can be found on the schedule
-    - Includes links to notes, assignments and additional materials
-* Both are mobile friendly. 
-* Often links will be broken. Typo's happen. Notify me via slack and I'll get to it asap. 
-* The syllabus covers course details such as grading, office location and classroom policies. 
+# What is this course about
 
 
-# Online systems
+# Course resources
 
-* Blackboard Learn (BBL) used for recording grades
-    - Some assignments will ask you to "drop a note" in BBL when your assignments are ready for grading. 
-* Assignments will be turned in and peer reviewed through Google Drive. 
-* The textbook is used for data, reading and learning content. Sometimes problem sets. 
-    - Great long term resource, but a new edition will be coming out next year. 
-    - I've provided a draft for select chapters in the 6th edition. 
-* Slack will be used for outside class discussions, homework help and general chatter. 
+* **Class Website**
+    * https://norcalbiostat.github.io/MATH615/ 
+        - Landing page for announcements
+        - Details on weekly topics can be found on the schedule
+        - Includes links to notes, assignments and additional materials
+    * Often links will be broken. Typo's happen. Notify me via slack and I'll get to it asap. 
+    * The syllabus covers course details such as grading, office location and classroom policies. 
+
+* **Blackboard Learn (BBL)** is used for recording grades
+* **Google Drive**
+    -- Assignments will be turned in and peer reviewed through Google Drive. 
+    
+* **Textbook: Practical Multivariable Analysis (PMA5)**
+    - The textbook is used for data, reading and learning content. 
+        - Great long term resource, but a new edition will be coming out next year. 
+        - I've provided a draft for select chapters in the 6th edition. 
+        
+* **Slack** will be used for outside class discussions, homework help and general chatter. 
     - I will not answer programming questions through email. 
-    - Download either the phone app or the desktop app (I use both) 
+    - Download either the phone app or the desktop app (I use both). This is mandatory.
     - I don't think push notifications are not automatically turned on. You must opt in. 
-* Lecture notes
+    
+* **Lecture notes**
     - Combination of Applied Statistics notebook, and stand alone lecture notes like these. 
     - Available as PDF or HTML. 
 
@@ -88,7 +90,7 @@ See the course [FAQ](faq.html) page.
 * All my lecture notes use R. This entire website is built with R. R is a pioneer in generating reproducible and publishable quality reports. 
     - [Here's an student-generated example](../reading/Final_chem_report.pdf)
 * I will not dictate which software program you use in this class. 
-* But I will expect you to navigate and use code. You can point and click your way to an answer, but code must be saved and reusible with minimal changes. 
+* But I will expect you to submit reproducible code. You can point and click your way to an answer, but code must be saved and reusible with minimal changes. 
 * Be open to new things, there is power in being polyglottal. 
 * The first few weeks will be ramp up time. 
 
@@ -101,7 +103,7 @@ See the course [FAQ](faq.html) page.
 * On campus resources: From the desk of David Philhour (BSS) 
     - Open computer labs in Butte Hall (207, 211) with many open lab hours.
     - Tutoring center in AJH108 run by Dr. Penelope Kuhn. 
-    - The psyc depth lab is Modoc 224 but is pretty impacted with classes Monday thru Thursday. Friday's are pretty open.
+    - Check availability of Psyc dept lab in Modoc 224
 * Off Campus resources
     - Kent State University Tutorials: https://libguides.library.kent.edu/SPSS/home 
     - UCLA Institute for Digital Research and Education: https://stats.idre.ucla.edu/spss/ 
@@ -137,8 +139,29 @@ See the course [FAQ](faq.html) page.
 * Python is the other primary language for Data Science. I am in the process of learning Python but the capabilities are very great. If you're thinking this route be sure to use Jupyter notebooks. 
 
 
-----
+# Organizing your working directory
 
-Back to the Week 1 overview: https://norcalbiostat.github.io/MATH615/wk/wk01.html
+Using a consistent folder structure across your projects will help keep things
+organized, and will also make it easy to find/file things in the future. This
+can be especially helpful when you have multiple projects. In general, you may
+create directories (folders) for **scripts**, **data**, and **documents**.
+
+You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
+
+* ALL CAPS (MATH615)
+* no caps (math615)
+* snake_case (math_615) 
+* CamelCase (Math615) 
+
+Call this working directory `math615`, and create the four subfolders: `data`, `scripts`, `documents`.  
+
+You will put all files related to this class in here. For example lecture notes go in the document folder, homework code files in the `scripts` folder, and data in, you guessed it, the `data` folder. 
+
+This means when you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file. Do not let files live in your downloads folder. 
+
+
+Your working directory should now look similar to this:
+
+<center><img src="images/folder_org.png" width="350px"></center>
 
 
