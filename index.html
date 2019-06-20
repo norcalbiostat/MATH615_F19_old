@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>index.utf8.md</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MATH 615</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="schedule.html">
+    <span class="fa fa-calendar"></span>
+     
+    Schedule
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-folder-open"></span>
+     
+    Materials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notes.html">
+        <span class="fa fa-file-alt"></span>
+         
+        All Files
+      </a>
+    </li>
+    <li>
+      <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/">
+        <span class="fa fa-book-open"></span>
+         
+        Applied Stats Notebook
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-code"></span>
+     
+    Collaborative Code notes
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg">R</a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/00_J78IaQouu4DalQ-3P3w">SPSS</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Project Instructions</a>
+    </li>
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit#gid=0">Peer Review Assignments</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-wrench"></span>
+     
+    Tools
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://drive.google.com/drive/folders/11ah_oFsHalQ_35AkK5bkYW7wDbm97_vu?usp=sharing">
+        <span class="fa fa-google"></span>
+         
+        Google Drive
+      </a>
+    </li>
+    <li>
+      <a href="https://math615.slack.com/">
+        <span class="fa fa-slack"></span>
+         
+        Slack (class discussions)
+      </a>
+    </li>
+    <li>
+      <a href="https://csuchico.zoom.us/">
+        <span class="fa fa-video-camera"></span>
+         
+        Zoom (video conference)
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="faq.html">
+    <span class="fa fa-question"></span>
+     
+    Help
+  </a>
+</li>
+<li>
+  <a href="syllabus_615_f18.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="math-615-homepage" class="section level1">
+<h1>Math 615 Homepage</h1>
+<p>This is the landing page for <span style="color:blue"><strong>Statistical Methods for Graduate Research</strong></span> course taught by <a href="http://www.norcalbiostat.com">Dr. Robin Donatello</a> for <span style="color:blue"><strong>Fall 2019</strong></span>.<br />
+This page is used for posting of regular announcements and information for students of the class.</p>
+<!----
+
+### 12/xx/18 - Final Exam. 10-12noon. Holt 155
+
+<span style="color:red">**Office Hours for Finals Week**</span> 
+
+* Tuesday 2-4pm, Holt 155
+
+<span style="color:red">**Allowed Exam Materials**</span> 
+
+* The [[OFFICIAL]](https://norcalbiostat.github.io/MATH615/FinalDocs/FinalExam_Fall17_Supplemental.pdf) supplemental information and analyses for the Outlook on Life Survey. 
+    - Print these pages. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages.
+    - Be prepared to answer questions about modeling and interpreting these analyses. 
+* Paper on [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf).
+    - Print, read, comment on, and bring to the final. 
+    - Be prepared to answer questions about the methods, models, and results.
+* A calculator
+* Up to 2 pages of additional notes (does not include your notes on the supplemental output)
+
+    
+Additional information on this new survey, such as full wording of the question on how the variables were coded can be found in the [[codebook]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Codebook.pdf) and [[survey questionnaire]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Questionnaire.pdf). **Do not bring these to the final**. They are for you to use as reference material while you are learning to understand this survey.   
+
+<span style="color:red">**Review List**</span> 
+This final exam is comprehensive in that everything in this class builds upon previous topics. 
+Here are a list of topics to review. All topics have equal importance, regardless of the time that was spent on each topic during class. 
+
+* Probability
+* Creating and interpreting confidence intervals
+* Assumptions for statistical methods to be valid
+* Generalizability, representativeness, bias, sampling frame
+* Statistical Analysis Procedures: 
+    - Two-sample T-tests for means and proportions
+    - ANOVA and $\chi^{2}$ for multiple samples
+    - Linear and Logistic regression.
+* Identifying confounders, moderators and covariates. 
+* Interpreting regression coefficients and making predictions using models. 
+    - from linear and logistic models
+    - using continuous and categorical variables
+
+
+
+### 12/10/18 - Week 15
+
+* Poster building week! See the project page for instructions. 
+    - Drafts are due Thu 11/13, Peer review on Sat 12/15
+    - Final version due (as printed) on Wed 12/19
+* Take Home Final exam 
+    - Handed out Wed 12/12 (Estimated) - no later than Friday 12/14. 
+    - Due Friday 12/21
+* **Office Hours**
+    - Victoria (Poster design): 
+      * Tue 10-10:45 MLIB Math tutor lab (4th floor)
+      * Thu 12:45-1:45 Holt 155  
+    - Me (Holt 202)
+      * Mon 12/10 3-4pm
+      * Tue 12/11 2-4pm - Community Coding (MLIB 442)
+      * Wed 12/12 1-3pm
+      * Thu 12/13 10-11am
+      * Tue 12/18 2-3pm
+      * Wed 12/19 10-11am
+      * Thu 12/20 1-2pm
+      
+    
+
+### 12/3/18 - Week 14
+* You should be working on finishing the regression assignment, and Poster Prep Stage III this week. 
+* You will be building models, and having to decide which model fits the data best using different criteria. 
+    
+### 11/26/18 - [Week 13](https://norcalbiostat.github.io/MATH615/wk/wk13.html)
+<span style="color:red">**Summary of schedule updates**</span>   
+
+* MLR assignment has been re-drafted and cut down significantly
+* Poster prep stage III will not have a peer review
+* Final we be take home, poster presentations will occur during the 2 hour final period. 
+
+This week, let's ease back into things. Try to come back to "normal", when life is anything but normal.  
+
+* Tuesday - Section review, recap, reorient
+* Thursday - Logistic regression
+
+
+### 11/19/18 - Fall Break. 
+* Don't think about school, assignments or anything. 
+* Please take some time to be among your family and practice self care in this incredibly stressful time. 
+
+
+### 11/12/18 - Week 12 - Campus closed due to the Camp Fire
+* Please check in with me on Slack or email to let me know you're OK (or if you're not OK. I want to know that too!)
+* If you lived in the fire affected area please let me know. I want to support you in any way I can to finish the semester. Please check out campus resources: https://www.csuchico.edu/campfire/assistance.shtml 
+* If you were not affected, please consider volunteering to help out those that have been, and/or helping raise funds through the Wildcats Rise Fire recovery fund https://app.mobilecause.com/vf/WildcatsRise 
+
+
+### 11/6/18 - [Week 11](https://norcalbiostat.github.io/MATH615/wk/wk11.html)
+* Tuesday: Writing and interpreting multivariable models
+* Thursday: Moderation vs Confounding (bad lecture, too distracted)
+
+
+### 10/30/18 - [Week 10](https://norcalbiostat.github.io/MATH615/wk/wk10.html)
+* Tuesday: Moderation. What happens if we throw another variable into the mix? 
+* Thursday: Study design. How to set yourself up for success in research. 
+
+
+### 10/23/18 - [Week 9](https://norcalbiostat.github.io/MATH615/wk/wk09.html)
+* Tuesday - Analysis of categorical data using $\chi^{2}$ tests
+    - Additional lecture notes (lec03_cda) can be found on this topic under [Materials/Lecture notes](https://norcalbiostat.github.io/MATH615/notes.html)
+* Thursday - Correlation and Regression
+
+
+
+### 10/16/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk/wk08.html)
+* Comments on foundations assignment
+    - CI and HT are statements about the population, not the sample
+    - CI is a range of plausible values, need to compare interval to hypothesized value. 
+    - Great resource for more learning: [Open Intro Statistics](https://www.openintro.org/stat/textbook.php) Chapter 4 (free pdf)
+    - Short worksheet for practice writing/conducting hypothesis tests. 
+* Tuesday - comparing two means using a T-test for a difference in means
+* Thursday - Analysis of Variance for comparing means across multiple groups
+    - Lots of board work today
+* Reading and reference material posted on schedule
+
+
+
+### 10/9/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
+* Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. 
+* Lecture on choosing appropriate analyses on Thursday 
+* A recap on hypothesis testing, the types of bivariate analysis we'll be conducting, and how to choose the correct analysis procedure for your research hypothesis. 
+* Project updates: 
+    - Introduction to Phase II of the project analysis preparation, 
+    - Poster prep I instructions too vague to ensure quality work, going to roll points & grading into Stage II. 
+    - I am in the process of commenting on everyones posters so far. 
+* Instructions on Bivariate Inference Homework. 
+
+
+### 10/1/18 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
+* As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability, distributions, confidence intervals.
+* On thursday we'll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #'s from your data for this)
+
+
+### 9/24/18 - [Week 5](https://norcalbiostat.github.io/MATH615/wk/wk05.html)
+* Now that we've had a few weeks to settle into the semester, let's re-orient ourselves to the goals of this class. How are we achieving this goal?
+* Housekeeping
+    * Adding comments in a PDF in Google Drive. Comment directly in browser, don't open in GDocs. 
+    * Some clarifying information about formulation of good RQ's and terminology has been added to the bottom of [HW02 research codebook](hw/02_research_codebook.html). 
+    * I also added an example of C~C to [HW 06 Bivariate Graphing]
+* Next big assignment is the Research plan. 
+* Assigned reading: Difference between writing a research plan, and writing empirical research, how to conduct a literature review without getting burnt out, examples of how to use literature reviews to refine your RQ (citation assignment that is not assigned). 
+
+
+### 9/17/18 - [Week 4](https://norcalbiostat.github.io/MATH615/wk/wk04.html)
+
+* You will be exploring relationships between two variables using graphical and summary methods. 
+* You will also start the work to build your research poster. See the [project instructions](project.html) page for details. 
+
+
+### 9/11/18 - [Week 3](https://norcalbiostat.github.io/MATH615/wk/wk03.html)
+
+I'll try to keep lecture this week to 30 min and let you have the rest of the time to work. 
+
+
+**Visualizing Data!**
+
+* One of the most important things you can do to learn about your variables is to create descriptive plots. 
+* We spent time last week talking about how to choose appropriate visualizations and how to interpret them. You were then supposed to go create those plots on your own. 
+    - Then I found out that SPSS doesn't let you use the chart builder on un-prepared data. 
+* So the due date for the Univariate graphing assignment has been pushed back to next Monday 9/17.
+
+**Preparing your data for analysis.**
+
+We'll talk about how to identify features of data that will need to be changed prior to analysis. We can't cover them all, nor would you remember them all. This is a place where experience and repetition will be the true learning method. In the meantime, I provide a number of resources to help you identify what to look for. 
+
+* AS notebook chapter 1
+* Data management preparation questions
+* PMAS6 Draft Chapter 3.4
+* PMAS5 Chapter 4 (transformations)
+
+
+
+
+----
+
+### 09-02-2019: Week 2
+
+Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing! 
+
+* Mon 3-4pm  
+* Wed 1-2pm  
+* Thu 10-11am  
+
+We've seen some pitfalls regarding data entry, and practiced reading in data into our SPC. 
+**SPSS users need to add information to the [collaborative SPSS notes](https://hackmd.io/00_J78IaQouu4DalQ-3P3w) on how to read data into SPSS**
+
+Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we'll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We're going to do this on the "dirty" data because visualization is a really good way to detect any problems in the data. 
+
+--->
+<hr />
+<div id="welcome-to-fall-19" class="section level3">
+<h3>08-26-2019: Welcome to Fall 19!</h3>
+<ul>
+<li>This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.</li>
+<li>Specifically click on and explore items in the top navigation bar.<br />
+</li>
+<li>Take this survey to help choose when I should hold Office Hours [TBD]</li>
+<li>You have been sent email invitations to your campus email to be added to our Slack workspace, and our Google Drive. If you have not recieved these by the first day of class email me directly.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
