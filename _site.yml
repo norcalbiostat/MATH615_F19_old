@@ -15,13 +15,6 @@ navbar:
     - text: "Applied Stats Notebook"
       icon: fa-book-open
       href: https://norcalbiostat.github.io/AppliedStatistics_notes/
-  - text: "Collaborative Code notes"
-    icon: fa-code
-    menu:
-    - text: "R"
-      href: https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg
-    - text: "SPSS"
-      href: https://hackmd.io/00_J78IaQouu4DalQ-3P3w
   - text: "Projects"
     icon: fa-bar-chart
     menu:

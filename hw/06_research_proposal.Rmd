@@ -17,7 +17,7 @@ In preparation for writing the introduction section, you should have found and r
 
 * Write your paper directly as a google doc in the `06 Research Proposal` folder in Google Drive with the file name: `proposal_userid` by the due date. 
 * This assignment will be peer reviewed in a more detailed manner. See below for instructions. 
-* After the optional review period, upload your final document to Blackboard learn for grading. 
+* After the review period, upload your final document to Blackboard learn for grading. 
     
     
 # Writing Template

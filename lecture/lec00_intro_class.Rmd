@@ -18,6 +18,13 @@ Back to the [[Schedule]](../schedule.html)
 
 # What is this course about
 
+* Developing the skills to conduct statistically valid and reproducible research. 
+* Understanding how data needs to be structured and formatted for analysis, so you can better prepare data collection methods for future research. 
+* Becoming a critical consumer of the data being thrown at you. Sifting through the BS to understand the truth. 
+* Practing the skills to be the boss of your own data without relying on others to "run the numbers" for you. 
+* Learning basic statistical techniques for a small selection of analysis situations. 
+* Laying the statistical foundation so you can learn to apply more advanced statistical models as needed, such as those covered in Applied Statisitcs II (Math 456). 
+
 
 # Course resources
 
@@ -29,50 +36,41 @@ Back to the [[Schedule]](../schedule.html)
     * Often links will be broken. Typo's happen. Notify me via slack and I'll get to it asap. 
     * The syllabus covers course details such as grading, office location and classroom policies. 
 
-* **Blackboard Learn (BBL)** is used for recording grades
+* **Blackboard Learn (BBL)** is used for recording grades via grading rubric. 
+
 * **Google Drive**
     -- Assignments will be turned in and peer reviewed through Google Drive. 
     
-* **Textbook: Practical Multivariable Analysis (PMA5)**
+* **Textbook: Practical Multivariable Analysis (PMA5 / PMA6)**
     - The textbook is used for data, reading and learning content. 
-        - Great long term resource, but a new edition will be coming out next year. 
+        - Great long term resource
+        - New edition coming out in October (ish). You can get the 5th or wait for the 6th edition. 
         - I've provided a draft for select chapters in the 6th edition. 
         
 * **Slack** will be used for outside class discussions, homework help and general chatter. 
-    - I will not answer programming questions through email. 
+    - I will not answer most questions through email. 
     - Download either the phone app or the desktop app (I use both). This is mandatory.
-    - I don't think push notifications are not automatically turned on. You must opt in. 
+      Do not rely on remembering to log in via the web browser. You will miss important notifications. 
+    
     
 * **Lecture notes**
-    - Combination of Applied Statistics notebook, and stand alone lecture notes like these. 
-    - Available as PDF or HTML. 
-
-    
-# Descriptive vs. Inferential Statistics
-* Two main phases of Statistics. 
-    - Also called Exploratory and Confirmatory 
-* [Passion Driven Statistics](../reading/PDS_Intro_Stat.pdf) 
-    - Backbone theory behind the class. Read this PDF to get a sense of how statistics fits into science. 
-    - The videos can be used as an additional learning tool. 
-* Google `data analysis lifecycle` and look at [images](https://www.google.com/search?q=data+analytics+life+cycle&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi32cepp9DcAhXLhVQKHYR8AScQ_AUICigB&biw=1482&bih=876). What sense do you get? 
+    - Combination of the Applied Statistics notebook, and stand alone lecture notes like these. 
+    - Most are available as PDF or HTML. 
 
 # Project
 
 * This course will revolve around a data analysis project. 
-* Individual projects, but you will collaborate with each other
-* All assignments are desgined to support your research
+* Individual projects, but you will collaborate with each other through a peer review process. 
+* All assignments are desgined to support your research.
 * Must choose a project out of select data sets.
     - Individual research is typically not developed or robust enough to be demonstrative. 
+* Project will culminate with the creation and presentation of a research poster. 
 * More details are on the [project](project.html) page. 
-
-# Assignment Submission
-See the course [FAQ](faq.html) page. 
-
 
 # Computing and Reproducibility
 
-* No more TI-83, modern statistics is computational based. 
-* Big push for open research in the Natural Sciences. 
+* No more TI-83, modern statistics is computational based. And I don't mean Excel. 
+* Big push for open research in the Natural and Social Sciences. 
     - Sharing code & data. Sometimes required along with manuscript for publishing. 
 * Reproducibility. Give someone else access to your data and code, and they can replicate your findings. 
     - We will practice this in this class. 
@@ -86,17 +84,20 @@ See the course [FAQ](faq.html) page.
     
 
 # Software program of choice (SPC)   
-* This class is not a class on how to use the software program. You will be learning that on your own or in another class. 
+* This class is not a class on how to use the software program. You will be responsible for learning a lot of the programming language outside of class on your own time. That's part of the process of a Masters program. You are learning how to learn, how to look stuff up, how to do new things. You can't learn all the things in 2 years. 
 * All my lecture notes use R. This entire website is built with R. R is a pioneer in generating reproducible and publishable quality reports. 
     - [Here's an student-generated example](../reading/Final_chem_report.pdf)
 * I will not dictate which software program you use in this class. 
 * But I will expect you to submit reproducible code. You can point and click your way to an answer, but code must be saved and reusible with minimal changes. 
-* Be open to new things, there is power in being polyglottal. 
-* The first few weeks will be ramp up time. 
+* Be open to new things, there is power in being polyglottal. You can use one language in here and another language for another class or project. 
+* Your professors in your other classes, or your masters committee may want you to learn a specific language. That should influence your choice. 
+    - So should your industry. Don't make assumptions, look at job postings and see what they want. 
+    - I.e. Center for Healthy Communities has a lot of Nutrition faculty/students. They're moving towards R. 
+    - Political Science & Economics often use Stata. I've met Sociologists that use SAS, Stata, R and SPSS. 
 
 
 ## SPSS
-* Purchase v24 or v25 from http://www-03.ibm.com/software/products/en/spss-stats-gradpack for $50 for 6mo rental. 
+* Purchase v25 or v26 from http://www-03.ibm.com/software/products/en/spss-stats-gradpack for $50 for 6mo rental. 
 * Point and click, but can save code and write scripts. 
 * Stand alone program. No integration. Licenses are not cheap. 
 * Will be used again in NSFC 600 (no exp necc for that class either)
@@ -110,7 +111,7 @@ See the course [FAQ](faq.html) page.
     - Recommended selection of YouTube videos https://www.youtube.com/results?search_query=andy+field+spss+tutorials
 
 ## R 
-* Free. Installation Instructions here: https://norcalbiostat.netlify.com/post/software-overview/
+* Free. Installation Instructions available in `lec02` from my Math 130 webpage: https://norcalbiostat.github.io/MATH130/
 * Harder up front, more powerful in the end. 
 * Seamless integration with a multitude of other scientific analysis and reproducible reporting mechanisms. 
 * Becoming much more popular in all scientific fields of study. One of the primary languages for Data Science. 
@@ -134,9 +135,11 @@ See the course [FAQ](faq.html) page.
    
    
 ## SAS? STATA? Python? 
+Yes, yes and yes. You can use any software program you want. 
+
 * SAS has only now working on literate and integrated programming by using Jupyter notebooks and SAS University Edition (free)
 * Stata has a few user written packages that allow for the integration of LaTeX or markdown into your code document. 
-* Python is the other primary language for Data Science. I am in the process of learning Python but the capabilities are very great. If you're thinking this route be sure to use Jupyter notebooks. 
+* Python is the other primary language for Data Science. 
 
 
 # Organizing your working directory
@@ -153,9 +156,9 @@ You need to choose a naming convention for your class folder and stick with it. 
 * snake_case (math_615) 
 * CamelCase (Math615) 
 
-Call this working directory `math615`, and create the four subfolders: `data`, `scripts`, `documents`.  
+Call this working directory `math615`, and create the four subfolders: `data`, `scripts`, `documents` and `project`.  
 
-You will put all files related to this class in here. For example lecture notes go in the document folder, homework code files in the `scripts` folder, and data in, you guessed it, the `data` folder. 
+You will put all files related to this class in here. For example lecture notes and the sylalbus go in the `documents` folder, homework code files in the `scripts` folder, data and codebook in, you guessed it, the `data` folder, and code specifically for your project in the `project` folder. 
 
 This means when you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file. Do not let files live in your downloads folder. 
 
