@@ -13,9 +13,7 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 ## Overview
 
 <p>
-Unless specified otherwise, all assignments are due at midnight on the due date listed.  
-
-Don't forget to check the weekly details for information on how to prepare and links to other materials. 
+Unless specified otherwise, all assignments are due at midnight on the due date listed. The weekly quizzes are on material from the prior week. 
 </p>
 ```{r}
 # Read in schedule
@@ -86,9 +84,7 @@ out %>%
 
 ## Calendar
 
-For those of you that like the calendar view of your schedule. Due to schedule adjustments during
-the semester these dates may not match exactly with the schedule. In those cases please bring any 
-descrepencies to my attention via Slack. 
+For those of you that like the calendar view of your schedule. Due to schedule adjustments during the semester these dates may not match exactly with the schedule. In those cases please bring any descrepencies to my attention via Slack. 
 
 <iframe src="https://calendar.google.com/calendar/embed?src=mail.csuchico.edu_bpvuoivh18qp7ui1263m0dju3o%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
 
