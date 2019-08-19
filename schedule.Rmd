@@ -23,7 +23,7 @@ rawdat <- read_xlsx("schedule_615.xlsx", sheet='weekly_schedule')
 start.date <- as.Date("2019-08-25")
 
 # which rows have week numbers (manually add line number for break week and finals)
-wn <- c(which(!is.na(rawdat$wknum)),41, 46) %>% sort() 
+wn <- c(which(!is.na(rawdat$wknum)),19, 25) %>% sort() 
 
 # generate list of weekdates
 wkdt <- seq.Date(start.date, start.date+7*16, by='week')
@@ -41,16 +41,17 @@ out <- rawdat[which(rawdat$Order==1.1):nrow(rawdat), ]%>% select(Topic:Assignmen
 # add bullets to materials
 #mats <- which(!is.na(out$Materials))
 #out$Materials[mats] <- paste0("<ul><li>", out$Materials[mats], "</li></ul>")
-#out$Materials[mats] <- gsub("\r\n", "</li><li>", out$Materials[mats])
+out$Topic <- gsub("\r\n", "<br>", out$Topic)
+out$Reading <- gsub("\r\n", "<br>", out$Reading)
 
 # add bold to due dates
-out$Assignments <- gsub(" (", " (<b>", out$Assignments, fixed=TRUE)
+out$Assignments <- gsub(" (", "<br>(<b>", out$Assignments, fixed=TRUE)
 out$Assignments <- gsub(" )", "</b>)", out$Assignments, fixed=TRUE)
-out$Quiz <- gsub(" (", " (<b>", out$Quiz, fixed=TRUE)
+out$Quiz <- gsub(" (", "<br>(<b>", out$Quiz, fixed=TRUE)
 out$Quiz <- gsub(" )", "</b>)", out$Quiz, fixed=TRUE)
 
-wk.labs <-  "background-color: #4d6600; color: #fff;"
-hlt.wks <-  "background-color: #754b13; color: #fff;"
+wk.labs <-  "background-color: #50a18d; color: #fff;"
+hlt.wks <-  "background-color: #654378; color: #fff;"
 ```
 
 ```{r, results='asis'}
@@ -75,10 +76,9 @@ out %>%
   pack_rows(weekdates[16], wn[16],  wn[17]-1, label_row_css =wk.labs) %>%
   pack_rows(weekdates[17], wn[17],  wn[17], label_row_css =hlt.wks) %>%
   column_spec(1, width = "35%") %>% 
-  column_spec(2, width = "6%") %>%
-  column_spec(3, width = "6%") %>%
-  column_spec(4, width = "18%") %>% 
-  column_spec(5, width = "35%")
+  column_spec(2, width = "13%") %>%
+  column_spec(3, width = "13%") %>% 
+  column_spec(4, width = "38%")
 ```
 
 

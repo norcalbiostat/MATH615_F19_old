@@ -33,9 +33,11 @@ Links to the templates can be found in the homework assignment itself. A list of
 * All assignments should be in PDF format. 
 * The file should be clearly named using this format: `assignment_userid.pdf`. E.g. `univ_graphics_rdonatello.pdf`
 * Uploaded to the corresponding assignment folder in Google Drive. 
+* Assignments will be subject to peer review/comments
 * Standard homework assignments just get checked off for completion. 
   - I will still review and comment on each assignment, writing corrections and suggestions for improvement on the PDF itself. 
-  - I will then put my copy into your personal returned folder in Google Drive. 
+* Once graded the file will be moved into the `graded` subfolder in Google Drive. 
+* Grades are recorded in Blackboard learn. 
 
 **Project Assignments**
 
@@ -69,13 +71,12 @@ Links to the templates can be found in the homework assignment itself. A list of
 
 ## How do I conduct a Peer Review
 
-1. Check the [Peer Review Rotation](https://docs.google.com/spreadsheets/d/1hjRLCwf-5lZNX-6jPs75WvtTOp3sKmuh10eiKfL6lm0/edit?usp=sharing) spreadsheet to see who you are scheduled to review. 
+1. Check the [Peer Review Rotation](https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing) spreadsheet to see who you are scheduled to review. 
     - If one of your reviewees did not submit the assignment then pick another person to review. 
 2. Open the assignment file in Google Drive directly. 
 3. Change from "editing" to "suggesting" in the top right. 
 4. By editing the veribiage directly, or using comment bubbles, provide feedback to your peers. 
     - Be specific. Give the type of feedback that you want to recieve. 
-    - Minimum four positive comments about what they did well, or should continue to do.
     - Minimum four corrections or suggestions for improvement. If it is reworking/grammer make these edits directly in the document.  
 
 
@@ -86,40 +87,30 @@ As I do my reviews on the same document, I will be reading and assessing your pe
 ----
 
 # Statistical Programming Help 
-
-Below is a set of collaborative HackMD notes on how to do things in R and SPSS. (New for Fall 18)
-
-* R https://hackmd.io/Ue0ojg6xRWC4fP3Xg3Tveg
-* SPSS https://hackmd.io/00_J78IaQouu4DalQ-3P3w
       
 ### R, R Studio, R Markdown
 
 #### Online
 * Chico [R User Group](https://groups.google.com/forum/#!forum/chico-rug)
 * UCLA IDRE [[R Learning modules]](https://stats.idre.ucla.edu/r/modules/)
+* R studio guides https://www.rstudio.com/online-learning/ 
 
 #### In Person
-* **Robin Donatello** - Stat professor. Holt 202. OH M-3pm, W-1pm, R-10am
+* **Robin Donatello** - Stat professor. Holt 202. 
 * **Edward Roualdes** - Stat professor. Holt 204 - eroualdes@csuchico.edu
-* **Community Coding** Fall Schedule TBD
+* **Community Coding** TWR 2-4pm, Yolo 206
 * **Math Learning Lab (MLIB 4th floor)** Tutor Schedule TBD
-* **Tutors & Learning assistants**. Possibly available for private tutoring also. 
-    - **Victoria Coia** Occasionally will be in class. You can also ping her on Slack.
-    - **Mariby Cruz** Find her in the Math Tutor lab (4th floor of library). 
-    - **Ricardo Aguilar** raguilar11@mail.csuchico.edu 
-    
+
 
 ### SPSS 
 
 #### Online
-* UCLA IDRE [[learning modules]](https://stats.idre.ucla.edu/spss/modules/)
-* Sigma Plus SPSS [Tutorials](https://www.spss-tutorials.com/basics/)
-* IBM Knowledge [[Center]](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html)
+* UCLA IDRE learning modules: https://stats.idre.ucla.edu/spss/modules/
+* Kent State University: https://libguides.library.kent.edu/SPSS 
+* Sigma Plus SPSS Tutorials: https://www.spss-tutorials.com/basics/
+* IBM Knowledge Center: https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html
 
-----
+#### In Person
 
-Other resources pending organization
+* David Philhour in Butte 213
 
-* http://www.wesleyan.edu/qac/curriculum/resources/syntax.html
-* PDS bookdown https://alanarnholt.github.io/PDS-Bookdown2/ 
-* sjPlot vignette - custom plot appearance: https://cran.r-project.org/web/packages/sjPlot/vignettes/custplot.html 
