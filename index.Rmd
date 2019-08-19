@@ -1,8 +1,10 @@
-<br>
+---
+title: "Math 615 homepage"
+---
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 wk1.date <- as.Date("2019-08-26")
 ```
-# Math 615 Homepage
 
 This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](http://www.norcalbiostat.com) for <span style="color:blue">**Fall 2019**</span>.   
 This page is used for posting of regular announcements and information for students of the class. 
