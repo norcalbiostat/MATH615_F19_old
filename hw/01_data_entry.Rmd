@@ -1,12 +1,12 @@
 ---
 title: "Data entry and codebook creation"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: true
     toc_float: true
-  pdf_document: default
 css: ../css/custom_css.css
 ---
 
@@ -27,7 +27,7 @@ You will enter data and create your codebook directly in Google Sheets.
 
 * Start a new spreadsheet in the **01 Data Entry** folder in our shared Google Drive. 
 * Name this file `medrecords_userid` where _userid_ is your chico state user id. 
-* Name the first three worksheets within this file: `data`, `codebook`, `import`.
+* Name the following worksheets: `data`, `codebook`, `import`.
 
 ----
 
@@ -35,7 +35,7 @@ You will enter data and create your codebook directly in Google Sheets.
 
 ## 1. Data Entry
 1. Select 4 variables recorded on the medical forms
-    - one should be a unique identifier, at least one should be a quantitative variable and at least one should be a categorical variable
+    - one should be a unique identifier, at least one should be a quantitative variable and at least one should be a categorical variable. (Read PMA5 Ch2 for this information)
 2. Select a brief name for each variable - write this in the first row
     - Use good variable naming conventions:
 3. Determine what range of values is needed for recording each variable 
@@ -83,5 +83,7 @@ An example of what this should look like is below.
     - Data was read in correctly
         - first row was read in as variable names
         - missing data properly accounted for
+    - Screenshot present
+    
 
 
