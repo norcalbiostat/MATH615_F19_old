@@ -2,12 +2,13 @@
 title: "Introduction to MATH 615"
 date: "Last Updated `r Sys.time()`"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document: 
+urlcolor: blue
 css: ../css/custom_css.css
 ---
 
@@ -51,10 +52,12 @@ Back to the [[Schedule]](../schedule.html)
     - Download either the phone app or the desktop app (I use both). This is mandatory.
       Do not rely on remembering to log in via the web browser. You will miss important notifications. 
     
-    
 * **Lecture notes**
-    - Combination of the Applied Statistics notebook, and stand alone lecture notes like these. 
+    - Stand alone lecture notes like these. 
+    - **NEW PILOT** Interactive lecture notes on Hack MD: https://hackmd.io/
+    - Applied Statistics notebook
     - Most are available as PDF or HTML. 
+
 
 # Project
 
@@ -164,5 +167,22 @@ This means when you download a file, right click and "Save as" or "Save target a
 Your working directory should now look similar to this:
 
 <center><img src="images/folder_org.png" width="350px"></center>
+
+# Setup checklist
+
+* Software program installed
+* Get textbook
+* Class webpage bookmarked
+* Slack account made
+    - Desktop / phone app installed
+    - Introduction posted in #introductions channel
+* Star the class google drive folder so it's easier to find
+* Class working directory setup 
+* Read the syllabus for class policies
+
+All done? Do the required reading or check the schedule to see what's coming up. 
+
+
+
 
 

@@ -30,6 +30,9 @@ navbar:
     - text: Google Drive
       icon: fa-google
       href: https://drive.google.com/drive/folders/11ah_oFsHalQ_35AkK5bkYW7wDbm97_vu?usp=sharing
+    - text: Hack MD
+      icon: fa-file-code
+      href: https://hackmd.io/
     - text: Slack (class discussions)
       icon: fa-slack
       href: https://math615.slack.com/
