@@ -2,13 +2,12 @@
 title: "Introduction to MATH 615"
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 css: ../css/custom_css.css
 ---
 
@@ -43,9 +42,9 @@ Back to the [[Schedule]](../schedule.html)
     
 * **Textbook: Practical Multivariable Analysis (PMA5 / PMA6)**
     - The textbook is used for data, reading and learning content. 
+        - New edition coming out in December (ish). I'd advise to just rent the 5th and buy the 6th.
         - Great long term resource
-        - New edition coming out in October (ish). You can get the 5th or wait for the 6th edition. 
-        - I've provided a draft for select chapters in the 6th edition. 
+        - I've provided a draft for select chapters in the 6th edition on the course materials page.
         
 * **Slack** will be used for outside class discussions, homework help and general chatter. 
     - I will not answer most questions through email. 
@@ -127,7 +126,6 @@ Back to the [[Schedule]](../schedule.html)
     - Chico R Users Group 
         - [Meetup](https://www.meetup.com/Chico-R-Users-Group/)
         - [Google l-serv](https://groups.google.com/forum/#!forum/chico-rug)
-    - [Data camp](http://www.datacamp.com)
     - [Quick-R](http://www.statmethods.net/)
     - [Cookbook for R](http://www.cookbook-r.com/)
     - [R Examples Repository](http://dwoll.de/rexrepos/) (This site was also built using R Markdown, is open source and a fabulous example of reproducible research!)

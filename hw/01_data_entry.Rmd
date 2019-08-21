@@ -85,8 +85,3 @@ An example of what this should look like is below.
         - missing data properly accounted for
 
 
-
-
-
-[Lec 00 - Introduction to the class](lecture/lec00_intro_class.html)
-[Reproducibility slides](http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/)
