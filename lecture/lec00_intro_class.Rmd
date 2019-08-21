@@ -2,12 +2,12 @@
 title: "Introduction to MATH 615"
 date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document: 
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document: 
 urlcolor: blue
 css: ../css/custom_css.css
 ---
@@ -57,6 +57,11 @@ Back to the [[Schedule]](../schedule.html)
     - **NEW PILOT** Interactive lecture notes on Hack MD: https://hackmd.io/
     - Applied Statistics notebook
     - Most are available as PDF or HTML. 
+    
+* **Hack MD**
+  - Interactive collaborative notes
+  - https://hackmd.io/@norcalbiostat/intro_hackmd#/
+  
 
 
 # Project
@@ -173,6 +178,7 @@ Your working directory should now look similar to this:
 * Software program installed
 * Get textbook
 * Class webpage bookmarked
+* Go to Hack MD (link above), read the introduction and add your name/major
 * Slack account made
     - Desktop / phone app installed
     - Introduction posted in #introductions channel
