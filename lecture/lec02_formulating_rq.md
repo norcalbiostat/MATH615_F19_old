@@ -5,12 +5,11 @@ robots: noindex, nofollow
 
 # Lec02 - Formulating Research Questions
 
-By the end of this lecture students will understand that
+By the end of this topic students will understand 
 
-* Data is recorded in different manners
-* Spreadsheets are a common method of recording data
-* Codebooks are an essential piece in learning about the data
-* There is a difference between human readable and computer readable data formats 
+* How to use a codebook to connect measured items to research question topics
+* How to formulate a testable hypothesis
+* How to review literture to refine their research question
 
 ---
 
@@ -22,6 +21,7 @@ By the end of this lecture students will understand that
 :question: **What is the one essential piece you need to review before you can formulate a research question?**
 
 
+<!---
 
 # Stages of question formulation
 
@@ -64,6 +64,9 @@ Depending on your field of study, these terms may be called different things. St
 :question: **What is an example of a research question?**
 
 
+--->
+<!---
+
 ## 4. Conduct a literature review
 
 Literature reviews help you identify gaps in the current literature regarding your research topic, and refine your research question. 
@@ -87,6 +90,9 @@ Literature reviews help you identify gaps in the current literature regarding yo
 
 :question: **What are the two main sources of scientific literature?**
 
+--->
+<!---
+
 ### Primary source literature
 * Journal articles reporting study results – a researcher did a literature review, had data, analyzed it, and wrote up results in context.
 * This is what you will be doing later, in poster form. 
@@ -100,9 +106,13 @@ Literature reviews help you identify gaps in the current literature regarding yo
 
 ### How can you tell if it a primary source? 
 * It has a title, abstract, introduction, method (with participants), results, discussion, and reference list.
-    - What would "participants" look like for field biology research? Chemistry?  
 
-## A few tips for your literature search
+:question: **What would "participants" look like for research in your field?**
+
+--->
+<!---
+
+### A few tips for your literature search
 * Try to use articles that are published within the last 5-10 years
 * Read the abstract, if sounds similar to your topic, read the participants, methods, and discussion at a glance then decide if you should keep or not
 * As you read the literature, there should be an exchange between your research question and what you are learning. 
@@ -110,13 +120,16 @@ Literature reviews help you identify gaps in the current literature regarding yo
     - Allows us to see what we KNOW and what we DO NOT KNOW
 * Give special attention to the "future research" sections of the articles that you read. 
 * Try to find a few articles that are looking specifically what you are looking at in terms of the association between your two specific topics.
-    - This will tell you what we already know and the "future research"" in the discussions and conclusions sections will tell you questions that need more research.
+    - This will tell you what we already know and the "future research" in the discussions and conclusions sections will tell you questions that need more research.
     - If you can look at an association that has recently been identified as "area for future research" we have hit the jackpot in terms of topics.
-* How to read a journal article is available on the course website under 'Articles""
-
+* How to read a journal article is available on the course website under Articles
 
 
 ## 5. Refine your research question
 
 Based on your literature review some of your draft questions may already be answered, or you noticed that your question is a still too vague. 
 Revisions are a part of research. 
+
+
+
+--->
