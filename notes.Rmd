@@ -48,6 +48,8 @@ gsub("<thead>.*</thead>", "", x)
 * [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) 
 * Lec00: Intro to the class [[HTML]](lecture/lec00_intro_class.html)[[PDF]](lecture/lec00_intro_class.pdf)
 * Lec01: Data architecture [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec01)
+* Lec02: Formulating Research Questions [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec02)
+
 
 ----
 

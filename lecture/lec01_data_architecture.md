@@ -14,7 +14,9 @@ By the end of this lecture students will understand that
 
 ---
 
-## Prior knowledge
+## Prior knowledge (TPS)
+_This is a "Think-Pair-Share" (TPS) exercise. Please wait until prompted to move on from each phase_
+Think about the following questions and write down a few answers. When prompted, pair up with your neighbor and share some of your responses. Then pick one or two answers to each question and add it to these collaborative notes so we can discuss it as a class. 
 
 :question: **What is data?**
 
