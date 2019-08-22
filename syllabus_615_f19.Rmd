@@ -47,6 +47,7 @@ By the end of the semester students will be able to
 * **Reliable Laptop**: Expect to bring often. Contact me if this poses a problem or concern for you. 
 * **Reliable internet** connection while on and off campus. ITSS can help you get this setup. 
 * **Computer Software:** Data Analysis is done using statistical analysis software. Common statistical programs include SAS, STATA, R and SPSS. I am fluent in SAS, STATA and R, but can provide limited support for SPSS. The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
+* **Accounts:** Slack, for discussion. Hack MD for collaborative notes. 
 
 
 # Grading
