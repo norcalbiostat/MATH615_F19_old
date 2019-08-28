@@ -216,4 +216,3 @@ Next up is setting up a reproducible research pipeline, choosing some research h
     - Use the link under 'Tools' in the navigation boar of this page to go to our Slack workspace, make an account using your @mail.csuchico.edu email address. 
     - You must download either the desktop app, or the phone app, or both. Do not rely on the browser based version. 
 
-

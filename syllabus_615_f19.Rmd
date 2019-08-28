@@ -1,8 +1,8 @@
 ---
 title: "Syllabus Math 615 Fall 19"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Course Description
@@ -53,8 +53,12 @@ By the end of the semester students will be able to
 # Grading
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
-* The approximate contributions per category are: Participation 15%, Written Assignments 20%, Quizzes 25%, Exams 20%, and Project related assignments 20%. 
-    - Most written assignments are not graded for content. They will be reviewed and commented on by your peers and by the instructor. Credit is only given for a complete assignment. Think of the written assignments as a draft version 1 of analyses that you will refine and present as part of your cumulative project. 
+* The approximate contributions per category are:  
+  - Participation 15%: Slack usage, Peer reviews  
+  - Written Assignments 20%: Submitted in Google Drive, but graded using a visable rubric in Blackboard Learn.  
+  - Weekly Quizzes 25%: Google Forms. This replaces a midterm exam.  
+  - Final exam 20%: Take home 
+  - Project related assignments 20%  
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 
 # Schedule of Topics
