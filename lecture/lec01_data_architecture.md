@@ -14,19 +14,52 @@ By the end of this lecture students will understand that
 
 ---
 
-## Prior knowledge (TPS)
-_This is a "Think-Pair-Share" (TPS) exercise. Please wait until prompted to move on from each phase_
-Think about the following questions and write down a few answers. When prompted, pair up with your neighbor and share some of your responses. Then pick one or two answers to each question and add it to these collaborative notes so we can discuss it as a class. 
+## Prior knowledge
 
 :question: **What is data?**
+- Data is collectable information
+- Facts and statistics
+- Descriptive terms linked to subjects of interest
+- Set of values that help describe phenomenon
+- Values
+- Qualitative vs. quantitative
+- Tangible information that can be used for analysis
+- Information
+- EVIDENCE
+
 
 :question: **In what manner/forms is data found?**
+- Paper: survey, logs, tests, records
+- Electronic: xls, database
+- Ordinal, continuous, categorical, numerical
+- Qualitative and quantitive 
+- Through different research methods and techniques
+- images, video, audio
 
 :question: **How / where do you store data?**
+- Database, standalone file, data sheet during field collection, etc.
+- Hard copy
+- Data can be stored in online files/paper copies, online surveys
+- CLOUD
+- Files on a computer
+- Database, often in a manner that is comprehensible to the user/users
+- On paper or a computer
+- Spreadsheets
+- In the field data is collected and stored on paper but transfered to a database 
 
 :question: **What do we use data for?**
 
-<!--- 
+To make inferences about the world around us 
+- Describe phenomenon, predict future scenarios, determine relationships, monitor species over time
+- To create informed decisions about a project or hypothesis
+- to connect information and better understand how things are related
+- To answer questions 
+- To plan for the FUTURE (predictions)
+- To identify relationships or the lack there of between subjects of interest
+- To understand events, situations
+- We use data to help us analyze our research on a deeper level than observations or feelings/hunches.
+
+
 
 ## Data in Spreadsheets
 
@@ -37,14 +70,40 @@ In this lesson[^dc], we’re going to talk about good data entry practices - for
 
 
 :question: **What kind of tasks do you do in spreadsheets?**
+- Calculations/formulas, rote storage
+- Simple stat analysis and visualization.
+- budgeting 
+- classwork mainly; graphs, organizing data, lists
+-  attendance
+-  graphing and tables
+-  Calculating finances/ bills
+-  Grade comparisons 
+-  I don't use them
+- Association of data sets, calculating indexes using formulas, organize data
+
 
 :question:  **Which tasks do you think spreadsheets are good for?**
+- data storage
+- Graphs, pie charts, automating things
+-  finding obvious patterns
+- organization 
+- experimental learning/ trial and error for inputing information
+- Schedule
+- Organize data
+- Storing Data (google sheets)
+- basic analysis of data
+- Organizing a large amount of data
 
 :question:  **Spreadsheet frustrations (Pain points)** _(What have you accidentally done that made you frustrated or sad)_
+- editing large datasets
+- printing spreadsheets
+- Interlinked data (getting one code wrong and messing everything up)
+- Working with 1,000,000+ records in Excel (does not work...)
+- data disappering / accidentally deleting important things
+- FORMATTING
+- Excel gets very slow with a lot of data
+- graphs and visual data sets
 
---->
-
-<!---
 
 ### Formatting data in spreadsheets 
 
@@ -64,9 +123,9 @@ In this lesson[^dc], we’re going to talk about good data entry practices - for
 * Leave missing data cells blank:
     *  don't put a `.`, or `missing`, or 0, or NULL
 
---->
 
-<!---
+
+
 
 :books: # Example - livestock data
 
@@ -85,9 +144,7 @@ If they were to keep track of the data like this:
 ![](https://datacarpentry.org/spreadsheets-socialsci/fig/single-info.png)
 
 
---->
 
-<!---
 
 # Metadata 
 
