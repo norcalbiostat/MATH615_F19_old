@@ -37,19 +37,25 @@ You will enter data and create your codebook directly in Google Sheets.
 1. Select 4 variables recorded on the medical forms
     - one should be a unique identifier, at least one should be a quantitative variable and at least one should be a categorical variable. (Read PMA5 Ch2 for this information)
 2. Select a brief name for each variable - write this in the first row
-    - Use good variable naming conventions:
+    - Use good variable naming conventions: 
+        - short
+        - no special characters
+        - no spaces
+        - doesn't start with a number
 3. Determine what range of values is needed for recording each variable 
 5. Enter the data for each patient, one patient per row. 
 6. If data is missing for a particular value, leave the cell blank. 
 
+![](hw1_data.png)
+
+Recall the _tidy data principles_ state to put one observation per row, and one variable (characteristic) per column. 
+
 ## 2. Codebook Creation
 In a separate worksheet list the variable names, labels, data types, and response code or ranges in separate columns (4 columns total).
 
-An example of what this should look like is below. 
+An example of what this should look like is below. (With the exception of the red error)
 
-<span style="color:red">fix this</span>
-
-![](med_records.png)
+![](hw1_codebook.png)
 
 
 ## 3. Data Import
@@ -63,6 +69,13 @@ An example of what this should look like is below.
     - Did you have to specify missing values in any specific way?
 4. Show that it worked by taking a screenshot of the code, and the view of the data. Paste both in the `codebook` worksheet.
     
+
+Examples of import code
+
+![](hw1_r_code.png)
+
+![](hw1_spss_code.png)
+
 
 ----
 
