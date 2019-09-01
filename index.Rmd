@@ -190,20 +190,21 @@ We'll talk about how to identify features of data that will need to be changed p
 
 ----
 
+--->
+
+
 ### `r format(wk1.date+7, "%m-%d-%Y")`: Week 2
 
 Hope everyone had a relaxing 3day weekend. Office hours have been set. Thank you for contributing! 
 
-* Mon 3-4pm  
-* Wed 1-2pm  
-* Thu 10-11am  
+* Monday 2-3pm Holt 202
+* Tuesday 10-11am Holt  202
+* Wednesday 2-4pm PHSC 213 (Community Coding)
+* Thursday 2-4pm MLIB 442 (Community Coding)
 
-We've seen some pitfalls regarding data entry, and practiced reading in data into our SPC. 
-**SPSS users need to add information to the [collaborative SPSS notes](https://hackmd.io/00_J78IaQouu4DalQ-3P3w) on how to read data into SPSS**
+Collaborative Hack MD notes are posted under "Materials" in the nav bar. 
 
-Next up is setting up a reproducible research pipeline, choosing some research hypotheses and then we'll start talking about how to describe distributions of a single variable using summary statistics, tables and plots. We're going to do this on the "dirty" data because visualization is a really good way to detect any problems in the data. 
-
---->
+Next up is formulating research hypotheses on your selected data, and setting up a reproducible research pipeline to prepare data for analysis. 
 
 ----
 

@@ -15,6 +15,12 @@ navbar:
     - text: "Applied Stats Notebook"
       icon: fa-book-open
       href: https://norcalbiostat.github.io/AppliedStatistics_notes/
+    - text: "Collaborative R notes on Hack MD"
+      icon: fa-file-code
+      href: https://hackmd.io/@norcalbiostat/r_notes
+    - text: "Collaborative SPSS notes on Hack MD"
+      icon: fa-file-code
+      href: https://hackmd.io/@norcalbiostat/spss_notes
   - text: "Projects"
     icon: fa-bar-chart
     menu:
@@ -46,6 +52,9 @@ navbar:
     - text: Syllabus
       icon: fa-info-circle
       href: syllabus_615_f19.html
+    - text: Community Coding
+      icon: fa-group
+      href: http://bit.ly/cc_hours
     - text: Dr. D's website
       icon: fa-paw
       href: http://www.norcalbiostat.com/
