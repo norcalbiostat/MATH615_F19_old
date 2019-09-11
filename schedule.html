@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -55,9 +54,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -71,6 +72,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -175,6 +177,8 @@ $(document).ready(function () {
 });
 </script>
 
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
 
 <style type="text/css">
@@ -231,17 +235,20 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -407,8 +414,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="last-updated-fri-sep-06-113751-am" class="section level1 tabset tabset-fade tabset-pills">
-<h1>Last Updated: Fri Sep 06 11:37:51 AM</h1>
+<div id="last-updated-wed-sep-11-131215" class="section level1 tabset tabset-fade tabset-pills">
+<h1>Last Updated: Wed Sep 11 13:12:15</h1>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>
@@ -486,7 +493,7 @@ PMA5 Ch 4
 Quiz 03<br>(<b>Due 09/16</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
-<a href="hw/hw03_data_management.html">hw03_data_management</a><br>(<b>Draft Due 9/13, PR 9/14, Final 9/15</b>)
+<a href="hw/03_data_management.html">hw03_data_management</a><br>(<b>Draft Due 9/13, PR 9/14, Final 9/15</b>)
 </td>
 </tr>
 <tr grouplength="2">
@@ -505,7 +512,7 @@ PMA6 Ch 4<br>ASCN Ch 2
 Quiz 04<br>(<b>Due 09/23</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
-<a href="hw/hw04_univ_graphing.html">hw04_univ_graphing</a><br>(<b>Draft Due 9/20, PR 9/21, Final 9/22</b>)
+<a href="hw/04_univ_graphing.html">hw04_univ_graphing</a><br>(<b>Draft Due 9/20, PR 9/21, Final 9/22</b>)
 </td>
 </tr>
 <tr>
@@ -535,7 +542,7 @@ Describing relationships (Q~C, Q~Q)
 Quiz 05<br>(<b>Due 09/30</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
-<a href="hw/hw05_biv_graphing.html">hw05_biv_graphing</a><br>(<b>Draft Due 9/27, PR 9/28, Final 9/29</b>)
+<a href="hw/05_biv_graphing.html">hw05_biv_graphing</a><br>(<b>Draft Due 9/27, PR 9/28, Final 9/29</b>)
 </td>
 </tr>
 <tr grouplength="1">
@@ -851,23 +858,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
