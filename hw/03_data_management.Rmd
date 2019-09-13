@@ -80,10 +80,14 @@ clean <- mydata %>% select(age, marital, cesd, health_cat)
 save(clean, file="depression_clean.Rdata")
 ```
 
-## Example 2: AddHealth
+## Example 2: Example DM files on AddHealth
 
-Here is an example data management file for the Add Health data: https://norcalbiostat.netlify.com/data/dm_addhlth.html as an example. _Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn't quite work the way we intended._ 
+### R 
+The R example is posted at https://norcalbiostat.netlify.com/data/dm_addhlth.html. _Warning, do not copy this code from the HTML file directly. It will contain special characters that will prevent your code from working. Plus the sleep variable didn't quite work the way we intended._ 
 
+### SPSS
+
+You can download and view a copy of a DM file in SPSS for AddHealth using [[this link]](../docs/dm_addhealth.sps). 
 
 
 # Submission instructions
@@ -94,8 +98,9 @@ Upload your <span style="color:red">PDF</span> file to the `03 Data Management` 
 
 * R users compile your RMD file to create a PDF (knit to PDF)
 * SPSS users will have to present additional output to demonstrate that the recodes were successful. 
-    - Perhaps Include the `FREQUENCIES` code in your `dm` file to create tables or summaries of the modified variables, so that it shows up in your output window? I'm open to suggestions here. 
-    - Either save your output file as PDF or copy/paste output into word then save as PDF. 
+    - Include the `FREQUENCIES` code in your `dm` file to create tables or summaries of the modified variables, so that it shows up in your output window. 
+    - After you are done, close & restart SPSS by opening your `dm` file. Click "Run all" 
+    - Export your output file as PDF and upload it to Google Drive
 
 ## Final
 Upload your <span style="color:red">code</span> (`.Rmd` or `.sps`) file to the `03 Data Management/code` folder in Google Drive. 
@@ -104,7 +109,7 @@ Upload your <span style="color:red">code</span> (`.Rmd` or `.sps`) file to the `
   - The file it creates will be the item that is graded. 
   - You can keep submitting files until it works. 
 
-# Peer Review instructions 
+# Peer Review instructions (PR Assignment Removed for Fall 19)
 
 As a reviewer, this is what you're checking for: 
 
