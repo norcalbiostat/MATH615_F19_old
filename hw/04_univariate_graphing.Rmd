@@ -4,8 +4,10 @@ output:
   html_document:
     highlight: tango
     theme: flatly
+    toc: true
+    toc_float: true
   pdf_document: default
-css: ../css/customh5.css
+css: ../css/custom_css.css
 ---
 
 ```{r setup, include=FALSE}
@@ -18,12 +20,12 @@ There are a variety of conventional ways to visualize data - tables, histograms,
 
 # Instructions
 
-* Use the template provided: [[RMD]](03_univariate_graphing_template.Rmd) for R users, and [[Word]](03_univariate_graphing_template.docx) for SPSS users. Rename this file to `univ_graphing_userid`
+* Use the template provided: [[RMD]](04_univariate_graphing_template.Rmd) for R users, and [[Word]](04_univariate_graphing_template.docx) for SPSS users. Rename this file to `univ_graphing_userid`
 * Completely describe 2 categorical and 2 quantitative variables using 
     - A table of summary statistics,
     - An appropriate plot with titles and axes labels, 
     - A short paragraph description in full complete English sentences. 
-* Upload your final PDF to `03 Univariate Graphing` folder in Google Drive with the file name: `univ_graphing_userid.pdf`
+* Upload your final PDF to `04 Univariate Graphing` folder in Google Drive with the file name: `univ_graphing_userid.pdf`
 * This is a peer reviewed assignment. 
 
 To guide your description of this distribution try to include the following information:

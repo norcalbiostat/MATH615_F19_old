@@ -68,11 +68,10 @@ Create a new `project.Rmd` or `project.sps` file in your Math 615 folder. Put al
 
 
 ## Poster setup
-Setup your poster by doing the following with your partner. 
+Setup your poster by doing the following: 
 
 * Create a Google Slides presentation directly into the Project Slides folder in our Google Drive. 
-* Name your file using your analysis pair names: `last_last` only. 
-
+* Name your file using your username only. 
 
 You will fill out these slides in 4 stages. The required contents for each slide are listed below under **Stages**
 
@@ -80,8 +79,9 @@ You will fill out these slides in 4 stages. The required contents for each slide
 * There is an example slide deck in Google Drive named `AAA Example/Template`
 * There is a grading rubric in Blackboard that you can self-check your submission against prior to grading. 
 * This includes reviewing the current set of feedback and mak the appropriate corrections. 
-    - Once you have addressed a particular piece of feedback mark it as "resolved" in Google Slides. 
+    - Once you have addressed a particular piece of feedback mark it as "resolved" in Google Slides. (Do Not Delete Feedback.)
 * Your presentation should be limited to approximately 20 slides. The contents of each slide are specified below. 
+    - You are welcome to have "staging" slides where you can dump content, thoughts, analyses that you _may_ end up using. 
 
 
 ## Stage 1: Setting up the story (Slides 1-7)
@@ -203,7 +203,7 @@ https://norcalbiostat.netlify.com/lec/poster_guidelines/
 
   * Links to poster templates, 
   * Details on what each section should contain
-  * Guidance on aestetics and printing
+  * Guidance on aestetics and printing (when appropriate)
   * Evaluation criteria
   * Examples of professional and prior student work. 
 
