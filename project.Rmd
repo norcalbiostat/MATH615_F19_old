@@ -76,10 +76,10 @@ Setup your poster by doing the following:
 You will fill out these slides in 4 stages. The required contents for each slide are listed below under **Stages**
 
 * At each stage you should update anything you need to change, such as correctly making graphics, writing results correctly etc. 
-* There is an example slide deck in Google Drive named `AAA Example/Template`
+* There is an example slide deck in Google Drive named `AAA Example/Template`. This has more details about the contents of each slide and guidance for what should be included on that slide. 
 * There is a grading rubric in Blackboard that you can self-check your submission against prior to grading. 
 * This includes reviewing the current set of feedback and mak the appropriate corrections. 
-    - Once you have addressed a particular piece of feedback mark it as "resolved" in Google Slides. (Do Not Delete Feedback.)
+    - Once you have addressed a particular piece of feedback mark it as "resolved" in Google Slides. (*Do Not Delete Feedback.*)
 * Your presentation should be limited to approximately 20 slides. The contents of each slide are specified below. 
     - You are welcome to have "staging" slides where you can dump content, thoughts, analyses that you _may_ end up using. 
 

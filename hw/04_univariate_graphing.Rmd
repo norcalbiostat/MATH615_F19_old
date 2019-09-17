@@ -1,12 +1,12 @@
 ---
 title: "Describing distributions of data"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: true
     toc_float: true
-  pdf_document: default
 css: ../css/custom_css.css
 ---
 
@@ -25,23 +25,27 @@ There are a variety of conventional ways to visualize data - tables, histograms,
     - A table of summary statistics,
     - An appropriate plot with titles and axes labels, 
     - A short paragraph description in full complete English sentences. 
-* Upload your final PDF to `04 Univariate Graphing` folder in Google Drive with the file name: `univ_graphing_userid.pdf`
+* Upload your final PDF to `04 Univariate Graphing` folder in Google Drive.
 * This is a peer reviewed assignment. 
+* Grading rubric is available for viewing in Blackboard Learn. 
 
 To guide your description of this distribution try to include the following information:
 
 * What is the trend in the data? What exactly does the chart show? (Use the chart title to help you answer this question)
-* What are the axes and what are the units?
+* Describe the location of the bulk of the data. Measures include
+    - Measures of center: mean/median
+    - IQR as Q3 and Q1 (i.e., 50% of the data lie between $x_{1}$ and $x_{2}$)
+    - N and (%) for categorical data for the largest category. 
 * Describe the shape:
     - Symmetry/Skewness - Is it symmetric, skewed right, or skewed left?
-    - Modality - Is it uniform, unimodal, or bimodal?             
-* Describe the spread:
-    - Variability - What is the approximate range of the data (x-axis)?
-    - Does the variable have a lot of variability in the data (visually, are the participants responded to many different responses or mainly just one)?
-* Describe the center: What is the mean/median/midpoint of the data? (Pick one or two). Don't 
-* Describe the outliers (note: there may not be any for every graph):
+    - Modality - Is it uniform, unimodal, or bimodal?       
+* Describe the spread or variability in the data
+    - Appropriate measures include range, standard deviation, IQR for continuous data
+    - For categorical data describe if distribution is spread across multiple response categories or mainly only one.
+* Describe the outliers (note: there may not be any for every graph). Continuous data only.
     - Are there any outliers for the variable?
-    - If yes, are these true outliers or false (due to data management or input error) outliers?
+    - If yes, are these true outliers or false (due to data management or input error) outliers? 
+    (This could alert you to missing codes like -77 or 99 that need to be set to missing)
 
 \newpage 
 

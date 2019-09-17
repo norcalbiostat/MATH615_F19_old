@@ -163,9 +163,18 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 I'm alive!
 
-We'll continue to work more on data management this week (and for the next few weeks)
+> OH Cancelled Monday. Sorry, lot of Drs appts in the upcoming weeks that were scheduled months ago. 
+> Additional OH Wednesday at 9am
 
-* You also be starting to explore and describe variables using graphical and summary methods. 
+If there's one take home message for this week, is to describe the distribution of variables you need: 
+
+1. a picture
+2. summary statistics
+3. a complete sentence interpretation
+
+> Re: Homework 03. I will adjusted the grading rubric to downweight the data management portion. 
+> We'll continue to work more on data management this week (and for the next few weeks).
+
 * You will also start the work to build your research poster. See the [project instructions](project.html) page for details. 
 
 ---
