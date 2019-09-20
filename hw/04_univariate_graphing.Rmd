@@ -51,7 +51,7 @@ To guide your description of this distribution try to include the following info
 
 # Example
 This example uses the `mpg` data set from the `ggplot2` package.
-```{r}
+```{r, echo=FALSE}
 mpg <- ggplot2::mpg
 ```
 
@@ -75,7 +75,7 @@ Cleaned up plot, full English sentences, useful text formatting of variable name
 ```{r, fig.height=4, fig.align='center'}
 library(sjPlot); library(ggplot2)
 set_theme(base = theme_classic())
-sjp.frq(mpg$class)
+plot_frq(mpg$class)
 ```
 
 > Sub compact cars are the most frequently reported type of car, making up over one-quarter (26.5%) of the cars in this data set with n=62 cars represented. The least represented car is a compact car with n=5 (2.1%) records. 
