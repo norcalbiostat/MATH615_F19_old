@@ -50,6 +50,7 @@ gsub("<thead>.*</thead>", "", x)
 * Lec01: Data architecture [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec01)
 * Lec02: Formulating Research Questions [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec02)
 * Lec03: Preparing Data for Analysis [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec03)
+* Lec04: Describing Distributions and Relationships [[Hack MD]](https://hackmd.io/@norcalbiostat/math615_lec04)
 
 
 ----
