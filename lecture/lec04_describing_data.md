@@ -27,31 +27,40 @@ For each section below, write instructions and guidance on how to fully describe
 ## Describing data (Table 1)
 To describe the distribution of data you must include three things: 
 
-1. 
+1. Explain what we're looking for in complete English sentence
 
-2. 
+2. Graph the data
 
-3. 
+3. Descriptive sentence to conclude your findings: talk about summary statistics
 
 
 ## Single Categorical Measure (Table 2)
 
 
-
+- Bar chart to visualize data
+- Identify what type of categorical variable it is (nominal, binary, ordinal)
+- Write descriptive paragraph to describe the distribution
+- Calculate summary statitcs: % most frequent, % least frequent, counts
 
 ## Single Quantitative Measure (Table 3)
-
+1. Has to do with numbers  
+2. Quantitative measures inclide:
+box plots, histogram, density plot, and want to see  location, shape,  skewness, peaks, range of data, IQR
+(ANYTHING BUT BAR CHARTS and PIE CHARTS!)
+3. Include summary statistics- standard deviation, median, min, max, & outliers 
+4. Discuss: shape, spread, location
 
 
 
 ## Explanatory vs Response measures (Table 4)
-Define/Describe, and provide an example of each. 
+Define/Describe, and provide an example of each.
 
 **Explanatory**
-
+1. Explanatory is the independent variable.
+E variable: characteristics of outcome variables or predictors to an outcome: demographic background, socioeconomics. Ex: Do you smoke cigarettes? Yes/No
 
 **Response**
-
+3. Response measures outcome AKA dependent variable. ex: LUNG CANCER.
 
 
 -----
@@ -59,15 +68,29 @@ Define/Describe, and provide an example of each.
 
 ## Categorical explanatory vs. Categorical response (C~C)
 
-
+* graph: Side by side barcharts
+* N, %'s of response within each level of explanatory varible
 
 
 ## Categorical explanatory vs. Quantitative response (Q~C)
 
+* graph: boxplots, density plots, histograms - for every level of the categorical explanatory variable. 
+* same summary statistics: mean, sd, 
+* talk about shape, center, spread for each category. Using comparative language
+* 
 
 
 
 ## Quantitative explanatory vs. Quantitative response (Q~Q)
+
+Explain: 
+* **direction**: pos or neg
+* **form**: linear vs nonlinear
+* **strength**: -1 (perfect neg corrre), 1 (perfect pos corre) 
+
+Plot: scatterplot
+
+Summary stats: correlation
 
 
 
