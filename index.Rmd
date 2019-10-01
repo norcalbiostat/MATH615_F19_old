@@ -149,6 +149,18 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 --->
 
+### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 6: Probability
+
+So far you have been conducting an exploratory data analysis to learn the distributions of your measures, and to assess for any possible relationships in your research. You cannot make any statistical claims about whether or not a relationship is significant at this point. That is under the realm of _inferential statistics_ and will be the topic of the class after Spring break. 
+
+To understand why inferential statistics can be used to make valid claims, we have to learn a little bit about _Probability_ first. If you are rusty on your basic statistics and probability, I recommend getting the OpenIntro textbook as a review. 
+
+This is a much more mathematical section of the course, so be sure to plan your time accordingly. 
+
+**Updates** I have cxl'd HW 6 (research proposal). 
+
+
+
 ### `r format(wk1.date+4*7, "%m-%d-%Y")` Week 5: Describing Relationships between two variables
 
 Goals for the week: 
