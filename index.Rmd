@@ -142,14 +142,32 @@ This week, let's ease back into things. Try to come back to "normal", when life 
     - I am in the process of commenting on everyones posters so far. 
 * Instructions on Bivariate Inference Homework. 
 
-
-### 10/1/18 - [Week 6](https://norcalbiostat.github.io/MATH615/wk/wk06.html)
-* As we start our next phase of the class learning about _Inferential Statistics_, we need to first refresh our understanding about probability, distributions, confidence intervals.
-* On thursday we'll walk through a hypothesis test using your research data. Check the schedule or weekly overview for how to prepare. (hint, you need some summary #'s from your data for this)
-
 --->
 
-### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 6: Probability
+
+### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 7: Quantifying Uncertainty, Foundations for Inference
+
+As we start our next phase of the class working on conducting _Inferential Statistics_, we need to finish learning how to correctly interpret a confidence interval, and some fundamentals regarding hypothesis testing. 
+
+Each day for the next 2 weeks we will cover how to analyze a different combination of response & explanatory variables. Don't wait until the end to do that portion of the HW08. As soon as we cover that topic, do that piece of the HW. 
+
+This week you should also be working on your Poster prep stage II: Showcase your data.  
+
+**Tuesday 10/8**  
+
+* Interpreting Confidence intervals as a range of plausible values  
+* Foundations for how to conduct a thourough hypothesis test.   
+* We're still working out of [OpenIntro Statistics textbook Ch5](https://leanpub.com/openintro-statistics) or Dr. D's [Math 315 course notes Ch4](https://norcalbiostat.github.io/MATH315/reading/RAD_course_notes_f19.pdf) 
+
+**Thursday 10/10**
+
+* Group quiz on interval estimation
+* Start Homework 08, analyzing bivariate relationships. This can/will build directly off HW 05.   
+* Two sample T-test for a difference in means (Q ~ B)
+
+---
+
+### `r format(wk1.date+5*7, "%m-%d-%Y")` Week 6: Probability
 
 So far you have been conducting an exploratory data analysis to learn the distributions of your measures, and to assess for any possible relationships in your research. You cannot make any statistical claims about whether or not a relationship is significant at this point. That is under the realm of _inferential statistics_ and will be the topic of the class after Spring break. 
 
@@ -159,7 +177,7 @@ This is a much more mathematical section of the course, so be sure to plan your 
 
 **Updates** I have cxl'd HW 6 (research proposal). 
 
-
+---
 
 ### `r format(wk1.date+4*7, "%m-%d-%Y")` Week 5: Describing Relationships between two variables
 
