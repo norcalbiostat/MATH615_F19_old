@@ -145,25 +145,34 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 --->
 
 
-### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 7: Quantifying Uncertainty, Foundations for Inference
+### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 7: Quantifying Uncertainty, Calculating Probabilities
 
-As we start our next phase of the class working on conducting _Inferential Statistics_, we need to finish learning how to correctly interpret a confidence interval, and some fundamentals regarding hypothesis testing. 
+As we start our next phase of the class working on conducting _Inferential Statistics_, we need to finish learning how to correctly interpret a confidence interval, and how to use known distributions (like the sampling distribution) to calculate probabilities.  
 
 Each day for the next 2 weeks we will cover how to analyze a different combination of response & explanatory variables. Don't wait until the end to do that portion of the HW08. As soon as we cover that topic, do that piece of the HW. 
 
 This week you should also be working on your Poster prep stage II: Showcase your data.  
 
+We're still working out of external resources such as 
+
+* [OpenIntro Statistics textbook Ch5](https://leanpub.com/openintro-statistics)
+* Dr. D's [Math 315 course notes](https://norcalbiostat.github.io/MATH315/reading/RAD_course_notes_f19.pdf) 
+
+
 **Tuesday 10/8**  
 
+* Calculating Probabilities under a known distribution [[Hack MD Lec05]](https://hackmd.io/@norcalbiostat/math615_lec05). 
+* Additional resource for calculating probabilities
+    - [Dr D's course notes ch 3.3](https://www.youtube.com/watch?v=Bv9iY8-UzYw&feature=youtu.be)
+    - OpenIntro Statistis [Shiny app](https://gallery.shinyapps.io/dist_calc/)
 * Interpreting Confidence intervals as a range of plausible values  
-* Foundations for how to conduct a thourough hypothesis test.   
-* We're still working out of [OpenIntro Statistics textbook Ch5](https://leanpub.com/openintro-statistics) or Dr. D's [Math 315 course notes Ch4](https://norcalbiostat.github.io/MATH315/reading/RAD_course_notes_f19.pdf) 
+    - Collaborative recap on [[Hack MD Lec06]](https://hackmd.io/@norcalbiostat/math615_lec06) notes on terminology
 
+    
 **Thursday 10/10**
 
 * Group quiz on interval estimation
-* Start Homework 08, analyzing bivariate relationships. This can/will build directly off HW 05.   
-* Two sample T-test for a difference in means (Q ~ B)
+* Foundations for how to conduct a thourough hypothesis test.   
 
 ---
 
