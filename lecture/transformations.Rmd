@@ -1,0 +1,26 @@
+---
+title: "Transformations example"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(gridExtra)
+depress <- read.delim("https://norcalbiostat.netlify.com/data/depress_081217.txt", header=TRUE, sep="\t")
+```
+
+```{r, fig.height=10, fig.width=12}
+theme_set(theme_classic())
+
+x.dens <- ggplot(depress, aes(x=income)) + geom_density() + ggtitle("Income - Density")
+x.qq   <- ggplot(depress, aes(sample=income)) + stat_qq() + stat_qq_line() + ggtitle("Income - QQplot")
+
+
+logx.dens <- ggplot(depress, aes(x=log(income))) + geom_density() + ggtitle("Log(Income) - Density")
+logx.qq   <- ggplot(depress, aes(sample=log(income))) + stat_qq() + stat_qq_line() + ggtitle("Log(Income) - QQplot")
+
+sqrtx.dens <- ggplot(depress, aes(x=sqrt(income))) + geom_density() + ggtitle("sqrt(Income) - Density")
+sqrtx.qq   <- ggplot(depress, aes(sample=sqrt(income))) + stat_qq() + stat_qq_line() + ggtitle("sqrt(Income) - QQplot")
+
+grid.arrange(x.dens, x.qq, logx.dens, logx.qq, sqrtx.dens, sqrtx.qq, ncol=2)
+```

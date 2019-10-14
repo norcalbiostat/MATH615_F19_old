@@ -54,6 +54,8 @@ gsub("<thead>.*</thead>", "", x)
 * [[Lec04]](https://hackmd.io/@norcalbiostat/math615_lec04): Describing Distributions and Relationships
 * [[Lec05]](https://hackmd.io/@norcalbiostat/math615_lec05): Probability and Sampling Distributions 
 * [[Lec06]](https://hackmd.io/@norcalbiostat/math615_lec06): Interval Estimation and Hypothesis Testing 
+* [[Lec07]](https://hackmd.io/@norcalbiostat/math615_lec07): Transformations for Normality
+* [[Lec08]](https://hackmd.io/@norcalbiostat/math615_lec08): Choosing Appropriate Analysis
 
 
 ----

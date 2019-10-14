@@ -132,17 +132,16 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 
 
-### 10/9/18 - [Week 7](https://norcalbiostat.github.io/MATH615/wk/wk07.html)
-* Midterm on Tuesday. Will emphasize correct identification of data, interpretation of univariate and bivariate graphics and use of summary statistics. 
-* Lecture on choosing appropriate analyses on Thursday 
-* A recap on hypothesis testing, the types of bivariate analysis we'll be conducting, and how to choose the correct analysis procedure for your research hypothesis. 
-* Project updates: 
-    - Introduction to Phase II of the project analysis preparation, 
-    - Poster prep I instructions too vague to ensure quality work, going to roll points & grading into Stage II. 
-    - I am in the process of commenting on everyones posters so far. 
-* Instructions on Bivariate Inference Homework. 
-
 --->
+
+
+### `r format(wk1.date+7*7, "%m-%d-%Y")` Week 8: Statistical Inference
+
+* Active discussion on transformations for normality, and choosing appropriate analyses on Tuesday.
+    - Bring your textbook!
+* Start Bivariate Inference (hw08) on Thursday.
+    - Two sample T-test for a difference in means. 
+    - Analysis of Variance. 
 
 
 ### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 7: Quantifying Uncertainty, Calculating Probabilities
