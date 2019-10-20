@@ -134,6 +134,17 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 --->
 
+### `r format(wk1.date+7*8, "%m-%d-%Y")` Week 9: Inference on multiple groups
+
+The [[Applied Stats]](https://norcalbiostat.github.io/AppliedStatistics_notes/) notebook is being updated to include separate sections for each bivariate analysis. Read through the relevant chapters prior to class. 
+
+* Some board work on ANOVA on Tuesday
+* Chi-squared activity with M&M's on Thursday
+
+Each day will have open work time. 
+
+
+---
 
 ### `r format(wk1.date+7*7, "%m-%d-%Y")` Week 8: Statistical Inference
 
@@ -141,7 +152,6 @@ This week, let's ease back into things. Try to come back to "normal", when life 
     - Bring your textbook!
 * Start Bivariate Inference (hw08) on Thursday.
     - Two sample T-test for a difference in means. 
-    - Analysis of Variance. 
 
 
 ### `r format(wk1.date+6*7, "%m-%d-%Y")` Week 7: Quantifying Uncertainty, Calculating Probabilities
