@@ -119,20 +119,18 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 
 
-### 10/16/17 - [Week 8](https://norcalbiostat.github.io/MATH615/wk/wk08.html)
-* Comments on foundations assignment
-    - CI and HT are statements about the population, not the sample
-    - CI is a range of plausible values, need to compare interval to hypothesized value. 
-    - Great resource for more learning: [Open Intro Statistics](https://www.openintro.org/stat/textbook.php) Chapter 4 (free pdf)
-    - Short worksheet for practice writing/conducting hypothesis tests. 
-* Tuesday - comparing two means using a T-test for a difference in means
-* Thursday - Analysis of Variance for comparing means across multiple groups
-    - Lots of board work today
-* Reading and reference material posted on schedule
-
-
-
 --->
+
+### `r format(wk1.date+7*9, "%m-%d-%Y")` Week 10: Correlation and Regression Analysis
+
+* Two ways to assess relationships between two continuous measurements: 
+    - Correlation. Is X associated with y?
+    - Regression. How much does Y change as X changes? 
+    
+* Back to reading PMA5. The Applied Stats course notes is the short version. Quiz topics will be out of both. 
+
+
+
 
 ### `r format(wk1.date+7*8, "%m-%d-%Y")` Week 9: Inference on multiple groups
 
