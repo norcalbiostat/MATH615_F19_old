@@ -112,6 +112,8 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 
 Let's start to explore how a third variable can effect, or change, a pattern or relationship between two variables. This is called *moderation*, and it introduces a type of analysis called *stratification*. 
 
+We're also going to continue your personal resarch by applying appropriate statistical analyses to your poster prep slides. (Stage III)
+
 ### `r format(wk1.date+7*9, "%m-%d-%Y")` Week 10: Correlation and Regression Analysis
 
 * Two ways to assess relationships between two continuous measurements: 

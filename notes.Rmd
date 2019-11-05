@@ -57,6 +57,7 @@ gsub("<thead>.*</thead>", "", x)
 * [[Lec06]](https://hackmd.io/@norcalbiostat/math615_lec06): Interval Estimation and Hypothesis Testing 
 * [[Lec07]](https://hackmd.io/@norcalbiostat/math615_lec07): Transformations for Normality
 * [[Lec08]](https://hackmd.io/@norcalbiostat/math615_lec08): Choosing Appropriate Analysis
+* [[Lec09]](https://hackmd.io/@norcalbiostat/math615_lec09): Moderation and Stratification
 
 
 ----
