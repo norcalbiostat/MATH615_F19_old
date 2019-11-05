@@ -1,20 +1,18 @@
 ---
 title: "Moderation Assignment Instructions"
+author: "your name here"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
-    toc: true
-    toc_float: true
-  pdf_document: default
-css: ../css/customh5.css
 ---
 
 _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _  
 Back to the [[Schedule]](../schedule.html)
 <br>
 
-0. Download the Moderation template file. [[RMD for R users]](09_moderation_template.Rmd), [[WORD for SPSS users]](09_moderation_template.docx)
+0. Download the Moderation template file from the materials page. 
 1. For each type of analysis (ANOVA, $\chi^2$, Regression), decide on a third variable to test as a moderating variable.
     - The potential moderator can be different for each analyses. You need to decide what variables are most appropriate for your research question. 
     - This third variable must be categorical and the fewer number of levels it has the easier it is to interpret. 

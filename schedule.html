@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -55,9 +54,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -71,6 +72,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -175,6 +177,8 @@ $(document).ready(function () {
 });
 </script>
 
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
 
 <style type="text/css">
@@ -231,17 +235,20 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -407,8 +414,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="last-updated-sat-oct-26-53653-pm" class="section level1 tabset tabset-fade tabset-pills">
-<h1>Last Updated: Sat Oct 26 5:36:53 PM</h1>
+<div id="last-updated-mon-nov-04-200827" class="section level1 tabset tabset-fade tabset-pills">
+<h1>Last Updated: Mon Nov 04 20:08:27</h1>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>
@@ -662,15 +669,16 @@ Poster prep Stage III*<br>(<b>Draft Due 11/05, PR 11/07, Final 11/09</b>)
 </tr>
 <tr>
 <td style="text-align:left; padding-left: 2em;width: 35%; " indentlevel="1">
-Moderation<br>Study Design<br>Causation
+Stratification<br>Moderation
 </td>
 <td style="text-align:center;width: 13%; ">
+ASCN 9.2, 9.3
 </td>
 <td style="text-align:center;width: 13%; ">
 Quiz 10<br>(<b>Due 11/11</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
-<a href="hw/hw09_moderation.html">hw09_moderation</a><br>(<b>Draft Due 11/07, PR 11/09, Final 11/11</b>)
+<a href="hw/09_moderation.html">HW 09 Moderation</a><br>(<b>Draft Due 11/07, PR 11/09, Final 11/11</b>)
 </td>
 </tr>
 <tr grouplength="1">
@@ -787,7 +795,7 @@ Poster prep Stage IV*<br>(<b>Draft Due 12/03, PR 12/05, Final 12/07</b>)
 </tr>
 <tr>
 <td style="text-align:left; padding-left: 2em;width: 35%; " indentlevel="1">
-Develop Research Poster
+Develop Research Poster<br>Study Design &amp; Causation
 </td>
 <td style="text-align:center;width: 13%; ">
 </td>
@@ -811,7 +819,7 @@ Poster Presentation
 <td style="text-align:center;width: 13%; ">
 </td>
 <td style="text-align:center;width: 38%; ">
-Thursday 12/19, 10-12 noon. I’ll bring snacks!
+Thursday 12/19, 10-12 noon. THMA 116 I’ll bring snacks!
 </td>
 </tr>
 <tr>
@@ -854,23 +862,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

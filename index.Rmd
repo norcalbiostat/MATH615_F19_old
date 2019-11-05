@@ -106,20 +106,11 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 * Tuesday: Writing and interpreting multivariable models
 * Thursday: Moderation vs Confounding (bad lecture, too distracted)
 
-
-### 10/30/18 - [Week 10](https://norcalbiostat.github.io/MATH615/wk/wk10.html)
-* Tuesday: Moderation. What happens if we throw another variable into the mix? 
-* Thursday: Study design. How to set yourself up for success in research. 
-
-
-### 10/23/18 - [Week 9](https://norcalbiostat.github.io/MATH615/wk/wk09.html)
-* Tuesday - Analysis of categorical data using $\chi^{2}$ tests
-    - Additional lecture notes (lec03_cda) can be found on this topic under [Materials/Lecture notes](https://norcalbiostat.github.io/MATH615/notes.html)
-* Thursday - Correlation and Regression
-
-
-
 --->
+
+### `r format(wk1.date+7*10, "%m-%d-%Y")` Week 11: Moderation
+
+Let's start to explore how a third variable can effect, or change, a pattern or relationship between two variables. This is called *moderation*, and it introduces a type of analysis called *stratification*. 
 
 ### `r format(wk1.date+7*9, "%m-%d-%Y")` Week 10: Correlation and Regression Analysis
 

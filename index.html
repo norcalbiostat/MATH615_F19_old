@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -54,9 +53,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -70,6 +71,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -174,6 +176,8 @@ $(document).ready(function () {
 });
 </script>
 
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
 
 <style type="text/css">
@@ -230,17 +234,20 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -504,20 +511,11 @@ This week, let's ease back into things. Try to come back to "normal", when life 
 * Tuesday: Writing and interpreting multivariable models
 * Thursday: Moderation vs Confounding (bad lecture, too distracted)
 
-
-### 10/30/18 - [Week 10](https://norcalbiostat.github.io/MATH615/wk/wk10.html)
-* Tuesday: Moderation. What happens if we throw another variable into the mix? 
-* Thursday: Study design. How to set yourself up for success in research. 
-
-
-### 10/23/18 - [Week 9](https://norcalbiostat.github.io/MATH615/wk/wk09.html)
-* Tuesday - Analysis of categorical data using $\chi^{2}$ tests
-    - Additional lecture notes (lec03_cda) can be found on this topic under [Materials/Lecture notes](https://norcalbiostat.github.io/MATH615/notes.html)
-* Thursday - Correlation and Regression
-
-
-
 --->
+<div id="week-11-moderation" class="section level3">
+<h3>11-04-2019 Week 11: Moderation</h3>
+<p>Let’s start to explore how a third variable can effect, or change, a pattern or relationship between two variables. This is called <em>moderation</em>, and it introduces a type of analysis called <em>stratification</em>.</p>
+</div>
 <div id="week-10-correlation-and-regression-analysis" class="section level3">
 <h3>10-28-2019 Week 10: Correlation and Regression Analysis</h3>
 <ul>
@@ -671,23 +669,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
