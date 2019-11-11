@@ -25,7 +25,6 @@ panderOptions("digits", 3)
 
 ## 2. State the research Hypothesis
 
-
 * Null hypothesis: 
 * Alternative hypothesis:
 * Confounding hypothesis: 
@@ -37,6 +36,10 @@ panderOptions("digits", 3)
 
 ## 5. Interpret the regression coefficients.
 
+* $b_{0}$: 
+* $b_{1}$: 
+* $b_{2}$: 
+
 ## 6. Conclusion
 
 ----
@@ -47,7 +50,7 @@ panderOptions("digits", 3)
 ## 1. Identify variables
 
 * Binary outcome:  
-* Binary predictor: 
+* Quantitative predictor: 
 * Binary confounder: 
  
 
@@ -67,14 +70,17 @@ panderOptions("digits", 3)
 
 ## 5. Interpret the Odds Ratio estimates
 
+
 ## 6. Conclusion
 
 ----
 
 # Log Transformed Response 
 
-## 1. Identify variables
-
+## 1. Identify variables and their data type
+* Outcome:
+* Predictor: 
+* Predictor: 
  
 ## 2. State hypothesis
 
@@ -83,6 +89,10 @@ panderOptions("digits", 3)
 
 
 ## 5. Interpret the regression coefficients.
+
+* $b_{0}$: 
+* $b_{1}$: 
+* $b_{2}$: 
 
 ## 6. Conclusion
 
@@ -97,40 +107,26 @@ panderOptions("digits", 3)
 * Predictor: 
  
 ## 2. Write the mathematical model. 
-Define what each $x$ is, and write the mathematical model. State what group is the reference group. 
+Define what each $x$ is, and write the mathematical model. You may have to add $x's$. R users, make sure they are wrapped in dollar signs. 
+State what group is the reference group. 
 
 * Let $x_{1}$ be 
 * Let $x_{2}=1$ when  
 * let $x_{3}=1$ when  
 
 
-The reference group 
+The reference group is: 
 
 The mathematical model would look like: 
 
 $$ Y \sim \beta_{0} + \beta_{1}*x_{1} + \beta_{2}x_{2} + \beta_{3}x_{3} + \beta_{4}x_{4} + \beta_{5}x_{5} $$
 
-
-## 3. State hypothesis in words and symbols
-
-* Null: 
-* Alternative:
- 
-
-$H_{0}: \beta_{2}=\beta_{3} ... =0$
-
-$H_{A}:$ at least one $\beta_{j}$ is not 0
-
- 
- 
- 
-## 3. Visualize this relationship
-
-## 4. Fit the multivariable model with both predictors. 
+## 3. Fit the multivariable model with both predictors. 
 
 
-## 5. Interpret the regression coefficients. 
+## 4. Interpret the regression coefficients. 
 
+* $b_{0}$: 
 * $b_{1}$: 
 * $b_{2}$: 
 * $b_{3}$:
