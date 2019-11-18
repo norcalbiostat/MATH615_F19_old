@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -55,9 +54,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -71,6 +72,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -175,6 +177,8 @@ $(document).ready(function () {
 });
 </script>
 
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
 
 <style type="text/css">
@@ -231,17 +235,20 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -407,8 +414,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="last-updated-mon-nov-11-32914-pm" class="section level1 tabset tabset-fade tabset-pills">
-<h1>Last Updated: Mon Nov 11 3:29:14 PM</h1>
+<div id="last-updated-mon-nov-18-082959" class="section level1 tabset tabset-fade tabset-pills">
+<h1>Last Updated: Mon Nov 18 08:29:59</h1>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>
@@ -687,7 +694,7 @@ Multiple Regression analysis<br>Confounding
 PMA5 Ch 7<br>ASCN Ch 8, 9.5
 </td>
 <td style="text-align:center;width: 13%; ">
-Quiz 11<br>(<b>Due 11/18</b>)
+<a href="https://forms.gle/a6nfb4UGuhworGtU7">[Quiz 11]</a><br>(<b>Due 11/20</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
 <a href="hw/10_MLR_confounding.html">HW10 Regression</a><br>(<b>Draft Due 11/22, PR 11/23, Final 11/24</b>)
@@ -752,7 +759,6 @@ Model Building<br>Assessing model fit
 PMA5 Ch8<br>ASCN Ch 9
 </td>
 <td style="text-align:center;width: 13%; ">
-Quiz 13<br>(<b>Due 12/09</b>)
 </td>
 <td style="text-align:center;width: 38%; ">
 </td>
@@ -855,23 +861,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
