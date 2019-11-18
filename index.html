@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -54,9 +53,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -70,6 +71,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -174,6 +176,8 @@ $(document).ready(function () {
 });
 </script>
 
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
 
 <style type="text/css">
@@ -230,17 +234,20 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -410,25 +417,11 @@ $(document).ready(function () {
 This page is used for posting of regular announcements and information for students of the class.</p>
 <!----
 
-### 12/xx/18 - Final Exam. 10-12noon. Holt 155
+### 12/xx/19 - Final Exam. 10-12noon. Holt 155
 
 <span style="color:red">**Office Hours for Finals Week**</span> 
 
 * Tuesday 2-4pm, Holt 155
-
-<span style="color:red">**Allowed Exam Materials**</span> 
-
-* The [[OFFICIAL]](https://norcalbiostat.github.io/MATH615/FinalDocs/FinalExam_Fall17_Supplemental.pdf) supplemental information and analyses for the Outlook on Life Survey. 
-    - Print these pages. Ensure that you understand what models are being fit and how to read the output. You are allowed to write notes on these pages.
-    - Be prepared to answer questions about modeling and interpreting these analyses. 
-* Paper on [Smoking Behavior of US Youth](FinalDocs/Smoking behavior child welfare - Fettes 2011.pdf).
-    - Print, read, comment on, and bring to the final. 
-    - Be prepared to answer questions about the methods, models, and results.
-* A calculator
-* Up to 2 pages of additional notes (does not include your notes on the supplemental output)
-
-    
-Additional information on this new survey, such as full wording of the question on how the variables were coded can be found in the [[codebook]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Codebook.pdf) and [[survey questionnaire]](https://norcalbiostat.github.io/MATH615/FinalDocs/OOL%20Questionnaire.pdf). **Do not bring these to the final**. They are for you to use as reference material while you are learning to understand this survey.   
 
 <span style="color:red">**Review List**</span> 
 This final exam is comprehensive in that everything in this class builds upon previous topics. 
@@ -458,42 +451,25 @@ Here are a list of topics to review. All topics have equal importance, regardles
     - Handed out Wed 12/12 (Estimated) - no later than Friday 12/14. 
     - Due Friday 12/21
 * **Office Hours**
-    - Victoria (Poster design): 
-      * Tue 10-10:45 MLIB Math tutor lab (4th floor)
-      * Thu 12:45-1:45 Holt 155  
-    - Me (Holt 202)
-      * Mon 12/10 3-4pm
-      * Tue 12/11 2-4pm - Community Coding (MLIB 442)
-      * Wed 12/12 1-3pm
-      * Thu 12/13 10-11am
-      * Tue 12/18 2-3pm
-      * Wed 12/19 10-11am
-      * Thu 12/20 1-2pm
-      
+
     
 
 ### 12/3/18 - Week 14
-* You should be working on finishing the regression assignment, and Poster Prep Stage III this week. 
+* You should be working on Poster Prep Stage IV this week. 
 * You will be building models, and having to decide which model fits the data best using different criteria. 
-    
-### 11/26/18 - [Week 13](https://norcalbiostat.github.io/MATH615/wk/wk13.html)
-<span style="color:red">**Summary of schedule updates**</span>   
-
-* MLR assignment has been re-drafted and cut down significantly
-* Poster prep stage III will not have a peer review
-* Final we be take home, poster presentations will occur during the 2 hour final period. 
-
-This week, let's ease back into things. Try to come back to "normal", when life is anything but normal.  
-
-* Tuesday - Section review, recap, reorient
-* Thursday - Logistic regression
-
-
-### 11/19/18 - Fall Break. 
-* Don't think about school, assignments or anything. 
-* Please take some time to be among your family and practice self care in this incredibly stressful time. 
 
 --->
+<div id="fall-break" class="section level3">
+<h3>11-25-2019 Fall Break</h3>
+<p>Relax, get caught up on sleep.</p>
+</div>
+<div id="week-13-generalized-linear-models" class="section level3">
+<h3>11-18-2019 Week 13: Generalized Linear Models</h3>
+<ul>
+<li>What to do when the response variable is no longer continuous.</li>
+<li>How to include categorical variables in multivariable models.</li>
+</ul>
+</div>
 <div id="week-12-multivariable-regression-modeling" class="section level3">
 <h3>11-11-2019 Week 12: Multivariable Regression Modeling</h3>
 <ul>
@@ -660,23 +636,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
