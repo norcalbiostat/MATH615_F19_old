@@ -10,44 +10,37 @@ This is the landing page for <span style="color:blue">**Statistical Methods for 
 This page is used for posting of regular announcements and information for students of the class. 
 
 
-<!----
 
-### 12/xx/19 - Final Exam. 10-12noon. Holt 155
+
+### `r format(wk1.date+7*16, "%m-%d-%Y")` Week 16: Finals Week
+
+Poster Session - **Thursday**  12/19, 10-12pm Tehama 116.
+
+* Edward Roualdes will supervise and serve as reviewer. 
+* Poster peer review Google Form: https://forms.gle/169KD9x43T5YKHGh6 
+    - Some paper copies will be available. 
+    - You will be expected to review 8 posters during the final session. 
+
+
 
 <span style="color:red">**Office Hours for Finals Week**</span> 
 
-* Tuesday 2-4pm, Holt 155
-
-<span style="color:red">**Review List**</span> 
-This final exam is comprehensive in that everything in this class builds upon previous topics. 
-Here are a list of topics to review. All topics have equal importance, regardless of the time that was spent on each topic during class. 
-
-* Probability
-* Creating and interpreting confidence intervals
-* Assumptions for statistical methods to be valid
-* Generalizability, representativeness, bias, sampling frame
-* Statistical Analysis Procedures: 
-    - Two-sample T-tests for means and proportions
-    - ANOVA and $\chi^{2}$ for multiple samples
-    - Linear and Logistic regression.
-* Identifying confounders, moderators and covariates. 
-* Interpreting regression coefficients and making predictions using models. 
-    - from linear and logistic models
-    - using continuous and categorical variables
+> OH for Finals Week: All hours will be held in Holt 202   
+- Mon: 9-10am, 2-3pm  
+- Tue: 10:30-11:30, 3pm-5pm  
+- Wed: 9:30-11am   
 
 
-
-### 12/10/18 - Week 15
+### `r format(wk1.date+7*15, "%m-%d-%Y")` Week 15: Poster building!
 
 * Poster building week! See the project page for instructions. 
-    - Drafts are due Thu 11/13, Peer review on Sat 12/15
-    - Final version due (as printed) on Wed 12/19
+    - Drafts are due Fri 11/13, Peer review on Sun 12/15
+    - Final version due to Google Drive by 9am on Thursday. 
 * Take Home Final exam 
-    - Handed out Wed 12/12 (Estimated) - no later than Friday 12/14. 
-    - Due Friday 12/21
-* **Office Hours**
+    - Distributed Wed 12/11 via Slack. 
+    - Due Friday 12/20 EOD. 
+    - All links to files and for submission in Slack post. 
 
---->
 
 
 ### `r format(wk1.date+7*14, "%m-%d-%Y")` Week 14: Model building / Model fit
