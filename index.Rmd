@@ -3,15 +3,14 @@ title: "Math 615 homepage"
 ---
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-wk1.date <- as.Date("2019-08-26")
+wk1.date <- as.Date("2022-08-23")
 ```
 
-This is the landing page for <span style="color:blue">**Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](http://www.norcalbiostat.com) for <span style="color:blue">**Fall 2019**</span>.   
-This page is used for posting of regular announcements and information for students of the class. 
+This is the course website for <span style="color:#6f1d1b">**MATH 615 - Statistical Methods for Graduate Research**</span> course taught by [Dr. Robin Donatello](www.norcalbiostat.com) in Fall 2022 at California State University, Chico. This landing page is used for posting of regular announcements and information for students of the class.
 
+# Revisions for Fall 22 in progress
 
-
-
+<!---
 ### `r format(wk1.date+7*16, "%m-%d-%Y")` Week 16: Finals Week
 
 Poster Session - **Thursday**  12/19, 10-12pm Tehama 116.
@@ -234,7 +233,9 @@ Next up is formulating research hypotheses on your selected data, and setting up
 
 ----
 
-### `r format(wk1.date, "%m-%d-%Y")`: Welcome to Fall 19!
+
+
+### `r format(wk1.date, "%m-%d-%Y")`: Welcome to Fall 22!
 
 * This course website contains all materials except the textbook for this class. Be sure to familarize yourself with the organization. You will be here a lot. Bookmark this page.
 * Specifically click on and explore items in the top navigation bar. 
@@ -242,4 +243,4 @@ Next up is formulating research hypotheses on your selected data, and setting up
 * We will use Slack to faciliate outside of class discussion, and to replace emails. 
     - Use the link under 'Tools' in the navigation boar of this page to go to our Slack workspace, make an account using your @mail.csuchico.edu email address. 
     - You must download either the desktop app, or the phone app, or both. Do not rely on the browser based version. 
-
+--->

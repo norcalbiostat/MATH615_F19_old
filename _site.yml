@@ -27,7 +27,7 @@ navbar:
     - text: "Project Instructions"  
       href: project.html
     - text: "Peer Review Assignments"
-      href: https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing
+      href: 
     - text: "Project Data (Google Drive)"
       href: https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY
   - text: Tools
@@ -35,26 +35,21 @@ navbar:
     menu:
     - text: Google Drive
       icon: fa-google
-      href: https://drive.google.com/drive/folders/11ah_oFsHalQ_35AkK5bkYW7wDbm97_vu?usp=sharing
+      href: 
     - text: Hack MD
       icon: fa-file-code
       href: https://hackmd.io/
-    - text: Slack (class discussions)
-      icon: fa-slack
-      href: https://math615.slack.com/
-    - text: Zoom (video conference)
-      icon: fa-video-camera
-      href: https://csuchico.zoom.us/
+
   right:
     - text: Help
       icon: fa-question
       href: faq.html
     - text: Syllabus
       icon: fa-info-circle
-      href: syllabus_615_f19.html
+      href: syllabus.html
     - text: Community Coding
       icon: fa-group
-      href: http://bit.ly/cc_hours
+      href: https://www.csuchico.edu/datascience/community-coding.shtml
     - text: Dr. D's website
       icon: fa-paw
       href: http://www.norcalbiostat.com/
