@@ -1,49 +1,29 @@
 name: "Robin Donatello"
 output_dir: "."
 navbar:
-  title: MATH 615
+  title: HOME
   left:
   - text: Schedule
     icon: fa-calendar
     href: schedule.html
   - text: "Materials"
-    icon: fa-folder-open
-    menu:
-    - text: "All Files"
-      icon: fa-file-alt
-      href: notes.html
-    - text: "Applied Stats Notebook"
-      icon: fa-book-open
-      href: https://norcalbiostat.github.io/AppliedStatistics_notes/
-    - text: "Collaborative R notes on Hack MD"
-      icon: fa-file-code
-      href: https://hackmd.io/@norcalbiostat/r_notes
-    - text: "Collaborative SPSS notes on Hack MD"
-      icon: fa-file-code
-      href: https://hackmd.io/@norcalbiostat/spss_notes
+    href: materials.html
   - text: "Projects"
     icon: fa-bar-chart
     menu:
     - text: "Project Instructions"  
       href: project.html
     - text: "Peer Review Assignments"
-      href: 
-    - text: "Project Data (Google Drive)"
+      href: https://docs.google.com/spreadsheets/d/1gqNCqp_RjuCbvpD0Zfvav-ejgGF9nIwSlCXUfFkf7js/edit
+    - text: "Project Data (REMOVE THIS)"
       href: https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY
-  - text: Tools
-    icon: fa-wrench
-    menu:
-    - text: Google Drive
-      icon: fa-google
-      href: 
-    - text: Hack MD
-      icon: fa-file-code
-      href: https://hackmd.io/
+    - text: "Poster Guidelines"
+      href: https://norcalbiostat.netlify.com/lec/poster_guidelines/ 
 
   right:
     - text: Help
       icon: fa-question
-      href: faq.html
+      href: help.html
     - text: Syllabus
       icon: fa-info-circle
       href: syllabus.html

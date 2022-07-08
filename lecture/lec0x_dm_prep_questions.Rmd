@@ -16,7 +16,7 @@ You know what variables you want to use, and you've looked over the codebook eno
 
 Here are some questions for you to think about in preparation for doing data management on your own set of variables. 
 
-Answer the following questions in prepartion to learn how to tackle problems such as missing data and recoding variables in the next week. Some of these items guide you to updating your personal codebook. For each variable that you have to modify, write a note in your codebook what you plan to do and why. You will include these notes into your data management script file as a record of your changes. 
+Answer the following questions in preparation to learn how to tackle problems such as missing data and recoding variables in the next week. Some of these items guide you to updating your personal codebook. For each variable that you have to modify, write a note in your codebook what you plan to do and why. You will include these notes into your data management script file as a record of your changes. 
 
 
 1. **Do you understand what each variable is actually measuring?**

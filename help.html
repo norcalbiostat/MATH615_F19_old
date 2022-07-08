@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>help.knit</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">HOME</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="schedule.html">
+    <span class="fa fa-calendar"></span>
+     
+    Schedule
+  </a>
+</li>
+<li class="dropdown-header">Materials</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Project Instructions</a>
+    </li>
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1gqNCqp_RjuCbvpD0Zfvav-ejgGF9nIwSlCXUfFkf7js">Peer Review Assignments</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="faq.html">
+    <span class="fa fa-question"></span>
+     
+    Help
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="https://www.csuchico.edu/datascience/community-coding.shtml">
+    <span class="fa fa-group"></span>
+     
+    Community Coding
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><img  class="circle" src="so-help-much-wow.jpg" width="200px" 
+      alt="Picture of help doge" 
+      title = "So help much wow"/></p>
+<div id="getting-help" class="section level1 tabset">
+<h1 class="tabset">Getting Help</h1>
+<div id="logistics" class="section level2">
+<h2>Logistics</h2>
+<div id="where-is-the-syllabus" class="section level3">
+<h3>Where is the Syllabus?</h3>
+<p>Linked in the top right of the navigation bar on this website. <a
+href="syllabus.pdf">Download as PDF</a></p>
+</div>
+<div id="when-can-i-get-help-outside-of-class" class="section level3">
+<h3>When can I get help outside of class?</h3>
+<p>This is when you can come talk to me about the course material, the
+subject in general, or life. These are my hours that I dedicate
+specifically to helping you.</p>
+<ul>
+<li><a
+href="https://www.csuchico.edu/datascience/community-coding.shtml">Community
+Coding</a>. See webpage for schedule.</li>
+<li>Before class 3-4pm. Holt 202.</li>
+</ul>
+<p>None of these times work for you? Use the booking link below to see
+my availability.</p>
+<p><a href="https://dr-donatello.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" style="border-style:none;"/></a></p>
+</div>
+<div id="what-am-i-graded-on" class="section level3">
+<h3>What am I graded on?</h3>
+<p>I care both that you are keeping up with the material, but also that
+by the end of the term you can conduct your own personalized analysis on
+a new data set. Here is how I check in on your progress throughout the
+semester</p>
+<ul>
+<li>Weekly quizzes on the prior week’s content. (are you ready to move
+on?)</li>
+<li>Regular homework. This is your testing ground, your first round of
+practice. Can you take what you learned and apply it to a data set.</li>
+<li>Project. Can you weave together data and story to do research?</li>
+<li>Final Exam. Can you analyze a new data set to answer a research
+question and write a professional report on your results?</li>
+</ul>
+</div>
+<div id="how-can-you-submit-anonymous-feedback" class="section level3">
+<h3>How can you submit Anonymous feedback?</h3>
+<p>I want to make this class a welcome learning opportunity for
+everyone. I welcome your comments and constructive critique. What I do
+not welcome is flaming, trolling or insults. Here are some examples of
+appropriate uses of this feedback form.</p>
+<ol style="list-style-type: decimal">
+<li>Class activities. What should I start doing, stop doing, and keep
+doing? Is the pace too fast? To slow?</li>
+<li>Topics: Is there something specific you would like brought up in
+class, but don’t want to be the one to bring it up?</li>
+<li>Flagging the Misfires. I am bound to make mistakes and
+microaggressions regarding culture, religion, gender, and diversity.
+Helping you feel safe is a real-time pursuit. If my remarks created
+discomfort, you can use this form to voice the concern quickly rather
+than saving it for the course evaluation months later.</li>
+<li>Words of Encouragement. I need positive feedback to keep me
+recharged!</li>
+</ol>
+<p><a href="https://forms.gle/D86w12njtjgX7yBN7"><button type="button">Anonymous
+Feedback Form</button> </a></p>
+</div>
+</div>
+<div id="materials" class="section level2">
+<h2>Materials</h2>
+<div id="course-webpage" class="section level3">
+<h3>Course Webpage</h3>
+<p>This course webpage contains all materials used in this class.
+Bookmark this page, you will be here a lot.</p>
+<ul>
+<li><strong>HOME</strong>. This shows the weekly announcements and
+updates.</li>
+<li><strong>Schedule</strong>. This page shows a summary of the week-by
+week content in a table format, with links to the weekly materials
+(Topic), including quizzes, homework, reading and videos. This is the
+first place you can go for due dates.<br />
+</li>
+<li><strong>Materials</strong> Links to all homework, reading, video and
+notes.</li>
+<li><strong>Projects</strong> Instructions for conducting and submitting
+the semester long data analysis project</li>
+<li><strong>Syllabus</strong>. A very important document that contains
+all the policies and procedures for this class.</li>
+<li><strong>Help</strong>. The question mark links to this help page.
+This page attempts to provide answers to commonly asked questions.</li>
+<li><strong>Dr. D’s Website</strong> This drop down menu contains links
+to my personal webpage, my Github and Twitter accounts, and a link to my
+schedule so you can find a time to meet with me as you need.</li>
+</ul>
+</div>
+<div id="how-do-i-use-discord" class="section level3">
+<h3>How do I use Discord?</h3>
+<p>How to use Discord YouTube video channel: <a
+href="https://www.youtube.com/watch?v=ppN9YbPX1Zo"
+class="uri">https://www.youtube.com/watch?v=ppN9YbPX1Zo</a></p>
+<blockquote>
+<p>NOTE: You will be/have joined the Math &amp; Stats server. You do not
+need to create one of your own.</p>
+</blockquote>
+</div>
+</div>
+<div id="statistical-programming" class="section level2">
+<h2>Statistical Programming</h2>
+<p>In effort to not duplicate content (and so I only have one place to
+update), please see <THE DSI PAGE></p>
+<p><a href="https://www.csuchico.edu/wcs/">Wildcat computing support
+page</a></p>
+<div id="community-coding" class="section level3">
+<h3>Community Coding</h3>
+<ul>
+<li>The <a href="https://www.csuchico.edu/datascience/">Data Science
+Initiative</a> offers year-round training workshops and seminars on
+data-science related topics including R.</li>
+<li><a
+href="https://www.csuchico.edu/datascience/community-coding.shtml">Community
+Coding</a> (CC): Students, staff, faculty, and the public are invited to
+join the Community Coding sessions. Bring your computer, coding
+projects, and your questions to this open working environment. Think of
+CC as additional office hours where you have access to more teachers
+than just me.
+<ul>
+<li>I highly recommend making a habit to attend CC at minimum to do your
+homework in a supportive environment.</li>
+</ul></li>
+</ul>
+</div>
+<div id="r-r-studio-r-markdown" class="section level3">
+<h3>R, R Studio, R Markdown</h3>
+<ul>
+<li>The Math 130 Introduction to R Help page: <a
+href="https://norcalbiostat.github.io/MATH130/faq.html"
+class="uri">https://norcalbiostat.github.io/MATH130/faq.html</a></li>
+<li>Chico <a href="https://groups.google.com/forum/#!forum/chico-rug">R
+User Group</a></li>
+<li>UCLA IDRE <a href="https://stats.idre.ucla.edu/r/modules/">[R
+Learning modules]</a></li>
+<li>R studio guides <a href="https://www.rstudio.com/online-learning/"
+class="uri">https://www.rstudio.com/online-learning/</a></li>
+</ul>
+</div>
+<div id="spss" class="section level3">
+<h3>SPSS</h3>
+<ul>
+<li>UCLA IDRE learning modules: <a
+href="https://stats.idre.ucla.edu/spss/modules/"
+class="uri">https://stats.idre.ucla.edu/spss/modules/</a></li>
+<li>Kent State University: <a
+href="https://libguides.library.kent.edu/SPSS"
+class="uri">https://libguides.library.kent.edu/SPSS</a></li>
+<li>Sigma Plus SPSS Tutorials: <a
+href="https://www.spss-tutorials.com/basics/"
+class="uri">https://www.spss-tutorials.com/basics/</a></li>
+<li>IBM Knowledge Center: <a
+href="https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html"
+class="uri">https://www.ibm.com/support/knowledgecenter/en/SSLVMB_24.0.0/statistics_spsstut_project_ddita-gentopic1.html</a></li>
+</ul>
+</div>
+<div id="technology" class="section level3">
+<h3>Technology</h3>
+<ul>
+<li><a href="https://www.csuchico.edu/itss/">IT Support Services</a>
+will provide comprehensive technology support, including laptop loans
+and virtual technology assistance.</li>
+<li>The <a href="https://www.csuchico.edu/oats/">Office of Accessible
+Technology Services</a> will offer all students online access to a staff
+member during normal business hours Monday–Friday via email at <a
+href="mailto:oats@csuchico.edu">oats@csuchico.edu</a>. Students with
+questions on inclusive technology or who need assistance setting up
+technology accommodations are encouraged to reach out.</li>
+<li>If you do not have off-campus access to the Internet, <a
+href="https://www.csuchico.edu/coronavirus/internet.shtml">resources are
+available</a>.</li>
+</ul>
+</div>
+</div>
+<div id="quizzes" class="section level2">
+<h2>Quizzes</h2>
+<p>Quizzes are a great way to test yourself, enhance recall, and
+self-assess your comprehension of the subject. Quizzes are administered
+in Google Forms, and done in two parts.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Individual</strong>: First try to answer as many
+questions without looking at your notes. Then use your notes to answer
+the rest.</p></li>
+<li><p><strong>Group</strong>: After the individual quiz closes I will
+choose 1-4 questions that the class as a whole seemed to struggle with
+the most. The next class period we will do a class-wide discussion of
+those topics, then you will work in groups to redo the selected
+questions.</p></li>
+</ol>
+<p>Points earned from the group quiz get added to your individual quiz
+score (not to exceed total points).</p>
+</div>
+<div id="assignments" class="section level2">
+<h2>Assignments</h2>
+<div id="how-do-i-complete-the-assignments" class="section level3">
+<h3>How do I complete the assignments?</h3>
+<p>Most homework assignments will come with a template to use. This will
+be a R markdown (<code>*.Rmd</code>) file for R users, and a Word
+document (<code>*.doc</code>) for SPSS users.</p>
+<p>R users write their code and answers directly into the Rmd file. SPSS
+users will copy their code and relevant output into the Word doc, along
+with writing their answers in the Word doc directly.</p>
+<p>All homework files must be compiled or converted to PDF before
+submission. R users <code>knit</code> their file to PDF, SPSS users will
+<code>save as</code> their Word document as PDF.</p>
+<p>Links to the templates can be found in the homework assignment
+itself. A list of all assignment files can be found on the <a
+href="materials.html">materials</a> page.</p>
+</div>
+<div id="howwhere-do-i-submit-completed-assignments"
+class="section level3">
+<h3>How/where do I submit completed assignments?</h3>
+<p><strong>Standard Assignments</strong></p>
+<ul>
+<li>All assignments should be in PDF format.</li>
+<li>The file should be clearly named using this format:
+<code>assignment_userid.pdf</code>. E.g.
+<code>univ_graphics_rdonatello.pdf</code></li>
+<li>Uploaded to the corresponding assignment folder in Google
+Drive.</li>
+<li>Assignments will be subject to peer review/comments</li>
+<li>Standard homework assignments just get checked off for completion.
+<ul>
+<li>I will still review and comment on each assignment, writing
+corrections and suggestions for improvement on the PDF itself.</li>
+</ul></li>
+<li>Once graded the file will be moved into the <code>graded</code>
+subfolder in Google Drive.</li>
+<li>Grades are recorded in Blackboard learn.</li>
+</ul>
+<p><strong>Project Assignments</strong></p>
+<ul>
+<li>These assignments will be completed in Google Drive directly and
+will be peer reviewed.</li>
+<li>On the due date for my review, you need to submit the URL through
+the Blackboard assignment. This allows me to use a rubric for grading in
+addition to providing specific feedback on the document itself.</li>
+<li>Project assignments should be considered quality work and such
+refined, reviewed, and absolutely spellchecked before submission.</li>
+</ul>
+</div>
+<div id="what-are-you-looking-for-when-you-grade"
+class="section level3">
+<h3>What are you looking for when you grade?</h3>
+<ul>
+<li>Most assignments include examples directly in the assignment file
+itself.</li>
+<li>Correct English grammer, spelling, formatting.</li>
+<li>Concise, clear and complete answers.</li>
+<li>Correct statistical methods used</li>
+<li>That you answered the question posed.</li>
+<li>No extraneous output or code</li>
+</ul>
+</div>
+</div>
+<div id="peer-review" class="section level2">
+<h2>Peer Review</h2>
+<div id="why-do-we-do-peer-review" class="section level3">
+<h3>Why do we do peer review?</h3>
+<ul>
+<li>Everyone has different thought processes and may have approached the
+question from a different perspective that can help you learn the
+material.</li>
+<li>Co-authoring and reviewing your peers work is part of a professional
+research position.</li>
+<li>Learning how to provide good feedback will make you a better
+collaborator</li>
+<li>This is a delayed version of paired programming - another set of
+eyeballs can typically help you find your mistake.</li>
+<li>I have 10fold more assignments to review than you do.
+<ul>
+<li>You’ll get your peer’s reviews back faster than I can get yours
+back.</li>
+<li>The more eyes on your document the better.</li>
+</ul></li>
+<li>I will be looking for different things than your peers will be. This
+is a good thing. They are looking from “untrained eyes”, which can be
+very critical to make sure you are explaining yourself clearly. I can
+better “figure out” what you are meaning to say - they are the ones that
+will best tell you when/where you need to explain your findings
+better.</li>
+</ul>
+</div>
+<div id="how-do-i-conduct-a-peer-review" class="section level3">
+<h3>How do I conduct a Peer Review</h3>
+<ol style="list-style-type: decimal">
+<li>Check the <a
+href="https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing">Peer
+Review Rotation</a> spreadsheet to see who you are scheduled to review.
+<ul>
+<li>If one of your reviewees did not submit the assignment then pick
+another person to review.</li>
+</ul></li>
+<li>Open the assignment file in Google Drive directly.</li>
+<li>Change from “editing” to “suggesting” in the top right.</li>
+<li>By editing the verbiage directly, or using comment bubbles, provide
+feedback to your peers.
+<ul>
+<li>Be specific. Give the type of feedback that you want to
+receive.</li>
+<li>Minimum three corrections or suggestions for improvement. If it is
+reworking/grammar make these edits directly in the document.</li>
+</ul></li>
+</ol>
+</div>
+<div id="grading-of-peer-reviews" class="section level3">
+<h3>Grading of peer reviews</h3>
+<p>As I do my reviews on the same document, I will be reading and
+assessing your peer review. If I find your review is not providing
+quality feedback to the author you will not receive credit for that
+review. You may see the cells in the peer review spreadsheet changing
+color as I check off your review.</p>
+</div>
+</div>
+<div id="life" class="section level2">
+<h2>Life</h2>
+<p>This is not an all encompassing list. If there is something not
+listed that you think should be, please let me know!</p>
+<div id="basic-needs" class="section level3">
+<h3>Basic Needs</h3>
+<p>The <strong>Hungry Wildcat Food Pantry</strong> provides supplemental
+food, fresh produce, CalFresh application assistance and basic needs
+referral services for students experiencing food and housing
+insecurity.</p>
+<p>All students are welcomed to visit the Pantry located in the Student
+Service Center 196. Check the website for current hours.</p>
+<p>Please visit the Chico State Basic Needs website <a
+href="http://www.csuchico.edu/basic-needs"
+class="uri">http://www.csuchico.edu/basic-needs</a> for more
+information.</p>
+</div>
+<div id="celebrating-diversity" class="section level3">
+<h3>Celebrating Diversity</h3>
+<p>The <a
+href="https://www.csuchico.edu/diversity/students/index.shtml">Diversity
+resources for students</a> webpage has a lot of information on clubs,
+organizations, resources and opportunities available to our wonderful
+body of non-[white/cis/hetero/able] students.</p>
+</div>
+<div id="accomodations" class="section level3">
+<h3>Accomodations</h3>
+<p>If you need course adaptations or accommodations because of a
+disability or chronic illness, or if you need to make special
+arrangements in case the building must be evacuated, please make an
+appointment with me as soon as possible, or see me during office hours.
+Please also contact <a
+href="https://www.csuchico.edu/arc/">Accessibility Resource Center</a>
+(ARC) as they are the designated department responsible for approving
+and coordinating reasonable accommodations and services for students
+with disabilities. ARC will help you understand your rights and
+responsibilities under the Americans with Disabilities Act and provide
+you further assistance with requesting and arranging accommodations.</p>
+</div>
+<div id="tutoring" class="section level3">
+<h3>Tutoring</h3>
+<p>The <a href="https://www.csuchico.edu/slc/">Student Learning
+Center</a> will provide all learning support services online. Students
+can schedule appointments on the Center’s website. The <a
+href="https://www.csuchico.edu/slc/si.shtml">Supplemental
+Instruction</a> program will also be available virtually, utilizing
+peer-assisted study sessions to increase student success in historically
+difficult courses. Student leaders are faculty-recommended and trained
+to facilitate group sessions. Math tutoring is available via Zoom from
+the <a
+href="https://www.csuchico.edu/math/students/learning-lab.shtml">Math
+Learning Lab</a>.</p>
+</div>
+<div id="financial-aid" class="section level3">
+<h3>Financial Aid</h3>
+<p><a href="https://www.csuchico.edu/fa/">Financial Aid &amp;
+Scholarship Office</a> is providing financial aid assistance virtually.
+Contact <a href="mailto:finaid@csuchico.edu"
+class="email">finaid@csuchico.edu</a> or call 530-898-6451 and to set up
+an appointment by phone or Zoom.</p>
+</div>
+<div id="health-center" class="section level3">
+<h3>Health Center</h3>
+<p>The <a href="https://www.csuchico.edu/healthcenter">WellCat Health
+Center</a> is available by appointment for regular healthcare services.
+Visit their website for current hours and appointment times.</p>
+</div>
+<div id="covid-19-news-and-information" class="section level3">
+<h3>Covid-19 news and information</h3>
+<p>It’s super important to stay informed about what is going on. This is
+a horrible once in a lifetime (hopefully) GLOBAL pandemic, and the whole
+world is suffering. <a
+href="https://www.csuchico.edu/coronavirus/index.shtml">Campus
+information can be found here</a>, and here is a link to the Butte
+County <a
+href="https://infogram.com/1pe66wmyjnmvkrhm66x9362kp3al60r57ex?live">Covid
+tracking dashboard</a>.</p>
+</div>
+<div id="mental-health" class="section level3">
+<h3>Mental Health</h3>
+<p>Online counseling is available through the <a
+href="https://www.csuchico.edu/counseling/">WellCat Counseling
+Center</a> and <a href="https://www.csuchico.edu/safeplace/">Safe
+Place</a>. Find specific information on their websites.</p>
+</div>
+<div id="career-center" class="section level3">
+<h3>Career Center</h3>
+<p>The <a href="https://www.csuchico.edu/careers/">Career Center</a>
+remains virtual only, but will continue providing a wide variety of
+career development programs for students of all majors and class levels,
+and for all alumni. It also offers services to help students with the
+transition from student to working professional.</p>
+</div>
+</div>
+<div id="policies" class="section level2">
+<h2>Policies</h2>
+<div id="everyone-is-welcome-here" class="section level3">
+<h3>Everyone is welcome here</h3>
+<p>It is my intent that students from all diverse backgrounds and
+perspectives be well-served by this course, that students’ learning
+needs be addressed both in and out of class, and that the diversity that
+the students bring to this class be viewed as a resource, strength and
+benefit. It is my intent to present materials and activities that are
+respectful of diversity: gender identity, sexuality, disability, age,
+socioeconomic status, ethnicity, race, nationality, religion, and
+culture. Your suggestions are encouraged and appreciated. Please let me
+know ways to improve the effectiveness of the course for you personally,
+or for other students or student groups.</p>
+<p>I would like to create a learning environment that supports a
+diversity of thoughts, perspectives and experiences, and honors your
+identities (including race, gender, class, sexuality, religion, ability,
+etc.) To help accomplish this:</p>
+<ul>
+<li>Let me know if you have a name and/or set of pronouns that differ
+from those that appear in your official Chico records. I make it a point
+to call on people by name, so please make sure that I know what you want
+to be called.
+<ul>
+<li>I also want to try to pronounce your name as accurately as possible.
+The more you help and correct me the better I can do to honor your
+name.</li>
+</ul></li>
+<li>If you feel like your performance in the class is being impacted by
+your experiences outside of class, please don’t hesitate to come and
+talk with me. I want to be a resource for you. Remember that you can
+also submit anonymous feedback using the feedback button on the schedule
+and help pages of the website (which will lead to me making a general
+announcement to the class, if necessary to address your concerns).</li>
+<li>If you prefer to speak with someone outside of the course, the
+Office of Diversity and Inclusion is here to assist. Their number is
+530-898-4764, and email <a href="mailto:diversityoffice@csuchico.edu"
+class="email">diversityoffice@csuchico.edu</a></li>
+<li>I (like many people) am still in the process of learning about
+diverse perspectives and identities. If something was said in class (by
+anyone) that made you feel uncomfortable, please talk to me about it.
+(Again, anonymous feedback is always an option).</li>
+</ul>
+<p><em>Adapted from <a
+href="https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements">Monica
+Linden at Brown University</a></em>.</p>
+<p>Furthermore, I would like to acknowledge that Chico State stands on
+lands that were originally occupied by the first people of this area,
+the Mechoopda. I recognize their distinctive spiritual relationship with
+this land and the waters that run through campus. I am humbled that our
+campus resides upon sacred lands that once sustained the Mechoopda
+people for centuries.</p>
+</div>
+<div id="late-work" class="section level3">
+<h3>Late work</h3>
+<ul>
+<li>You should strive to submit on time for all draft items the sake of
+your peers. Do you want your reviews back in a timely manner? You should
+show them the same courtesy and professionalism.</li>
+<li>I don’t penalize for late work, but I prioritize on time
+submissions. If you submit an assignment after i’m done grading everyone
+elses, and we’re moving on to the next topic then your assignment may
+have to wait a few days before I can get back to it.</li>
+</ul>
+</div>
+<div id="collaboration" class="section level3">
+<h3>Collaboration</h3>
+<p>Collaboration on assignments is encouraged. People learn better when
+they have someone else to talk through concepts with. Collaboration on
+individual quizzes is not allowed.</p>
+</div>
+<div id="grading" class="section level3">
+<h3>Grading</h3>
+<p>See the <a href="syllabus.html">syllabus</a>.</p>
+</div>
+<div id="covid-19" class="section level3">
+<h3>COVID-19</h3>
+<p>The CSU requires students to be fully vaccinated and boosted against
+COVID-19 by February 28th, 2022, unless you have an approved exemption.
+While Chico State has relaxed its stance on mask mandates, for your and
+my health and safety I <em>request</em> that everyone wear an
+appropriate face mask covering the nose and mouth while in class.</p>
+<p>Please note that dishonesty relating to the vaccination policy and/or
+your failure to comply with any other COVID-19 related safety policy or
+mandate may result in disciplinary action against you through the office
+of Student Conduct, Rights and Responsibilities, which can include
+suspension or expulsion from the California State University system.</p>
+</div>
+<div id="adding-and-dropping-the-course" class="section level3">
+<h3>Adding and Dropping the course</h3>
+<p>You are responsible for understanding the policies and procedures
+about add/drops, academic renewal, etc., found in the <a
+href="http://www.csuchico.edu/catalog/">CSU Chico University
+Catalog</a>. You should be aware of the new deadlines and penalties for
+adding and dropping classes.</p>
+</div>
+<div id="confidentiality-and-mandatory-reoprting"
+class="section level3">
+<h3>Confidentiality and Mandatory Reoprting</h3>
+<p>As an instructor, one of my responsibilities is to help create a safe
+learning environment on our campus. I also have a mandatory reporting
+responsibility related to my role as a your instructor. I am required to
+share information regarding sexual misconduct with the University.
+Students may speak to someone confidentially by contacting the
+Counseling and Wellness Center (898-6345) or Safe Place (898-3030).
+Information on campus reporting obligations and other Title IX related
+resources are available here: www.csuchico.edu/title-ix.</p>
+</div>
+<div id="academic-integrity" class="section level3">
+<h3>Academic Integrity</h3>
+<p>Academic integrity is defined as “a commitment, even in the face of
+adversity, to five fundamental values: honesty, trust, fairness,
+respect, and responsibility”. From these values flow principles of
+behavior that enable academic communities to translate ideals to action.
+Academic integrity is expected and required. No forms of cheating or
+plagiarism will be tolerated. Please see your student handbook at <a
+href="https://www.csuchico.edu/scrr/integrity.shtml"
+class="uri">https://www.csuchico.edu/scrr/integrity.shtml</a> if you
+have questions about the meaning of these terms or the consequences of
+violating academic integrity.</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

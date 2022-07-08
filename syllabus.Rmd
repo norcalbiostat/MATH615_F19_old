@@ -1,50 +1,31 @@
 ---
 title: "Syllabus MATH 615 - Fall 22"
-output:
-  html_document: 
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    theme: readable
+output: pdf_document
+date: \today
 ---
 
-
-_Last updated: `r format(Sys.time(), "%a %b %d %Y %X")`_
-
-# Course Information (check if current)
+# Course Information
 
 _Introduction to common procedures used to analyze data. Single and two-sample inference, analysis of variance, multiple regression, analysis of co-variance, experimental design, repeated measures, nonparametric procedures, and categorical data analysis. Examples will be drawn from Biology and related disciplines. Statistical computer packages will be introduced. Appropriate for biology, agriculture, nutrition, psychology, social science, and other majors. 3 hours discussion._
 
-
-# Logistics
-**Instructor:** Dr. Robin Donatello  
-**Office Location:** Holt 202  
-**Phone Number:** 898-5767  
-**E-mail:** rdonatello@csuchico.edu  
-**Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, or MATH 350.  
-**Meeting Days and Times** MW 4-5:30, Holt XXX
-**Office Hours** Holt 202: TBD See course website after week 1.  
-**Class Website** https://norcalbiostat.github.io/MATH615/  
-**Discord Server** https://discord.gg/tzcB4MJadW
-**Google Drive**  You will be added to the Math 615 Google drive using your campus email. 
 
 ## Instructor
 * **Name & pronouns** Dr. Robin Donatello  (Dr. D, she/her)
 * **Office Location:** Holt 202
 * **E-mail:** rdonatello@csuchico.edu
-* **Best Contact Method:** Discord: https://discord.gg/tzcB4MJadW 
+* **Best Contact Method:** Discord
+* **Student Office Hours** Holt 202: MW 3-4pm and during community coding
 
 ## Logistics
-* **Prerequisites:** Math 121
-* **Meeting Pattern:** Section 01: 2-3:15pm, Section 02: 3:30-4:50 pm; MLIB 045
-    - Don't know how to find the library basement? There's a video in Blackboard. 
+* **Meeting Pattern:** MW 4-5:30, Holt 291
+* **Class Website** https://norcalbiostat.github.io/MATH615/  
+* **Prerequisites:** Basic computer literacy. Recent statistics course such as Math 105, MATH 315, or MATH 350.  
+* **Mode of Instruction:** In Person. _The mode of instruction for this course is classified as a "In Person"; this means all students are expected to attend class in person each session. At this time there is no specific plan for habitual synchronous hybrid zoom session._
 
-## Mode of Instruction: In Person
-The mode of instruction for this course is classified as a "In Person"; this means all students are expected to attend class in person each session. At this time there is no specific plan for habitual synchronous hybrid zoom session. 
 
 ----
 
-# What are we going to learn? (Course Learning Outcomes) {#co}
+# What are we going to learn? (Course Learning Outcomes)
 
 By the end of the course, students will be able to...
 
@@ -67,7 +48,7 @@ I have a Doctorate in Public Health (DrPH) Biostatistics from UCLA, but I'm a Ch
 
 My campus life consists of training the next generation of Scientists how to harness the power of Statistics and Data in a responsible and ethical manner, supporting students in their academic adventures through intensive advising and research, leading the Data Science Initiative (DSI) to develop Data Science capacity on our campus, and providing analytical support and statistical consulting for many projects on and off campus.
 
-When I’m not on campus, typically I’m growing 🥕🌾🍅🍆🍏 for my family, out adventuring with my 🐶🧔🐩, or getting some 🎮🎲📚 time in.
+When I’m not on campus, typically I’m growing food for my family, out adventuring with my dogs, or getting some game time in.
 
 You can learn more about the work that I do on my [website](http://www.norcalbiostat.com/)
 
@@ -81,9 +62,28 @@ Homework 0 gets you connected with these materials.
     - _Optional_: Open Intro Statistics 3rd edition. If you need a refresher on your basic statistics. Free PDF available at https://www.openintro.org/stat/textbook.php?stat_book=os
 * **Reliable Laptop**: Expect to bring often. Contact me if this poses a problem or concern for you. 
 * **Reliable internet** connection while on and off campus. ITSS can help you get this setup. 
-* **Computer Software:** Data Analysis is done using statistical analysis software. Common statistical programs include SAS, STATA, R and SPSS. I am fluent in SAS, STATA and R, but can provide limited support for SPSS and Python. The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
-* **Accounts:** Google Drive (campus account), Discord, for discussion. Hack MD for collaborative notes. 
+* **Computer Software:** Data Analysis is done using statistical analysis software. Common statistical programs include SAS, STATA, R and SPSS. I am fluent in SAS, STATA and R, reasonably read in SPSS but can provide limited support for Python. The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
+    - I highly recommend making a habit to attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml)
+* **Accounts:** 
+    - Google Drive: You will be added to the Math 615 Google drive using your campus email.
+    - **Discord Server** https://discord.gg/tzcB4MJadW
+    - Hack MD for collaborative notes. An account is needed to keep our notes private. I suggest you sign up with your campus email (@csuchico.edu)
 
+
+# Typical Schedule for success
+
+* Sunday you check the course website and schedule to note important due dates and to plan your week accordingly. 
+* Before Monday noon you complete your individual quiz through Google forms, and perhaps watch one of the lecture videos or do some reading on that week's topic. 
+* Monday class: ~20 min group quiz, ~20 min lecture on topic for the week, ~35 min actively working on homework
+* Before Wednesday class you complete the assigned reading, watch lecture videos, and prepare answers to the discussion questions
+* Wednesday class: ~20 min questions/discussion, ~55 min actively working on homework
+* Before Thursday EOD you submit your draft assignment to google drive.
+* Between Friday & Saturday noon you provide feedback on 1-2 of your classmates assignments and continue to work on your own assignment using. 
+* By EOD Sunday you revise your assignment based on your peer's feedback and submit your final assignment for grading
+
+EOD: End of day, or 11:59pm. 
+
+> Expect to spend 10-12 hours each week on this class. I will do my best not to move due dates so you can plan accordingly. 
 
 ----
 
@@ -91,11 +91,11 @@ Homework 0 gets you connected with these materials.
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
 * The approximate contributions per category are:  
-  - Participation 15%: Slack usage, Peer reviews  
-  - Written Assignments 20%: Submitted in Google Drive, but graded using a visable rubric in Blackboard Learn.  
-  - Weekly Quizzes 25%: Google Forms. This replaces a midterm exam.  
-  - Final exam 20%: Take home 
-  - Project related assignments 20%  
+  - Participation 15%: Peer reviews  
+  - Written Assignments 25%: Submitted in Google Drive, graded using a rubric in Blackboard Learn.  
+  - Weekly Quizzes 25%: Google Forms. 
+  - Take home Final exam: 10%
+  - Project related assignments:  25%  
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 
 # Schedule of Topics
@@ -107,7 +107,7 @@ The general ordering of topics is:
 * Data Visualization
 * Foundations for Inference:  probability distributions, point and interval estimation, Hypothesis Testing
 * Inference comparing multiple samples (t-tests, ANOVA, $\chi^{2}$ tests)
-* Study design, confounding, causation **(experimental design??? and pseudoreplication?)**
+* Study design, confounding, causation 
 * Linear regression analysis (Simple and Multiple, Categorical predictors, variable selection)
 * Logistic regression analysis
 * Model building techniques and comparing model fit
@@ -148,27 +148,7 @@ Furthermore, I would like to acknowledge that Chico State stands on lands that w
 
 Class attendance is expected. Talk to me ahead of time if you need to miss a class for a planned reason. In the event of an unplanned reason, PM me in Discord when you can so that I know you are still alive. 
 
-* If you are not feeling well or are experiencing Covid symptoms **DO NOT COME TO CLASS**. DM me in Discord and attend online until you can return. 
-* I will be taking daily attendance - this is more for my learning of names and to keep an eye out for students who may be struggling in class and deciding not to show up. 
-
-
-----
-
-## Collaboration
-
-Collaboration on assignments is encouraged. People learn better when they have someone else to talk through concepts with. Collaboration on individual quizzes is not allowed.
-
-According to [this document about ollaboration](https://www.csuchico.edu/scrr/_assets/documents/collaboration.pdf) linked on the CSU, Chico website: 
-
-> Collaboration is working with another or receiving assistance from someone (e.g., a classmate, friend, or parent, whether in person or by electronic media) to complete coursework for a grade. 
-> "Unauthorized collaboration" means working with others without the specific permission of the instructor on assignments that will be submitted for a grade. (i.e. in class or take home tests, quizzes, labs and homework)
-
-
-Below are two quotes from [this article](https://revoteaching.blogspot.com/2021/04/ungrading-and-academic-integrity.html) that resonated with me. We will specifically talk about the idea of why students cheat in the first few weeks as a class. 
-
-> "In my opinion students cheat for one of three reasons (or some combination): students don’t see the value in doing the work, or they don’t believe they can achieve that value if they do the work required of them, or they don’t know how to complete the work. Students cheat because they see the work as busy work, work that has no value. My students aren’t lazy. They have jobs in addition to school, they have family obligations, they have financial concerns that sometimes include housing and food insecurity. They also binge watch entertainment and play video games for hours on end. They have the ability to pay attention when their circumstances and their interests allow it."
-> 
-> "The solution to cheating is to address the motivation to cheat, not the consequences of cheating. Why would students cheat if they believed in the value (benefit) of the work, believed the work would produce the benefit, and believed they could complete the work? Our job as faculty is convince students of the first two ideas and help them with the third. And then we trust students to act in their own self-interest."
+* If you are not feeling well or are experiencing Covid symptoms **DO NOT COME TO CLASS**. DM me in Discord we'll make a backup plan. 
 
 ----
 
@@ -177,14 +157,6 @@ Below are two quotes from [this article](https://revoteaching.blogspot.com/2021/
 This [campus website](https://www.csuchico.edu/coronavirus/students.shtml) contains a lot of information and resources specific to our COVID-19 situation. Specifically this page contains links to resources to help you keep [learning](https://www.csuchico.edu/keep-learning/index.shtml), and [engaging](https://www.csuchico.edu/keep-engaging/index.shtml), and lots of links to student support services such as emergency grants, basic need such as healthy food and housing, tutoring, health center, financial aid and a lot more.
 
 You can also check out the resources on the [Help](help.html) page. 
-
-## Technology Support
-
--   [IT Support Services](https://www.csuchico.edu/itss/) will provide comprehensive technology support, including laptop loans and virtual technology assistance.
--   The [Office of Accessible Technology Services](https://www.csuchico.edu/oats/) will offer all students online access to a staff member during normal business hours Monday--Friday via email at [oats\@csuchico.edu](mailto:oats@csuchico.edu). Students with questions on inclusive technology or who need assistance setting up technology accommodations are encouraged to reach out.
--   If you do not have off-campus access to the Internet, [resources are available](https://www.csuchico.edu/coronavirus/internet.shtml).
--   The [Data Science Initiative](https://www.csuchico.edu/datascience/) offers year-round training workshops and seminars on data-science related topics including R.
--   [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml) (CC): Students, staff, faculty, and the public are invited to join the Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. Think of CC as additional office hours where you have access to more teachers than just me.
 
 ## Americans with Disabilities Act
 
@@ -198,19 +170,14 @@ Accessibility Resource Center 530-898-5959 Student Services Center 170 [arcdept\
 
 ## COVID-19 
 
-The CSU requires students to be fully vaccinated and boosted against COVID-19 by February 28th, 2022, unless you have an approved exemption.  Additionally, Chico State is requiring everyone on campus to wear an approved face covering in all indoor campus spaces. Accordingly, all students are required to wear an appropriate face mask covering the nose and mouth in order to participate in this course. Policies and requirements regarding COVID-19 are subject to change pursuant to campus, local, state and/or federal guidelines.
+The CSU requires students to be fully vaccinated and boosted against COVID-19 by February 28th, 2022, unless you have an approved exemption. While Chico State has relaxed its stance on mask mandates, for your and my health and safety I _request_ that everyone wear an appropriate face mask covering the nose and mouth while in class. 
 
-Please note that dishonesty relating to the vaccination policy and/or your failure to comply with any other COVID-19 related safety policy or mandate, including the face covering requirement, may result in disciplinary action against you through the office of Student Conduct, Rights and Responsibilities, which can include suspension or expulsion from the California State University system. 
-
-Individuals unable to wear a face covering due to a medical condition should contact the Accessibility Resource Center by phone at (530) 898-5959 or by email at arcdept@csuchico.edu. 
+Please note that dishonesty relating to the vaccination policy and/or your failure to comply with any other COVID-19 related safety policy or mandate may result in disciplinary action against you through the office of Student Conduct, Rights and Responsibilities, which can include suspension or expulsion from the California State University system. 
 
 
 ## Adding and Dropping the course
 
 You are responsible for understanding the policies and procedures about add/drops, academic renewal, etc., found in the [CSU Chico University Catalog](http://www.csuchico.edu/catalog/). You should be aware of the new deadlines and penalties for adding and dropping classes.
-
-The last day to add or drop classes without special permission by the instructor is 2/4/22. No adds or drops are allowed after 2/18/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.
-
 
 ## Confidentiality and Mandatory Reoprting
 

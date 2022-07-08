@@ -1,4 +1,5 @@
 ---
+title: Math 615 Notes
 output:
   html_document:
     toc: yes
@@ -33,10 +34,15 @@ out.hw <- hw %>% mutate(name = gsub("hw/|_template",  "", filenames),
                           link = sprintf("[%s](%s)",type, filenames))
 ```
 
+This page contains links to all materials needed for this class. 
+
+# Other Platforms
+
+* [Google Drive](https://drive.google.com/drive/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP)
+
+
+
 # Notes
-We will be using a combination of notes from the list below
-
-
 ```{r, eval=FALSE, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.lec %>% select(link, type, nam) %>% 
     dcast(nam~type, value.var="link") %>% 
@@ -46,9 +52,11 @@ x = out.lec %>% select(link, type, nam) %>%
 gsub("<thead>.*</thead>", "", x)
 ```
 
-* Dr. D's [Math 315 course notes](https://norcalbiostat.github.io/MATH315/reading/RAD_course_notes_f19.pdf) 
-* [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) 
-* Lec00: Intro to the class [[HTML]](lecture/lec00_intro_class.html)[[PDF]](lecture/lec00_intro_class.pdf)
+### Lecture notes
+* [[Lec00]](lecture/lec00_intro_class.html): Intro to the class
+
+
+### Collaborative Discussions
 * [[Lec01]](https://hackmd.io/@norcalbiostat/math615_lec01): Data architecture
 * [[Lec02]](https://hackmd.io/@norcalbiostat/math615_lec02): Formulating Research Questions
 * [[Lec03]](https://hackmd.io/@norcalbiostat/math615_lec03): Preparing Data for Analysis
@@ -59,6 +67,15 @@ gsub("<thead>.*</thead>", "", x)
 * [[Lec08]](https://hackmd.io/@norcalbiostat/math615_lec08): Choosing Appropriate Analysis
 * [[Lec09]](https://hackmd.io/@norcalbiostat/math615_lec09): Moderation and Stratification
 
+### Statistics
+* Dr. D's [Math 315 course notes](https://norcalbiostat.github.io/MATH315/reading/RAD_course_notes_f19.pdf) 
+* [Applied Statistics Notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/index.html) (Abbreviated as **AS Notebook**) 
+
+### Programming
+
+* [Collaborative R notes on Hack MD](https://hackmd.io/@norcalbiostat/r_notes)
+* [Collaborative SPSS notes on Hack MD](https://hackmd.io/@norcalbiostat/spss_notes)
+      
 
 ----
 
@@ -77,7 +94,8 @@ gsub("<thead>.*</thead>", "", x)
 ```
 
 
-# Articles
+# Articles & Readings
+
 Some of these are required readings, some are for your information and curiosity. 
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}

@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Math 615 schedule"
 output: html_document
 ---
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -8,7 +8,7 @@ options(knitr.table.format = "html", knitr.kable.NA = '')
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE) 
 ```
 
-# Last Updated: `r format(Sys.time(), "%a %b %d %X")` {.tabset .tabset-fade .tabset-pills}
+# _Last Updated: `r format(Sys.time(), "%a %b %d %X")`_ {.tabset .tabset-fade .tabset-pills}
 
 ## Overview
 
@@ -20,7 +20,7 @@ Unless specified otherwise, all assignments are due at midnight on the due date 
 rawdat <- read_xlsx("schedule_615.xlsx", sheet='weekly_schedule')
 
 # Set semester start date and format weeks nicely
-start.date <- as.Date("2019-08-25")
+start.date <- as.Date("2022-08-22")
 
 # which rows have week numbers (manually add line number for break week and finals)
 wn <- c(which(!is.na(rawdat$wknum)),18, 23) %>% sort() 
@@ -30,8 +30,8 @@ wkdt <- seq.Date(start.date, start.date+7*16, by='week')
 
 # format for display
 weekdates <- paste0("Week ", rawdat$wknum[wn], " (", format(wkdt, "%m/%d") , ")") 
-weekdates[14] <- "Fall Break (11/24)"
-weekdates[17] <- "Finals Week (12/15)"
+weekdates[14] <- "Fall Break (11/21)"
+weekdates[17] <- "Finals Week (12/12)"
 
 # Filter rows to display on schedule
 out <- rawdat[which(rawdat$Order==1.1):nrow(rawdat), ]%>% select(Topic:Assignments)
@@ -43,12 +43,6 @@ out <- rawdat[which(rawdat$Order==1.1):nrow(rawdat), ]%>% select(Topic:Assignmen
 #out$Materials[mats] <- paste0("<ul><li>", out$Materials[mats], "</li></ul>")
 out$Topic <- gsub("\r\n", "<br>", out$Topic)
 out$Reading <- gsub("\r\n", "<br>", out$Reading)
-
-# add bold to due dates
-out$Assignments <- gsub(" (", "<br>(<b>", out$Assignments, fixed=TRUE)
-out$Assignments <- gsub(" )", "</b>)", out$Assignments, fixed=TRUE)
-out$Quiz <- gsub(" (", "<br>(<b>", out$Quiz, fixed=TRUE)
-out$Quiz <- gsub(" )", "</b>)", out$Quiz, fixed=TRUE)
 
 wk.labs <-  "background-color: #50a18d; color: #fff;"
 hlt.wks <-  "background-color: #654378; color: #fff;"
@@ -76,15 +70,18 @@ out %>%
   pack_rows(weekdates[16], wn[16],  wn[17]-1, label_row_css =wk.labs) %>%
   pack_rows(weekdates[17], wn[17],  wn[17], label_row_css =hlt.wks) %>%
   column_spec(1, width = "35%") %>% 
-  column_spec(2, width = "13%") %>%
-  column_spec(3, width = "13%") %>% 
-  column_spec(4, width = "38%")
+  column_spec(2, width = "15%") %>%
+  column_spec(3, width = "15%") %>% 
+  column_spec(4, width = "10%") %>% 
+  column_spec(5, width = "25%")
 ```
 
 
-## Calendar
+## Google Calendar (Due Dates)
 
-For those of you that like the calendar view of your schedule. Due to schedule adjustments during the semester these dates may not match exactly with the schedule. In those cases please bring any descrepencies to my attention via Slack. 
+For those of you that like the calendar view of your schedule. Due to schedule adjustments during the semester these dates may not match exactly with the schedule. In those cases please bring any descrepencies to my attention via Discord. 
+
+> `r emo::ji("idea")` Subscribe to this calendar by clicking the plus button in the bottom right corner!
 
 <iframe src="https://calendar.google.com/calendar/embed?src=mail.csuchico.edu_bpvuoivh18qp7ui1263m0dju3o%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
 
