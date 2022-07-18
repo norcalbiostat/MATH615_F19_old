@@ -1,0 +1,40 @@
+---
+title: "Week X: "
+date: "`r paste(Sys.Date())`"
+output:   
+  html_document: 
+    highlight: tango
+    theme: yeti
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+  css: style.css
+---
+
+
+# Housekeeping 
+
+----
+
+# Learning Path
+
+### Where we've been
+
+
+### Where we're at
+
+
+----
+
+# Goals for the week
+
+
+----
+
+# Tuesday
+
+
+----
+
+# Thursday
+

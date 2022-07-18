@@ -6,7 +6,7 @@ date: \today
 
 # Course Information
 
-_Introduction to common procedures used to analyze data. Single and two-sample inference, analysis of variance, multiple regression, analysis of co-variance, experimental design, repeated measures, nonparametric procedures, and categorical data analysis. Examples will be drawn from Biology and related disciplines. Statistical computer packages will be introduced. Appropriate for biology, agriculture, nutrition, psychology, social science, and other majors. 3 hours discussion._
+_This course provides a hands-on introduction to using data to rigorously answer research questions. Students practice cleaning and manipulating data, creating data visualizations, and conducting introductory level statistical analysis using real-world data sets that are relevant to their field. Analysis topics include single and two-sample inference, analysis of variance, multiple regression, analysis of co-variance, experimental design, repeated measures, nonparametric procedures, and categorical data analysis. Reproducible research is strongly emphasized through the use of statistical computing software (e.g. SPSS, Stata, SAS, R, Python). Recommended for all majors that use data for research. 3 hours discussion._
 
 
 ## Instructor
@@ -65,20 +65,20 @@ Homework 0 gets you connected with these materials.
 * **Computer Software:** Data Analysis is done using statistical analysis software. Common statistical programs include SAS, STATA, R and SPSS. I am fluent in SAS, STATA and R, reasonably read in SPSS but can provide limited support for Python. The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
     - I highly recommend making a habit to attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml)
 * **Accounts:** 
-    - Google Drive: You will be added to the Math 615 Google drive using your campus email.
-    - **Discord Server** https://discord.gg/tzcB4MJadW
-    - Hack MD for collaborative notes. An account is needed to keep our notes private. I suggest you sign up with your campus email (@csuchico.edu)
-
+    - **[Google Drive](https://drive.google.com/drive/u/1/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP)**: You will be added to the Math 615 Google drive using your campus email.
+    - **[Discord](https://discord.gg/tzcB4MJadW):** A free discussion platform with a lot of collaborative functionality. This is the defacto method of communication for the class. 
+    - **[Hack MD]():** for collaborative notes. An account is needed to keep our notes private. I suggest you sign up with your campus email (@csuchico.edu)
+    - **[Poll Everywhere](https://pollev.com/drd):** Used for frequent checks of your understanding of the current topic. You can respond on the web or via mobile app. 
 
 # Typical Schedule for success
 
-* Sunday you check the course website and schedule to note important due dates and to plan your week accordingly. 
-* Before Monday noon you complete your individual quiz through Google forms, and perhaps watch one of the lecture videos or do some reading on that week's topic. 
-* Monday class: ~20 min group quiz, ~20 min lecture on topic for the week, ~35 min actively working on homework
-* Before Wednesday class you complete the assigned reading, watch lecture videos, and prepare answers to the discussion questions
-* Wednesday class: ~20 min questions/discussion, ~55 min actively working on homework
+* Sunday you check the course website schedule to note important upcoming due dates and to plan accordingly. 
+* Before Monday class you watch one of the lecture videos and do some reading on that week's topic.
+* Monday class: ~25 min lecture on topic for the week, ~50 min actively working on homework
+* Before Wednesday class you complete the assigned reading and videos, and prepare answers to the discussion questions
+* Wednesday class: ~10 minute topic quiz, ~25 min questions/discussion, ~50 min actively working on homework
 * Before Thursday EOD you submit your draft assignment to google drive.
-* Between Friday & Saturday noon you provide feedback on 1-2 of your classmates assignments and continue to work on your own assignment using. 
+* Between Friday & Saturday noon you provide feedback on 1-2 of your classmates assignments and continue to work on your own assignment using the rubric in BBL as your guide. 
 * By EOD Sunday you revise your assignment based on your peer's feedback and submit your final assignment for grading
 
 EOD: End of day, or 11:59pm. 
@@ -91,11 +91,11 @@ EOD: End of day, or 11:59pm.
 
 * Your final grade will be a straight sum of points earned and will be displayed as a running total in Blackboard Learn. 
 * The approximate contributions per category are:  
-  - Participation 15%: Peer reviews  
-  - Written Assignments 25%: Submitted in Google Drive, graded using a rubric in Blackboard Learn.  
-  - Weekly Quizzes 25%: Google Forms. 
-  - Take home Final exam: 10%
-  - Project related assignments:  25%  
+  - Participation 20%: Peer reviews  
+  - Written Assignments 30%: Submitted in Google Drive, graded using a rubric in Blackboard Learn.
+  - Quizzes: 10%
+  - Take home Final exam: 15%
+  - Project related assignments: 30%  
 * I use a standard grade cutoff of 100-90\%: A, 89-80\%: B, 79-70\%: C, 69-60\%. Plusses and minuses will be as displayed on Blackboard Learn. 
 
 # Schedule of Topics

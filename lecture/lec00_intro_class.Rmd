@@ -1,13 +1,12 @@
 ---
 title: "Introduction to MATH 615"
-date: "Last Updated `r Sys.time()`"
 output:
+  pdf_document: 
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
-  pdf_document: 
 urlcolor: blue
 css: ../css/custom_css.css
 ---

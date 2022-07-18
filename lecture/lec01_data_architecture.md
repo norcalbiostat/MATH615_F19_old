@@ -17,22 +17,14 @@ By the end of this lecture students will understand that
 ## Prior knowledge
 
 :question: **What is data?**
-- Data is collectable information
-- Facts and statistics
-- Descriptive terms linked to subjects of interest
-- Set of values that help describe phenomenon
-- Values
-- Qualitative vs. quantitative
-- Tangible information that can be used for analysis
-- Information
-- EVIDENCE
+
 
 
 :question: **In what manner/forms is data found?**
 - Paper: survey, logs, tests, records
 - Electronic: xls, database
 - Ordinal, continuous, categorical, numerical
-- Qualitative and quantitive 
+- Qualitative and quantitative 
 - Through different research methods and techniques
 - images, video, audio
 
@@ -45,7 +37,7 @@ By the end of this lecture students will understand that
 - Database, often in a manner that is comprehensible to the user/users
 - On paper or a computer
 - Spreadsheets
-- In the field data is collected and stored on paper but transfered to a database 
+- In the field data is collected and stored on paper but transferred to a database 
 
 :question: **What do we use data for?**
 

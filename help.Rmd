@@ -55,8 +55,8 @@ I want to make this class a welcome learning opportunity for everyone. I welcome
 ### Course Webpage
 This course webpage contains all materials used in this class. Bookmark this page, you will be here a lot.  
 
-* **HOME**. This shows the weekly announcements and updates. 
-* **Schedule**. This page shows a summary of the week-by week content in a table format, with links to the weekly materials (Topic), including quizzes, homework, reading and videos. This is the first place you can go for due dates.  
+* **Overview**. This page shows a summary of the week-by week content in a table format, with links to the weekly materials and assignments. 
+    - Google Calendar View: **Shows Due Dates** 
 * **Materials** Links to all homework, reading, video and notes. 
 * **Projects** Instructions for conducting and submitting the semester long data analysis project
 * **Syllabus**. A very important document that contains all the policies and procedures for this class. 
@@ -102,16 +102,6 @@ In effort to not duplicate content (and so I only have one place to update), ple
 -   The [Office of Accessible Technology Services](https://www.csuchico.edu/oats/) will offer all students online access to a staff member during normal business hours Monday--Friday via email at [oats@csuchico.edu](mailto:oats@csuchico.edu). Students with questions on inclusive technology or who need assistance setting up technology accommodations are encouraged to reach out.
 -   If you do not have off-campus access to the Internet, [resources are available](https://www.csuchico.edu/coronavirus/internet.shtml).
 
-
-## Quizzes
-
-Quizzes are a great way to test yourself, enhance recall, and self-assess your comprehension of the subject. Quizzes are administered in Google Forms, and done in two parts.
-
-1. **Individual**: First try to answer as many questions without looking at your notes. Then use your notes to answer the rest. 
-
-2. **Group**: After the individual quiz closes I will choose 1-4 questions that the class as a whole seemed to struggle with the most. The next class period we will do a class-wide discussion of those topics, then you will work in groups to redo the selected questions. 
-
-Points earned from the group quiz get added to your individual quiz score (not to exceed total points). 
 
 
 ## Assignments

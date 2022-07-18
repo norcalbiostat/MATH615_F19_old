@@ -13,12 +13,22 @@
 
 <title>Project Information</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -26,37 +36,22 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-
-
-
 <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
-<link rel="stylesheet" href="css\custom_css.css" type="text/css" />
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
 
 
 
@@ -65,10 +60,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -85,40 +76,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -146,7 +113,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -158,7 +125,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -169,10 +136,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -184,7 +164,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -310,7 +289,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -324,63 +303,59 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">MATH 615</a>
+      <a class="navbar-brand" href="index.html">Overview</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="schedule.html">
-    <span class="fa fa-calendar"></span>
-     
-    Schedule
-  </a>
+  <a href="materials.html">All Materials</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-folder-open"></span>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-gear"></span>
      
-    Materials
+    Platforms
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="notes.html">
-        <span class="fa fa-file-alt"></span>
+      <a href="https://discord.gg/tzcB4MJadW">
+        <span class="fa fa-discord"></span>
          
-        All Files
+        Discord
       </a>
     </li>
     <li>
-      <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/">
-        <span class="fa fa-book-open"></span>
+      <a href="https://pollev.com/drd">
+        <span class="fa fa-square-poll-horizontal"></span>
          
-        Applied Stats Notebook
+        Poll Everywhere
       </a>
     </li>
     <li>
-      <a href="https://hackmd.io/@norcalbiostat/r_notes">
-        <span class="fa fa-file-code"></span>
+      <a href="https://hackmd.io/@norcalbiostat/intro_hackmd">
+        <span class="fa fa-comment-code"></span>
          
-        Collaborative R notes on Hack MD
+        Hack MD
       </a>
     </li>
     <li>
-      <a href="https://hackmd.io/@norcalbiostat/spss_notes">
-        <span class="fa fa-file-code"></span>
+      <a href="https://drive.google.com/drive/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP">
+        <span class="fa fa-google-drive"></span>
          
-        Collaborative SPSS notes on Hack MD
+        Google Drive
       </a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-bar-chart"></span>
      
     Projects
@@ -392,70 +367,34 @@ div.tocify {
       <a href="project.html">Project Instructions</a>
     </li>
     <li>
-      <a href="https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing">Peer Review Assignments</a>
+      <a href="https://docs.google.com/spreadsheets/d/1gqNCqp_RjuCbvpD0Zfvav-ejgGF9nIwSlCXUfFkf7js/edit">Peer Review Assignments</a>
     </li>
     <li>
-      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (Google Drive)</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-wrench"></span>
-     
-    Tools
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="https://drive.google.com/drive/folders/11ah_oFsHalQ_35AkK5bkYW7wDbm97_vu?usp=sharing">
-        <span class="fa fa-google"></span>
-         
-        Google Drive
-      </a>
+      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (REMOVE THIS)</a>
     </li>
     <li>
-      <a href="https://hackmd.io/">
-        <span class="fa fa-file-code"></span>
-         
-        Hack MD
-      </a>
-    </li>
-    <li>
-      <a href="https://math615.slack.com/">
-        <span class="fa fa-slack"></span>
-         
-        Slack (class discussions)
-      </a>
-    </li>
-    <li>
-      <a href="https://csuchico.zoom.us/">
-        <span class="fa fa-video-camera"></span>
-         
-        Zoom (video conference)
-      </a>
+      <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/">Poster Guidelines</a>
     </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="faq.html">
+  <a href="help.html">
     <span class="fa fa-question"></span>
      
     Help
   </a>
 </li>
 <li>
-  <a href="syllabus_615_f19.html">
+  <a href="syllabus.html">
     <span class="fa fa-info-circle"></span>
      
     Syllabus
   </a>
 </li>
 <li>
-  <a href="http://bit.ly/cc_hours">
+  <a href="https://www.csuchico.edu/datascience/community-coding.shtml">
     <span class="fa fa-group"></span>
      
     Community Coding
@@ -473,43 +412,66 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
 <h1 class="title toc-ignore">Project Information</h1>
-<h4 class="date">Last Updated 2019-12-17 17:48:15</h4>
+<h4 class="date">Last Updated 2022-07-17 23:18:25</h4>
 
 </div>
 
 
-<p>Throughout the entire semester you will be analyzing a data set with the end goal of creating a poster presentation to present your research. Often your homework serves as a first draft of exploration into your research questions, and helps you build your story. Homework assignments alone will not be sufficient for a good analysis.</p>
+<p>Throughout the entire semester you will be analyzing a data set with
+the end goal of creating a poster presentation to present your research.
+Often your homework serves as a first draft of exploration into your
+research questions, and helps you build your story. Homework assignments
+alone will not be sufficient for a good analysis.</p>
 <div id="peer-review" class="section level1">
 <h1>Peer Review</h1>
 <p>Project based assignments are subject to peer review.</p>
 <div id="purpose" class="section level2">
 <h2>Purpose</h2>
-<p>Why do we do peer review instead of just getting feedback from you?</p>
+<p>Why do we do peer review instead of just getting feedback from
+you?</p>
 <ul>
-<li>Everyone has different thought processes and may have approached the question from a different perspective that can help you learn the material.</li>
-<li>Co-authoring and reviewing your peers work is part of a professional research position.</li>
-<li>Learning how to provide good feedback will make you a better collaborator</li>
-<li>This is a delayed version of paired programming - another set of eyeballs can typically help you find your mistake.</li>
-<li>I will be looking for different things than your peers will be. This is a good thing. They are looking from “untrained eyes”, which can be very critical to make sure you are explaining yourself clearly. I can better “figure out” what you are meaning to say - they are the ones that will best tell you when/where you need to explain your findings better.</li>
-<li>You are expected to read your peer’s feedback and revise your work before it is graded.</li>
+<li>Everyone has different thought processes and may have approached the
+question from a different perspective that can help you learn the
+material.</li>
+<li>Co-authoring and reviewing your peers work is part of a professional
+research position.</li>
+<li>Learning how to provide good feedback will make you a better
+collaborator</li>
+<li>This is a delayed version of paired programming - another set of
+eyeballs can typically help you find your mistake.</li>
+<li>I will be looking for different things than your peers will be. This
+is a good thing. They are looking from “untrained eyes”, which can be
+very critical to make sure you are explaining yourself clearly. I can
+better “figure out” what you are meaning to say - they are the ones that
+will best tell you when/where you need to explain your findings
+better.</li>
+<li>You are expected to read your peer’s feedback and revise your work
+before it is graded.</li>
 </ul>
 </div>
 <div id="process" class="section level2">
 <h2>Process</h2>
 <p>How do I conduct a Peer Review</p>
 <ol style="list-style-type: decimal">
-<li>Check the <a href="https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing">Peer Review Rotation</a> spreadsheet to see who you are scheduled to review.</li>
+<li>Check the <a
+href="https://docs.google.com/spreadsheets/d/16aT7O6A7fylqhE-OLpIp7cwpaQLKULrxT-D6yxQC15M/edit?usp=sharing">Peer
+Review Rotation</a> spreadsheet to see who you are scheduled to
+review.</li>
 <li>Open the assignment file in Google Drive directly.</li>
-<li>By editing the veribiage directly, or using comment bubbles, provide feedback to your peers.
+<li>By editing the veribiage directly, or using comment bubbles, provide
+feedback to your peers.
 <ul>
-<li>Be specific. Give the type of feedback that you want to recieve.</li>
+<li>Be specific. Give the type of feedback that you want to
+recieve.</li>
 </ul></li>
-<li>Minimum four corrections or suggestions for improvement. If it is reworking/grammer make these edits directly in the document. Explain why what you found was wrong and show how to do it correctly.</li>
+<li>Minimum four corrections or suggestions for improvement. If it is
+reworking/grammer make these edits directly in the document. Explain why
+what you found was wrong and show how to do it correctly.</li>
 </ol>
 </div>
 <div id="feedback" class="section level2">
@@ -517,53 +479,84 @@ div.tocify {
 <p>How to give good feedback</p>
 <ul>
 <li>Compliment the author. What did you like about their writing?</li>
-<li>Make specific suggestions regarding things like word choices, use of details, organization, topic</li>
-<li>Mark corrections such as spelling, grammer, punctuation, analysis methods, coding errors</li>
+<li>Make specific suggestions regarding things like word choices, use of
+details, organization, topic</li>
+<li>Mark corrections such as spelling, grammer, punctuation, analysis
+methods, coding errors</li>
 <li>Don’t try to turn their paper or style into your style.</li>
-<li>If you find a claim that is not supported by data in the document (or cited) be sure to point it out.</li>
+<li>If you find a claim that is not supported by data in the document
+(or cited) be sure to point it out.</li>
 </ul>
 <p>Other resources (i’m always looking for more)</p>
 <ul>
-<li><a href="https://blog.scholasticahq.com/post/how-to-write-helpful-peer-review-comments/" class="uri">https://blog.scholasticahq.com/post/how-to-write-helpful-peer-review-comments/</a></li>
-<li>Look at the questions posed in the bubbles for each section. <a href="https://violentmetaphors.com/2013/12/13/how-to-become-good-at-peer-review-a-guide-for-young-scientists/" class="uri">https://violentmetaphors.com/2013/12/13/how-to-become-good-at-peer-review-a-guide-for-young-scientists/</a></li>
-<li><a href="https://blog.cengage.com/top_blog/suggested-guidelines-for-student-peer-review/" class="uri">https://blog.cengage.com/top_blog/suggested-guidelines-for-student-peer-review/</a></li>
+<li><a
+href="https://blog.scholasticahq.com/post/how-to-write-helpful-peer-review-comments/"
+class="uri">https://blog.scholasticahq.com/post/how-to-write-helpful-peer-review-comments/</a></li>
+<li>Look at the questions posed in the bubbles for each section. <a
+href="https://violentmetaphors.com/2013/12/13/how-to-become-good-at-peer-review-a-guide-for-young-scientists/"
+class="uri">https://violentmetaphors.com/2013/12/13/how-to-become-good-at-peer-review-a-guide-for-young-scientists/</a></li>
+<li><a
+href="https://blog.cengage.com/top_blog/suggested-guidelines-for-student-peer-review/"
+class="uri">https://blog.cengage.com/top_blog/suggested-guidelines-for-student-peer-review/</a></li>
 </ul>
 </div>
 <div id="grading-of-peer-reviews" class="section level2">
 <h2>Grading of peer reviews</h2>
-<p>As I do my reviews on the same document, I will be reading and assessing your peer review. If I find your review is not providing quality feedback to the author you will not recieve credit for that review. You may see the cells in the peer review spreadsheet changing color as I check off your review.</p>
+<p>As I do my reviews on the same document, I will be reading and
+assessing your peer review. If I find your review is not providing
+quality feedback to the author you will not recieve credit for that
+review. You may see the cells in the peer review spreadsheet changing
+color as I check off your review.</p>
 </div>
 </div>
 <div id="poster-preparation" class="section level1">
 <h1>Poster preparation</h1>
-<p>You will organize your research in stages by putting only relevant information into a slide deck. This will help you concicely explain your research topic and findings in a way that you can more easily translate (fit) onto a poster.</p>
+<p>You will organize your research in stages by putting only relevant
+information into a slide deck. This will help you concicely explain your
+research topic and findings in a way that you can more easily translate
+(fit) onto a poster.</p>
 <div id="code-managemement" class="section level2">
 <h2>Code managemement</h2>
-<p>Create a new <code>project.Rmd</code> or <code>project.sps</code> file in your Math 615 folder. Put all code that you use to create summary statistics, tables, graphics and analyses into this file. This is to keep it separate from your homework.</p>
+<p>Create a new <code>project.Rmd</code> or <code>project.sps</code>
+file in your Math 615 folder. Put all code that you use to create
+summary statistics, tables, graphics and analyses into this file. This
+is to keep it separate from your homework.</p>
 </div>
 <div id="poster-setup" class="section level2">
 <h2>Poster setup</h2>
 <p>Setup your poster by doing the following:</p>
 <ul>
-<li>Create a Google Slides presentation directly into the Project Slides folder in our Google Drive.</li>
+<li>Create a Google Slides presentation directly into the Project Slides
+folder in our Google Drive.</li>
 <li>Name your file using your username only.</li>
 </ul>
-<p>You will fill out these slides in 4 stages. The required contents for each slide are listed below under <strong>Stages</strong></p>
+<p>You will fill out these slides in 4 stages. The required contents for
+each slide are listed below under <strong>Stages</strong></p>
 <ul>
-<li>At each stage you should update anything you need to change, such as correctly making graphics, writing results correctly etc.</li>
-<li>There is an example slide deck in Google Drive named <code>AAA Example/Template</code>. This has more details about the contents of each slide and guidance for what should be included on that slide.</li>
-<li>There is a grading rubric in Blackboard that you can self-check your submission against prior to grading.</li>
-<li>This includes reviewing the current set of feedback and mak the appropriate corrections.
+<li>At each stage you should update anything you need to change, such as
+correctly making graphics, writing results correctly etc.</li>
+<li>There is an example slide deck in Google Drive named
+<code>AAA Example/Template</code>. This has more details about the
+contents of each slide and guidance for what should be included on that
+slide.</li>
+<li>There is a grading rubric in Blackboard that you can self-check your
+submission against prior to grading.</li>
+<li>This includes reviewing the current set of feedback and mak the
+appropriate corrections.
 <ul>
-<li>Once you have addressed a particular piece of feedback mark it as “resolved” in Google Slides. (<em>Do Not Delete Feedback.</em>)</li>
+<li>Once you have addressed a particular piece of feedback mark it as
+“resolved” in Google Slides. (<em>Do Not Delete Feedback.</em>)</li>
 </ul></li>
-<li>Your presentation should be limited to approximately 20 slides. The contents of each slide are specified below.
+<li>Your presentation should be limited to approximately 20 slides. The
+contents of each slide are specified below.
 <ul>
-<li>You are welcome to have “staging” slides where you can dump content, thoughts, analyses that you <em>may</em> end up using.</li>
+<li>You are welcome to have “staging” slides where you can dump content,
+thoughts, analyses that you <em>may</em> end up using.</li>
 </ul></li>
 </ul>
 </div>
-<div id="stage-1-setting-up-the-story-slides-1-7" class="section level2">
+<div id="stage-1-setting-up-the-story-slides-1-7"
+class="section level2">
 <h2>Stage 1: Setting up the story (Slides 1-7)</h2>
 <ol style="list-style-type: decimal">
 <li>Title</li>
@@ -571,37 +564,50 @@ div.tocify {
 <li>Background &amp; lit review.</li>
 <li>Explain the research problem / topic area</li>
 <li>State your Research Question as a testable hypothesis.</li>
-<li>Introduce the data. Where does it come from, how was it collected. How many records?</li>
-<li>Description of measures (variables) being used. Explain any recoding and/or altering that was done.
+<li>Introduce the data. Where does it come from, how was it collected.
+How many records?</li>
+<li>Description of measures (variables) being used. Explain any recoding
+and/or altering that was done.
 <ul>
-<li>This refers to significant changes to the data (making new variables, dichotomizing or categorizing existing variables)</li>
-<li>Do NOT discuss setting missing codes such as 98 and 99 to <code>NA</code> or <code>SYSMIS</code>.</li>
+<li>This refers to significant changes to the data (making new
+variables, dichotomizing or categorizing existing variables)</li>
+<li>Do NOT discuss setting missing codes such as 98 and 99 to
+<code>NA</code> or <code>SYSMIS</code>.</li>
 <li>Do NOT talk about applying labels</li>
 <li>Do NOT use variable names.</li>
-<li>Restrict this list to only the variables you are using in your analysis. This is likely not to be more than 4-6.</li>
+<li>Restrict this list to only the variables you are using in your
+analysis. This is likely not to be more than 4-6.</li>
 </ul></li>
 </ol>
 </div>
-<div id="stage-2-exploratory-data-analysis-slide-8-11" class="section level2">
+<div id="stage-2-exploratory-data-analysis-slide-8-11"
+class="section level2">
 <h2>Stage 2: Exploratory data analysis (Slide 8-11)</h2>
 <ol start="8" style="list-style-type: decimal">
 <li>Fully describe your primary outcome (response) variable …</li>
 <li>Fully describe your primary explanatory variable …</li>
-<li>Fully describe the relationship between your primary explanatory and primary response variables ….</li>
-<li>Fully describe the relationship of a third variable to either your explanatory or response variables …</li>
+<li>Fully describe the relationship between your primary explanatory and
+primary response variables ….</li>
+<li>Fully describe the relationship of a third variable to either your
+explanatory or response variables …</li>
 </ol>
-<p>… All using appropriate summary statistics, graphic and an explanatory sentence.</p>
+<p>… All using appropriate summary statistics, graphic and an
+explanatory sentence.</p>
 <hr />
 </div>
-<div id="stage-3-bivariate-inference-slide-12-13" class="section level2">
+<div id="stage-3-bivariate-inference-slide-12-13"
+class="section level2">
 <h2>Stage 3: Bivariate Inference (Slide 12-13)</h2>
 <p>Revise and update all prior slides.</p>
-<p>Two analyses, one per slide. Each slide should contain the following:</p>
+<p>Two analyses, one per slide. Each slide should contain the
+following:</p>
 <ol style="list-style-type: decimal">
-<li>A fully labeled and cleaned up plot demonstrating the bivariate relationship under consideration.</li>
+<li>A fully labeled and cleaned up plot demonstrating the bivariate
+relationship under consideration.</li>
 <li>The results of an appropriate bivariate analysis.
 <ul>
-<li>This should be a conclusion written in English, includes a confidence interval and a p-value.</li>
+<li>This should be a conclusion written in English, includes a
+confidence interval and a p-value.</li>
 <li>You also need to state the name of the test you used.</li>
 </ul></li>
 </ol>
@@ -610,43 +616,68 @@ div.tocify {
 <div id="stage-4-multivariable-analysis" class="section level2">
 <h2>Stage 4: Multivariable analysis</h2>
 <p>Revise and update all prior slides.</p>
-<p>You are trying to understand the relationship between your explanatory and response variable, in presence of information contained in other variables.</p>
+<p>You are trying to understand the relationship between your
+explanatory and response variable, in presence of information contained
+in other variables.</p>
 <p><strong>Slide 14: Testing for moderators</strong></p>
 <ul>
 <li>Moderation:
 <ul>
-<li>If you found a moderator: Remove the bivariate graph and write up from your poster and replace with explanation of moderator and graph of significant bivariate at the 3rd variable level.</li>
-<li>If you did NOT find a moderator: Include a slide stating what relationships you tested for moderation and with what variable to see if it was a moderator, explaining that it was not a moderator. No graphs needed</li>
+<li>If you found a moderator: Remove the bivariate graph and write up
+from your poster and replace with explanation of moderator and graph of
+significant bivariate at the 3rd variable level.</li>
+<li>If you did NOT find a moderator: Include a slide stating what
+relationships you tested for moderation and with what variable to see if
+it was a moderator, explaining that it was not a moderator. No graphs
+needed</li>
 </ul></li>
 </ul>
 <p><strong>Slide 15: Testing for confounding relationships</strong></p>
 <ul>
 <li>Confounding:
 <ul>
-<li>If you found a confounder: on slide with bivariate relationship that was confounded put a bullet point that explains what variable confounded the relationship and put the written results that are shown in the confounding assignment on how to write results. Make sure to explain if it helped improve prediction of response variable.</li>
-<li>If you did NOT find a confounder: Include a slide stating what relationships you tested for confounds and with what variable to see if it was a confound, explaining that it was not a moderator. Make sure to explain if it helped improve prediction of response variable.</li>
+<li>If you found a confounder: on slide with bivariate relationship that
+was confounded put a bullet point that explains what variable confounded
+the relationship and put the written results that are shown in the
+confounding assignment on how to write results. Make sure to explain if
+it helped improve prediction of response variable.</li>
+<li>If you did NOT find a confounder: Include a slide stating what
+relationships you tested for confounds and with what variable to see if
+it was a confound, explaining that it was not a moderator. Make sure to
+explain if it helped improve prediction of response variable.</li>
 </ul></li>
 </ul>
 <p><strong>Slide 16: Results from a Multivariable Model</strong></p>
 <ul>
-<li>Build a multivariable model by adding additional predictors to the model.
+<li>Build a multivariable model by adding additional predictors to the
+model.
 <ul>
 <li>See the lecture notes on model building as guidance.</li>
-<li>Include any variables that were found to be significantly associated with the outcome</li>
-<li>If you found a moderator, your model should include an interaction term with your moderating variable.</li>
+<li>Include any variables that were found to be significantly associated
+with the outcome</li>
+<li>If you found a moderator, your model should include an interaction
+term with your moderating variable.</li>
 </ul></li>
-<li>A table or a graphic of the regression coefficients (or Odds Ratios) must be presented.
+<li>A table or a graphic of the regression coefficients (or Odds Ratios)
+must be presented.
 <ul>
-<li>Make tables in Excel or Powerpoint directly. Do not copy R output</li>
+<li>Make tables in Excel or Powerpoint directly. Do not copy R
+output</li>
 </ul></li>
-<li>At least one coefficient, the primary explanatory variable, must be interpreted in context of the problem.</li>
+<li>At least one coefficient, the primary explanatory variable, must be
+interpreted in context of the problem.</li>
 </ul>
 <p><strong>Slide 17. Discussion</strong></p>
 <ul>
-<li>Here you will explain what your graphical and inferential results tell you about your topic.</li>
-<li>Discuss if your research hypothesis was supported, if it was not, why you think that might be</li>
-<li>Explain the overall story/trend/what you learned when you consider your univariate, bivariate &amp; multivariate results about your topic.</li>
-<li>Compare your results to previous research results. Do they agree or disagree?</li>
+<li>Here you will explain what your graphical and inferential results
+tell you about your topic.</li>
+<li>Discuss if your research hypothesis was supported, if it was not,
+why you think that might be</li>
+<li>Explain the overall story/trend/what you learned when you consider
+your univariate, bivariate &amp; multivariate results about your
+topic.</li>
+<li>Compare your results to previous research results. Do they agree or
+disagree?</li>
 </ul>
 <p><strong>Slide 18. Implications</strong></p>
 <ul>
@@ -654,28 +685,41 @@ div.tocify {
 <li>What could others do with your findings?</li>
 <li>What future research needs to be conducted?
 <ul>
-<li>This needs to be more specific than “other variables could be explored”. Which variables and why? What other research articles indicate that those other variables are relevant?</li>
+<li>This needs to be more specific than “other variables could be
+explored”. Which variables and why? What other research articles
+indicate that those other variables are relevant?</li>
 </ul></li>
 </ul>
 <p><strong>Slide 19. Limitations</strong></p>
 <ul>
-<li>Who are the results of this study generalizable to? (i.e. a subset of individuals?)</li>
+<li>Who are the results of this study generalizable to? (i.e. a subset
+of individuals?)</li>
 <li>Were there any model assumptions that were not upheld?</li>
-<li>If this is an observational study, you should make a statement about the findings are associations and not causal in nature</li>
-<li>Are there other factors that could exlain your response variable that you did not include in your model?</li>
+<li>If this is an observational study, you should make a statement about
+the findings are associations and not causal in nature</li>
+<li>Are there other factors that could exlain your response variable
+that you did not include in your model?</li>
 </ul>
 <p><strong>Slide 20. References</strong></p>
 <ul>
 <li>You can use smaller font to get all references on one slide.</li>
-<li>Use references from research plan, and any additional references gathered along the way.</li>
+<li>Use references from research plan, and any additional references
+gathered along the way.</li>
 <li>Make sure these are correctly done in APA format.</li>
 <li>Proper citations for
 <ul>
-<li><a href="http://www.cpc.unc.edu/projects/addhealth/faqs/addhealth#how-do-i-cite-the-add-health-contractual-data-">Add Health</a></li>
+<li><a
+href="http://www.cpc.unc.edu/projects/addhealth/faqs/addhealth#how-do-i-cite-the-add-health-contractual-data-">Add
+Health</a></li>
 <li><em>R</em>: Type <code>citation()</code></li>
-<li><a href="https://support.rstudio.com/hc/en-us/articles/206212048-Citing-RStudio">R Studio</a></li>
-<li><a href="http://www-01.ibm.com/support/docview.wss?uid=swg21476197">SPSS</a></li>
-<li><a href="http://blog.apastyle.org/apastyle/2015/01/how-to-cite-software-in-apa-style.html">How to cite software in Text</a></li>
+<li><a
+href="https://support.rstudio.com/hc/en-us/articles/206212048-Citing-RStudio">R
+Studio</a></li>
+<li><a
+href="http://www-01.ibm.com/support/docview.wss?uid=swg21476197">SPSS</a></li>
+<li><a
+href="http://blog.apastyle.org/apastyle/2015/01/how-to-cite-software-in-apa-style.html">How
+to cite software in Text</a></li>
 </ul></li>
 </ul>
 <hr />
@@ -684,42 +728,57 @@ div.tocify {
 <div id="posters-presentations" class="section level1">
 <h1>Posters Presentations</h1>
 <ul>
-<li>You will transfer all findings into a research poster, print the poster, and then present your research to your classmates.
+<li>You will transfer all findings into a research poster, print the
+poster, and then present your research to your classmates.
 <ul>
-<li>We will split the class in half. When not presenting, you will be scoring the other half of the class’s posters.</li>
+<li>We will split the class in half. When not presenting, you will be
+scoring the other half of the class’s posters.</li>
 </ul></li>
-<li>Posters can be in powerpoint (the standard format for research posters), or Google Slides (once appropriately sized)
+<li>Posters can be in powerpoint (the standard format for research
+posters), or Google Slides (once appropriately sized)
 <ul>
-<li>Regardless of the file type, you must use a template. Do not try to reinvent the wheel.</li>
+<li>Regardless of the file type, you must use a template. Do not try to
+reinvent the wheel.</li>
 </ul></li>
 </ul>
 <div id="poster-guidelines" class="section level2">
 <h2>Poster Guidelines:</h2>
-<p><a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/" class="uri">https://norcalbiostat.netlify.com/lec/poster_guidelines/</a></p>
+<p><a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/"
+class="uri">https://norcalbiostat.netlify.com/lec/poster_guidelines/</a></p>
 <ul>
 <li>Links to poster templates,</li>
 <li>Details on what each section should contain</li>
-<li>Guidance on aestetics and printing (when appropriate)</li>
+<li>Guidance on aesthetics and printing (when appropriate)</li>
 <li>Evaluation criteria</li>
 <li>Examples of professional and prior student work.</li>
 </ul>
 <div id="draft-version" class="section level3">
 <h3>Draft version</h3>
 <ul>
-<li>This draft is graded on how complete the poster is. You should consider this a draft that you would circulate to your colleagues for final review and comments.</li>
-<li>Use the <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation criteria</a> as a guide for what I am looking for.</li>
-<li><strong>This assignment is graded in Blackboard using a rubric</strong> - be sure to look at this before you submit.
+<li>This draft is graded on how complete the poster is. You should
+consider this a draft that you would circulate to your colleagues for
+final review and comments.</li>
+<li>Use the <a
+href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation
+criteria</a> as a guide for what I am looking for.</li>
+<li><strong>This assignment is graded in Blackboard using a
+rubric</strong> - be sure to look at this before you submit.
 <ul>
-<li>Points are awarded based off how close to presentation quality your poster is by the time the draft is due.</li>
-<li>Basically the more work I think you need to put into your poster to make it presentable, the lower the points you get for the draft.</li>
+<li>Points are awarded based off how close to presentation quality your
+poster is by the time the draft is due.</li>
+<li>Basically the more work I think you need to put into your poster to
+make it presentable, the lower the points you get for the draft.</li>
 </ul></li>
 </ul>
 <p><strong>Submission and Peer Review Instructions</strong></p>
 <ul>
-<li>Save your poster as a PDF and upload to the <code>Google Drive/Project Poster Drafts</code> folder.</li>
-<li>To conduct your peer review, open the PDF from Google Drive directly in your browser.
+<li>Save your poster as a PDF and upload to the
+<code>Google Drive/Project Poster Drafts</code> folder.</li>
+<li>To conduct your peer review, open the PDF from Google Drive directly
+in your browser.
 <ul>
-<li>Use the comment feature to write the comments directly into the poster file itself.</li>
+<li>Use the comment feature to write the comments directly into the
+poster file itself.</li>
 <li>provide at least two specific comments for each
 <ul>
 <li>something that can be improved</li>
@@ -731,17 +790,28 @@ div.tocify {
 <div id="final-version" class="section level3">
 <h3>Final Version</h3>
 <ul>
-<li>Upload your final poster (as printed) to the <code>Google Drive/Project Poster Final Version</code> folder.
+<li>Upload your final poster (as printed) to the
+<code>Google Drive/Project Poster Final Version</code> folder.
 <ul>
 <li>PDF preferred. PPTX ok.</li>
 </ul></li>
-<li>Scoring will be done via <a href="https://forms.gle/oFMQ2hqtthZFPq7T7">Google Forms</a>. It looks exactly like the <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation criteria</a>.
+<li>Scoring will be done via <a
+href="https://forms.gle/oFMQ2hqtthZFPq7T7">Google Forms</a>. It looks
+exactly like the <a
+href="https://norcalbiostat.netlify.com/lec/poster_guidelines/#evaluation-criteria">evaluation
+criteria</a>.
 <ul>
-<li>When not presenting, you will walk around and learn about others research. Ask them questions, fill out the evaluation on your phone as you go. Printed copies will be available upon request so you can submit later.</li>
+<li>When not presenting, you will walk around and learn about others
+research. Ask them questions, fill out the evaluation on your phone as
+you go. Printed copies will be available upon request so you can submit
+later.</li>
 </ul></li>
 <li>The final grade will be determined by
 <ul>
-<li>Base score = <strong>30%</strong> student score + <strong>70%</strong> instructor score <strong>+ bonus pts</strong> for best in show awards <strong>- 1</strong> point penalty for each day late.</li>
+<li>Base score = <strong>30%</strong> student score +
+<strong>70%</strong> instructor score <strong>+ bonus pts</strong> for
+best in show awards <strong>- 1</strong> point penalty for each day
+late.</li>
 </ul></li>
 </ul>
 </div>
@@ -759,7 +829,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -777,7 +847,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -786,6 +856,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
@@ -798,7 +871,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

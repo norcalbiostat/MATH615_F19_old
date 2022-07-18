@@ -1,13 +1,25 @@
 name: "Robin Donatello"
 output_dir: "."
 navbar:
-  title: HOME
+  title: Overview
   left:
-  - text: Schedule
-    icon: fa-calendar
-    href: schedule.html
-  - text: "Materials"
+  - text: "All Materials"
     href: materials.html
+  - text: "Platforms"
+    icon: fa-gear
+    menu:
+    - text: "Discord"
+      icon: fa-discord
+      href: https://discord.gg/tzcB4MJadW
+    - text: "Poll Everywhere"
+      icon: fa-square-poll-horizontal
+      href: https://pollev.com/drd
+    - text: "Hack MD"
+      icon: fa-comment-code
+      href: https://hackmd.io/@norcalbiostat/intro_hackmd
+    - text: "Google Drive"
+      icon: fa-google-drive
+      href: https://drive.google.com/drive/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP
   - text: "Projects"
     icon: fa-bar-chart
     menu:

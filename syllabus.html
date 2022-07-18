@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Syllabus MATH 615 - Fall 22</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom_css.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Overview</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="materials.html">All Materials</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-gear"></span>
+     
+    Platforms
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://discord.gg/tzcB4MJadW">
+        <span class="fa fa-discord"></span>
+         
+        Discord
+      </a>
+    </li>
+    <li>
+      <a href="https://pollev.com/drd">
+        <span class="fa fa-square-poll-horizontal"></span>
+         
+        Poll Everywhere
+      </a>
+    </li>
+    <li>
+      <a href="https://hackmd.io/@norcalbiostat/intro_hackmd">
+        <span class="fa fa-comment-code"></span>
+         
+        Hack MD
+      </a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/drive/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP">
+        <span class="fa fa-google-drive"></span>
+         
+        Google Drive
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-bar-chart"></span>
+     
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project.html">Project Instructions</a>
+    </li>
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1gqNCqp_RjuCbvpD0Zfvav-ejgGF9nIwSlCXUfFkf7js/edit">Peer Review Assignments</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">Project Data (REMOVE THIS)</a>
+    </li>
+    <li>
+      <a href="https://norcalbiostat.netlify.com/lec/poster_guidelines/">Poster Guidelines</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="help.html">
+    <span class="fa fa-question"></span>
+     
+    Help
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="https://www.csuchico.edu/datascience/community-coding.shtml">
+    <span class="fa fa-group"></span>
+     
+    Community Coding
+  </a>
+</li>
+<li>
+  <a href="http://www.norcalbiostat.com/">
+    <span class="fa fa-paw"></span>
+     
+    Dr. D's website
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Syllabus MATH 615 - Fall 22</h1>
+
+</div>
+
+
+<div id="course-information" class="section level1">
+<h1>Course Information</h1>
+<p><em>This course provides a hands-on introduction to using data to
+rigorously answer research questions. Students practice cleaning and
+manipulating data, creating data visualizations, and conducting
+introductory level statistical analysis using real-world data sets that
+are relevant to their field. Analysis topics include single and
+two-sample inference, analysis of variance, multiple regression,
+analysis of co-variance, experimental design, repeated measures,
+nonparametric procedures, and categorical data analysis. Reproducible
+research is strongly emphasized through the use of statistical computing
+software (e.g. SPSS, Stata, SAS, R, Python). Recommended for all majors
+that use data for research. 3 hours discussion.</em></p>
+<div id="instructor" class="section level2">
+<h2>Instructor</h2>
+<ul>
+<li><strong>Name &amp; pronouns</strong> Dr. Robin Donatello (Dr. D,
+she/her)</li>
+<li><strong>Office Location:</strong> Holt 202</li>
+<li><strong>E-mail:</strong> <a href="mailto:rdonatello@csuchico.edu"
+class="email">rdonatello@csuchico.edu</a></li>
+<li><strong>Best Contact Method:</strong> Discord</li>
+<li><strong>Student Office Hours</strong> Holt 202: MW 3-4pm and during
+community coding</li>
+</ul>
+</div>
+<div id="logistics" class="section level2">
+<h2>Logistics</h2>
+<ul>
+<li><strong>Meeting Pattern:</strong> MW 4-5:30, Holt 291</li>
+<li><strong>Class Website</strong> <a
+href="https://norcalbiostat.github.io/MATH615/"
+class="uri">https://norcalbiostat.github.io/MATH615/</a><br />
+</li>
+<li><strong>Prerequisites:</strong> Basic computer literacy. Recent
+statistics course such as Math 105, MATH 315, or MATH 350.<br />
+</li>
+<li><strong>Mode of Instruction:</strong> In Person. <em>The mode of
+instruction for this course is classified as a “In Person”; this means
+all students are expected to attend class in person each session. At
+this time there is no specific plan for habitual synchronous hybrid zoom
+session.</em></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="what-are-we-going-to-learn-course-learning-outcomes"
+class="section level1">
+<h1>What are we going to learn? (Course Learning Outcomes)</h1>
+<p>By the end of the course, students will be able to…</p>
+<ul>
+<li>Import data into a statistical analysis software program in a format
+that is ready to analyze.</li>
+<li>Process, screen, recode, transform, and clean data.</li>
+<li>Describe distributions and patterns of data using visualizations and
+words.</li>
+<li>Select and carry out an appropriate statistical analysis.</li>
+<li>Explain study results and limitations to a non-technical
+audience.</li>
+<li>Understand and implement a reproducible research pipeline.</li>
+<li>Become a data nerd (Optional, but recommended).</li>
+</ul>
+<hr />
+</div>
+<div id="who-are-we-learning-it-with" class="section level1">
+<h1>Who are we learning it with?</h1>
+<p>My name is Robin Donatello and my pronouns are she/her. You can
+address me as “Robin”, “Dr. D”, or some other respectful title such as
+“professor”.</p>
+<p>I have a Doctorate in Public Health (DrPH) Biostatistics from UCLA,
+but I’m a Chico alum. I double majored in Statistics &amp; Biology, with
+minor in Chemistry, and a first generation college student who started
+at Butte College.</p>
+<p>My campus life consists of training the next generation of Scientists
+how to harness the power of Statistics and Data in a responsible and
+ethical manner, supporting students in their academic adventures through
+intensive advising and research, leading the Data Science Initiative
+(DSI) to develop Data Science capacity on our campus, and providing
+analytical support and statistical consulting for many projects on and
+off campus.</p>
+<p>When I’m not on campus, typically I’m growing food for my family, out
+adventuring with my dogs, or getting some game time in.</p>
+<p>You can learn more about the work that I do on my <a
+href="http://www.norcalbiostat.com/">website</a></p>
+</div>
+<div id="how-are-we-gonna-learn-it-required-materials"
+class="section level1">
+<h1>How are we gonna learn it? (Required materials)</h1>
+<p>Homework 0 gets you connected with these materials.</p>
+<ul>
+<li><strong>Textbook</strong>: <em>Practical Multivariate Analysis, 6th
+ed</em> by Afifi, May, Donatello, Clark. <a
+href="https://www.routledge.com/Practical-Multivariate-Analysis/Afifi-May-Donatello-Clark/p/book/9781032088471">[Link]</a>
+<ul>
+<li>This wil be used in Math 456, and is an excellent reference
+guide.</li>
+<li>If you’re curious, I get about 1% of the sale in royalty. The income
+is <em>not</em> why I collaborated on this edition. I used the 4th
+edition in grad school and really like teaching out of it.</li>
+<li><em>Optional</em>: Open Intro Statistics 3rd edition. If you need a
+refresher on your basic statistics. Free PDF available at <a
+href="https://www.openintro.org/stat/textbook.php?stat_book=os"
+class="uri">https://www.openintro.org/stat/textbook.php?stat_book=os</a></li>
+</ul></li>
+<li><strong>Reliable Laptop</strong>: Expect to bring often. Contact me
+if this poses a problem or concern for you.</li>
+<li><strong>Reliable internet</strong> connection while on and off
+campus. ITSS can help you get this setup.</li>
+<li><strong>Computer Software:</strong> Data Analysis is done using
+statistical analysis software. Common statistical programs include SAS,
+STATA, R and SPSS. I am fluent in SAS, STATA and R, reasonably read in
+SPSS but can provide limited support for Python. The choice of software
+you use for this class is up to you, but you will be expected to learn
+how to navigate the programs outside of class time.
+<ul>
+<li>I highly recommend making a habit to attend <a
+href="https://www.csuchico.edu/datascience/community-coding.shtml">Community
+Coding</a></li>
+</ul></li>
+<li><strong>Accounts:</strong>
+<ul>
+<li><strong><a
+href="https://drive.google.com/drive/u/1/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP">Google
+Drive</a></strong>: You will be added to the Math 615 Google drive using
+your campus email.</li>
+<li><strong><a
+href="https://discord.gg/tzcB4MJadW">Discord</a>:</strong> A free
+discussion platform with a lot of collaborative functionality. This is
+the defacto method of communication for the class.</li>
+<li><strong><a href="">Hack MD</a>:</strong> for collaborative notes. An
+account is needed to keep our notes private. I suggest you sign up with
+your campus email (<span class="citation">@csuchico.edu</span>)</li>
+<li><strong><a href="https://pollev.com/drd">Poll
+Everywhere</a>:</strong> Used for frequent checks of your understanding
+of the current topic. You can respond on the web or via mobile app.</li>
+</ul></li>
+</ul>
+</div>
+<div id="typical-schedule-for-success" class="section level1">
+<h1>Typical Schedule for success</h1>
+<ul>
+<li>Sunday you check the course website schedule to note important
+upcoming due dates and to plan accordingly.</li>
+<li>Before Monday class you watch one of the lecture videos and do some
+reading on that week’s topic.</li>
+<li>Monday class: ~25 min lecture on topic for the week, ~50 min
+actively working on homework</li>
+<li>Before Wednesday class you complete the assigned reading and videos,
+and prepare answers to the discussion questions</li>
+<li>Wednesday class: ~10 minute topic quiz, ~25 min
+questions/discussion, ~50 min actively working on homework</li>
+<li>Before Thursday EOD you submit your draft assignment to google
+drive.</li>
+<li>Between Friday &amp; Saturday noon you provide feedback on 1-2 of
+your classmates assignments and continue to work on your own assignment
+using the rubric in BBL as your guide.</li>
+<li>By EOD Sunday you revise your assignment based on your peer’s
+feedback and submit your final assignment for grading</li>
+</ul>
+<p>EOD: End of day, or 11:59pm.</p>
+<blockquote>
+<p>Expect to spend 10-12 hours each week on this class. I will do my
+best not to move due dates so you can plan accordingly.</p>
+</blockquote>
+<hr />
+</div>
+<div id="how-is-learning-measured-what-are-you-graded-on"
+class="section level1">
+<h1>How is learning measured? (What are you graded on?)</h1>
+<ul>
+<li>Your final grade will be a straight sum of points earned and will be
+displayed as a running total in Blackboard Learn.</li>
+<li>The approximate contributions per category are:
+<ul>
+<li>Participation 20%: Peer reviews<br />
+</li>
+<li>Written Assignments 30%: Submitted in Google Drive, graded using a
+rubric in Blackboard Learn.</li>
+<li>Quizzes: 10%</li>
+<li>Take home Final exam: 15%</li>
+<li>Project related assignments: 30%<br />
+</li>
+</ul></li>
+<li>I use a standard grade cutoff of 100-90%: A, 89-80%: B, 79-70%: C,
+69-60%. Plusses and minuses will be as displayed on Blackboard
+Learn.</li>
+</ul>
+</div>
+<div id="schedule-of-topics" class="section level1">
+<h1>Schedule of Topics</h1>
+<p>The general ordering of topics is:</p>
+<ul>
+<li>Data Collection and recording</li>
+<li>Preparing data for analysis</li>
+<li>Data Visualization</li>
+<li>Foundations for Inference: probability distributions, point and
+interval estimation, Hypothesis Testing</li>
+<li>Inference comparing multiple samples (t-tests, ANOVA, <span
+class="math inline">\(\chi^{2}\)</span> tests)</li>
+<li>Study design, confounding, causation</li>
+<li>Linear regression analysis (Simple and Multiple, Categorical
+predictors, variable selection)</li>
+<li>Logistic regression analysis</li>
+<li>Model building techniques and comparing model fit</li>
+<li>Special analysis topics - how to identify when linear regression
+models won’t work.</li>
+</ul>
+<hr />
+</div>
+<div id="how-do-you-get-help" class="section level1">
+<h1>How do you get help?</h1>
+<ul>
+<li>Check out the resources on the <a href="help.html">help</a>
+page</li>
+<li>Post in our Discord text chat channel. You can direct message me as
+well.</li>
+<li>Attend student office hours: Days/times &amp; location TBD. Will be
+figured out by Friday of week 1.</li>
+<li>Attend Community Coding: Lots of open student help hours open to any
+student. Hours, location and zoom link at <a
+href="https://www.csuchico.edu/datascience/community-coding.shtml"
+class="uri">https://www.csuchico.edu/datascience/community-coding.shtml</a></li>
+</ul>
+<hr />
+</div>
+<div id="class-policies-and-statements" class="section level1">
+<h1>Class Policies and statements</h1>
+<div id="everyone-is-welcome-here" class="section level2">
+<h2>Everyone is welcome here</h2>
+<p>It is my intent that students from all diverse backgrounds and
+perspectives be well-served by this course, that students’ learning
+needs be addressed both in and out of class, and that the diversity that
+the students bring to this class be viewed as a resource, strength and
+benefit. It is my intent to present materials and activities that are
+respectful of diversity: gender identity, sexuality, disability, age,
+socioeconomic status, ethnicity, race, nationality, religion, and
+culture. Your suggestions are encouraged and appreciated. Please let me
+know ways to improve the effectiveness of the course for you personally,
+or for other students or student groups.</p>
+<p>I would like to create a learning environment that supports a
+diversity of thoughts, perspectives and experiences, and honors your
+identities (including race, gender, class, sexuality, religion, ability,
+etc.) To help accomplish this:</p>
+<ul>
+<li>Let me know if you have a name and/or set of pronouns that differ
+from those that appear in your official Chico records. I make it a point
+to call on people by name, so please make sure that I know what you want
+to be called. - I also want to try to pronounce your name as accurately
+as possible. The more you help and correct me the better I can do to
+honor your name.</li>
+<li>If you feel like your performance in the class is being impacted by
+your experiences outside of class, please don’t hesitate to come and
+talk with me. I want to be a resource for you. Remember that you can
+also submit anonymous feedback using the feedback button on the schedule
+and help pages of the website (which will lead to me making a general
+announcement to the class, if necessary to address your concerns).</li>
+<li>If you prefer to speak with someone outside of the course, the
+Office of Diversity and Inclusion is here to assist. Their number is
+530-898-4764, and email <a href="mailto:diversityoffice@csuchico.edu"
+class="email">diversityoffice@csuchico.edu</a></li>
+<li>I (like many people) am still in the process of learning about
+diverse perspectives and identities. If something was said in class (by
+anyone) that made you feel uncomfortable, please talk to me about it.
+(Again, anonymous feedback is always an option).</li>
+</ul>
+<p><em>Adapted from <a
+href="https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements">Monica
+Linden at Brown University</a></em>.</p>
+<p>Furthermore, I would like to acknowledge that Chico State stands on
+lands that were originally occupied by the first people of this area,
+the Mechoopda. I recognize their distinctive spiritual relationship with
+this land and the waters that run through campus. I am humbled that our
+campus resides upon sacred lands that once sustained the Mechoopda
+people for centuries.</p>
+</div>
+<div id="attendance" class="section level2">
+<h2>Attendance</h2>
+<p>Class attendance is expected. Talk to me ahead of time if you need to
+miss a class for a planned reason. In the event of an unplanned reason,
+PM me in Discord when you can so that I know you are still alive.</p>
+<ul>
+<li>If you are not feeling well or are experiencing Covid symptoms
+<strong>DO NOT COME TO CLASS</strong>. DM me in Discord we’ll make a
+backup plan.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="campus-resources" class="section level1">
+<h1>Campus Resources</h1>
+<p>This <a
+href="https://www.csuchico.edu/coronavirus/students.shtml">campus
+website</a> contains a lot of information and resources specific to our
+COVID-19 situation. Specifically this page contains links to resources
+to help you keep <a
+href="https://www.csuchico.edu/keep-learning/index.shtml">learning</a>,
+and <a
+href="https://www.csuchico.edu/keep-engaging/index.shtml">engaging</a>,
+and lots of links to student support services such as emergency grants,
+basic need such as healthy food and housing, tutoring, health center,
+financial aid and a lot more.</p>
+<p>You can also check out the resources on the <a
+href="help.html">Help</a> page.</p>
+<div id="americans-with-disabilities-act" class="section level2">
+<h2>Americans with Disabilities Act</h2>
+<p>If you need course adaptations or accommodations because of a
+disability or chronic illness, or if you need to make special
+arrangements in case the building must be evacuated, please make an
+appointment with me as soon as possible, or see me during office hours.
+Please also contact Accessibility Resource Center (ARC) as they are the
+designated department responsible for approving and coordinating
+reasonable accommodations and services for students with disabilities.
+ARC will help you understand your rights and responsibilities under the
+Americans with Disabilities Act and provide you further assistance with
+requesting and arranging accommodations. We try our best to ensure equal
+access to materials in accessible formats. Reach out to your me if there
+is some aspect of the course materials that are inaccessible to you.</p>
+<p>Accessibility Resource Center 530-898-5959 Student Services Center
+170 <a href="mailto:arcdept@csuchico.edu"
+class="email">arcdept@csuchico.edu</a> <a
+href="https://www.csuchico.edu/arc/">http://www.csuchico.edu/arc</a></p>
+<hr />
+</div>
+</div>
+<div id="university-policies" class="section level1">
+<h1>University Policies</h1>
+<div id="covid-19" class="section level2">
+<h2>COVID-19</h2>
+<p>The CSU requires students to be fully vaccinated and boosted against
+COVID-19 by February 28th, 2022, unless you have an approved exemption.
+While Chico State has relaxed its stance on mask mandates, for your and
+my health and safety I <em>request</em> that everyone wear an
+appropriate face mask covering the nose and mouth while in class.</p>
+<p>Please note that dishonesty relating to the vaccination policy and/or
+your failure to comply with any other COVID-19 related safety policy or
+mandate may result in disciplinary action against you through the office
+of Student Conduct, Rights and Responsibilities, which can include
+suspension or expulsion from the California State University system.</p>
+</div>
+<div id="adding-and-dropping-the-course" class="section level2">
+<h2>Adding and Dropping the course</h2>
+<p>You are responsible for understanding the policies and procedures
+about add/drops, academic renewal, etc., found in the <a
+href="http://www.csuchico.edu/catalog/">CSU Chico University
+Catalog</a>. You should be aware of the new deadlines and penalties for
+adding and dropping classes.</p>
+</div>
+<div id="confidentiality-and-mandatory-reoprting"
+class="section level2">
+<h2>Confidentiality and Mandatory Reoprting</h2>
+<p>As an instructor, one of my responsibilities is to help create a safe
+learning environment on our campus. I also have a mandatory reporting
+responsibility related to my role as a your instructor. I am required to
+share information regarding sexual misconduct with the University.
+Students may speak to someone confidentially by contacting the
+Counseling and Wellness Center (898-6345) or Safe Place (898-3030).
+Information on campus reporting obligations and other Title IX related
+resources are available here: www.csuchico.edu/title-ix.</p>
+</div>
+<div id="academic-integrity" class="section level2">
+<h2>Academic Integrity</h2>
+<p>Academic integrity is defined as “a commitment, even in the face of
+adversity, to five fundamental values: honesty, trust, fairness,
+respect, and responsibility”. From these values flow principles of
+behavior that enable academic communities to translate ideals to action.
+Academic integrity is expected and required. No forms of cheating or
+plagiarism will be tolerated. Please see your student handbook at <a
+href="https://www.csuchico.edu/scrr/integrity.shtml"
+class="uri">https://www.csuchico.edu/scrr/integrity.shtml</a> if you
+have questions about the meaning of these terms or the consequences of
+violating academic integrity.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
