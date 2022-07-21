@@ -34,19 +34,18 @@ Ready to learn
 
 ---
 
-# Learning Materials
-
 ```{r}
 read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>% 
   mutate(Date = format(date, "%m/%d")) %>% 
   filter(floor(order)==1) %>%
-  select(Reading:`Collaborative Notes`) %>% 
-  pivot_longer(everything(), names_to = 'Content Type') %>%
+  select(Reading:Assignment) %>% 
+  pivot_longer(everything(), names_to = 'Materials') %>%
   mutate(Item = gsub("\r\n", "-", value)) %>% 
   select(-value) %>%
   na.omit() %>%
   separate_rows(Item, sep = "-") %>% 
-  arrange(`Content Type`) %>% 
+  mutate(Materials = factor(Materials, levels = c("Lecture Notes", "Collaborative Notes", "Reading", "Video", "Assignment"))) %>% 
+  arrange(Materials) %>% 
   kbl(align="ll", escape=FALSE) %>%
   kable_paper("hover", full_width=F, html_font = "Ariel",
               position='left', font_size=16) %>% 
@@ -63,14 +62,13 @@ read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>%
 
 * To each other
 * Code of conduct
-* To your learning tools and platforms (navbar)
-
-* [lec00: Intro to the class](lecture/lec00_intro_class.html)
+* To your learning tools and platforms
+    - What is HackMD?
 
 ## Data Architecture
 
 * What is data, where can it be found, how do we use it? 
-* [Data architecture](https://hackmd.io/@norcalbiostat/01_data_arch) notes on HackMD
+* Data Architecture collaborative notes on HackMD
 
 ----
 
@@ -96,14 +94,12 @@ Same collaborative notes as Monday.
 * Leave missing data cells blank:
     *  don't put a `.`, or `missing`, or 0, or NULL
 
-
 ### Tidy Data principles
 
 * Put all variables in columns - this is the thing that you're measuring (weight, temp, address)
 * One observation per row
 * Don't combine multiple pieces of information in once cell. 
 * pct_5_10_F : percent of females between 5 & 10 years old in that county
-
 
 
 
@@ -119,7 +115,7 @@ If they were to keep track of the data like this:
 **What are some of the problems with this?**
 
 
-**What is actually being measured?7**
+**What is actually being measured?**
 
 
 <!---
@@ -154,5 +150,8 @@ If they were to keep track of the data like this:
 
 
 
-## Choosing project data
+## Explore project data
+
+* Project data you can choose from can be found here: https://drive.google.com/drive/u/0/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY 
+* Browse through the available data sets, read the summaries and skim the codebooks. Next week you'll choose a data set and start to develop research questions to explore. 
 

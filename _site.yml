@@ -27,8 +27,6 @@ navbar:
       href: project.html
     - text: "Peer Review Assignments"
       href: https://docs.google.com/spreadsheets/d/1gqNCqp_RjuCbvpD0Zfvav-ejgGF9nIwSlCXUfFkf7js/edit
-    - text: "Project Data (REMOVE THIS)"
-      href: https://drive.google.com/drive/u/3/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY
     - text: "Poster Guidelines"
       href: https://norcalbiostat.netlify.com/lec/poster_guidelines/ 
 

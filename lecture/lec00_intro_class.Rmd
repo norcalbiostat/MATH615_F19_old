@@ -1,67 +1,110 @@
 ---
 title: "Introduction to MATH 615"
 output:
-  pdf_document: 
   html_document:
     highlight: tango
     theme: flatly
     toc: yes
     toc_float: yes
+  pdf_document: 
 urlcolor: blue
 css: ../css/custom_css.css
 ---
 
 _Last Updated: `r format(Sys.time(), "%a %b %d %X")` _   
-Back to the [[Schedule]](../schedule.html)
 <br>
 
 # What is this course about
 
 * Developing the skills to conduct statistically valid and reproducible research. 
 * Understanding how data needs to be structured and formatted for analysis, so you can better prepare data collection methods for future research. 
-* Becoming a critical consumer of the data being thrown at you. Sifting through the BS to understand the truth. 
-* Practing the skills to be the boss of your own data without relying on others to "run the numbers" for you. 
+* Practicing the skills to be the boss of your own data without relying on others to "run the numbers" for you. 
 * Learning basic statistical techniques for a small selection of analysis situations. 
-* Laying the statistical foundation so you can learn to apply more advanced statistical models as needed, such as those covered in Applied Statisitcs II (Math 456). 
+* Learning how to do all of this in a reproducible manner to save you headache and time during your research.
+* Laying the statistical foundation so you can learn to apply more advanced statistical models as needed, such as those covered in Applied Statistics II (Math 456). 
+
+See the [syllabus](../syllabus.html) for more detailed learning objectives. 
+
+# Who am I? 
+
+My name is Robin Donatello and my pronouns are she/her. You can address me as "Robin", "Dr. D", or some other respectful title such as "professor". 
+
+I have a Doctorate in Public Health (DrPH) Biostatistics from UCLA, but I'm a Chico alum. I double majored in Statistics &  Biology, with minor in Chemistry, and a first generation college student who started at Butte College. 
+
+My campus life consists of training the next generation of Scientists how to harness the power of Statistics and Data in a responsible and ethical manner, supporting students in their academic adventures through intensive advising and research, leading the Data Science Initiative (DSI) to develop Data Science capacity on our campus, and providing analytical support and statistical consulting for many projects on and off campus. 
+
+I am also a research manager at the Center for Healthy communities. I help to manage their research and evaluation team. 
+
+I have yet another hat as a PI for [Project DA-FANH](https://www.dataanalytics4fanh.science/), a multi-campus collaboration whose goal is to retain and graduate highly qualified students while dismantling barriers and existing stereotypes. We aim to build a pathway for students of color in the intersection of Data Science/Data Analytics within food, agriculture, natural resources and human sciences (FANH) careers. We run workshops and internships for both graduate and undergraduate students. 
+
+When I’m not on campus, typically I’m growing food for my family, out adventuring with my dogs, or getting some game time in.
+
+You can learn more about the work that I do on my [website](http://www.norcalbiostat.com/)
 
 
-# Course resources
+# What are all the course materials? 
 
-* **Class Website**
-    * https://norcalbiostat.github.io/MATH615/ 
-        - Landing page for announcements
-        - Details on weekly topics can be found on the schedule
-        - Includes links to notes, assignments and additional materials
-    * Often links will be broken. Typo's happen. Notify me via slack and I'll get to it asap. 
-    * The syllabus covers course details such as grading, office location and classroom policies. 
+I don't sanitize this class for you by keeping everything in a learning management system like Blackboard or Canvas. In a working environment you have to deal with multiple platforms, multiple accounts and manage multiple locations for files and content. I use the best tools for the job. Here is an overview of all the things we'll be working with in this class. Homework 0 provides a checklist for getting connected and testing out these tools. 
 
-* **Blackboard Learn (BBL)** is used for recording grades via grading rubric. 
+#### Class website
 
-* **Google Drive**
-    -- Assignments will be turned in and peer reviewed through Google Drive. 
+* Bookmark this page. You will be here a lot.  
+* Contains details on weekly topics, due dates, links to notes, assignments and additional materials
+* Often links will be broken. Typo's happen. Notify me via Discord and I'll get to it asap. 
+
+#### Textbook
+
+* The textbook is used for data, reading and learning content. 
+* This wil be used in Math 456, and is an excellent reference guide.
+* If you're curious, I get about 1% of the sale in royalty. The income is *not* why I collaborated on this edition. I used the 4th edition in grad school and really like teaching out of it. 
+
+
+#### Blackboard Learn (BBL)
+* Used for recording grades via grading rubric. 
+
+#### Google Drive
+* Assignments will be turned in and peer reviewed through Google Drive. 
+* You will be added to the Math 615 Google drive using your campus email.
+
+      
+#### Discord
+
+* Used for outside class discussions, meme sharing, homework help and general chatter. 
+* I will not answer most questions through email. 
+* Download either the phone app or the desktop app (I use both). This is mandatory.
+* Do not rely on remembering to log in via the web browser. You will miss important notifications. 
     
-* **Textbook: Practical Multivariable Analysis (PMA5 / PMA6)**
-    - The textbook is used for data, reading and learning content. 
-        - New edition coming out in December (ish). I'd advise to just rent the 5th and buy the 6th.
-        - Great long term resource
-        - I've provided a draft for select chapters in the 6th edition on the course materials page.
-        
-* **Slack** will be used for outside class discussions, homework help and general chatter. 
-    - I will not answer most questions through email. 
-    - Download either the phone app or the desktop app (I use both). This is mandatory.
-      Do not rely on remembering to log in via the web browser. You will miss important notifications. 
+#### Lecture notes
+* Stand alone lecture notes like these. 
+* Collaborative lecture notes on Hack MD (more info below)
+* Most are available as PDF or HTML. 
     
-* **Lecture notes**
-    - Stand alone lecture notes like these. 
-    - **NEW PILOT** Interactive lecture notes on Hack MD: https://hackmd.io/
-    - Applied Statistics notebook
-    - Most are available as PDF or HTML. 
-    
-* **Hack MD**
-  - Interactive collaborative notes
-  - https://hackmd.io/@norcalbiostat/intro_hackmd#/
-  - No account needed to view, but account needed for editing (which you will be doing)
+#### Hack MD
+* Interactive collaborative notes
+* No account needed to view, but account needed for editing (which you will be doing)
   
+#### Poll Everywhere
+* web-based student response system. 
+* During class I will display an activity on-screen and you respond on your device (computer or mobile). 
+* I have already registered you for Poll Everywhere by connecting it to Blackboard. 
+* Use your student email to log in and use the password reset link to create a new password. Let me know if you can't get registered. 
+
+# What does this look like in practice? 
+
+Here is a typical schedule for student success
+
+* Sunday you check the course website schedule to note important upcoming due dates and to plan accordingly. 
+* Before Monday class you watch one of the lecture videos and do some reading on that week's topic.
+* Monday class: ~25 min lecture on topic for the week, ~50 min actively working on homework
+* Before Wednesday class you complete the assigned reading and videos, and prepare answers to the discussion questions
+* Wednesday class: ~10 minute topic quiz poll, ~25 min questions/discussion, ~50 min actively working on homework
+* Before Thursday EOD you submit your draft assignment to google drive.
+* Between Friday & Saturday noon you provide feedback on 1-2 of your classmates assignments and continue to work on your own assignment using the rubric in BBL as your guide. 
+* By EOD Sunday you revise your assignment based on your peer's feedback and submit your final assignment for grading
+
+EOD: End of day, or 11:59pm. 
+
+> Expect to spend 10-12 hours each week on this class. I will do my best not to move due dates so you can plan accordingly. 
 
 
 # Project
@@ -82,114 +125,30 @@ Back to the [[Schedule]](../schedule.html)
 * Reproducibility. Give someone else access to your data and code, and they can replicate your findings. 
     - We will practice this in this class. 
     - I practice this by putting all class material online with a cc-by license. (others are free to copy and share my work with acknowledgement)
-* Review these [Slides](http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/) on reproducible research in the social sciences.
-    - I will not require any measure of version control or open source coding in this class. 
-* Be mindful about file naming conventions (slide 11). Make a plan and stick with it. 
-    * https://www.xkcd.com/1459/
+* I'm not the only one [teaching reproducible research](http://benmarwick.github.io/UW-eScience-reproducibility-social-sciences/#/). 
 * Expect to bring your laptop every day to class. 
     - The more reading and content learning done outside of class, the more time for in class analysis and discussion
-    
+
+> Warning. Learning to program is like the guy in last place here: https://imgur.com/3eizJGT . Except without risk of bodily harm. 
 
 # Software program of choice (SPC)   
 * This class is not a class on how to use the software program. You will be responsible for learning a lot of the programming language outside of class on your own time. That's part of the process of a Masters program. You are learning how to learn, how to look stuff up, how to do new things. You can't learn all the things in 2 years. 
+    - There is an entire secton on the help page of the class website that is devoted to programming resources.
 * All my lecture notes use R. This entire website is built with R. R is a pioneer in generating reproducible and publishable quality reports. 
     - [Here's an student-generated example](../reading/Final_chem_report.pdf)
-* I will not dictate which software program you use in this class. 
-* But I will expect you to submit reproducible code. You can point and click your way to an answer, but code must be saved and reusible with minimal changes. 
+* I will not dictate which software program you use in this class. Homework 0 has more information on the two historically popular programs for this class; SPSS and R. 
+* But I will expect you to submit reproducible code. You can point and click your way to an answer, but code must be saved and reusable with minimal changes. 
 * Be open to new things, there is power in being polyglottal. You can use one language in here and another language for another class or project. 
 * Your professors in your other classes, or your masters committee may want you to learn a specific language. That should influence your choice. 
     - So should your industry. Don't make assumptions, look at job postings and see what they want. 
-    - I.e. Center for Healthy Communities has a lot of Nutrition faculty/students. They're moving towards R. 
+    - I.e. Center for Healthy Communities has a lot of Nutrition faculty/students. They're solidly using R. 
     - Political Science & Economics often use Stata. I've met Sociologists that use SAS, Stata, R and SPSS. 
 
 
-## SPSS
-* Purchase v25 or v26 from http://www-03.ibm.com/software/products/en/spss-stats-gradpack for $50 for 6mo rental. 
-* Point and click, but can save code and write scripts. 
-* Stand alone program. No integration. Licenses are not cheap. 
-* Will be used again in NSFC 600 (no exp necc for that class either)
-* On campus resources: From the desk of David Philhour (BSS) 
-    - Open computer labs in Butte Hall (207, 211) with many open lab hours.
-    - Tutoring center in AJH108 run by Dr. Penelope Kuhn. 
-    - Check availability of Psyc dept lab in Modoc 224
-* Off Campus resources
-    - Kent State University Tutorials: https://libguides.library.kent.edu/SPSS/home 
-    - UCLA Institute for Digital Research and Education: https://stats.idre.ucla.edu/spss/ 
-    - Recommended selection of YouTube videos https://www.youtube.com/results?search_query=andy+field+spss+tutorials
-
-## R 
-* Free. Installation Instructions available in `lec02` from my Math 130 webpage: https://norcalbiostat.github.io/MATH130/
-* Harder up front, more powerful in the end. 
-* Seamless integration with a multitude of other scientific analysis and reproducible reporting mechanisms. 
-* Becoming much more popular in all scientific fields of study. One of the primary languages for Data Science. 
-* Google at [diagram](https://osf.io/69gub/wiki/home/) of the `tidyverse` (a suite of functions in R). Compare it to the images of the data analysis life cycle. What sense do you get? 
-* Need some motivation? 
-    - https://www.psychologicalscience.org/observer/why-you-should-become-a-user-a-brief-introduction-to-r 
-    - https://osf.io/j28w7/
-    - https://www.youtube.com/watch?v=jn_3N_o2d6Q
-* On campus resources
-    - Introduction to R (MATH 130) 1 unit CR/NC
-    - Data Science Initiative workshops, talks, open drop in analysis time. 
-* Off Campus resources (a few)
-    - Chico R Users Group 
-        - [Meetup](https://www.meetup.com/Chico-R-Users-Group/)
-        - [Google l-serv](https://groups.google.com/forum/#!forum/chico-rug)
-    - [Quick-R](http://www.statmethods.net/)
-    - [Cookbook for R](http://www.cookbook-r.com/)
-    - [R Examples Repository](http://dwoll.de/rexrepos/) (This site was also built using R Markdown, is open source and a fabulous example of reproducible research!)
-
-   
-   
-## SAS? STATA? Python? 
-Yes, yes and yes. You can use any software program you want. 
-
-* SAS has only now working on literate and integrated programming by using Jupyter notebooks and SAS University Edition (free)
-* Stata has a few user written packages that allow for the integration of LaTeX or markdown into your code document. 
-* Python is the other primary language for Data Science. 
+* I am fluent in SAS, STATA and R, reasonably read in SPSS but can provide limited support for Python. 
+* The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
+* I highly recommend making a habit to attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml) even if it's just to sit and do your work with your peers. 
 
 
-# Organizing your working directory
-
-Using a consistent folder structure across your projects will help keep things
-organized, and will also make it easy to find/file things in the future. This
-can be especially helpful when you have multiple projects. In general, you may
-create directories (folders) for **scripts**, **data**, and **documents**.
-
-You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
-
-* ALL CAPS (MATH615)
-* no caps (math615)
-* snake_case (math_615) 
-* CamelCase (Math615) 
-
-Call this working directory `math615`, and create the four subfolders: `data`, `scripts`, `documents` and `project`.  
-
-You will put all files related to this class in here. For example lecture notes and the sylalbus go in the `documents` folder, homework code files in the `scripts` folder, data and codebook in, you guessed it, the `data` folder, and code specifically for your project in the `project` folder. 
-
-This means when you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file. Do not let files live in your downloads folder. 
-
-
-Your working directory should now look similar to this:
-
-<center><img src="images/folder_org.png" width="350px"></center>
-
-# Setup checklist
-
-* Install software program of choice
-* Get textbook
-* Bookmark class webpage
-* Make an account on Hack MD. 
-    - Go to the link above, read the introduction and add your name/major
-* Make an account on Slack
-    - Install the Desktop and/or phone app
-    - Post an introduction in the #introductions channel
-* Star the class google drive folder so it's easier to find
-* Set up your class working directory
-* Read the syllabus for class policies
-
-All done? Do the required reading or check the schedule to see what's coming up. 
-
-
-
-
+# <a href="https://norcalbiostat.github.io/MATH615/"><button type="button">Back</button> </a>
 

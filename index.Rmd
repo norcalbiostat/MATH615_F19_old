@@ -42,7 +42,6 @@ for(t in 1:16){
 }
 
 
-
 wk.col <-  "background-color: #654378; color: #fff;"
 hlt.col <-  "background-color: #50a18d; color: #fff;"
 

@@ -37,53 +37,21 @@ By the end of the course, students will be able to...
 * Understand and implement a reproducible research pipeline. 
 * Become a data nerd (Optional, but recommended).
 
-
 ----
-  
-# Who are we learning it with? 
 
-My name is Robin Donatello and my pronouns are she/her. You can address me as "Robin", "Dr. D", or some other respectful title such as "professor". 
+# Required materials and accounts
 
-I have a Doctorate in Public Health (DrPH) Biostatistics from UCLA, but I'm a Chico alum. I double majored in Statistics &  Biology, with minor in Chemistry, and a first generation college student who started at Butte College. 
+Homework 0 provides a checklist for you to make sure you have everything. 
 
-My campus life consists of training the next generation of Scientists how to harness the power of Statistics and Data in a responsible and ethical manner, supporting students in their academic adventures through intensive advising and research, leading the Data Science Initiative (DSI) to develop Data Science capacity on our campus, and providing analytical support and statistical consulting for many projects on and off campus.
-
-When I’m not on campus, typically I’m growing food for my family, out adventuring with my dogs, or getting some game time in.
-
-You can learn more about the work that I do on my [website](http://www.norcalbiostat.com/)
-
-
-# How are we gonna learn it? (Required materials)
-Homework 0 gets you connected with these materials. 
-
-* **Textbook**: _Practical Multivariate Analysis, 6th ed_ by Afifi, May, Donatello, Clark. [[Link]](https://www.routledge.com/Practical-Multivariate-Analysis/Afifi-May-Donatello-Clark/p/book/9781032088471)
-    - This wil be used in Math 456, and is an excellent reference guide.
-    - If you're curious, I get about 1% of the sale in royalty. The income is *not* why I collaborated on this edition. I used the 4th edition in grad school and really like teaching out of it. 
-    - _Optional_: Open Intro Statistics 3rd edition. If you need a refresher on your basic statistics. Free PDF available at https://www.openintro.org/stat/textbook.php?stat_book=os
-* **Reliable Laptop**: Expect to bring often. Contact me if this poses a problem or concern for you. 
-* **Reliable internet** connection while on and off campus. ITSS can help you get this setup. 
-* **Computer Software:** Data Analysis is done using statistical analysis software. Common statistical programs include SAS, STATA, R and SPSS. I am fluent in SAS, STATA and R, reasonably read in SPSS but can provide limited support for Python. The choice of software you use for this class is up to you, but you will be expected to learn how to navigate the programs outside of class time. 
-    - I highly recommend making a habit to attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml)
-* **Accounts:** 
-    - **[Google Drive](https://drive.google.com/drive/u/1/folders/1oeVbt6QXvNjiadAu8VspPLXOlfaMmtXP)**: You will be added to the Math 615 Google drive using your campus email.
-    - **[Discord](https://discord.gg/tzcB4MJadW):** A free discussion platform with a lot of collaborative functionality. This is the defacto method of communication for the class. 
-    - **[Hack MD]():** for collaborative notes. An account is needed to keep our notes private. I suggest you sign up with your campus email (@csuchico.edu)
-    - **[Poll Everywhere](https://pollev.com/drd):** Used for frequent checks of your understanding of the current topic. You can respond on the web or via mobile app. 
-
-# Typical Schedule for success
-
-* Sunday you check the course website schedule to note important upcoming due dates and to plan accordingly. 
-* Before Monday class you watch one of the lecture videos and do some reading on that week's topic.
-* Monday class: ~25 min lecture on topic for the week, ~50 min actively working on homework
-* Before Wednesday class you complete the assigned reading and videos, and prepare answers to the discussion questions
-* Wednesday class: ~10 minute topic quiz, ~25 min questions/discussion, ~50 min actively working on homework
-* Before Thursday EOD you submit your draft assignment to google drive.
-* Between Friday & Saturday noon you provide feedback on 1-2 of your classmates assignments and continue to work on your own assignment using the rubric in BBL as your guide. 
-* By EOD Sunday you revise your assignment based on your peer's feedback and submit your final assignment for grading
-
-EOD: End of day, or 11:59pm. 
-
-> Expect to spend 10-12 hours each week on this class. I will do my best not to move due dates so you can plan accordingly. 
+* **Class website**: https://norcalbiostat.github.io/MATH615/
+* **Textbook (Required)**: _Practical Multivariate Analysis, 6th ed_ by Afifi, May, Donatello, Clark. [[Link]](https://www.routledge.com/Practical-Multivariate-Analysis/Afifi-May-Donatello-Clark/p/book/9781032088471)
+* **Textbook (Optional)**: Open Intro Statistics 3rd edition. If you need a refresher on your basic statistics. Free PDF available at https://www.openintro.org/stat/textbook.php?stat_book=os
+* **Laptop & Internet**: Expect to bring your laptop to class every day. Contact me if this poses a problem or concern for you. Refer to ITSS for help with internet. * **Data Analysis software**: R recommended but not required. Common statistical programs include SAS, STATA, Python and SPSS. 
+* **Blackboard Learn (BBL)**: Used for recording grades via grading rubric only.
+* **Google Drive**: Through your campus email.
+* **Discord**: https://discord.gg/tzcB4MJadW: A free discussion platform with a lot of collaborative functionality. The defacto method of communication for the class. Download either the phone app or the desktop app (I use both). This is mandatory. Do not rely on remembering to log in via the web browser. You will miss important notifications. 
+* **Hack MD**: https://hackmd.io/. Interactive collaborative notes. No account needed to view, but account needed for editing (which you will be doing). I recommend you sign up with your campus email (@csuchico.edu)
+* **Poll Everywhere**: I will add you to my class using your campus email. 
 
 ----
 
@@ -117,11 +85,7 @@ The general ordering of topics is:
 
 # How do you get help?
 
-* Check out the resources on the [help](help.html) page
-* Post in our Discord text chat channel. You can direct message me as well. 
-* Attend student office hours: Days/times & location TBD. Will be figured out by Friday of week 1.
-* Attend Community Coding: Lots of open student help hours open to any student. Hours, location and zoom link at https://www.csuchico.edu/datascience/community-coding.shtml 
-
+* See the [help](help.html) page on the course website.
 
 ----
 
