@@ -38,7 +38,7 @@ out.hw <- hw %>% mutate(name = gsub("hw/|_template",  "", filenames),
 
 This page contains links to all materials needed for this class. 
 
-# Lecture notes
+# Lecture Notes
 
 ```{r, eval=TRUE, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.lec %>% select(link, type, nam) %>% 

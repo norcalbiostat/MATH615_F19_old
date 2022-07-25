@@ -1,12 +1,12 @@
 ---
 title: "HW 02: Formulating a research hypothesis."
 output:
-  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: true
     toc_float: true
+  pdf_document: default
 css: ../css/custom_css.css
 ---
 
@@ -20,16 +20,17 @@ Learn more about your chosen research data and formulate a testable research hyp
 4. Conduct a literature review to learn more about your topic
 
 # Instructions
-* You will conduct the work directly in a Google document in the `02 Research Quesetion and Codebook` folder. 
+* You will conduct the work directly in a Google document in the `02 Research Question and Codebook` folder. 
 * Name this file `rq_userid` 
 * Use header formats to clearly denote the required sections (see below for examples).  
+* When you have completed this work, download a copy as a PDF and submit through Blackboard for scoring. 
 
 
 # Peer Review
-This assignment will be subject to peer review. 
-After the draft due date, check the [Peer review assignment sheet for your assignments. 
-In Google Docs directly, use the commenting feature to provide feedback on this assignment. 
-Check the [[project]](../project.html) page for instructions on how to provide a review. 
+* This assignment will be subject to peer review. 
+* After the draft due date, check the Peer review assignment sheet for your assignments. 
+* In Google Docs directly, use the commenting feature to provide feedback on this assignment. 
+* Check the [[project]](https://norcalbiostat.github.io/MATH615/project.html#Peer_Review) page for instructions on how to provide a review. 
 
 What specifically to look for: 
 

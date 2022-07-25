@@ -11,7 +11,7 @@
 
 
 
-<title>Week 01: Introduction to the Class</title>
+<title>Week 02: Introduction to the Class</title>
 
 <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -415,7 +415,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Week 01: Introduction to the Class</h1>
+<h1 class="title toc-ignore">Week 02: Introduction to the Class</h1>
 
 </div>
 
@@ -425,18 +425,25 @@ div.tocify {
 <h1>Learning Path</h1>
 <div id="where-weve-been" class="section level2">
 <h2>Where we’ve been</h2>
-<p>Summer Break!</p>
+<ul>
+<li>Learning how to interact with data.</li>
+<li>Exploring the data available for this semester</li>
+</ul>
 </div>
 <div id="where-were-at" class="section level2">
 <h2>Where we’re at</h2>
-<p>Ready to learn</p>
+<ul>
+<li>Choosing a data set</li>
+<li>Learning what is involved in data processing</li>
+</ul>
 </div>
 <div id="objectives-for-the-week" class="section level2">
 <h2>Objectives for the week</h2>
 <ul>
-<li>Get connected to all the class materials &amp; tools</li>
-<li>Learning how to format data in spreadsheets</li>
-<li>Choose a research project data set and review its codebook</li>
+<li>Write down several research questions</li>
+<li>Import your chosen data into your SPC</li>
+<li>Create a plan to handle data management in a reproducible
+manner</li>
 </ul>
 <hr />
 <table class=" lightable-paper lightable-hover" style="font-size: 16px; font-family: Ariel; width: auto !important; ">
@@ -456,15 +463,7 @@ Item
 Lecture Notes
 </td>
 <td style="text-align:left;">
-<a href="lecture/lec00_intro_class.html">Lec00</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; border-right:1px solid;">
-Lecture Notes
-</td>
-<td style="text-align:left;">
-<a href="lecture/lec01_spreadsheets.html">Lec01</a>
+<a href="lecture/lec02_formulating_research_questions.html">Lec02</a>
 </td>
 </tr>
 <tr>
@@ -472,8 +471,7 @@ Lecture Notes
 Collaborative Notes
 </td>
 <td style="text-align:left;">
-<a href="https://hackmd.io/@norcalbiostat/intro_hackmd">What is
-HackMD</a>
+<a href="https://hackmd.io/@norcalbiostat/02_rq">Lec02</a>
 </td>
 </tr>
 <tr>
@@ -481,32 +479,7 @@ HackMD</a>
 Collaborative Notes
 </td>
 <td style="text-align:left;">
-<a href="https://hackmd.io/@norcalbiostat/01_data_arch">Data
-architecture</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; border-right:1px solid;">
-Reading
-</td>
-<td style="text-align:left;">
-PMA6 Ch 2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; border-right:1px solid;">
-Reading
-</td>
-<td style="text-align:left;">
-<a href="../syllabus.html">Syllabus</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; border-right:1px solid;">
-Reading
-</td>
-<td style="text-align:left;">
-<a href="../help.html">Help page</a>
+<a href="https://hackmd.io/@norcalbiostat/math615_lec03">Lec03</a>
 </td>
 </tr>
 <tr>
@@ -515,16 +488,23 @@ Reading
 </td>
 <td style="text-align:left;">
 <a
-href="https://tidyr.tidyverse.org/articles/tidy%20%3C/td%3E%20%3C/tr%3E%20%3Ctr%3E%20%3Ctd%20style=%22text-align:left;width:%2020%;%20border-right:1px%20solid;%22%3E%20Reading%20%3C/td%3E%20%3Ctd%20style=%22text-align:left;%22%3E%20data.html#tidying">Tidy
-data principles</a> (Optional)
+href="https://norcalbiostat.github.io/AppliedStatistics_notes/data%20%3C/td%3E%20%3C/tr%3E%20%3Ctr%3E%20%3Ctd%20style=%22text-align:left;width:%2020%;%20border-right:1px%20solid;%22%3E%20Reading%20%3C/td%3E%20%3Ctd%20style=%22text-align:left;%22%3E%20prep.html">ASCN
+Ch 1</a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 20%; border-right:1px solid;">
-Video
+Reading
 </td>
 <td style="text-align:left;">
-Welcome Aboard!
+PMA6 Ch 3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; border-right:1px solid;">
+Reading
+</td>
+<td style="text-align:left;">
 </td>
 </tr>
 <tr>
@@ -532,15 +512,7 @@ Welcome Aboard!
 Assignment
 </td>
 <td style="text-align:left;">
-<a href="hw/hw00_setup.html">HW00 Setup</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; border-right:1px solid;">
-Assignment
-</td>
-<td style="text-align:left;">
-<a href="hw/hw01_data_entry.html">HW01 Data Entry</a>
+<a href="hw/02_rq_formulation.html">HW02 RQ Formulation</a>
 </td>
 </tr>
 </tbody>
@@ -550,45 +522,27 @@ Assignment
 </div>
 <div id="monday" class="section level1">
 <h1>Monday</h1>
-<div id="introductions" class="section level2">
-<h2>Introductions</h2>
+<div id="formulating-testable-hypothesis" class="section level2">
+<h2>Formulating testable hypothesis</h2>
 <ul>
-<li>To each other</li>
-<li>Code of conduct</li>
-<li>To your learning tools and platforms
-<ul>
-<li>What is HackMD?</li>
-</ul></li>
-</ul>
-</div>
-<div id="data-architecture" class="section level2">
-<h2>Data Architecture</h2>
-<ul>
-<li>What is data, where can it be found, how do we use it?</li>
-<li>Data Architecture collaborative notes on HackMD</li>
+<li>Asking questions is easy. Asking <em>answerable</em> questions is
+more difficult.</li>
+<li>We’ll be working in lec02: Formulating research questions lecture
+notes, and the corresponding HackMD collab notes</li>
 </ul>
 <hr />
 </div>
 </div>
 <div id="wednesday" class="section level1">
 <h1>Wednesday</h1>
-<div id="spreadsheets-metadata" class="section level2">
-<h2>Spreadsheets &amp; Metadata</h2>
+<div id="preparing-data-for-analysis" class="section level2">
+<h2>Preparing data for analysis</h2>
 <ul>
-<li>Best practices for working with data in spreadsheets</li>
-<li>What is metadata and why should we care?</li>
-<li>Practicing data entry (hw1)</li>
-</ul>
-</div>
-<div id="explore-project-data" class="section level2">
-<h2>Explore project data</h2>
-<ul>
-<li>Project data you can choose from can be found <a
-href="https://drive.google.com/drive/u/0/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY">here
-in Google Drive</a></li>
-<li>Browse through the available data sets, read the summaries and skim
-the codebooks. Next week you’ll choose a data set and start to develop
-research questions to explore.</li>
+<li>Do not underestimate the importance of this step</li>
+<li>It will take you far, far longer than you anticipate to ‘clean’ your
+data</li>
+<li>Writing code will be challenging, but will pay off in the long
+run</li>
 </ul>
 </div>
 </div>

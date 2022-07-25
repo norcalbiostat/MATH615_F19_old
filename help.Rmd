@@ -31,8 +31,9 @@ None of these times work for you? Use the booking link below to see my availabil
 
 I care both that you are keeping up with the material, but also that by the end of the term you can conduct your own personalized analysis on a new data set. Here is how I check in on your progress throughout the semester
 
-* Weekly quizzes on the prior week's content. (are you ready to move on?)
-* Regular homework. This is your testing ground, your first round of practice. Can you take what you learned and apply it to a data set.
+* Poll based quizzes on the current or prior content. (Completion only, not correctness)
+* Homework. This is your testing ground, your first round of practice. Can you take what you learned and apply it to a data set.
+* Peer reviews. Helping others enhances your own understanding.
 * Project. Can you weave together data and story to do research? 
 * Final Exam. Can you analyze a new data set to answer a research question and write a professional report on your results? 
 

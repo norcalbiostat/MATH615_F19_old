@@ -1,5 +1,5 @@
 ---
-title: "Week 01: Introduction to the Class"
+title: "Week 02: Introduction to the Class"
 output:   
   html_document: 
     toc: yes
@@ -20,24 +20,26 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 # Learning Path
 
 ## Where we've been
-Summer Break! 
+* Learning how to interact with data.
+* Exploring the data available for this semester
 
 ## Where we're at
-Ready to learn
+* Choosing a data set
+* Learning what is involved in data processing
 
 
 ## Objectives for the week
 
-* Get connected to all the class materials & tools
-* Learning how to format data in spreadsheets
-* Choose a research project data set and review its codebook
+* Write down several research questions
+* Import your chosen data into your SPC
+* Create a plan to handle data management in a reproducible manner
 
 ---
 
 ```{r}
 read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>% 
   mutate(Date = format(date, "%m/%d")) %>% 
-  filter(floor(order)==1) %>%
+  filter(floor(order)==2) %>%
   select(Reading:Assignment) %>% 
   pivot_longer(everything(), names_to = 'Materials') %>%
   mutate(Item = gsub("\r\n", "-", value)) %>% 
@@ -58,30 +60,18 @@ read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>%
 
 # Monday
 
-## Introductions
+## Formulating testable hypothesis
 
-* To each other
-* Code of conduct
-* To your learning tools and platforms
-    - What is HackMD?
-
-## Data Architecture
-
-* What is data, where can it be found, how do we use it? 
-* Data Architecture collaborative notes on HackMD
+* Asking questions is easy. Asking _answerable_ questions is more difficult. 
+* We'll be working in lec02: Formulating research questions lecture notes, and the corresponding HackMD collab notes
 
 ----
 
 # Wednesday 
 
-## Spreadsheets & Metadata
+## Preparing data for analysis
 
-* Best practices for working with data in spreadsheets
-* What is metadata and why should we care? 
-* Practicing data entry (hw1)
-
-## Explore project data
-
-* Project data you can choose from can be found [here in Google Drive](https://drive.google.com/drive/u/0/folders/1jULudBjRbHdW-uLIvmMbxRBEJJkq9crY)
-* Browse through the available data sets, read the summaries and skim the codebooks. Next week you'll choose a data set and start to develop research questions to explore. 
+* Do not underestimate the importance of this step
+* It will take you far, far longer than you anticipate to 'clean' your data
+* Writing code will be challenging, but will pay off in the long run
 
