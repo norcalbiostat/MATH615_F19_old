@@ -1,12 +1,12 @@
 ---
 title: "Preparing Data for Analysis"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
     theme: flatly
     toc: true
     toc_float: true
-  pdf_document: default
 css: ../css/custom_css.css
 ---
 
@@ -21,10 +21,11 @@ You are **not** expected to have completed data management for every one of your
 I want to see a VERY good effort has been made (raw data read in, at least 2 quant and 2 cat variables dealt with, analysis data saved out.)
 You can always check the rubric in Blackboard learn for more grade specific details. 
 
+----
 
 # Instructions 
 
-1. Use your `dm_dataname.Rmd` or `dm_dataname.sps` code file created last week. 
+1. Create a `dm_dataname.Rmd` or `dm_dataname.sps` script file. 
     - Rename this to include your username. I.e. `dm_dataname_rdonatello.Rmd`. 
     - Make sure this is your **math615/script** folder, and your data is in your **math615/data** folder
 2. If you have not done so yet, restrict the variables to only the ones you are investigating. 
@@ -39,6 +40,41 @@ You can always check the rubric in Blackboard learn for more grade specific deta
 SPSS users may perform tasks using point & click, but the code must be pasted into a `.sps` file that can be run on command. 
 
 4. Save the resulting data set to your `data` folder as `datasetname_clean.Rdata`, or `datasetname_clean.sav`. e.g. `addhealth_clean.Rdata`. 
+
+----
+
+# Submission instructions
+
+## Draft
+
+Upload your <span style="color:red">PDF</span> file to the `03 Data Management` folder in Google Drive. 
+
+* R users compile your RMD file to create a PDF (knit to PDF)
+* SPSS users will have to present additional output to demonstrate that the recodes were successful. 
+    - Include the `FREQUENCIES` code in your `dm` file to create tables or summaries of the modified variables, so that it shows up in your output window. 
+    - After you are done, close & restart SPSS by opening your `dm` file. Click "Run all" 
+    - Export your **output** file as PDF and upload it to Google Drive
+
+### Peer Review instructions
+
+As a reviewer, this is what you're checking for: 
+
+* Check that they have 2 quantitative and 2 categorical variables present
+* Did they check for missing, out of range values? 
+* Did they present some sort of proof that a certain recode worked as intended? 
+* Does their work appear to be reproducible? 
+
+## Final
+Upload your <span style="color:red">code</span> file to the `03 Data Management/code` folder in Google Drive. 
+
+  - I will download this file and run it on my computer.
+  - The file it creates will be the item that is graded. 
+  - You can keep submitting files until it works. 
+
+
+
+
+----
 
 # Examples
 
@@ -88,36 +124,6 @@ The R example is posted at https://norcalbiostat.netlify.com/data/dm_addhlth.htm
 ### SPSS
 
 You can download and view a copy of a DM file in SPSS for AddHealth using [[this link]](../docs/dm_addhealth.sps). 
-
-
-# Submission instructions
-
-## Draft
-
-Upload your <span style="color:red">PDF</span> file to the `03 Data Management` folder in Google Drive. 
-
-* R users compile your RMD file to create a PDF (knit to PDF)
-* SPSS users will have to present additional output to demonstrate that the recodes were successful. 
-    - Include the `FREQUENCIES` code in your `dm` file to create tables or summaries of the modified variables, so that it shows up in your output window. 
-    - After you are done, close & restart SPSS by opening your `dm` file. Click "Run all" 
-    - Export your output file as PDF and upload it to Google Drive
-
-## Final
-Upload your <span style="color:red">code</span> (`.Rmd` or `.sps`) file to the `03 Data Management/code` folder in Google Drive. 
-
-  - I will download this file and run it on my computer.
-  - The file it creates will be the item that is graded. 
-  - You can keep submitting files until it works. 
-
-# Peer Review instructions (PR Assignment Removed for Fall 19)
-
-As a reviewer, this is what you're checking for: 
-
-* Check that they have 2 quantitative and 2 categorical variables present
-* Did they check for missing, out of range values? 
-* Did they present some sort of proof that a certain recode worked as intended? 
-* Does their work appear to be reproducible? 
-
 
 
     

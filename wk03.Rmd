@@ -1,0 +1,82 @@
+---
+title: "Week 03: Data Management"
+output:   
+  html_document: 
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr);library(readxl); library(kableExtra); library(tidyr)
+library(stringr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE) 
+```
+
+
+----
+
+# Learning Path
+
+## Where we've been
+* Choosing a data set & writing a research question
+* Learning what is involved in data processing
+
+## Where we're at
+* Data wrangling
+
+## Objectives for the week
+
+* Create a reproducible script file that does the following: 
+    - Imports the raw data
+    - performs data management tasks
+    - exports an analysis ready data set
+    
+---
+
+```{r}
+read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>% 
+  mutate(Date = format(date, "%m/%d")) %>% 
+  filter(floor(order)==3) %>%
+  select(Reading:Assignment) %>% 
+  pivot_longer(everything(), names_to = 'Materials') %>%
+  mutate(Item = gsub("\r\n", "@", value), 
+         Materials = gsub("Collab ", "", Materials)) %>% 
+  select(-value) %>%
+  na.omit() %>%
+  separate_rows(Item, sep = "@") %>% 
+  mutate(Materials = factor(Materials, levels = c("Notes", "Reading", "Video", "Assignment"))) %>% 
+  arrange(Materials) %>% 
+  kbl(align="ll", escape=FALSE) %>%
+  kable_paper("hover", full_width=F, html_font = "Ariel",
+              position='left', font_size=16) %>% 
+  column_spec(1, width = '20%', border_right = TRUE) %>% 
+  row_spec(0, bold = T, color = "white", background = "#654378")
+```
+
+
+----
+
+# Monday
+
+> No Class, Labor day. 
+
+Enjoy the three day weekend, and consider learning something new about this holiday. (Optional reading)
+
+* [US Department of Labor: "History of Labor Day"](https://www.dol.gov/general/laborday/history)
+* [America's Black Holocaust Museum: "America's Racist History of Labor"](https://www.abhmuseum.org/watch-americas-racist-history-of-labor/)
+* [Smithsonian: "Striking Union Workers Turned the First Labor Day Into a Networking Event "](https://www.smithsonianmag.com/history/striking-union-workers-turned-first-labor-day-networking-event-180964705/)
+* [UAW: "Celebrating Labor day by Celebrating Labor Unions"](https://uaw.org/celbrating-labor-day-celebrating-labor-unions/)
+
+Got more? Share in our Discord channel.
+
+----
+
+# Wednesday 
+
+We will be working on Homework #3 today in class. Your goal is to have a working script file before the end of the day. 
+
+There are no new notes for this section. Continue to use the Data Management chapter of the [Applied Stats notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/data-management.html) for code and examples in R. 
+
+
