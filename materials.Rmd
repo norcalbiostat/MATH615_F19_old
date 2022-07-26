@@ -54,11 +54,11 @@ Links are to notes on HackMD
 
 ```{r}
 x <- read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>% 
-  select(`Collaborative Notes`) %>% 
-  mutate(Item = gsub("\r\n", "-", `Collaborative Notes`)) %>% 
-  select(-`Collaborative Notes`) %>%
+  select(`Collab Notes`) %>% 
+  mutate(Item = gsub("\r\n", "@", `Collab Notes`)) %>% 
+  select(-`Collab Notes`) %>%
   na.omit() %>%
-  separate_rows(Item, sep = "-") %>% 
+  separate_rows(Item, sep = "@") %>% 
   kbl(align="ll", escape=FALSE) %>% 
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive" ,"bordered"), 
                   full_width=FALSE,  position = "left")

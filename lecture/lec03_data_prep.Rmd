@@ -1,0 +1,20 @@
+---
+title: "Data Preparation"
+output:
+  html_document:
+    highlight: tango
+    theme: flatly
+    toc: yes
+    toc_float: yes
+urlcolor: blue
+css: ../css/custom_css.css
+---
+
+_Last Updated: `r format(Sys.time(), "%a %b %d %X")` _   
+<br>
+
+
+We will use the Data Management chapter of the [Applied Stats notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/data-management.html) for this topic.
+
+# <a href="https://norcalbiostat.github.io/MATH615/"><button type="button">Back</button> </a>
+

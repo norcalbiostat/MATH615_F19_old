@@ -84,5 +84,5 @@ By the end of this topic students will understand
 * options for literate programming
 * several questions to ask themselves when preparing data for analysis
 
-The lecture notes for this topic can be found in the Applied Stats notebook
-https://norcalbiostat.github.io/AppliedStatistics_notes/data-management.html
+We will use the Data Management chapter of the [Applied Stats notebook](https://norcalbiostat.github.io/AppliedStatistics_notes/data-management.html) for this topic.
+
