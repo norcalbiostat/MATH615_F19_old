@@ -1,0 +1,80 @@
+---
+title: "Week 04: Describing Distributions"
+output:   
+  html_document: 
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr);library(readxl); library(kableExtra); library(tidyr)
+library(stringr)
+options(knitr.table.format = "html", knitr.kable.NA = '') 
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE) 
+```
+
+
+----
+
+# Learning Path
+
+## Where we've been
+* Data wrangling & recoding
+
+## Where we're at
+* Data wrangling & recoding (this will persist for a long time)
+* Data visualization
+
+## Objectives for the week
+
+By the end of this topic students will be able to 
+
+* identify what discussion points are needed to be included in a complete description. 
+* discern what types of plots or visualizations are appropriate for different data types
+* discern what types of numerical summary statistics are appropriate for different data types
+* describe the distribution of a single variable in a full complete revised sentence
+
+---
+
+```{r}
+read_excel("schedule_615.xlsx", sheet="weekly_schedule") %>% 
+  mutate(Date = format(date, "%m/%d")) %>% 
+  filter(floor(order)==4) %>%
+  select(Reading:Assignment) %>% 
+  pivot_longer(everything(), names_to = 'Materials') %>%
+  mutate(Item = gsub("\r\n", "@", value), 
+         Materials = gsub("Collab ", "", Materials)) %>% 
+  select(-value) %>%
+  na.omit() %>%
+  separate_rows(Item, sep = "@") %>% 
+  mutate(Materials = factor(Materials, levels = c("Notes", "Reading", "Video", "Assignment"))) %>% 
+  arrange(Materials) %>% 
+  kbl(align="ll", escape=FALSE) %>%
+  kable_paper("hover", full_width=F, html_font = "Ariel",
+              position='left', font_size=16) %>% 
+  column_spec(1, width = '20%', border_right = TRUE) %>% 
+  row_spec(0, bold = T, color = "white", background = "#654378")
+```
+
+
+----
+
+# Monday
+
+* We will start to examine how to visualize and describe a single variable at a time. 
+* This is a critical step to not be overlooked in favor of plotting the relationship between two variables. 
+* This is instrumental in your data discovery/preparation stages. Did you create the variable correctly? Do you have a massive imbalance of responses in a single category? 
+
+We will be working out of PMA6 Chapter 4, and the [Applied Stats Notebook Chapter 2.3](https://norcalbiostat.github.io/AppliedStatistics_notes/univariate-visualizations.html)
+
+----
+
+# Wednesday 
+
+Start your research poster! 
+
+This is a big project, and so to help stay organized, help you keep on track and help you see how to revise your work we will be working through preparation "stages" for your ultimate goal - a research poster. 
+
+See the [project](project.html) page for all the details. 
+

@@ -73,8 +73,10 @@ gsub("<thead>.*</thead>", "", x)
 
 # Homework files
 
+HTML and PDF files contain the instructions and examples. The RMD and DOCX files are templates you should use. 
+
 To download RMD template files, right click and "save as". Do not open in a browser then save. 
-Word doc templates are built off the same file as the R template, so it may contain irrelevant verbiage that you can delete. 
+Word doc templates are built off the same file as the R template, so it may contain irrelevant verbiage that you can delete.
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 x = out.hw %>% select(link, type, nam) %>% 
